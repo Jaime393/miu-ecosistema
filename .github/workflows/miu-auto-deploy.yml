@@ -1,0 +1,21 @@
+name: MIU Auto-Deploy Sin PAT
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo "# MIU 16/16" > AUTO.md
+          git config user.name "miu-tejedor"
+          git config user.email "miu@local"
+          git add AUTO.md
+          git diff --staged --quiet || git commit -m "MIU Auto"
+          git push origin main
