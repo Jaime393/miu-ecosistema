@@ -1,0 +1,1 @@
+class MIU_Micelio extends EventTarget{sembrarNodo({rho}){return {rho:Math.max(rho,0.001)}}renderMicelioCanvas(c){}};window.MIU_Micelio=MIU_Micelio;
