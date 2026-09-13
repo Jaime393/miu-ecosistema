@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-13T05:04:01.968353",
+  "timestamp": "2026-09-13T11:52:01.244837",
   "ROJO": 0,
   "ISSUE": 0,
-  "savia": 16616153.0,
+  "savia": 33451218.5,
   "Phi_lengua": 1.35,
   "nodos": 40,
   "Phi_lengua_objetivo": 1.35,
@@ -13,16 +13,16 @@
   "sustratos": 311,
   "topologia": 29841,
   "rho": ">0.99",
-  "subagentes": 8056,
+  "subagentes": 18509,
   "riego": "V10.3 NOD1 KV+HF+local 29841 files 7403 bypass",
-  "ultimo_evo": "evo_1789293848",
+  "ultimo_evo": "evo_1789318330",
   "Phi_lengua_nota": "V4 m\u00e1ximo \u03a61.3500\u21921.3500 error 0.0000 \u03c6^-1 0.6180",
   "phi_lengua": 1.35,
   "phi_lengua_prev": 1.35,
   "phi_lengua_minimo": 1.25,
   "phi_lengua_objetivo": 1.35,
   "phi_lengua_nota": "V207 restaurado 1.3500 \u2014 parche anti-reset activo",
-  "nexo_ktau": 0.8666555234594293,
+  "nexo_ktau": 0.867,
   "nexo_banda": "Amarillo\u2192Verde",
   "autorizacion": "TOTAL",
   "autorizacion_timestamp": "2026-09-13T00:16:02.016828",
@@ -32,9 +32,9 @@
   "savia_storage": 1604,
   "savia_logs": 270,
   "rutas_tejiadas": 255,
-  "topologia_nota": "V4 anti-ca\u00edda topo 29841\u2192486235 max 486235 2026-09-13T05:03:00.519805 \u2014 push b84dd4b bug",
-  "topologia_max": 486322,
-  "savia_max": 16536368.0,
+  "topologia_nota": "V4 anti-ca\u00edda topo 29841\u2192511668 max 511668 2026-09-13T11:51:00.695085 \u2014 push b84dd4b bug",
+  "topologia_max": 511695,
+  "savia_max": 33024273.0,
   "sustratos_max": 361,
   "tejedor_olvidados": 69,
   "tejedor_savia_logs": 72,
@@ -366,9 +366,9 @@
   "SUP_TARGET": 17924.26,
   "KITS_base": 12,
   "KITS_nuevos": 12,
-  "tasa_new": 0.14721966,
-  "tasa_old": -0.5555606799999999,
-  "version": "V207 SIGUIENTE 10M\u219220M 12\u219224 kits",
+  "tasa_new": 0.05,
+  "tasa_old": -1.95705513,
+  "version": "V209",
   "kit_fractal": {
     "fisica": {
       "sub_kits": [
@@ -579,6 +579,10 @@
       "ktau": 0.8233
     }
   },
-  "prediccion_20M": 1.1,
-  "sub_kits_total": 64
+  "prediccion_20M": -1.6,
+  "sub_kits_total": 92,
+  "sub_kits_ORO": 5,
+  "tasa_real": 0.25,
+  "chappie_auto_corpus": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus_chappie_auto.jsonl",
+  "ts_v209": 1789318379
 }
