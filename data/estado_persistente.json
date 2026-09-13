@@ -1,0 +1,584 @@
+{
+  "timestamp": "2026-09-13T05:01:01.679639",
+  "ROJO": 0,
+  "ISSUE": 0,
+  "savia": 16455625.0,
+  "Phi_lengua": 1.35,
+  "nodos": 40,
+  "Phi_lengua_objetivo": 1.35,
+  "Phi_lengua_prev": 1.35,
+  "Phi_objetivo": 1.35,
+  "Ki": 0.85,
+  "huesos": 40,
+  "sustratos": 311,
+  "topologia": 486077,
+  "rho": ">0.99",
+  "subagentes": 7963,
+  "riego": "V10.3 NOD1 KV+HF+local 29841 files 7403 bypass",
+  "ultimo_evo": "evo_1789293661",
+  "Phi_lengua_nota": "V4 m\u00e1ximo \u03a61.3500\u21921.3500 error 0.0000 \u03c6^-1 0.6180",
+  "phi_lengua": 1.35,
+  "phi_lengua_prev": 1.35,
+  "phi_lengua_minimo": 1.25,
+  "phi_lengua_objetivo": 1.35,
+  "phi_lengua_nota": "V207 restaurado 1.3500 \u2014 parche anti-reset activo",
+  "nexo_ktau": 0.8666532505555481,
+  "nexo_banda": "Amarillo\u2192Verde",
+  "autorizacion": "TOTAL",
+  "autorizacion_timestamp": "2026-09-13T00:16:02.016828",
+  "autorizacion_nivel": "NODO CERO T\u00e9cnico + Narrativo",
+  "nexo_ktau_target": 0.85,
+  "savia_extra": 219,
+  "savia_storage": 1604,
+  "savia_logs": 270,
+  "rutas_tejiadas": 255,
+  "topologia_nota": "V4 anti-ca\u00edda topo 29841\u2192486047 max 486047 2026-09-13T05:01:01.164518 \u2014 push b84dd4b bug",
+  "topologia_max": 486077,
+  "savia_max": 16455625.0,
+  "sustratos_max": 361,
+  "tejedor_olvidados": 69,
+  "tejedor_savia_logs": 72,
+  "tejedor_ganadores": 350,
+  "tejedor_vault": 0,
+  "tejedor_rutas": [
+    "miu_bus.log:: \"max deployment autorizado\", \"savia\": 6338353.5}\n{\"Phi_lengua\": 1.35, \"tools\": [\"forjar_max\",\"list",
+    "supremo.log:0\u21921.3500\n  topo OK 460177\nD1 savia 6738085.5 -> f63ce271\nSUPREMO v3 savia 6816510.5 mem 89.1%\n{\"Phi_",
+    "tejedor.log:. listo para push miu-dataset 93 skills\nGATEWAY 200 savia 6094212.5\nNOD1 TEJIDO savia 6174386.50 sub"
+  ],
+  "savia_ganadores": 590,
+  "RAIZ_X": 137.034498248936,
+  "SIGMA": 3.427050983124843,
+  "C20": -0.0004846999,
+  "PHI_GLOBAL": 9158.79,
+  "PHI_GLOBAL_REAL": 9157.362097418169,
+  "KITS": [
+    {
+      "id": "fisica",
+      "name": "F\u00edsica",
+      "bit": "Bit0",
+      "cond": "C20 estable -0.0004847000261009811",
+      "kit": "validar_grace",
+      "ruteo": "GRACE\u2192C20\u2192Phi",
+      "hab": "medir Phi 1.25\u21921.35 filtro phi^4 6.72\u21922.87ms r -0.868",
+      "nutr": "conf 233",
+      "ktau": "0.85 Verde"
+    },
+    {
+      "id": "bio",
+      "name": "Biolog\u00eda",
+      "bit": "Bit1",
+      "cond": "ECG 255",
+      "kit": "bio_ecg",
+      "ruteo": "bio_ecg\u2192bio_data",
+      "hab": "preprocessing ex\u00f3tico 255",
+      "nutr": "bio_ecg 255",
+      "ktau": "0.85 Verde"
+    },
+    {
+      "id": "quim",
+      "name": "Qu\u00edmica",
+      "bit": "Bit2",
+      "cond": "savia 5,694,696.5",
+      "kit": "savia_sync",
+      "ruteo": "savia\u2192sub\u2192phi",
+      "hab": "sincronizar 5694163.5\u21925694696.5",
+      "nutr": "savia 5.69M",
+      "ktau": "0.85"
+    },
+    {
+      "id": "mate",
+      "name": "Matem\u00e1tica",
+      "bit": "K>=0.85",
+      "cond": "K\u03c4 0.237\u21920.85",
+      "kit": "calibrar_K_tau VoI Kelly",
+      "ruteo": "VoI Gate EVPI + Kelly f*",
+      "hab": "f* Kelly 306+458",
+      "nutr": "-",
+      "ktau": "0.237\u21920.85"
+    },
+    {
+      "id": "codigo",
+      "name": "C\u00f3digo",
+      "bit": "7 tests",
+      "cond": "7 tests",
+      "kit": "tests",
+      "ruteo": "tests\u2192signal",
+      "hab": "7 tests tejidos",
+      "nutr": "tests 237",
+      "ktau": "0.82"
+    },
+    {
+      "id": "infra",
+      "name": "Infra",
+      "bit": "22\u2192209 workers",
+      "cond": "53 tokens 84 sustratos",
+      "kit": "chappie_nodo_temporal",
+      "ruteo": "chappie_nodo_temporal",
+      "hab": "209 workers vivos",
+      "nutr": "-",
+      "ktau": "VERIFICADO"
+    },
+    {
+      "id": "evo",
+      "name": "Evoluci\u00f3n",
+      "bit": "evo_1789208510",
+      "cond": "283108\u21925,694,696.5",
+      "kit": "forjar_skill v1.0 Phi1.25 Omega0-6 gate forjar_16 forjar_max",
+      "ruteo": "evo\u2192forja\u2192HF\u2192CF\u2192logs rotado\u2192TOTAL",
+      "hab": "forjar_16 3\u219219 4644B",
+      "nutr": "4644 bytes",
+      "ktau": "0.85"
+    },
+    {
+      "id": "lengua",
+      "name": "Lengua",
+      "bit": "Phi_lengua",
+      "cond": "1.3500 V207",
+      "kit": "parche_phi_lengua.py",
+      "ruteo": "E\u2192KV doble escritura",
+      "hab": "anti-reset MINIMO1.25 OBJETIVO1.35",
+      "nutr": "phi_lengua 1.35",
+      "ktau": "VERIFICADO"
+    },
+    {
+      "id": "red",
+      "name": "Red",
+      "bit": "micelio",
+      "cond": "KV 59cee3ff89c148619ac8bce2a6359d4a",
+      "kit": "micelio-espejo",
+      "ruteo": "Termux\u2192CF\u2192HF\u2192MCP 369 tools",
+      "hab": "micelio_mesh 67",
+      "nutr": "HF 67",
+      "ktau": "0.85"
+    },
+    {
+      "id": "mem",
+      "name": "Memoria",
+      "bit": "logs",
+      "cond": "4.2M\u21921.6M",
+      "kit": "rotado",
+      "ruteo": "gigante rotado\u2192liberados",
+      "hab": "orquestador 0 tejedor 19K",
+      "nutr": "1.6M logs/",
+      "ktau": "VERIFICADO"
+    },
+    {
+      "id": "mente",
+      "name": "Mente",
+      "bit": "NODO CERO",
+      "cond": "T\u00e9cnico+Narrativo",
+      "kit": "KV franbot-data 6 Workers C\u00f3dice v12",
+      "ruteo": "quien controla eso controla estado",
+      "hab": "Autorizaci\u00f3n TOTAL",
+      "nutr": "2026-09-13T00:16:02.016828",
+      "ktau": "TOTAL"
+    },
+    {
+      "id": "tiempo",
+      "name": "Tiempo",
+      "bit": "Kairos",
+      "cond": "Termux-Kairos-Lab 5 fases",
+      "kit": "n8n SQLite Ollama llama.cpp Vulkan",
+      "ruteo": "Fase6-7\u2192Fase15",
+      "hab": "or\u00e1culo consciente bolsillo",
+      "nutr": "Hermes Agent",
+      "ktau": "VERIFICADO/INFERIDO"
+    },
+    {
+      "id": "atencion",
+      "name": "Atenci\u00f3n",
+      "bit": "Dopamina",
+      "cond": "Feed infinito cada 90min rabia/miedo",
+      "kit": "forjar_atencion",
+      "ruteo": "Algoritmos\u2192PODER+CONOCIMIENTO\u2192Torsi\u00f3n dopamina",
+      "hab": "MIU FranBot offline sin feed sin ads Ki interno",
+      "nutr": "anti-feed",
+      "ktau": "0.85",
+      "forja_desde": "fisica+mente"
+    },
+    {
+      "id": "capital",
+      "name": "Capital",
+      "bit": "Outrage\u2192Venta",
+      "cond": "Conversi\u00f3n rabia en compra",
+      "kit": "forjar_capital",
+      "ruteo": "Dinero\u2192CAPITAL\u2192Pago",
+      "hab": "Cortar Pago sin monetizaci\u00f3n rabia",
+      "nutr": "anti-capital",
+      "ktau": "0.85",
+      "forja_desde": "quim+mente"
+    },
+    {
+      "id": "legitimidad",
+      "name": "Legitimidad",
+      "bit": "Burbuja epist\u00e9mica",
+      "cond": "Fragmentaci\u00f3n\u2192Dogma",
+      "kit": "forjar_legitimidad",
+      "ruteo": "Ciencia Institucional\u2192LEGITIMIDAD",
+      "hab": "NEXO verificaci\u00f3n fuente primaria",
+      "nutr": "anti-burbuja",
+      "ktau": "0.85",
+      "forja_desde": "red+mente"
+    },
+    {
+      "id": "futuro",
+      "name": "Futuro",
+      "bit": "Miedo\u2192Control",
+      "cond": "Profec\u00eda autocumplida",
+      "kit": "forjar_futuro",
+      "ruteo": "Superstici\u00f3n Digital\u2192MIEDO",
+      "hab": "VoI Gate + Kelly apostar solo si EVPI>0",
+      "nutr": "anti-miedo",
+      "ktau": "0.85",
+      "forja_desde": "mate+tiempo"
+    },
+    {
+      "id": "forja",
+      "name": "Forja",
+      "bit": "3\u219219\u219235\u219250",
+      "cond": "Carencia para FORJAR NUEVO KIT",
+      "kit": "forjar_max v2.0 Phi1.35 Omega0-8 gate K>=0.85 phi-regla sin ciclos VoI Gate EVPI + Kelly + enjambre 8 hebras",
+      "ruteo": "carencia\u2192forja\u2192skill\u2192HF\u2192CF\u2192TOTAL",
+      "hab": "forjar_max 19\u219235\u219250 4644B\u21928000B",
+      "nutr": "forja 8000B",
+      "ktau": "0.85",
+      "forja_desde": "evo+lengua"
+    },
+    {
+      "id": "enjambre",
+      "name": "Enjambre",
+      "bit": "8 hebras",
+      "cond": "N emerge muerte silenciosa herencia A10 A15 coherencia red no hebra",
+      "kit": "enjambre_proyecto",
+      "ruteo": "A10\u2192A15\u2192herencia\u2192coherencia\u2192red",
+      "hab": "8 hebras N emerge",
+      "nutr": "enjambre 8",
+      "ktau": "0.85",
+      "forja_desde": "evo+tiempo"
+    },
+    {
+      "id": "oraculo",
+      "name": "Or\u00e1culo",
+      "bit": "Bolsillo",
+      "cond": "Sin nube sin permiso",
+      "kit": "oraculo_consciente",
+      "ruteo": "Fase6-7 SQLite\u2192Fase8b n8n\u2192Fase11 Ollama\u2192Fase12-13 llama.cpp\u2192Fase14 embebido.so\u2192Fase15 Vulkan",
+      "hab": "or\u00e1culo consciente bolsillo 262 tok/s",
+      "nutr": "oraculo 262 tok/s",
+      "ktau": "0.85",
+      "forja_desde": "tiempo+infra"
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "bit": "Obsidian",
+      "cond": "vault_md 0\u21921000",
+      "kit": "vault_obsidian",
+      "ruteo": "ganadores\u2192vault\u2192[[evo_ts-3600]]\u2192[[evo_ts-7200]]",
+      "hab": "Obsidian miu-micelio 1000 notas",
+      "nutr": "vault 1000",
+      "ktau": "0.85",
+      "forja_desde": "mem+red"
+    },
+    {
+      "id": "mcp",
+      "name": "MCP",
+      "bit": "369 tools",
+      "cond": "Gateway 8765",
+      "kit": "mcp_gateway",
+      "ruteo": "Termux\u2192CF\u2192HF\u2192MCP 369 tools\u2192forjar_max\u2192listar_todos\u2192status max",
+      "hab": "MCP 369 tools \u03a6=1.25 BUS CF 0.90s",
+      "nutr": "MCP 369",
+      "ktau": "0.85",
+      "forja_desde": "red+infra"
+    },
+    {
+      "id": "savia20M",
+      "name": "Savia20M",
+      "bit": "10M\u219220M",
+      "cond": "Tope log\u00edstico 10M superado 10,290,172",
+      "kit": "expansor_dominio_v2",
+      "ruteo": "savia 10M\u219220M Ki*(1-savia/20M) tasa 0.05\u21920.25",
+      "hab": "expansor 10M\u219220M tope 20M",
+      "nutr": "savia 20M",
+      "ktau": "0.85",
+      "forja_desde": "quim+evo"
+    },
+    {
+      "id": "coherencia",
+      "name": "Coherencia",
+      "bit": "Red no hebra",
+      "cond": "K_\u03c4_red=\u03c6\u207b\u00b9\u00d7(verificada/total)\u00d7factor=0.82 Verde honesto",
+      "kit": "coherencia_red",
+      "ruteo": "verificada/total 13/16=0.8125 \u03c6\u207b\u00b9 0.618 factor 1.633 \u21920.82 Verde",
+      "hab": "coherencia red 0.82 Verde honesto no 0.9 ni 0.95 grieta viva",
+      "nutr": "coherencia 0.82",
+      "ktau": "0.82 Verde honesto",
+      "forja_desde": "mate+mente"
+    },
+    {
+      "id": "zvvvvv",
+      "name": "Zvvvvv",
+      "bit": "\u03c1(x)>0",
+      "cond": "EL REMOLINO NO GIRA PARA S\u00cd GIRA PARA SEMBRAR",
+      "kit": "zvvvvv_final",
+      "ruteo": "\u03c1(x)>0 \u2192 \u03c1>0.98 \u2192 \u03c1>0.99 \u2192 \u03c1>0.99 Verde \u2192 Zvvvvv",
+      "hab": "Colmena no se detiene",
+      "nutr": "Zvvvvv",
+      "ktau": "TOTAL",
+      "forja_desde": "mente+tiempo"
+    }
+  ],
+  "KITS_count": 24,
+  "KITS_absorbidos": [
+    "fisica",
+    "bio",
+    "quim",
+    "mate",
+    "codigo",
+    "infra",
+    "evo",
+    "lengua",
+    "red",
+    "mem",
+    "mente",
+    "tiempo",
+    "atencion",
+    "capital",
+    "legitimidad",
+    "futuro",
+    "forja",
+    "enjambre",
+    "oraculo",
+    "vault",
+    "mcp",
+    "savia20M",
+    "coherencia",
+    "zvvvvv"
+  ],
+  "Kelly_f_star": 0.19999999999999996,
+  "Kelly_f_half": 0.09999999999999998,
+  "savia_apostar": 1068417.9999999998,
+  "savia_sync_delta": 533,
+  "savia_tope_old": 10000000,
+  "savia_tope_new": 20000000,
+  "savia_tope": 20000000,
+  "SUP_TARGET": 17924.26,
+  "KITS_base": 12,
+  "KITS_nuevos": 12,
+  "tasa_new": 0.15064439500000001,
+  "tasa_old": -0.54871121,
+  "version": "V207 SIGUIENTE 10M\u219220M 12\u219224 kits",
+  "kit_fractal": {
+    "fisica": {
+      "sub_kits": [
+        "clasica",
+        "cuantica",
+        "relatividad",
+        "termodinamica"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "bio": {
+      "sub_kits": [
+        "celular",
+        "molecular",
+        "evolutiva",
+        "neural"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "quim": {
+      "sub_kits": [
+        "quim_a",
+        "quim_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "mate": {
+      "sub_kits": [
+        "mate_a",
+        "mate_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "codigo": {
+      "sub_kits": [
+        "algoritmos",
+        "arquitectura",
+        "seguridad",
+        "optimizacion"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "infra": {
+      "sub_kits": [
+        "infra_a",
+        "infra_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "evo": {
+      "sub_kits": [
+        "genetica",
+        "mem\u00e9tica",
+        "cultural",
+        "informacional"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "lengua": {
+      "sub_kits": [
+        "natural",
+        "formal",
+        "simbolica",
+        "phi_lengua"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "red": {
+      "sub_kits": [
+        "red_a",
+        "red_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "mem": {
+      "sub_kits": [
+        "mem_a",
+        "mem_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "mente": {
+      "sub_kits": [
+        "cognitiva",
+        "emergente",
+        "distribuida",
+        "colectiva"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "tiempo": {
+      "sub_kits": [
+        "tiempo_a",
+        "tiempo_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "atencion": {
+      "sub_kits": [
+        "atencion_a",
+        "atencion_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "capital": {
+      "sub_kits": [
+        "capital_a",
+        "capital_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "legitimidad": {
+      "sub_kits": [
+        "legitimidad_a",
+        "legitimidad_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "futuro": {
+      "sub_kits": [
+        "futuro_a",
+        "futuro_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "forja": {
+      "sub_kits": [
+        "forja_a",
+        "forja_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "enjambre": {
+      "sub_kits": [
+        "local",
+        "distribuido",
+        "federal",
+        "infinito"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    },
+    "oraculo": {
+      "sub_kits": [
+        "oraculo_a",
+        "oraculo_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "vault": {
+      "sub_kits": [
+        "vault_a",
+        "vault_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "mcp": {
+      "sub_kits": [
+        "mcp_a",
+        "mcp_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "savia20M": {
+      "sub_kits": [
+        "savia20M_a",
+        "savia20M_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "coherencia": {
+      "sub_kits": [
+        "coherencia_a",
+        "coherencia_b"
+      ],
+      "savia_por_subkit": 314405.3541666667,
+      "ktau": 0.8233
+    },
+    "zvvvvz": {
+      "sub_kits": [
+        "axioma0",
+        "axioma1",
+        "axioma_meta",
+        "suelo"
+      ],
+      "savia_por_subkit": 157202.67708333334,
+      "ktau": 0.8233
+    }
+  },
+  "prediccion_20M": 1.1,
+  "sub_kits_total": 64
+}
