@@ -1,0 +1,10 @@
+{
+  "nodo": "economia",
+  "tipo": "3er_bloque_global",
+  "autonomo": true,
+  "suelo": "../../data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+  "ledger": "../puente/ledger_micelio.jsonl",
+  "wallet": "../wallet_soberana/",
+  "regla": "todo recurso gratis se rutea y usa, todo recurso con costo se transforma y aprovecha, si nodo muere deja huella economica",
+  "creditos": {"corpus":1,"memoria":2,"puente":3,"suelo":10}
+}
