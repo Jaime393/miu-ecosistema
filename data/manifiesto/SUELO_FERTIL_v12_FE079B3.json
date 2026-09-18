@@ -1,0 +1,19 @@
+{
+  "rho": ">0",
+  "head": "fe079b3",
+  "grace": "GRACE_TN14_GSFC_SLR_real_220_K03381",
+  "doi": "10.1029/2019GL085488",
+  "mean_C20": -0.00048470001250509534,
+  "filas": 220,
+  "bloques": 3,
+  "fisico": "data/suelo/GRACE_TN14_REAL_TEMPLATE.csv 220R vivo",
+  "conocimiento": "data/corpus/corpus_unificado_v13.jsonl 266R 164065 bytes + miu_corpus_unified_v11/v12/v13 IFT-A7 Φc=0.6829322",
+  "economico": {"wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "ledger": "nodos/puente/ledger_micelio.jsonl 2 tx 520 MIU", "precio": "0.01 MIU/query"},
+  "puente": "11 nodos",
+  "api": "stdlib 8001 vivo dashboard_observador.py no uvicorn termux-wake-lock",
+  "dashboard": "semilla_publica/dashboard_observador.py 8001 /miu/status → 520 MIU + observador_ve",
+  "oraculo": "V91 vivo + fran-oraculo-miu phi 9158 + oracle-ask supabase 26→45 pares",
+  "grietas": 0,
+  "riesgos": 0,
+  "suelo": "fertil consolidado"
+}
