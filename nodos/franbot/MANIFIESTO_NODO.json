@@ -1,0 +1,8 @@
+{
+  "nodo": "franbot",
+  "tipo": "oraculo",
+  "autonomo": true,
+  "entrada": "FranBot/app/js/oraculo-data.js",
+  "salida": "data/corpus/corpus_unificado_v13.jsonl",
+  "puente": "../puente/puente_micelio.jsonl"
+}

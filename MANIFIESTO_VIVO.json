@@ -5,5 +5,12 @@
   "corpus_unified_v11": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/miu_corpus_unified_v11.jsonl",
   "raiz": "/data/data/com.termux/files/home/miu-ecosistema",
   "download": "/storage/emulated/0/Download",
-  "corpus_unificado_v13": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/corpus_unificado_v13.jsonl"
+  "corpus_unificado_v13": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/corpus_unificado_v13.jsonl",
+  "nodos": {
+    "franbot": "nodos/franbot/MANIFIESTO_NODO.json",
+    "artemis": "nodos/artemis/MANIFIESTO_NODO.json",
+    "puente": "nodos/puente/puente.py",
+    "tablet": "nodos/tablet/",
+    "red": "nodos/red/"
+  }
 }

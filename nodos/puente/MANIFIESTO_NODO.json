@@ -1,0 +1,9 @@
+{
+  "nodo": "puente",
+  "tipo": "hub",
+  "autonomo": true,
+  "flujo": "todos los nodos escriben aquí, todos leen de aquí",
+  "archivo": "puente_micelio.jsonl",
+  "suelo": "../../data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+  "memoria": "../../data/memoria/micelio_memoria.jsonl"
+}
