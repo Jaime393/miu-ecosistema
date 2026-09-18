@@ -31,6 +31,7 @@ def elige_modo(rec, forzado=None):
 
 def main():
     ap=argparse.ArgumentParser(description="Une tu nodo al micelio MIU sin rigidez")
+    ap.add_argument("--auto", action="store_const", const="auto", dest="modo", help="auto detecta recursos" )
     ap.add_argument("--modo", choices=["observador","puente_ligero","nodo_completo","auto"], default="auto")
     ap.add_argument("--aporte", type=str, help="ruta a aporte_template.json con tus plugins/prompts")
     args=ap.parse_args()
