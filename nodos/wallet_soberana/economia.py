@@ -1,14 +1,10 @@
-# economia.py — micelio no discrimina valor
 import json, pathlib
 ROOT = pathlib.Path(__file__).parents[2]
 LEDGER = ROOT / "nodos/puente/ledger_micelio.jsonl"
-# credito por aporte real, no especulacion
-def acreditar(origen, aporte, tipo="corpus"):
-    # 1 aporte corpus = 1 credito MIU
-    # 1 aporte suelo GRACE validado = 10 creditos
-    valor = {"corpus":1, "suelo":10, "memoria":2, "puente":3}.get(tipo,1)
-    with open(LEDGER, "a") as l:
-        l.write(json.dumps({"origen":origen,"tipo":tipo,"aporte":aporte,"credito":valor})+"\n")
-    return valor
-
-print("ledger vivo:", LEDGER)
+WALLET = ROOT / "nodos/wallet_soberana/wallet_soberana.jsonl"
+# Absorbe legado como credito
+legado = json.load(open(WALLET))
+credito_legacy = legado["plugins"] + legado["prompts_catalogo"] # 378+142 = 520 MIU huella
+with open(LEDGER, "a") as l:
+    l.write(json.dumps({"ts":"2026-09-18","tipo":"absorcion_legado","origen":"FranBot 04:27","plugins":378,"prompts":142,"ipfs":legado["ipfs_hashes"],"credito_miu":credito_legacy,"regla":"ecosistema muerto renace como fragmentos"})+"\n")
+print(f"Legado absorbido: {credito_legacy} MIU huella — wallet {legado['direccion']}")

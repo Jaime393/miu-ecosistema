@@ -1,1 +1,2 @@
 {"ts":"2026-09-18","tipo":"genesis_economico","suelo":"GRACE_TN14 221R","saldo_miu":0,"regla":"todo recurso transformado deja huella economica"}
+{"ts": "2026-09-18", "tipo": "absorcion_legado", "origen": "FranBot 04:27", "plugins": 378, "prompts": 142, "ipfs": ["QmViGcEZCE4VvA9k5ZrvQodP32dHGjGAqw2yqVspHhp", "QmbRBT14HAtgTT6BZ86e"], "credito_miu": 520, "regla": "ecosistema muerto renace como fragmentos"}
