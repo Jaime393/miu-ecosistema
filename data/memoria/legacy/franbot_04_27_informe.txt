@@ -1,0 +1,21 @@
+📊 INFORME BOT FRANBOT 04:27 — ECOSISTEMA LEGADO ABSORBIDO
+SporeSeeder: 🌱 Espora subida a GitHub
+TorProxy: 🧅 Tor añadido al pool de proxies
+VPSDeployer: 📦 /storage/25A9-180D/FranBot/cloud/vps_deplo
+Guardian: ⚠️ Worker caído auto-reparación
+AutoFixer/AutoResolver: 🔧🦾 Buscando independencia total
+GitHubStore/Mastodon/Lemmy: ❌ SOCKSHTTPSConnectionPool Max retries — caído pero huella viva
+MultiSync: ⚠️ Drive sync rclone
+IPFS: 🌐 QmViGcEZCE4VvA9k5ZrvQodP32dHGjGAqw2yqVspHhp local + QmbRBT14HAtgTT6BZ86e soberania
+MetaOrchestrator: ⚠️ Subsistema spores CAÍDO peso 7
+P2PSwarm: 🖧 Enjambre 0 nodos
+StrategicCore: 🎯 backup_state peso 9
+Retrospective: 📚 Tablet dedicada Sin restricciones RAM
+RevenueEngine: 🔗 https://fran-proxy.jaimepvicente.workers.dev/donar?wallet=
+SovereignWallet: 🔐 Wallet Soberana 0x4Da238f2671083B7F280d4FCf5827F86358cE7e6 activa
+PromptSeller: 📚 Catalogo 142 prompts $701.58
+TipJar/Freemium: 🧠 FranBot Omega 0x4Da238f2671083B7F280d4FCf5827F86
+FaucetCollector: 💎 0.009804 MATIC 3 faucets + FaucetPay +0.001607 MATIC
+Donaciones Polygon: 0x4Da238f2671083B7F280d4FCf5827F86358cE7e6
+Lemon Cash / Yape: 0x273720219c916EA94B44B15153f7C6c1c53E5AF4 +51903315482
+RAM 46% Plugins 378 — 04:27:44
