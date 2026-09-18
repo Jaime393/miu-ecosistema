@@ -32,7 +32,7 @@ def load_corpus_detail():
 # import franbot
 try:
     import sys; sys.path.insert(0,str(ROOT/"nodos/oraculo"))
-    from franbot_minimo import responder as fran_responder
+    from franbot_v12 import responder as fran_responder
 except:
     def fran_responder(q): return f"FranBot minimo no cargado — Q: {q} — suelo vivo 221L"
 
@@ -50,6 +50,10 @@ class H(http.server.BaseHTTPRequestHandler):
             if "/oraculo" in parsed.path:
                 q=qs.get('q',['que es grace?'])[0]
                 ans=fran_responder(q)
+                try:
+                    from cobro_miu import cobrar
+                    cobrar(q, ans)
+                except Exception as e: pass
                 data={"head":HEAD,"q":q,"a":ans,"grace":grace,"corpus_files":len(corpus),"timestamp":time.time()}
             elif "/corpus" in parsed.path:
                 data={"head":HEAD,"corpus_266R":corpus,"total_archivos":len(corpus),"grace":grace,"rho":">0"}
