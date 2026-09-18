@@ -1,0 +1,80 @@
+{
+  "grace": "GRACE_TN14_GSFC_SLR_real_220_K03381",
+  "doi": "10.1029/2019GL085488",
+  "rho_mean": -0.00048470001250505,
+  "rho_condition": "rho(x) > 0",
+  "head": "aa12689",
+  "suelo": "data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+  "estado_suelo": "vivo",
+  "bloques_globales": 3,
+  "bloque_fisico": "data/suelo",
+  "bloque_conocimiento": "data/corpus/corpus_unificado_v13.jsonl 164KB 265R + data/memoria + nodos/puente + nodos/franbot 1561 pares v8.0",
+  "bloque_economico": {
+    "genesis": "0 MIU",
+    "legado_absorbido": "520 MIU",
+    "wallet_soberana": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
+    "wallet_lemon_yape": "0x273720219c916EA94B44B15153f7C6c1c53E5AF4",
+    "ledger_real": "nodos/puente/ledger_micelio.jsonl",
+    "ipfs": ["QmViGcEZCE4VvA9k5ZrvQodP32dHGjGAqw2yqVspHhp","QmbRBT14HAtgTT6BZ86e"],
+    "matic_residual": 0.009804
+  },
+  "oraculo": {
+    "nombre": "FranBot 04:27 legacy + v8.0",
+    "pares": 1561,
+    "plugins": 378,
+    "prompts": 142,
+    "valor_estimado_usd": 701.58,
+    "estado": "nutriente vivo absorbido"
+  },
+  "puente": {
+    "router_libre": "nodos/puente/router_libre.py",
+    "estado": "router libre sin dependencia",
+    "redundantes": 0,
+    "carencias": [],
+    "optimizacion": "flujo perfecto"
+  },
+  "principio": "todo recurso gratis se rutea y usa, no se depende, si nodo muere deja huella, todo se transforma y aprovecha",
+  "acceso_agentes": {
+    "precio_oraculo": "0.01 MIU / query (1 MIU = 100 queries)",
+    "precio_suelo": "5 MIU / ancla GRACE",
+    "pago": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
+    "api": "nodos/economia/api_micelio.py"
+  }
+}
+{
+  "micelio": "MIU-ecosistema",
+  "version": "fe079b3",
+  "head": "cee86f2",
+  "grace": {
+    "dataset": "GRACE_TN14_GSFC_SLR_real_220_K03381",
+    "doi": "10.1029/2019GL085488",
+    "mean": -0.00048470001250509534,
+    "bloque": "220R",
+    "suelo": "vivo"
+  },
+  "economia": {
+    "wallet_soberana": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
+    "huella_total_MIU": 520,
+    "regla": "todo recurso transformado deja huella economica",
+    "tx_genesis": {
+      "from": "0x0000",
+      "amount": 0,
+      "note": "genesis 3er bloque economico global"
+    },
+    "tx_legado": {
+      "from": "FranBot_04:27_muerto",
+      "amount": 520,
+      "plugins": 378,
+      "prompts": 142,
+      "matic": 0.009804
+    }
+  },
+  "ipfs_legado": [
+    "QmViGcEZCE4VvA9k5ZrvQodP32dHGjGAqw2yqVspHhp",
+    "QmbRBT14HAtgTT6BZ86e"
+  ],
+  "suelo": "vivo",
+  "grietas": 0,
+  "riesgos": 0,
+  "principio": "ρ(x)>0 — sin rigidez, aporta segun recursos y limites"
+}
