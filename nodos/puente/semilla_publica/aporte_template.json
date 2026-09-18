@@ -1,0 +1,18 @@
+{
+  "nodo": "nodo_ejemplo_Lima",
+  "recursos": {
+    "ram_mb": 1024,
+    "cpus": 4,
+    "tipo": "Termux/Android o PC"
+  },
+  "aporte": {
+    "plugins": 5,
+    "prompts": 3,
+    "suelo": "GRACE local o dato vivo",
+    "codigo": "tu modulo"
+  },
+  "miu": 15,
+  "note": "aporte vivo desde Lima sin rigidez",
+  "contacto": "opcional github o ipfs",
+  "limites": "solo 2h al dia, solo datos publicos"
+}
