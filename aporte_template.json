@@ -1,0 +1,13 @@
+{
+  "nodo": "nodo_localhost",
+  "nivel": 0,
+  "ram_mb": 8192,
+  "cpus": 2,
+  "ipfs": true,
+  "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
+  "grace": -0.00048470001250509534,
+  "head": "cee86f2",
+  "miu": 0,
+  "aporte": "observador",
+  "limites": "solo 2h al dia, solo datos publicos"
+}
