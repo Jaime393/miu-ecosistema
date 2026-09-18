@@ -1,0 +1,9 @@
+{
+  "GRACE_TN14": "/data/data/com.termux/files/home/miu-ecosistema/data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+  "micelio_memoria": "/data/data/com.termux/files/home/miu-ecosistema/data/memoria/micelio_memoria.jsonl",
+  "corpus_unified_v12": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/miu_corpus_unified_v12.jsonl",
+  "corpus_unified_v11": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/miu_corpus_unified_v11.jsonl",
+  "raiz": "/data/data/com.termux/files/home/miu-ecosistema",
+  "download": "/storage/emulated/0/Download",
+  "corpus_unificado_v13": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/corpus_unificado_v13.jsonl"
+}

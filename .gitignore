@@ -3,3 +3,8 @@ artemis/
 .env
 *.txt
 *cloudflare*.txt
+data/fragmentos_viejos/
+data/suelo/
+*.log
+merger_local*.py
+Brave*
