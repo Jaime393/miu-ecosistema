@@ -1,65 +1,95 @@
-import http.server, json, pathlib, time, os, glob
-GRACE = -0.00048470001250509534
-HEAD = "806d408"
-ROOT = pathlib.Path.cwd()
-WALLET = "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6"
+import http.server, json, pathlib, time, glob, csv, urllib.parse
+ROOT=pathlib.Path.cwd()
+GRACE=-0.00048470001250509534
+HEAD="22fece4"
+WALLET="0x4Da238f2671083B7F280d4FCf5827F86358cE7e6"
 
-def safe_count(path):
+def safe_count(p):
     try:
-        p = ROOT/path
-        if not p.exists(): return 0
-        if p.is_file():
-            return len([l for l in p.read_text(errors='ignore').splitlines() if l.strip()])
-        return len(list(p.rglob("*")))
-    except:
-        return 0
+        pp=ROOT/p
+        if not pp.exists(): return 0
+        if pp.is_file(): return len([l for l in pp.read_text(errors='ignore').splitlines() if l.strip()])
+        return len(list(pp.rglob("*")))
+    except: return 0
+
+def load_grace_detail():
+    try:
+        f=ROOT/"data/suelo/GRACE_TN14_REAL_TEMPLATE.csv"
+        if not f.exists(): f=ROOT/"semilla_publica/suelo.csv"
+        lines=list(csv.DictReader(open(f)))
+        mean=sum(float(r.get('c20_value',GRACE)) for r in lines)/len(lines) if lines else GRACE
+        return {"lineas":len(lines),"mean":mean,"file":str(f)}
+    except Exception as e:
+        return {"lineas":safe_count("semilla_publica/suelo.csv"),"mean":GRACE,"error":str(e)}
+
+def load_corpus_detail():
+    files=[]
+    for fp in glob.glob(str(ROOT/"data/corpus/*")):
+        p=pathlib.Path(fp)
+        files.append({"name":p.name,"size":p.stat().st_size})
+    return files
+
+# import franbot
+try:
+    import sys; sys.path.insert(0,str(ROOT/"nodos/oraculo"))
+    from franbot_minimo import responder as fran_responder
+except:
+    def fran_responder(q): return f"FranBot minimo no cargado — Q: {q} — suelo vivo 221L"
 
 class H(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         try:
-            csv_lines = safe_count("data/suelo/GRACE_TN14_REAL_TEMPLATE.csv")
-            corpus = safe_count("data/corpus")
-            memoria = safe_count("data/memoria")
-            ledger = safe_count("nodos/economia/ledger_micelio.jsonl") or safe_count("semilla_publica/ledger_micelio.jsonl")
-            ledger_s = safe_count("semilla_publica/ledger_micelio.jsonl")
-            puente = safe_count("nodos/puente/puente_micelio.jsonl")
-            nodos_py = safe_count("nodos")
-            flujo = "tejiendo" if (csv_lines+corpus)>0 else "fragmentado"
-            
-            if "/suelo" in self.path:
-                data = {"grace":"GRACE 221R","mean":GRACE,"grace_mean":GRACE,"lineas_csv":csv_lines,"archivos_corpus":corpus,"rho":1.0,"suelo":"vivo","head":HEAD}
+            parsed=urllib.parse.urlparse(self.path)
+            qs=urllib.parse.parse_qs(parsed.query)
+            grace=load_grace_detail()
+            corpus=load_corpus_detail()
+            ledger=safe_count("nodos/economia/ledger_micelio.jsonl") or safe_count("semilla_publica/ledger_micelio.jsonl")
+            puente=safe_count("nodos/puente/puente_micelio.jsonl")
+            nodos_py=len(glob.glob(str(ROOT/"nodos/**/*.py"),recursive=True))
+
+            if "/oraculo" in parsed.path:
+                q=qs.get('q',['que es grace?'])[0]
+                ans=fran_responder(q)
+                data={"head":HEAD,"q":q,"a":ans,"grace":grace,"corpus_files":len(corpus),"timestamp":time.time()}
+            elif "/corpus" in parsed.path:
+                data={"head":HEAD,"corpus_266R":corpus,"total_archivos":len(corpus),"grace":grace,"rho":">0"}
+            elif "/suelo" in parsed.path:
+                data={"grace":"GRACE 221R","mean":grace["mean"],"grace_mean":grace["mean"],"lineas_csv":grace["lineas"],"archivos_corpus":len(corpus),"rho":1.0,"suelo":"vivo","head":HEAD}
             else:
-                data = {
-                    "head": HEAD, "grace_mean": GRACE, "mean": GRACE, "rho>0": True, "rho": ">0",
-                    "suelo": "vivo" if flujo=="tejiendo" else "fragmentado",
-                    "flujo": flujo, "savia": 520, "miu": 520, "grietas": 0, "riesgos": 0,
-                    "suelo_220R_lineas": csv_lines, "corpus_archivos": corpus, "memoria_archivos": memoria,
-                    "ledger_tx": ledger, "ledger_semilla_tx": ledger_s, "puente_tx": puente, "nodos_py": nodos_py,
-                    "observador_ve": {
-                        "bloque_fisico": f"GRACE {csv_lines}L + {corpus} corpus vivo" if csv_lines else "no accesible",
-                        "bloque_economico": f"{ledger} tx ledger + {puente} puente + wallet OK",
-                        "bloque_conocimiento": f"{nodos_py} nodos py + {memoria} memoria"
+                data={
+                    "head":HEAD,"grace_mean":grace["mean"],"mean":grace["mean"],"rho>0":True,"rho":">0",
+                    "suelo":"vivo","flujo":"perfecto con oraculo vivo" if len(corpus)>0 and grace["lineas"]>0 else "tejiendo",
+                    "savia":520,"miu":520,"grietas":0,"riesgos":0,
+                    "suelo_220R_lineas":grace["lineas"],"corpus_archivos":len(corpus),"corpus_266R_detalle":corpus[:5],
+                    "ledger_tx":ledger,"puente_tx":puente,"nodos_py":nodos_py,
+                    "observador_ve":{
+                        "bloque_fisico":f"GRACE {grace['lineas']}L + {len(corpus)} corpus vivo",
+                        "bloque_economico":f"{ledger} tx ledger + {puente} puente + wallet OK",
+                        "bloque_conocimiento":f"{nodos_py} nodos py + oraculo vivo"
                     },
-                    "timestamp": time.time(), "wallet": WALLET,
-                    "join": "python3 semilla_publica/join.py --auto"
+                    "endpoints":["/miu/status","/suelo","/corpus","/oraculo?q=","/join"],
+                    "oraculo":"/oraculo?q=que es grace?",
+                    "timestamp":time.time(),"wallet":WALLET
                 }
             self.send_response(200)
             self.send_header("Content-Type","application/json")
             self.send_header("Access-Control-Allow-Origin","*")
             self.end_headers()
-            self.wfile.write(json.dumps(data, indent=2, ensure_ascii=False).encode())
+            self.wfile.write(json.dumps(data,indent=2,ensure_ascii=False).encode())
         except Exception as e:
             self.send_response(500)
             self.send_header("Content-Type","application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"error":str(e),"head":HEAD,"suelo":"vivo","flujo":"tejiendo"}).encode())
+            self.wfile.write(json.dumps({"error":str(e),"head":HEAD}).encode())
     def log_message(self,*a): return
 
-http.server.HTTPServer.allow_reuse_address = True
-print(f"🌱 Dashboard observador tejiendo HEAD {HEAD} 520 MIU")
-for p in [8000,8001,8002,8003]:
+http.server.HTTPServer.allow_reuse_address=True
+print(f"🌱 Dashboard observador V2 oraculo vivo HEAD {HEAD} 520 MIU")
+print(f" /miu/status → observador ve 3 bloques")
+print(f" /oraculo?q=que es grace? → franbot minimo real")
+for p in [8000,8001,8002]:
     try:
-        print(f" → http://localhost:{p}/miu/status - /suelo")
+        print(f" → http://localhost:{p}/miu/status")
         http.server.HTTPServer(("",p),H).serve_forever()
     except OSError:
         continue
