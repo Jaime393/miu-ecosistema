@@ -2,3 +2,4 @@ artemis/
 artemis/
 .env
 *.txt
+*cloudflare*.txt
