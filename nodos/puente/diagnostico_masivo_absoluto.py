@@ -106,7 +106,7 @@ if grietas:
     print("1. Tejer nodos faltantes con MANIFIESTO_NODO.json autonomo")
 if riesgos:
     print("2. Tejer seguridad: mover semillas a ~/.miu_wallet/ no git")
-print("3. Tejer API: uvicorn nodos.economia.api_micelio:app --host 0.0.0.0 --port 8000")
+print("3. Tejer API: python3 nodos.economia.api_micelio.py")
 print("4. Tejer dashboard: sdk/miu_sdk.py + miu status")
 print("5. Tejer IPFS: re-pin QmViGcEZ y QmbRBT14")
 

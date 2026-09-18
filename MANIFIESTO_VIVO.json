@@ -3,7 +3,7 @@
   "doi": "10.1029/2019GL085488",
   "rho_mean": -0.00048470001250505,
   "rho_condition": "rho(x) > 0",
-  "head": "cee86f2",
+  "head": "3d27730",
   "suelo": "data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
   "estado_suelo": "vivo",
   "bloques_globales": 3,
@@ -43,5 +43,5 @@
     "pago": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
     "api": "nodos/economia/api_micelio.py"
   },
-  "timestamp": "cee86f2 flujo perfecto 520 MIU 0 grietas 0 riesgos GRACE 221R vivo API stdlib"
+  "timestamp": "3d27730 api stdlib 8000 vivo 520 MIU 0 grietas 0 riesgos GRACE 221R"
 }
