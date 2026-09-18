@@ -4,7 +4,7 @@ artemis/
 *.txt
 *cloudflare*.txt
 data/fragmentos_viejos/
-data/suelo/
 *.log
 merger_local*.py
 Brave*
+# suelo vivo ahora observable
