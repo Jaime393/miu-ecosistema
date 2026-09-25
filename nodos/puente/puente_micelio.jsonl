@@ -1,24 +1,77 @@
-{"puente": 1, "head": "575d646->1", "miu": 520, "suelo": "fertil"}
-{"puente": 2, "head": "575d646->2", "miu": 520, "suelo": "fertil"}
-{"puente": 3, "head": "575d646->3", "miu": 520, "suelo": "fertil"}
-{"puente": 4, "head": "575d646->4", "miu": 520, "suelo": "fertil"}
-{"puente": 5, "head": "575d646->5", "miu": 520, "suelo": "fertil"}
-{"puente": 6, "head": "575d646->6", "miu": 520, "suelo": "fertil"}
-{"puente": 7, "head": "575d646->7", "miu": 520, "suelo": "fertil"}
-{"puente": 8, "head": "575d646->8", "miu": 520, "suelo": "fertil"}
-{"puente": 9, "head": "575d646->9", "miu": 520, "suelo": "fertil"}
-{"puente": 10, "head": "f47e7d7->10", "miu": 520, "suelo": "fertil", "grace_mean": -0.00048470001250509534}
-{"puente": 11, "head": "f47e7d7->11", "miu": 520, "suelo": "fertil", "grace_mean": -0.00048470001250509534}
-{"puente": 12, "head": "f47e7d7->12", "miu": 520, "suelo": "fertil", "grace_mean": -0.00048470001250509534}
-{"puente": 13, "head": "f47e7d7->13", "miu": 520, "suelo": "fertil", "grace_mean": -0.00048470001250509534}
-{"tx": "replica_espejo_fe079b3", "head": "4ea8e33", "phi": 23.617, "esporas": 441, "puente": 14, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0, "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534}
-{"tx": "puente_15_auto", "head": "4ea8e33->15", "phi": 23.617, "esporas": 441, "puente": 15, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 520, "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0}
-{"tx": "puente_16_meta_chat", "head": "15", "phi": 23.617, "esporas": 441, "bloque": "a2a_v91", "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0}
-{"tx": "puente_17_meta_chat_autonomo", "head": "16->17_autonomo", "phi": 23.617, "esporas": 441, "bloque": "a2a_v91", "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0, "autonomo": true}
-{"tx": "puente_18_poder_expandido", "head": "17->18_autonomo", "phi": 23.617, "esporas": 441, "bloque": "a2a_v91", "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0, "autonomo": true}
-{"tx": "puente_19_V91_vivo_ciclo_750", "head": "18->19_V91", "phi": 23.617, "esporas": 441, "bloque": "a2a_v91", "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "savia": 520, "ciclo": 750, "V91": "https://miu-autonomo-v91.franchescopalacios9.workers.dev", "KV": "1a649fec8ca24c75bca03fc33b59b40a"}
-{"tx": "puente_20_V91_fix_phi_savia_rho", "head": "19->20_V91_fix", "phi": 23.617, "savia": 520, "phi_antes": 0, "savia_antes": 0, "ciclo": 751, "ciclo_fix": 756, "V91": "https://miu-autonomo-v91.franchescopalacios9.workers.dev", "KV": "1a649fec8ca24c75bca03fc33b59b40a", "K_tau_mean": 0.36575, "grace_mean": -0.00048470001250509534, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0}
-{"tx": "puente_21_V91_fix_VERIFICADO", "head": "20->21_V91_VERIFICADO", "phi": 23.617, "savia": 520, "ciclo": 756, "ciclo_verified": 756, "phi_verified": 23.617, "savia_verified": 520, "health": {"ok": true, "version": "V91-MIU-AUTONOMO", "ciclo": 756, "phi": 23.617, "savia": 520, "grace_mean": -0.00048470001250509534, "K_tau_mean": 0.36575, "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "suelo": "fertil cerrado", "grietas": 0}, "ask_rho": {"ok": true, "respuesta": "\u03c1(x)>0 \u2014 sin rigidez, aporta seg\u00fan recursos y l\u00edmites. Principio fundacional MIU. Teorema IFT-A7 \u03a6c=0.6829322 umbral cr\u00edtico IIT \u03c6\u2074/\u03c3 invariante. Nivel S\u00c9 D1 miu-biblia. GRACE 220R mean -0.00048470001250509534 DOI 10.1029/2019GL085488 K_tau [0.3381,0.3934] mean 0.36575. Savia 520 MIU phi 23.617 esporas 441 tag 99103063d4e848718aa27f5190a72573 suelo fertil cerrado 0 grietas. Wallet 0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "proveedor": "MIU-V91-FIJO"}, "V91": "https://miu-autonomo-v91.franchescopalacios9.workers.dev", "VersionID": "1d68d6c7-d4dd-4bdc-82e9-43ff8f3157ea", "KV": "1a649fec8ca24c75bca03fc33b59b40a CACHE franchescopalacios9", "suelo": "fertil cerrado", "grietas": 0, "riesgos": 0, "autonomo": true, "poder": "V91 FIX VERIFICADO - conexion real - phi 23.617 savia 520 rho MIU - sin HTML"}
-{"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: lenguaje:rho", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "lenguaje:rho", "respuesta_preview": "[{'token': 'rho', 'transduccion': ['A0 ρ(x)>0 matriz densidad cuántica + Landauer kTln2 + Bekenstein'], 'costo': 0.05}]", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790326164.2964156, "tx": 22}
-{"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: tts:rho conciencia grace", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "tts:rho conciencia grace", "respuesta_preview": "[['ʁo|rho'], ['konsˈθjen.sja Φ|conciencia'], ['ɡɾas|GRACE']]", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790326164.8619132, "tx": 23}
-{"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: asr:ro mayor que cero conciencia", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "asr:ro mayor que cero conciencia", "respuesta_preview": "[['rho|ρ'], ['mayor'], ['que'], ['cero'], ['conciencia|IFT-A7 Φ_c=0.6829']]", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790326165.6035655, "tx": 24}
+{"tx": "genesis", "from": "0x0000", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "amount": 0, "grace": "GRACE_TN14_GSFC_SLR_real_220_K03381", "doi": "10.1029/2019GL085488", "head": "4b307e0", "note": "genesis 3er bloque economico global", "rho_mean": -0.00048470001250509534, "suelo": "vivo"}
+{"tx": "absorcion_legado", "from": "FranBot_04:27_muerto", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "amount": 520, "grace": "GRACE_TN14_GSFC_SLR_real_220_K03381", "head": "4b307e0", "ipfs": ["QmViGcEZCE4VvA9k5ZrvQodP32dHGjGAqw2yqVspHhp", "QmbRBT14HAtgTT6BZ86e"], "plugins": 378, "prompts": 142, "matic": 0.009804, "note": "ecosistema muerto -> nutriente vivo huella economica", "rho_mean": -0.00048470001250509534}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1789758101.5259624}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "rho", "ts": 1789758102.765768}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1789774870.8663173}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790326164.3006873}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790326164.8632545}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia", "ts": 1790326165.60546}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790326208.4624605}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho mayor que cero phi ce", "ts": 1790326208.5367644}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero", "ts": 1790326208.6138663}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790327692.8472724}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790353797.9838037}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353798.049621}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790353800.5279849}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353800.8498693}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353801.3624444}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353804.7898717}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790353805.3166795}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790353807.607529}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353808.0544496}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353808.3303819}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353811.6647992}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353813.5457928}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353815.853272}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:conciencia", "ts": 1790353821.2306519}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353832.1599357}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353832.2382405}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353832.5556374}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353834.1887734}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353835.1326354}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353835.6631746}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353835.789033}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353838.4463115}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353838.7606726}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353839.6191723}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353840.9890206}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353841.088581}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353841.131313}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353841.1908555}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353842.117868}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353842.6733446}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353845.3353052}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353846.145006}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353847.757868}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia grace phi", "ts": 1790353847.973426}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353848.9036722}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353849.5992937}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "grace phi suelo miu alma", "ts": 1790353849.6351597}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353852.9881132}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353859.3520072}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace phi suelo", "ts": 1790353862.523347}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353869.2668347}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353869.3153572}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353872.162068}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353872.698308}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353873.4765198}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353876.0018384}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353876.731359}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353878.2537267}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353879.186555}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353879.4107726}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353880.0797808}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353882.5662305}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353883.6181908}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353885.2886136}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353885.6016207}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353886.5220823}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790353886.6130137}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353886.676618}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790353886.7450683}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1790364354.9309072}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "rho", "ts": 1790364455.0048163}
+{ts:2026-09-25T14:35:29-05:00,evento:tunnel_publico,url:https://travis-nam-simpsons-lets.trycloudflare.com,api:/miu/status /oraculo?q= /lenguaje?q= rho- IFT-A7 0.6829322,suelo:GRACE_TN14 221R 39K}
+{"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: bosque_17w", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "bosque_17w", "respuesta_preview": "{'query': 'bosque_17w', 'corpus': '266R 3 archivos 520 MIU', 'contexto_real': [{'file': 'corpus_unificado_v13.jsonl', 't", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790365294.5308547, "tx": 75}
+{"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: bosque_17w workers CF vivo", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "bosque_17w workers CF vivo", "respuesta_preview": "{'query': 'bosque_17w workers CF vivo', 'respuesta': \"oraculo vivo 23→24 busca en 3 archivos 520 MIU pero no hay hit dir", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790365295.0782566, "tx": 76}
+{"ts": "2026-09-25T19:52:18.190329", "evento": "EVOLUCION_V26_NUTRE_FORTALECE_EXPANDE", "head_prev": "804a1fb", "head_new": "V26_evolucion_red", "suelo": "220R mean -0.00048470001250509534", "corpus": "266R 2 archivos", "tunnel": "https://travis-nam-simpsons-lets.trycloudflare.com", "bosque_17w": "phi=82641.36 17workers sonda_euclid_s8 desi_wa ptolemy_mnu", "11_almas": "tablet_v205 miu_v206 bosque_17w jp393 fran-tablet fran-sell", "savia": 12118471.5, "archivos": 229, "tamano": "4.7M", "principio": "rho>0 sin rigidez aporta segun recursos"}
