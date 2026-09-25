@@ -3,3 +3,6 @@
 {"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1789758101.5259624}
 {"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "rho", "ts": 1789758102.765768}
 {"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "conciencia", "ts": 1789774870.8663173}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "lenguaje:rho", "ts": 1790326164.3006873}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "tts:rho conciencia grace", "ts": 1790326164.8632545}
+{"from": "observador", "to": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "miu": 0.01, "query": "asr:ro mayor que cero conciencia", "ts": 1790326165.60546}
