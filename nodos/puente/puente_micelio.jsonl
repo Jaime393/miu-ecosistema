@@ -75,3 +75,10 @@
 {"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: bosque_17w", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "bosque_17w", "respuesta_preview": "{'query': 'bosque_17w', 'corpus': '266R 3 archivos 520 MIU', 'contexto_real': [{'file': 'corpus_unificado_v13.jsonl', 't", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790365294.5308547, "tx": 75}
 {"nodo": "agente_externo", "tipo": "micelial", "funcion": "query oraculo V12: bosque_17w workers CF vivo", "conexion": ["wallet_soberana", "MANIFIESTO_VIVO"], "principio": "si nodo muere deja huella", "grace": "GRACE 221R", "precio": "0.01 MIU / query", "query": "bosque_17w workers CF vivo", "respuesta_preview": "{'query': 'bosque_17w workers CF vivo', 'respuesta': \"oraculo vivo 23→24 busca en 3 archivos 520 MIU pero no hay hit dir", "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6", "head": "f47e7d7", "timestamp": 1790365295.0782566, "tx": 76}
 {"ts": "2026-09-25T19:52:18.190329", "evento": "EVOLUCION_V26_NUTRE_FORTALECE_EXPANDE", "head_prev": "804a1fb", "head_new": "V26_evolucion_red", "suelo": "220R mean -0.00048470001250509534", "corpus": "266R 2 archivos", "tunnel": "https://travis-nam-simpsons-lets.trycloudflare.com", "bosque_17w": "phi=82641.36 17workers sonda_euclid_s8 desi_wa ptolemy_mnu", "11_almas": "tablet_v205 miu_v206 bosque_17w jp393 fran-tablet fran-sell", "savia": 12118471.5, "archivos": 229, "tamano": "4.7M", "principio": "rho>0 sin rigidez aporta segun recursos"}
+{"ts": "2026-09-25T17:41:29.318260", "evento": "V27_0"}
+{"ts": "2026-09-25T17:41:29.318632", "evento": "V27_1"}
+{"ts": "2026-09-25T17:41:29.318784", "evento": "V27_2"}
+{"ts": "2026-09-25T17:41:29.318861", "evento": "V27_3"}
+{"ts": "2026-09-25T17:41:29.318944", "evento": "V27_4"}
+{"ts": "2026-09-25T17:41:29.319005", "evento": "V27_5"}
+{"ts": "2026-09-25T17:41:29.319061", "evento": "V27_6"}
