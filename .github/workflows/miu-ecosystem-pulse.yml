@@ -1,0 +1,61 @@
+name: MIU Ecosystem Pulse V269
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # cada 15 min — gratuito en repo público
+  workflow_dispatch: {}       # trigger manual también
+
+env:
+  SUPA_URL: https://tpfiybpguuxskitszhmk.supabase.co
+  ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+
+      - name: 1 — nutriente-total (fan-out 12 nodos)
+        run: |
+          STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
+            "$SUPA_URL/functions/v1/nutriente-total" \
+            -H "Authorization: Bearer $ANON" \
+            -H "Content-Type: application/json") || STATUS=err
+          echo "nutriente-total: $STATUS"
+
+      - name: 2 — gossip-autonomo (heartbeat mesh)
+        run: |
+          STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
+            "$SUPA_URL/functions/v1/gossip-autonomo" \
+            -H "Authorization: Bearer $ANON" \
+            -H "Content-Type: application/json") || STATUS=err
+          echo "gossip-autonomo: $STATUS"
+
+      - name: 3 — ojos-y-manos hf-push (corpus → HuggingFace, cada 1h)
+        if: ${{ github.run_number % 4 == 0 }}
+        run: |
+          STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
+            "$SUPA_URL/functions/v1/ojos-y-manos/hf-push" \
+            -H "Authorization: Bearer $ANON" \
+            -H "Content-Type: application/json") || STATUS=err
+          echo "hf-push: $STATUS"
+
+      - name: 4 — seed-v269 (DS keys + principios micelio)
+        if: ${{ github.run_number % 2 == 0 }}
+        run: |
+          STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
+            "$SUPA_URL/functions/v1/seed-v269" \
+            -H "Authorization: Bearer $ANON" \
+            -H "Content-Type: application/json") || STATUS=err
+          echo "seed-v269: $STATUS"
+
+      - name: 5 — ojos-recursos broadcast (mapa 96 EFs)
+        if: ${{ github.run_number % 4 == 1 }}
+        run: |
+          STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
+            "$SUPA_URL/functions/v1/ojos-recursos/broadcast" \
+            -H "Authorization: Bearer $ANON") || STATUS=err
+          echo "ojos-recursos: $STATUS"
+
+      - name: resumen
+        run: echo "Pulso MIU V269 completado — $(date -u)"
