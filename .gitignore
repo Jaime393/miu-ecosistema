@@ -1,10 +1,27 @@
-artemis/
-artemis/
+# Estado runtime local
+.state/
+logs/
+tmp/
+*.pid
+
+# Secretos y credenciales
+**/wallet.json
+**/creds*.json
+**/*secret*
 .env
-*.txt
-*cloudflare*.txt
-data/fragmentos_viejos/
-*.log
-merger_local*.py
-Brave*
-# suelo vivo ahora observable
+.env.*
+
+# Caches Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Backups
+*.bak_*
+*.bak
+*~
+
+# Estado Supabase KV (contiene tokens)
+kv_local.json
+kv_global.json
