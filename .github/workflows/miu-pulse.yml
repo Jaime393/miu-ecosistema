@@ -1,0 +1,20 @@
+name: MIU Enjambre Pulse V269
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: nutriente-total
+        run: curl -sf -X POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nutriente-total -H 'Content-Type: application/json' -d '{"origen":"github-actions-V269"}' || true
+      - name: gossip-autonomo
+        run: curl -sf -X POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo -H 'Content-Type: application/json' -d '{"origen":"github-actions"}' || true
+      - name: corpus-sync
+        run: curl -sf https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/corpus-sync || true
+      - name: cipher-pulse
+        run: curl -sf -X POST https://fzdyxgkmpazbrfrhwfdo.supabase.co/functions/v1/nutriente-total -H 'Content-Type: application/json' -d '{"origen":"github-actions"}' || true
+      - name: beacons
+        run: curl -sf https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/beacons-v221 || true
