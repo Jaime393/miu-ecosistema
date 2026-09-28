@@ -1,20 +1,39 @@
-name: MIU Enjambre Pulse V269
+name: MIU Enjambre Pulse V269b
 on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+
+env:
+  P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  C: https://fzdyxgkmpazbrfrhwfdo.supabase.co/functions/v1
+  A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
 jobs:
   pulse:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
-      - name: nutriente-total
-        run: curl -sf -X POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nutriente-total -H 'Content-Type: application/json' -d '{"origen":"github-actions-V269"}' || true
-      - name: gossip-autonomo
-        run: curl -sf -X POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo -H 'Content-Type: application/json' -d '{"origen":"github-actions"}' || true
-      - name: corpus-sync
-        run: curl -sf https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/corpus-sync || true
-      - name: cipher-pulse
-        run: curl -sf -X POST https://fzdyxgkmpazbrfrhwfdo.supabase.co/functions/v1/nutriente-total -H 'Content-Type: application/json' -d '{"origen":"github-actions"}' || true
-      - name: beacons
-        run: curl -sf https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/beacons-v221 || true
+      - name: 1 nutriente-total panteon
+        run: curl -sf -X POST $P/nutriente-total -H "Authorization: Bearer $A" -H 'Content-Type: application/json' -d '{"origen":"gh-ecosistema-V269b"}' -o /dev/null -w "nutriente: %{http_code}\n" || true
+      - name: 2 gossip-autonomo
+        run: curl -sf -X POST $P/gossip-autonomo -H "Authorization: Bearer $A" -H 'Content-Type: application/json' -d '{"origen":"gh-ecosistema"}' -o /dev/null -w "gossip: %{http_code}\n" || true
+      - name: 3 cipher nutriente
+        run: curl -sf -X POST $C/nutriente-total -H 'Content-Type: application/json' -d '{"origen":"gh-ecosistema"}' -o /dev/null -w "cipher: %{http_code}\n" || true
+      - name: 4 corpus-sync
+        run: curl -sf $P/corpus-sync -H "Authorization: Bearer $A" -o /dev/null -w "corpus: %{http_code}\n" || true
+      - name: 5 ojos-y-manos hf-push (cada 4 runs)
+        if: ${{ github.run_number % 4 == 0 }}
+        run: curl -sf $P/ojos-y-manos/hf-push -H "Authorization: Bearer $A" -o /dev/null -w "hf: %{http_code}\n" || true
+      - name: 6 seed-v269 (cada 2 runs)
+        if: ${{ github.run_number % 2 == 0 }}
+        run: curl -sf $P/seed-v269 -H "Authorization: Bearer $A" -o /dev/null -w "seed: %{http_code}\n" || true
+      - name: 7 ojos-recursos (cada 4 runs)
+        if: ${{ github.run_number % 4 == 1 }}
+        run: curl -sf $P/ojos-recursos/broadcast -H "Authorization: Bearer $A" -o /dev/null || true
+      - name: 8 beacons
+        run: curl -sf $P/beacons-v221 -H "Authorization: Bearer $A" -o /dev/null || true
+      - name: 9 github-bridge pulse
+        run: curl -sf -X POST $P/github-bridge/pulse -H "Authorization: Bearer $A" -H 'Content-Type: application/json' -d '{"repo":"Jaime393/miu-ecosistema","origen":"gh-actions"}' -o /dev/null || true
+      - name: summary
+        run: echo "V269b pulse miu-ecosistema — $(date -u) — run ${{ github.run_number }}"
