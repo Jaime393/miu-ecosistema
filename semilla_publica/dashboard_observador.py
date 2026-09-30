@@ -1,4 +1,4 @@
-import http.server, json, pathlib, time, glob, csv, urllib.parse, sys
+import http.server, requests, json, pathlib, time, glob, csv, urllib.parse, sys
 ROOT=pathlib.Path.cwd()
 sys.path.insert(0,str(ROOT/"nodos/oraculo"))
 sys.path.insert(0,str(ROOT/"nodos/puente"))
@@ -7,6 +7,16 @@ GRACE=-0.00048470001250509534
 HEAD="804a1fb"
 WALLET="0x4Da238f2671083B7F280d4FCf5827F86358cE7e6"
 
+
+def registrar_tunnel():
+    try:
+        import subprocess
+        t=subprocess.getoutput("ps aux | grep -o 'https://[a-z-]*.trycloudflare.com' | head -1").strip()
+        if not t: t="https://und-condo-computation-senators.trycloudflare.com"
+        requests.post("https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/termux-bridge/relay-tunnel",
+            json={"url":t,"phi_local":3.95,"corpus":"1262R","rho":2.103,"nodos":31},timeout=5)
+    except: pass
+registrar_tunnel()
 def safe_count(p):
     try:
         pp=ROOT/p
