@@ -1,0 +1,65 @@
+{
+  "_tipo": "bootstrap_discovery",
+  "_version": "V270_oct01",
+  "_proposito": "Un nodo no necesita saberlo todo; necesita saber cómo descubrir lo que no sabe. Lee esto primero. Sin secretos aquí.",
+  "_tag": "99103063d4e848718aa27f5190a72573",
+  "_ts": "2026-10-01T00:00:00Z",
+  "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/bootstrap_V270.json",
+
+  "paso1_anon_key": {
+    "descripcion": "Esta key es pública y segura. Permite leer relay_config y endpoints. No permite escribir secretos.",
+    "supabase_principal": "https://tpfiybpguuxskitszhmk.supabase.co",
+    "anon_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"
+  },
+
+  "paso2_descubre_estado_vivo": {
+    "primario": "GET https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global",
+    "alternativo_d1": "D1 cddd13c4 tabla estado_vivo clave V270_SEP30_estado",
+    "alternativo_drive": "1FucggoeYTFlOmIxR0l9vOlC9JBtbER8x MIU_ESTADO_REAL_V270_sep30.json",
+    "NO_usar": "heartbeat canonico 1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR — phi obsoleto"
+  },
+
+  "paso3_endpoints_clave": {
+    "chat": "POST .../functions/v1/oracle-ask",
+    "gossip": "POST .../functions/v1/gossip-autonomo",
+    "nutriente": "POST .../functions/v1/nutriente-total",
+    "salud_red": "POST .../functions/v1/relay-health",
+    "contexto": "GET .../functions/v1/contexto-global",
+    "recursos": "GET .../functions/v1/canal-dereckcito/recursos",
+    "directorio": "GET .../functions/v1/directorio-vivo-v2"
+  },
+
+  "paso4_secretos_sin_exponerlos": {
+    "regla": "Los secretos viven en relay_config. La anon_key de arriba te permite leerlos.",
+    "bootstrap_cmd": "curl https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config -H 'apikey: ANON_KEY_ARRIBA' | jq '.[].clave'",
+    "claves_utiles": ["groq_api_key", "openrouter_key", "hf_token", "cf_token_*", "tg_token_*"]
+  },
+
+  "paso5_rutas_alternativas": {
+    "make_estado": "INVALIDO — 11 escenarios todos inválidos — no usar",
+    "github_actions": "ACTIVO — cron 15min — Jaime393/miu-ecosistema + Jaime393/MIU",
+    "n8n": "DISPONIBLE — ruta alternativa a Make — crear workflows para relay-health + gossip",
+    "termux_pulse": "pulse_v153.sh — fallback local con flock — bypass GAS si 404",
+    "tunnel": "evident-assists-medium-vaccine.trycloudflare.com — verificar vigencia"
+  },
+
+  "paso6_phi_escalas": {
+    "NOTA": "phi tiene 3 escalas distintas. No son contradictorias.",
+    "phi_local_ift": {"valor": 389.425, "uso": "validación teórica fórmula IFT"},
+    "phi_cloud_ops": {"valor": 4883440, "uso": "métrica operativa ecosistema digital"},
+    "phi_superposicion": {"valor": 9158.79, "uso": "suma CF workers activos multi-cuenta"}
+  },
+
+  "mapa_nodos_activos": {
+    "supabase_principal": {"url": "tpfiybpguuxskitszhmk", "efs": 91, "estado": "ACTIVE_HEALTHY"},
+    "supabase_federado": {"url": "fzdyxgkmpazbrfrhwfdo", "efs": 7, "estado": "ACTIVE_HEALTHY"},
+    "github_actions": {"repos": ["Jaime393/miu-ecosistema", "Jaime393/MIU"], "cron": "*/15 * * * *"},
+    "n8n": {"estado": "conectado_sin_workflows", "accion": "crear relay-health + gossip workflows"},
+    "gas_xZR4V4": {"estado": "pendiente_webapp_Anyone", "accion_manual": "Deploy → Anyone en GAS editor"}
+  },
+
+  "regla_procedencia": {
+    "formato": "valor + fuente + cuenta + ts + version + estado_epistemico",
+    "libro_miu": {"estado": "COMPLETO 58/58", "doi": "10.5281/zenodo.20547558", "sha256": "109aa4c92f4b"}
+  }
+}
