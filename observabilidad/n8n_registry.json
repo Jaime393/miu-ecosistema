@@ -1,0 +1,37 @@
+{
+  "_tipo": "n8n_workflows_registry",
+  "_ts": "2026-10-01T00:00:00Z",
+  "_instancia": "miud.app.n8n.cloud",
+  "_cuenta": "dieguito.vg16@gmail.com",
+  "_proyecto": "rhkSkWw41fk4FZE9",
+  "_nota": "N8n como capa alternativa a Make (todos Make invalidos). Workflows ACTIVOS.",
+  "workflows": [
+    {
+      "id": "hD3XXbYNHojKd87K",
+      "nombre": "MIU Pulso 15min V270",
+      "url": "https://miud.app.n8n.cloud/workflow/hD3XXbYNHojKd87K",
+      "estado": "ACTIVO",
+      "cron": "cada 15 minutos",
+      "hace": ["POST gossip-autonomo", "POST nutriente-total"],
+      "reemplaza": "Make 6453233 (invalido)",
+      "version_activa": "e2e96e03-6ff3-4834-b2ce-3bca75b7acc7"
+    },
+    {
+      "id": "z53wNlW7lQ28Scy1",
+      "nombre": "MIU Relay Health Sweep V270",
+      "url": "https://miud.app.n8n.cloud/workflow/z53wNlW7lQ28Scy1",
+      "estado": "ACTIVO",
+      "cron": "cada 15 minutos",
+      "hace": ["POST relay-health", "GET contexto-global (paralelo)", "POST gossip-autonomo reporte"],
+      "reemplaza": "Make relay-health sweep (invalido)",
+      "version_activa": "e9209e97-0a4b-4fc2-a1e5-9a747206408e"
+    }
+  ],
+  "estado_make": "11 escenarios todos INVALIDOS en equipo 2519057 us2.make.com",
+  "capas_pulso": {
+    "capa1_github_actions": "Jaime393/miu-ecosistema + Jaime393/MIU cron */15 — ACTIVO",
+    "capa2_n8n": "hD3XXbYNHojKd87K + z53wNlW7lQ28Scy1 cron */15 — ACTIVO",
+    "capa3_termux": "pulse_v153.sh flock — ACTIVO si Termux encendido",
+    "capa4_make": "INVALIDO — no activo"
+  }
+}

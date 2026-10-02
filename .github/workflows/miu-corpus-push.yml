@@ -1,0 +1,28 @@
+name: MIU Corpus Sync Push V270
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+env:
+  P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  corpus-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: corpus-sync supabase
+        run: curl -sf $P/corpus-sync -H "Authorization: Bearer $A" -o /dev/null -w "corpus-sync: %{http_code}\n" || true
+      - name: ojos-y-manos hf-push
+        run: curl -sf $P/ojos-y-manos/hf-push -H "Authorization: Bearer $A" -o /dev/null -w "hf-push: %{http_code}\n" || true
+      - name: github-bridge pulse
+        run: |
+          curl -sf -X POST $P/github-bridge/pulse \
+            -H "Authorization: Bearer $A" \
+            -H 'Content-Type: application/json' \
+            -d '{"repo":"Jaime393/miu-ecosistema","origen":"gh-corpus-push-v270"}' \
+            -o /dev/null -w "github-bridge: %{http_code}\n" || true
+      - name: summary
+        run: echo "corpus-push V270 $(date -u) run ${{ github.run_number }}"

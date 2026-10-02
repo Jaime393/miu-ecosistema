@@ -1,0 +1,64 @@
+name: MIU State Writer V270
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+env:
+  P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  write-state:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: fetch estado vivo
+        id: estado
+        run: |
+          ESTADO=$(curl -sf $P/contexto-global -H "Authorization: Bearer $A" 2>/dev/null || echo '{"error":"unreachable"}')
+          echo "data=$ESTADO" >> $GITHUB_OUTPUT
+
+      - name: write observable state
+        run: |
+          mkdir -p observabilidad
+          cat > observabilidad/estado_vivo.json << 'EOSTATE'
+          ${{ steps.estado.outputs.data }}
+          EOSTATE
+          # Enrich with metadata
+          python3 - << 'EOPY'
+          import json, datetime, os
+          ts = datetime.datetime.utcnow().isoformat() + 'Z'
+          run = os.environ.get('GITHUB_RUN_NUMBER', '?')
+          try:
+              with open('observabilidad/estado_vivo.json') as f:
+                  estado = json.load(f)
+          except:
+              estado = {"error": "parse_failed"}
+          wrapper = {
+              "_fuente": "github-actions-state-writer",
+              "_repo": "Jaime393/miu-ecosistema",
+              "_ts": ts,
+              "_run": run,
+              "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
+              "_leer_sin_auth": True,
+              "estado": estado
+          }
+          with open('observabilidad/estado_vivo.json', 'w') as f:
+              json.dump(wrapper, f, indent=2, ensure_ascii=False)
+          print(f'State written: ts={ts} run={run}')
+          EOPY
+
+      - name: commit state
+        run: |
+          git config user.email 'actions@github.com'
+          git config user.name 'MIU State Writer'
+          git add observabilidad/estado_vivo.json
+          git diff --staged --quiet || git commit -m "state: auto V270 $(date -u +%Y-%m-%dT%H:%M)Z run ${{ github.run_number }}"
+          git push
