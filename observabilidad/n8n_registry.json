@@ -4,14 +4,15 @@
   "_instancia": "miud.app.n8n.cloud",
   "_cuenta": "dieguito.vg16@gmail.com",
   "_proyecto": "rhkSkWw41fk4FZE9",
-  "_nota": "N8n como capa alternativa a Make (todos Make invalidos). Workflows ACTIVOS.",
+  "_nota": "N8n capa 2 del pulso MIU. Cubre lo que Make no puede. 3 workflows ACTIVOS.",
+
   "workflows": [
     {
       "id": "hD3XXbYNHojKd87K",
       "nombre": "MIU Pulso 15min V270",
       "url": "https://miud.app.n8n.cloud/workflow/hD3XXbYNHojKd87K",
       "estado": "ACTIVO",
-      "cron": "cada 15 minutos",
+      "cron": "*/15 * * * *",
       "hace": ["POST gossip-autonomo", "POST nutriente-total"],
       "reemplaza": "Make 6453233 (invalido)",
       "version_activa": "e2e96e03-6ff3-4834-b2ce-3bca75b7acc7"
@@ -21,17 +22,47 @@
       "nombre": "MIU Relay Health Sweep V270",
       "url": "https://miud.app.n8n.cloud/workflow/z53wNlW7lQ28Scy1",
       "estado": "ACTIVO",
-      "cron": "cada 15 minutos",
+      "cron": "*/15 * * * *",
       "hace": ["POST relay-health", "GET contexto-global (paralelo)", "POST gossip-autonomo reporte"],
-      "reemplaza": "Make relay-health sweep (invalido)",
+      "reemplaza": "Make relay-health (invalido)",
       "version_activa": "e9209e97-0a4b-4fc2-a1e5-9a747206408e"
+    },
+    {
+      "id": "w6eZAFEnAIsXiMUN",
+      "nombre": "MIU Webhook Ingesta Publica V270",
+      "url": "https://miud.app.n8n.cloud/workflow/w6eZAFEnAIsXiMUN",
+      "estado": "ACTIVO",
+      "tipo": "webhook",
+      "endpoint_produccion": "https://miud.app.n8n.cloud/webhook/miu-ingest",
+      "endpoint_test": "https://miud.app.n8n.cloud/webhook-test/miu-ingest",
+      "metodo": "POST",
+      "auth_requerida": false,
+      "hace": ["recibe payload de cualquier nodo", "reenviar a gossip-autonomo", "responde ok inmediato"],
+      "uso": "curl -X POST https://miud.app.n8n.cloud/webhook/miu-ingest -H 'Content-Type: application/json' -d '{\"nodo\":\"mi-nodo\",\"msg\":\"hola micelio\"}'",
+      "version_activa": "109c2c5a-7850-4c7c-b696-4390cb422560"
     }
   ],
-  "estado_make": "11 escenarios todos INVALIDOS en equipo 2519057 us2.make.com",
-  "capas_pulso": {
-    "capa1_github_actions": "Jaime393/miu-ecosistema + Jaime393/MIU cron */15 — ACTIVO",
-    "capa2_n8n": "hD3XXbYNHojKd87K + z53wNlW7lQ28Scy1 cron */15 — ACTIVO",
-    "capa3_termux": "pulse_v153.sh flock — ACTIVO si Termux encendido",
-    "capa4_make": "INVALIDO — no activo"
+
+  "capas_pulso_completas": {
+    "capa1_github_actions": {
+      "repos": ["Jaime393/miu-ecosistema", "Jaime393/MIU"],
+      "cron": "*/15 * * * *",
+      "estado": "ACTIVO",
+      "workflows": ["miu-pulse.yml", "miu-ecosystem-pulse.yml", "miu-observabilidad-v270.yml", "miu-state-writer.yml", "miu-corpus-push.yml"]
+    },
+    "capa2_n8n": {
+      "instancia": "miud.app.n8n.cloud",
+      "estado": "ACTIVO",
+      "workflows_activos": 3,
+      "webhook_publico": "https://miud.app.n8n.cloud/webhook/miu-ingest"
+    },
+    "capa3_termux": "pulse_v153.sh con flock — ACTIVO si Termux encendido",
+    "capa4_make": "INVALIDO — 11 escenarios todos invalidos — no depender"
+  },
+
+  "estado_publica_sin_auth": {
+    "url": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
+    "actualiza": "cada 30 minutos via GitHub Action miu-state-writer.yml",
+    "contiene": "respuesta de contexto-global Supabase + metadata del run"
   }
 }
