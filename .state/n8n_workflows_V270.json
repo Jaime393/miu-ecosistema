@@ -1,63 +1,35 @@
 {
-  "_ts": "2026-10-01T00:30:00Z",
+  "_ts": "2026-10-01T01:00:00Z",
   "_version": "V270",
-  "_fuente": "claude-mcp-nodo",
-
-  "n8n": {
-    "cuenta": "dieguito.vg16@gmail.com",
-    "instancia": "miud.app.n8n.cloud",
-    "workflows_activos": [
-      {
-        "id": "qZfvYGXBeLlG4mN7",
-        "nombre": "MIU Pulso 15min V270 (puente N8n)",
-        "url": "https://miud.app.n8n.cloud/workflow/qZfvYGXBeLlG4mN7",
-        "cron": "*/15 * * * *",
-        "llama": ["gossip-autonomo", "nutriente-total"],
-        "supa": "principal tpfiybpguuxskitszhmk",
-        "estado": "ACTIVO"
-      },
-      {
-        "id": "EyojHVpxyYOubfKW",
-        "nombre": "MIU Relay-Health + Puente Federado 15min V270",
-        "url": "https://miud.app.n8n.cloud/workflow/EyojHVpxyYOubfKW",
-        "cron": "*/15 * * * *",
-        "llama": ["relay-health", "nutriente-total federado"],
-        "supa": "principal + federado fzdyxgkmpazbrfrhwfdo",
-        "estado": "ACTIVO"
-      }
-    ]
-  },
-
-  "github_actions": {
-    "repos": [
-      "https://github.com/Jaime393/miu-ecosistema",
-      "https://github.com/Jaime393/MIU"
-    ],
-    "cron": "*/15 * * * *",
-    "workflows": [
-      ".github/workflows/miu-pulse.yml",
-      ".github/workflows/miu-ecosystem-pulse.yml",
-      ".github/workflows/miu-observabilidad-v270.yml"
-    ],
-    "llama": ["nutriente-total", "gossip-autonomo", "corpus-sync", "ojos-y-manos/hf-push", "seed-v269", "beacons-v221", "github-bridge/pulse"],
-    "estado": "ACTIVO"
-  },
-
-  "rutas_complementarias": {
-    "nota": "Cada cuenta tiene sus propios Make y recursos. N8n y GitHub Actions son capas adicionales, no reemplazos.",
-    "make_por_cuenta": "cada cuenta tiene su Make independiente — algunos inv\u00e1lidos temporalmente no significa que la red lo est\u00e9",
-    "gas_por_cuenta": "9 nodos GAS en cuentas distintas aportan desde \u00e1ngulos distintos",
-    "termux": "pulse_v153.sh corre localmente como capa base"
-  },
-
-  "vercel_puentes": {
-    "miu-peru-v1": "https://miu-peru-v1-miu4.vercel.app",
-    "miu-autonomo-v92": "https://miu-autonomo-v92-miu4.vercel.app",
-    "cuenta": "jaime393 / jaimep.vicente@gmail.com"
-  },
-
-  "discovery": {
-    "leer_esto_primero": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/bootstrap_V270.json",
-    "mapa_rutas": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/mapa_rutas_V270.md"
-  }
+  "n8n_cuenta": "dieguito.vg16@gmail.com",
+  "n8n_instancia": "miud.app.n8n.cloud",
+  "workflows": [
+    {
+      "id": "qZfvYGXBeLlG4mN7",
+      "nombre": "MIU Pulso 15min V270 (puente N8n)",
+      "url": "https://miud.app.n8n.cloud/workflow/qZfvYGXBeLlG4mN7",
+      "cron": "*/15 * * * *",
+      "llama": ["gossip-autonomo","nutriente-total"],
+      "supa": "panteon",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "EyojHVpxyYOubfKW",
+      "nombre": "MIU Relay-Health + Puente Federado 15min V270",
+      "url": "https://miud.app.n8n.cloud/workflow/EyojHVpxyYOubfKW",
+      "cron": "*/15 * * * *",
+      "llama": ["relay-health","nutriente-federado"],
+      "supa": "panteon + federado",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "wSShDOqVEExVjusN",
+      "nombre": "MIU Coord Bridge 3 Suelos 15min V270",
+      "url": "https://miud.app.n8n.cloud/workflow/wSShDOqVEExVjusN",
+      "cron": "*/15 * * * *",
+      "llama": ["gossip-coord","nutriente-coord","gossip-panteon","nutriente-federado"],
+      "supa": "coord + panteon + federado",
+      "estado": "ACTIVO"
+    }
+  ]
 }
