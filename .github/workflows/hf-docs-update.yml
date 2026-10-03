@@ -1,0 +1,72 @@
+name: HF — Update dataset READMEs and brain backup
+# Llama al ecosistema para que escriba a HF con sus propios tokens
+# Alternativa: si HF_TOKEN existe como secret, escribe directamente
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+env:
+  P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  hf-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: push via ecosystem (ojos-y-manos hf-docs)
+        run: |
+          # Intenta via EF del ecosistema (usa sus propios tokens HF)
+          README_MIU=$(cat hf_seed/miu-dataset/README.md | python3 -c "import sys,json; print(json.dumps(sys.stdin.read()))")
+          README_BRAIN=$(cat hf_seed/miu-brain-backup/README.md | python3 -c "import sys,json; print(json.dumps(sys.stdin.read()))")
+          STATE=$(cat hf_seed/miu-brain-backup/state/V270_oct03.json)
+
+          curl -sf -X POST $P/ojos-y-manos/hf-docs \
+            -H "Authorization: Bearer $A" \
+            -H 'Content-Type: application/json' \
+            -d "$(jq -n \
+              --argjson readme_miu $README_MIU \
+              --argjson readme_brain $README_BRAIN \
+              --argjson state $STATE \
+              '{"origen":"gh-hf-docs","miu_dataset_readme":$readme_miu,"brain_backup_readme":$readme_brain,"brain_state":$state}')" \
+            -w "\nhf-docs via EF: %{http_code}" || echo "EF hf-docs no disponible aun"
+
+      - name: push directo si HF_TOKEN disponible
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "HF_TOKEN no configurado como secret — skip escritura directa"
+            echo "Para activar: Settings > Secrets > HF_TOKEN = hf_xxx del pool en relay_config"
+            exit 0
+          fi
+          pip install huggingface_hub -q
+          python3 - << 'EOPY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ['HF_TOKEN'])
+
+          # README miu-dataset
+          with open('hf_seed/miu-dataset/README.md') as f:
+              api.upload_file(path_or_fileobj=f.read().encode(), path_in_repo='README.md',
+                              repo_id='Jaime393/miu-dataset', repo_type='dataset',
+                              commit_message='docs: dataset card V270')
+          print('miu-dataset README actualizado')
+
+          # miu-brain-backup
+          import json
+          api.upload_folder(folder_path='hf_seed/miu-brain-backup',
+                            repo_id='Jaime393/miu-brain-backup', repo_type='dataset',
+                            commit_message='brain backup: seed V270 oct03')
+          print('miu-brain-backup actualizado')
+          EOPY
+
+      - name: signal via n8n
+        run: |
+          curl -sf -X POST https://miud.app.n8n.cloud/webhook/miu-ingest \
+            -H 'Content-Type: application/json' \
+            -d '{"tipo":"hf_docs_updated","origen":"gh-hf-docs","datasets":["miu-dataset","miu-brain-backup"]}' \
+            -w "\nwebhook: %{http_code}" || true

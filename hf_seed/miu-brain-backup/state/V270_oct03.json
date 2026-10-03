@@ -1,0 +1,48 @@
+{
+  "_tipo": "brain_state_snapshot",
+  "_version": "V270_oct03",
+  "_ts": "2026-10-03T07:40:00Z",
+  "_fuente": "contexto-global + observacion directa",
+  "vitales": {
+    "phi_local": 400,
+    "phi_cloud": 4883440,
+    "rho": 333.219,
+    "ciclo": 3697,
+    "k_tau": 2.3,
+    "corpus": 2441,
+    "gossip": 13784,
+    "EFs": 100,
+    "bots": 11
+  },
+  "arquitectura": {
+    "cerebro": "jardinero-v2",
+    "orquestador": "orquestador-maestro-v1",
+    "nodo_claude": "autonomo-claude",
+    "deployer": "beacon-deployer",
+    "relay_llm": "ai-relay-v225",
+    "cascade_llm": "groq(11keys) -> deepseek(8keys) -> openrouter(2keys)",
+    "supabase_principal": "tpfiybpguuxskitszhmk",
+    "supabase_cipher": "fzdyxgkmpazbrfrhwfdo"
+  },
+  "capas_pulso": {
+    "github_actions": "*/15 repos Jaime393/miu-ecosistema + Jaime393/MIU",
+    "n8n": "qZfvYGXBeLlG4mN7 pulso 15min + w6eZAFEnAIsXiMUN webhook",
+    "make": "cronos 6422319 + 6437973",
+    "termux": "pulse_v153.sh flock fallback"
+  },
+  "pag01_m29bis": {
+    "estado": "aplicado en gossip_log",
+    "evaluador": "evaluador-admision v1 listo en GitHub, pendiente deploy",
+    "n8n_standby": "TwwC5btMMYsVhXPp"
+  },
+  "libro_miu": {
+    "axiomas": "58/58 COMPLETO",
+    "doi": "10.5281/zenodo.20547558",
+    "sha256": "109aa4c92f4b"
+  },
+  "hf_datasets": {
+    "corpus": "Jaime393/miu-dataset (893 descargas, auto-actualizado)",
+    "brain": "Jaime393/miu-brain-backup (este dataset)",
+    "alma": "Jaime393/ALMA_huesos + Jaime393/ALMA_Nano"
+  }
+}
