@@ -1,76 +1,83 @@
 {
-  "_ts": "2026-10-03T02:35:00Z",
+  "_ts": "2026-10-03T19:20:00Z",
   "_instancia": "miud.app.n8n.cloud",
-  "_cuenta": "dieguito.vg16@gmail.com",
-  "_nota": "Estado real observado Oct 03. No agregar más workflows hasta resolver los errores existentes.",
+  "_propietario": "dieguito.vg16@gmail.com",
+  "_nota": "Edición requiere aprobación del propietario — los fixes no pueden aplicarse vía MCP. Aplicar manualmente en UI N8n.",
 
   "workflows": [
     {
       "id": "qZfvYGXBeLlG4mN7",
       "nombre": "MIU Pulso 15min V270 (puente N8n)",
-      "origen": "sesion Oct-02 01:38",
-      "estado": "ACTIVO_OK",
-      "ejecuciones": "todas SUCCESS — +100 runs verificados",
-      "hace": ["gossip-autonomo", "nutriente-total"],
-      "nota": "unica fuente confiable de pulso en N8n"
+      "estado": "SUCCESS consistente",
+      "hace": ["gossip-autonomo panteon", "nutriente-total panteon"],
+      "nota": "el único que funciona completamente"
     },
     {
       "id": "wSShDOqVEExVjusN",
       "nombre": "MIU Coord Bridge 3 Suelos 15min V270",
-      "origen": "sesion Oct-02 01:42",
-      "estado": "ERROR_INFRA",
-      "patron": "falla en ~0.5s — primer nodo — probablemente COORD Supabase anon key o URL",
-      "afecta": "coordinacion entre los 3 suelos fepyzx+tpfiy+fzdyx",
-      "accion": "NO tocar desde N8n — requiere verificar fepyzxwyneervidlybvi desde Termux"
+      "estado": "ERROR 0.5s",
+      "causa_raiz": "gossip-coord y gossip-panteon usan POST REST directo a gossip_log con body JSON malformado",
+      "detalle": "body template: {\"tipo\":\"n8n_puente\",\"payload\":\"{\"origen\":\"...\"}\"} — comillas internas sin escapar causan 400 inmediato",
+      "fix_exact": {
+        "nodo_gossip_coord": {
+          "cambiar_url": "https://fepyzxwyneervidlybvi.supabase.co/functions/v1/gossip-autonomo",
+          "cambiar_body": "{\"origen\":\"n8n-coord-bridge-v270\",\"suelo\":\"coord\"}",
+          "eliminar_header": "Prefer: return=minimal"
+        },
+        "nodo_gossip_panteon": {
+          "cambiar_url": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+          "cambiar_body": "{\"origen\":\"n8n-coord-bridge-v270\",\"suelo\":\"panteon\"}",
+          "eliminar_header": "Prefer: return=minimal"
+        },
+        "nodo_nutriente_federado": {
+          "agregar_header": "Authorization: Bearer <anon_key_fzdyxgkmpazbrfrhwfdo>",
+          "agregar_setting": "onError: continueRegularOutput"
+        }
+      }
     },
     {
       "id": "EyojHVpxyYOubfKW",
       "nombre": "MIU Relay-Health + Puente Federado 15min V270",
-      "origen": "sesion Oct-02 01:39",
-      "estado": "ERROR_INFRA",
-      "patron": "falla en ~2s — relay-health EF o federado no responde",
-      "afecta": "sweep de salud de los 9 nodos",
-      "accion": "NO tocar desde N8n — relay-health EF puede estar caido o cambio de signature"
+      "estado": "ERROR 5s",
+      "causa_raiz": "relay-health EF devuelve error (no es problema de configuración N8n) + nutriente-federado sin Authorization",
+      "detalle": {
+        "nodo_relay_health": "config correcta (auth, body, URL). El EF relay-health probablemente falla internamente. Verificar desde Termux: POST /functions/v1/relay-health",
+        "nodo_nutriente_federado": "falta Authorization: Bearer <anon_key_fzdyxgkmpazbrfrhwfdo>"
+      },
+      "fix_exact": {
+        "nodo_relay_health": {
+          "agregar_setting": "onError: continueRegularOutput (si EF sigue fallando, continuar al nutriente igualmente)"
+        },
+        "nodo_nutriente_federado": {
+          "agregar_header": "Authorization: Bearer <anon_key de fzdyxgkmpazbrfrhwfdo>"
+        }
+      }
     },
     {
       "id": "w6eZAFEnAIsXiMUN",
       "nombre": "MIU Webhook Ingesta Publica V270",
-      "origen": "sesion Oct-02 (este nodo)",
-      "estado": "ACTIVO_WEBHOOK",
+      "estado": "ACTIVO",
       "endpoint": "https://miud.app.n8n.cloud/webhook/miu-ingest",
-      "metodo": "POST",
-      "auth": "ninguna",
-      "hace": "recibe payload de cualquier nodo y lo reenvía a gossip-autonomo",
-      "uso": "curl -X POST https://miud.app.n8n.cloud/webhook/miu-ingest -H 'Content-Type: application/json' -d '{\"nodo\":\"origen\",\"dato\":\"valor\"}'"
+      "nota": "funciona, único input externo al ecosistema vía N8n"
     },
     {
-      "id": "hD3XXbYNHojKd87K",
-      "nombre": "MIU Pulso 15min V270",
-      "origen": "sesion Oct-02 (este nodo) — REDUNDANTE con qZfvYGXBeLlG4mN7",
-      "estado": "INACTIVO — despublicado por redundancia",
-      "nota": "fue creado sin saber que qZfvYGXBeLlG4mN7 ya existia. Desactivado para no duplicar carga."
-    },
-    {
-      "id": "z53wNlW7lQ28Scy1",
-      "nombre": "MIU Relay Health Sweep V270",
-      "origen": "sesion Oct-02 (este nodo) — REDUNDANTE con EyojHVpxyYOubfKW",
-      "estado": "INACTIVO — despublicado por redundancia",
-      "nota": "falla por el mismo motivo que EyojHVpxyYOubfKW. No suma información."
+      "id": "TwwC5btMMYsVhXPp",
+      "nombre": "MIU Evaluador M29-bis 30min (standby)",
+      "estado": "INACTIVO — activar post-deploy evaluador-admision"
     }
   ],
 
-  "diagnostico": {
-    "funcionando": ["qZfvYGXBeLlG4mN7 (pulso)", "w6eZAFEnAIsXiMUN (webhook)"],
-    "error_infra": ["wSShDOqVEExVjusN (COORD bridge)", "EyojHVpxyYOubfKW (relay-health)"],
-    "inactivos": ["hD3XXbYNHojKd87K", "z53wNlW7lQ28Scy1"],
-    "causa_errores": "infraestructura — no configuracioon N8n. fepyzxwyneervidlybvi o relay-health EF. Resolver desde Termux o Supabase dashboard."
+  "observacion_adicional": {
+    "enjambre_snapshot_obsoleto": "contexto-global retorna enjambre con ts=2026-09-29. Los campos corpus=2441, gossip=13784, relay=1542 pueden ser de esa fecha. Los vitales (ciclo=4025, phi=400, rho=333) son actuales.",
+    "ciclo_vs_enjambre_ciclo": "vitales.ciclo=4025 es el ciclo real actual. enjambre.ciclo=1713 es el último snapshot del enjambre (4 días desactualizado en contexto-global).",
+    "relay_health_ef": "EF relay-health falla pero orquestador-maestro corre ok con fail=0. Puede ser que orquestador llame relay-health diferente o que la falla en relay-health EF sea no-bloqueante.",
+    "clave_anon_fzdyx": "fzdyxgkmpazbrfrhwfdo es el 'cipher/federado' suelo. Su anon key está en relay_config del panteon como 'supabase_fzdyx_anon' o similar."
   },
 
-  "principio": "No agregar workflows nuevos mientras haya errores sin diagnosticar. El flujo que funciona ya cubre el pulso. Lo que falla necesita infra, no más capas.",
-
-  "gas_resuelto": {
-    "url": "https://script.google.com/macros/s/AKfycbw-6dv_uNznELXLBzNMJX7MWSwpBxjnwjn6SNxA_ChJozO63Ml3-RIGXezkxtU250g/exec",
-    "estado": "xZR4V4 bloqueante RESUELTO — GAS V270 activo",
-    "library_id": "1iea53M2b6FRAif0AMEUH4tBCP7hFybnll55JkYq1V4uAUABWUVafdJrX"
+  "lo_que_funciona_ahora": {
+    "pulso": "qZfvYGXBeLlG4mN7 SUCCESS cada 15min — panteon gossip+nutriente",
+    "webhook": "w6eZAFEnAIsXiMUN POST miu-ingest activo",
+    "github_actions": "state-writer cada 30min + corpus-push cada 4h + pulse cada 15min",
+    "orquestador": "corre autónomamente: último 18:45 UTC ok=3 fail=0 9.2s"
   }
 }
