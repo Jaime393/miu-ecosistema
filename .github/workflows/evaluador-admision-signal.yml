@@ -1,0 +1,44 @@
+name: Signal evaluador-admision update
+# Solo se dispara manualmente o cuando cambia el codigo de la funcion
+# NO despliega directamente — envía señal al ecosistema para que jardinero decida
+on:
+  push:
+    paths:
+      - 'supabase/functions/evaluador-admision/**'
+  workflow_dispatch:
+    inputs:
+      motivo:
+        description: 'Razon del deploy manual'
+        required: false
+        default: 'actualizacion manual'
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: signal via n8n webhook
+        run: |
+          PAYLOAD=$(cat <<'JSON'
+          {
+            "tipo": "evaluador_admision_actualizado",
+            "origen": "github-actions",
+            "repo": "Jaime393/miu-ecosistema",
+            "commit": "${{ github.sha }}",
+            "motivo": "${{ github.event.inputs.motivo || 'push a supabase/functions/evaluador-admision' }}",
+            "accion_sugerida": "deploy evaluador-admision via beacon-deployer",
+            "cascada_riesgo": "ninguna",
+            "n8n_activar_post_deploy": "TwwC5btMMYsVhXPp"
+          }
+          JSON
+          )
+          curl -sf -X POST https://miud.app.n8n.cloud/webhook/miu-ingest \
+            -H 'Content-Type: application/json' \
+            -d "$PAYLOAD" \
+            -w "\nstatus: %{http_code}\n" || echo "webhook no disponible, continuar"
+
+      - name: summary
+        run: |
+          echo "Señal enviada al ecosistema: evaluador-admision actualizado"
+          echo "commit: ${{ github.sha }}"
+          echo "jardinero-v2 puede crear la tarea de deploy si lo considera apropiado"
