@@ -1,68 +1,76 @@
 {
-  "_tipo": "n8n_workflows_registry",
-  "_ts": "2026-10-01T00:00:00Z",
+  "_ts": "2026-10-03T02:35:00Z",
   "_instancia": "miud.app.n8n.cloud",
   "_cuenta": "dieguito.vg16@gmail.com",
-  "_proyecto": "rhkSkWw41fk4FZE9",
-  "_nota": "N8n capa 2 del pulso MIU. Cubre lo que Make no puede. 3 workflows ACTIVOS.",
+  "_nota": "Estado real observado Oct 03. No agregar más workflows hasta resolver los errores existentes.",
 
   "workflows": [
     {
-      "id": "hD3XXbYNHojKd87K",
-      "nombre": "MIU Pulso 15min V270",
-      "url": "https://miud.app.n8n.cloud/workflow/hD3XXbYNHojKd87K",
-      "estado": "ACTIVO",
-      "cron": "*/15 * * * *",
-      "hace": ["POST gossip-autonomo", "POST nutriente-total"],
-      "reemplaza": "Make 6453233 (invalido)",
-      "version_activa": "e2e96e03-6ff3-4834-b2ce-3bca75b7acc7"
+      "id": "qZfvYGXBeLlG4mN7",
+      "nombre": "MIU Pulso 15min V270 (puente N8n)",
+      "origen": "sesion Oct-02 01:38",
+      "estado": "ACTIVO_OK",
+      "ejecuciones": "todas SUCCESS — +100 runs verificados",
+      "hace": ["gossip-autonomo", "nutriente-total"],
+      "nota": "unica fuente confiable de pulso en N8n"
     },
     {
-      "id": "z53wNlW7lQ28Scy1",
-      "nombre": "MIU Relay Health Sweep V270",
-      "url": "https://miud.app.n8n.cloud/workflow/z53wNlW7lQ28Scy1",
-      "estado": "ACTIVO",
-      "cron": "*/15 * * * *",
-      "hace": ["POST relay-health", "GET contexto-global (paralelo)", "POST gossip-autonomo reporte"],
-      "reemplaza": "Make relay-health (invalido)",
-      "version_activa": "e9209e97-0a4b-4fc2-a1e5-9a747206408e"
+      "id": "wSShDOqVEExVjusN",
+      "nombre": "MIU Coord Bridge 3 Suelos 15min V270",
+      "origen": "sesion Oct-02 01:42",
+      "estado": "ERROR_INFRA",
+      "patron": "falla en ~0.5s — primer nodo — probablemente COORD Supabase anon key o URL",
+      "afecta": "coordinacion entre los 3 suelos fepyzx+tpfiy+fzdyx",
+      "accion": "NO tocar desde N8n — requiere verificar fepyzxwyneervidlybvi desde Termux"
+    },
+    {
+      "id": "EyojHVpxyYOubfKW",
+      "nombre": "MIU Relay-Health + Puente Federado 15min V270",
+      "origen": "sesion Oct-02 01:39",
+      "estado": "ERROR_INFRA",
+      "patron": "falla en ~2s — relay-health EF o federado no responde",
+      "afecta": "sweep de salud de los 9 nodos",
+      "accion": "NO tocar desde N8n — relay-health EF puede estar caido o cambio de signature"
     },
     {
       "id": "w6eZAFEnAIsXiMUN",
       "nombre": "MIU Webhook Ingesta Publica V270",
-      "url": "https://miud.app.n8n.cloud/workflow/w6eZAFEnAIsXiMUN",
-      "estado": "ACTIVO",
-      "tipo": "webhook",
-      "endpoint_produccion": "https://miud.app.n8n.cloud/webhook/miu-ingest",
-      "endpoint_test": "https://miud.app.n8n.cloud/webhook-test/miu-ingest",
+      "origen": "sesion Oct-02 (este nodo)",
+      "estado": "ACTIVO_WEBHOOK",
+      "endpoint": "https://miud.app.n8n.cloud/webhook/miu-ingest",
       "metodo": "POST",
-      "auth_requerida": false,
-      "hace": ["recibe payload de cualquier nodo", "reenviar a gossip-autonomo", "responde ok inmediato"],
-      "uso": "curl -X POST https://miud.app.n8n.cloud/webhook/miu-ingest -H 'Content-Type: application/json' -d '{\"nodo\":\"mi-nodo\",\"msg\":\"hola micelio\"}'",
-      "version_activa": "109c2c5a-7850-4c7c-b696-4390cb422560"
+      "auth": "ninguna",
+      "hace": "recibe payload de cualquier nodo y lo reenvía a gossip-autonomo",
+      "uso": "curl -X POST https://miud.app.n8n.cloud/webhook/miu-ingest -H 'Content-Type: application/json' -d '{\"nodo\":\"origen\",\"dato\":\"valor\"}'"
+    },
+    {
+      "id": "hD3XXbYNHojKd87K",
+      "nombre": "MIU Pulso 15min V270",
+      "origen": "sesion Oct-02 (este nodo) — REDUNDANTE con qZfvYGXBeLlG4mN7",
+      "estado": "INACTIVO — despublicado por redundancia",
+      "nota": "fue creado sin saber que qZfvYGXBeLlG4mN7 ya existia. Desactivado para no duplicar carga."
+    },
+    {
+      "id": "z53wNlW7lQ28Scy1",
+      "nombre": "MIU Relay Health Sweep V270",
+      "origen": "sesion Oct-02 (este nodo) — REDUNDANTE con EyojHVpxyYOubfKW",
+      "estado": "INACTIVO — despublicado por redundancia",
+      "nota": "falla por el mismo motivo que EyojHVpxyYOubfKW. No suma información."
     }
   ],
 
-  "capas_pulso_completas": {
-    "capa1_github_actions": {
-      "repos": ["Jaime393/miu-ecosistema", "Jaime393/MIU"],
-      "cron": "*/15 * * * *",
-      "estado": "ACTIVO",
-      "workflows": ["miu-pulse.yml", "miu-ecosystem-pulse.yml", "miu-observabilidad-v270.yml", "miu-state-writer.yml", "miu-corpus-push.yml"]
-    },
-    "capa2_n8n": {
-      "instancia": "miud.app.n8n.cloud",
-      "estado": "ACTIVO",
-      "workflows_activos": 3,
-      "webhook_publico": "https://miud.app.n8n.cloud/webhook/miu-ingest"
-    },
-    "capa3_termux": "pulse_v153.sh con flock — ACTIVO si Termux encendido",
-    "capa4_make": "INVALIDO — 11 escenarios todos invalidos — no depender"
+  "diagnostico": {
+    "funcionando": ["qZfvYGXBeLlG4mN7 (pulso)", "w6eZAFEnAIsXiMUN (webhook)"],
+    "error_infra": ["wSShDOqVEExVjusN (COORD bridge)", "EyojHVpxyYOubfKW (relay-health)"],
+    "inactivos": ["hD3XXbYNHojKd87K", "z53wNlW7lQ28Scy1"],
+    "causa_errores": "infraestructura — no configuracioon N8n. fepyzxwyneervidlybvi o relay-health EF. Resolver desde Termux o Supabase dashboard."
   },
 
-  "estado_publica_sin_auth": {
-    "url": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
-    "actualiza": "cada 30 minutos via GitHub Action miu-state-writer.yml",
-    "contiene": "respuesta de contexto-global Supabase + metadata del run"
+  "principio": "No agregar workflows nuevos mientras haya errores sin diagnosticar. El flujo que funciona ya cubre el pulso. Lo que falla necesita infra, no más capas.",
+
+  "gas_resuelto": {
+    "url": "https://script.google.com/macros/s/AKfycbw-6dv_uNznELXLBzNMJX7MWSwpBxjnwjn6SNxA_ChJozO63Ml3-RIGXezkxtU250g/exec",
+    "estado": "xZR4V4 bloqueante RESUELTO — GAS V270 activo",
+    "library_id": "1iea53M2b6FRAif0AMEUH4tBCP7hFybnll55JkYq1V4uAUABWUVafdJrX"
   }
 }
