@@ -1,0 +1,68 @@
+{
+  "_ts": "2026-10-03T03:00:00Z",
+  "_nota": "Estado del ecosistema tras PAG-01. No agregar capas sin leer esto.",
+
+  "pag01_m29bis": {
+    "estado": "APLICADO en colmena-cipher-v21-43 (tpfiybpguuxskitszhmk)",
+    "campos_nuevos_gossip_log": [
+      "k_i_transfer NUMERIC(6,4) CHECK 0-1",
+      "k_i_metodo TEXT",
+      "k_i_estado TEXT DEFAULT 'no_evaluado'",
+      "evento_padre_id UUID -> gossip_log.id ON DELETE SET NULL",
+      "evaluado_en TIMESTAMPTZ",
+      "confianza_evaluacion NUMERIC(4,3)"
+    ],
+    "vista": "public.v_k_i_transfer_distribucion — observacion diaria/media/mediana/desviacion",
+    "cascada": "NINGUNA — campos observacionales, no disparan triggers ni flujos"
+  },
+
+  "evaluador_admision_v1": {
+    "codigo": "supabase/functions/evaluador-admision/index.ts en este repo",
+    "estado": "LISTO para deploy — NO desplegado aun",
+    "deploy_cmd": "supabase functions deploy evaluador-admision --project-ref tpfiybpguuxskitszhmk --no-verify-jwt",
+    "n8n_workflow": {
+      "id": "TwwC5btMMYsVhXPp",
+      "nombre": "MIU Evaluador M29-bis 30min (standby)",
+      "url": "https://miud.app.n8n.cloud/workflow/TwwC5btMMYsVhXPp",
+      "estado": "INACTIVO — activar solo despues del deploy manual",
+      "activar": "publish_workflow TwwC5btMMYsVhXPp desde N8n MCP"
+    }
+  },
+
+  "riesgos_documentados": {
+    "rls_deshabilitado": [
+      "public.capacidades",
+      "public.nodo_capacidades",
+      "public.nodo_capacidades_historial"
+    ],
+    "accion_requerida": "habilitar RLS con politicas ANTES de exponer a produccion externa",
+    "search_path_mutable": "public.capacidades_registrar_exito",
+    "pg_net_en_public": "mover a esquema no publico"
+  },
+
+  "regla_cascada": {
+    "escribe_gossip_log_campos_normales": "IMPACTA — gossip-autonomo, mesh-autonomo, relay-health leen esto",
+    "escribe_k_i_campos_pag01": "SEGURO — solo v_k_i_transfer_distribucion los lee, sin triggers",
+    "escribe_relay_config": "IMPACTA — GAS y workers lo miran cada ciclo",
+    "escribe_miu_tareas": "IMPACTA — accionador lo ejecuta",
+    "lee_cualquier_tabla": "SEGURO — sin efectos secundarios"
+  },
+
+  "n8n_estado_completo": {
+    "activos": [
+      "qZfvYGXBeLlG4mN7: Pulso 15min (gossip+nutriente) — SUCCESS 100+ runs",
+      "w6eZAFEnAIsXiMUN: Webhook ingesta publica POST miu-ingest"
+    ],
+    "error_infra": [
+      "wSShDOqVEExVjusN: Coord Bridge 3 Suelos — COORD Supabase falla 0.5s",
+      "EyojHVpxyYOubfKW: Relay-Health + Federado — relay-health EF falla 2s"
+    ],
+    "standby": [
+      "TwwC5btMMYsVhXPp: Evaluador M29-bis 30min — activar post-deploy"
+    ],
+    "inactivos_redundantes": [
+      "hD3XXbYNHojKd87K",
+      "z53wNlW7lQ28Scy1"
+    ]
+  }
+}
