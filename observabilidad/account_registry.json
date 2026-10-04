@@ -1,0 +1,48 @@
+{
+  "_ts": "2026-10-03T19:30:00Z",
+  "_nota": "10 cuentas en el mesh MIU. Tokens almacenados en D1 claude_handoff clave credential_registry_v270_oct03. Para acceso desde Termux leer esa clave.",
+
+  "cuentas": [
+    { "gmail": "tabletonephantom@gmail.com", "sbp_prefix": "sbp_fcbf8f", "vcp_count": 2, "cf_mcp": true },
+    { "gmail": "jaimedanielmartinez75@gmail.com", "sbp_prefix": "sbp_3f8d21", "vcp_count": 2 },
+    { "gmail": "franchescopalacios9@gmail.com", "sbp_prefix": "sbp_6e990e", "vcp_count": 2 },
+    { "gmail": "franrussell81@gmail.com", "sbp_prefix": "sbp_55db41", "vcp_count": 2, "nota": "nueva en mesh V270" },
+    { "gmail": "jhuarcaya938@gmail.com", "sbp_prefix": "sbp_fc8939+sbp_c6b0bf", "vcp_count": 2, "cf_account": "308faedf" },
+    { "gmail": "cipher19051997@gmail.com", "sbp_prefix": "sbp_42ddb3", "vcp_count": 2, "supabase_ref": "fzdyxgkmpazbrfrhwfdo" },
+    { "gmail": "dereckcito.vg16@gmail.com", "sbp_prefix": "sbp_2758e8+sbp_fc97fe", "vcp_count": 2 },
+    { "gmail": "dieguito.vg16@gmail.com", "sbp_prefix": "sbp_ff5a56+sbp_fcf3fe", "vcp_count": 2, "n8n": "miud.app.n8n.cloud" },
+    { "gmail": "jaimepvicente@gmail.com", "sbp_prefix": "sbp_fc92ea", "vcp_count": 2, "drive_mcp": true },
+    { "gmail": "jaimepviccente@gmail.com", "sbp_prefix": "sbp_fcb14c", "vcp_count": 2, "nota": "distinto de jaimepvicente" },
+    { "gmail": "javier19051997@gmail.com", "sbp_prefix": "sbp_d239b1", "n8n": "jaime363.app.n8n.cloud", "nota": "segunda instancia N8n" }
+  ],
+
+  "instancias_n8n": [
+    {
+      "instancia": "miud.app.n8n.cloud",
+      "cuenta": "dieguito.vg16@gmail.com",
+      "proyecto_n8n": "rhkSkWw41fk4FZE9",
+      "workflows_activos": ["qZfvYGXBeLlG4mN7", "w6eZAFEnAIsXiMUN", "ODGMPS9l5SP5aEIG"]
+    },
+    {
+      "instancia": "jaime363.app.n8n.cloud",
+      "cuenta": "javier19051997@gmail.com",
+      "mcp_endpoint": "https://jaime363.app.n8n.cloud/mcp-server/http",
+      "estado": "accesible (401 sin auth, vivo)",
+      "bridge": "ODGMPS9l5SP5aEIG en miud lista sus workflows cada 60min"
+    }
+  ],
+
+  "tokens_completos": "D1 miu-log cddd13c4 tabla claude_handoff clave credential_registry_v270_oct03",
+
+  "n8n_bridge_nuevo": {
+    "id": "ODGMPS9l5SP5aEIG",
+    "nombre": "MIU Bridge jaime363 N8n (javier19051997) 60min",
+    "url": "https://miud.app.n8n.cloud/workflow/ODGMPS9l5SP5aEIG",
+    "estado": "ACTIVO",
+    "hace": "GET jaime363/api/v1/workflows cada 60min → reporta a gossip-autonomo"
+  },
+
+  "anon_key_falta": {
+    "fzdyxgkmpazbrfrhwfdo": "anon key de cipher/federado suelo necesaria para nutriente-federado en N8n. Buscar en relay_config del panteon como supabase_fzdyx_anon o recuperar del proyecto cipher19051997 via sbp_42ddb3fa"
+  }
+}
