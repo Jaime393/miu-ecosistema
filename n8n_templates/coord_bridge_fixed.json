@@ -1,0 +1,82 @@
+{
+  "name": "MIU Coord Bridge 3 Suelos FIXED (jaime363)",
+  "settings": { "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "sched-001",
+      "name": "Every 15 min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [0, 0],
+      "parameters": { "rule": { "interval": [{ "field": "minutes", "minutesInterval": 15 }] } }
+    },
+    {
+      "id": "http-001",
+      "name": "gossip-coord",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [220, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "https://fepyzxwyneervidlybvi.supabase.co/functions/v1/gossip-autonomo",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [
+          { "name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcHl6eHd5bmVlcnZpZGx5YnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NDc1NTQsImV4cCI6MjEwNTQyMzU1NH0.S6meOse3Xfq2d9k5nO4fjL3tseQOzvPNAsubGa0gl6k" },
+          { "name": "Content-Type", "value": "application/json" }
+        ]},
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "{\"origen\":\"n8n-coord-bridge-jaime363\",\"suelo\":\"coord\"}",
+        "options": { "timeout": 20000 }
+      }
+    },
+    {
+      "id": "http-002",
+      "name": "nutriente-coord",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [440, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "https://fepyzxwyneervidlybvi.supabase.co/functions/v1/nutriente-total",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [
+          { "name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcHl6eHd5bmVlcnZpZGx5YnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NDc1NTQsImV4cCI6MjEwNTQyMzU1NH0.S6meOse3Xfq2d9k5nO4fjL3tseQOzvPNAsubGa0gl6k" },
+          { "name": "Content-Type", "value": "application/json" }
+        ]},
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "{\"origen\":\"n8n-coord-bridge-jaime363\"}",
+        "options": { "timeout": 20000, "onError": "continue" }
+      }
+    },
+    {
+      "id": "http-003",
+      "name": "gossip-panteon",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [660, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [
+          { "name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0" },
+          { "name": "Content-Type", "value": "application/json" }
+        ]},
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "{\"origen\":\"n8n-coord-bridge-jaime363\",\"suelo\":\"panteon\"}",
+        "options": { "timeout": 20000 }
+      }
+    }
+  ],
+  "connections": {
+    "Every 15 min": { "main": [[{ "node": "gossip-coord", "type": "main", "index": 0 }]] },
+    "gossip-coord": { "main": [[{ "node": "nutriente-coord", "type": "main", "index": 0 }]] },
+    "nutriente-coord": { "main": [[{ "node": "gossip-panteon", "type": "main", "index": 0 }]] }
+  }
+}

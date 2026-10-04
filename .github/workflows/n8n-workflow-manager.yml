@@ -1,0 +1,111 @@
+name: N8n Workflow Manager (autonomo)
+# La red puede disparar este Action via repository_dispatch desde github-bridge
+# con el PAT en relay_config -> sin dependencia humana para gestionar N8n
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'list | create | activate | fix_coord_bridge | fix_relay_health'
+        required: true
+        default: 'list'
+      workflow_json:
+        description: 'JSON del workflow para create (opcional, usa template si vacio)'
+        required: false
+      workflow_id:
+        description: 'ID de workflow para activate'
+        required: false
+  repository_dispatch:
+    types: [n8n-manage]
+
+env:
+  N8N_BASE: https://jaime363.app.n8n.cloud/api/v1
+  SUPA: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  manage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: resolve action + payload
+        id: resolve
+        run: |
+          ACTION="${{ github.event.inputs.action || github.event.client_payload.action || 'list' }}"
+          WF_JSON='${{ github.event.inputs.workflow_json || github.event.client_payload.workflow_json }}'
+          WF_ID="${{ github.event.inputs.workflow_id || github.event.client_payload.workflow_id }}"
+          echo "action=$ACTION" >> $GITHUB_OUTPUT
+          echo "wf_id=$WF_ID" >> $GITHUB_OUTPUT
+          # Si se pide un template conocido, cargarlo
+          if [ -z "$WF_JSON" ] && [ "$ACTION" = "fix_coord_bridge" ]; then
+            WF_JSON=$(cat n8n_templates/coord_bridge_fixed.json)
+          fi
+          if [ -z "$WF_JSON" ] && [ "$ACTION" = "fix_relay_health" ]; then
+            WF_JSON=$(cat n8n_templates/relay_health_fixed.json)
+          fi
+          # Escribir payload a archivo para evitar problemas de quoting
+          echo "$WF_JSON" > /tmp/wf_payload.json
+
+      - name: list workflows (jaime363)
+        if: steps.resolve.outputs.action == 'list'
+        env:
+          N8N_JWT: ${{ secrets.N8N_JAIME363_JWT }}
+        run: |
+          RESULT=$(curl -sf -H "X-N8N-API-KEY: $N8N_JWT" "$N8N_BASE/workflows" 2>/dev/null || echo '{"error":"api_key_needed"}')
+          echo "$RESULT" | python3 -c "import sys,json; d=json.load(sys.stdin); [print(f\"  {w['id']}: {w['name']} active={w.get('active')}\") for w in d.get('data',[])]" 2>/dev/null || echo "$RESULT"
+
+      - name: create + activate workflow
+        if: steps.resolve.outputs.action == 'create' || steps.resolve.outputs.action == 'fix_coord_bridge' || steps.resolve.outputs.action == 'fix_relay_health'
+        env:
+          N8N_JWT: ${{ secrets.N8N_JAIME363_JWT }}
+        run: |
+          if [ ! -s /tmp/wf_payload.json ]; then
+            echo "No workflow JSON payload found"
+            exit 1
+          fi
+          # Crear
+          RESULT=$(curl -sf -X POST \
+            -H "X-N8N-API-KEY: $N8N_JWT" \
+            -H "Content-Type: application/json" \
+            "$N8N_BASE/workflows" \
+            --data-binary @/tmp/wf_payload.json)
+          echo "Create result: $RESULT"
+          WF_ID=$(echo "$RESULT" | python3 -c "import sys,json; print(json.load(sys.stdin)['id'])" 2>/dev/null)
+          if [ -z "$WF_ID" ]; then
+            echo "ERROR: no workflow ID returned"
+            exit 1
+          fi
+          echo "Workflow creado: $WF_ID"
+          # Activar
+          curl -sf -X POST \
+            -H "X-N8N-API-KEY: $N8N_JWT" \
+            "$N8N_BASE/workflows/$WF_ID/activate"
+          echo "Workflow $WF_ID activado en jaime363"
+
+      - name: activate existing workflow
+        if: steps.resolve.outputs.action == 'activate' && steps.resolve.outputs.wf_id != ''
+        env:
+          N8N_JWT: ${{ secrets.N8N_JAIME363_JWT }}
+        run: |
+          curl -sf -X POST \
+            -H "X-N8N-API-KEY: $N8N_JWT" \
+            "$N8N_BASE/workflows/${{ steps.resolve.outputs.wf_id }}/activate"
+          echo "Activado: ${{ steps.resolve.outputs.wf_id }}"
+
+      - name: signal ecosistema
+        if: always()
+        run: |
+          curl -sf -X POST $SUPA/gossip-autonomo \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d "$(python3 -c "import json,os; print(json.dumps({'origen':'gh-n8n-manager','accion':'${{ steps.resolve.outputs.action }}','instancia':'jaime363.app.n8n.cloud','run':'${{ github.run_number }}'}))" )" \
+            -w "\ngossip: %{http_code}" || true
+
+      - name: instrucciones si JWT falta
+        if: failure()
+        run: |
+          echo "Si fallo por JWT:"
+          echo "  Settings > Secrets > N8N_JAIME363_JWT = el JWT de javier19051997"
+          echo "  O el ecosistema lo inyecta via: POST /repos/Jaime393/miu-ecosistema/actions/secrets"
+          echo "  con GITHUB_PAT que ya esta en relay_config"
