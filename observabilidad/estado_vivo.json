@@ -1,18 +1,18 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-04T17:57:34.980383Z",
-  "_run": "10",
+  "_ts": "2026-10-04T21:02:02.955675Z",
+  "_run": "11",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V270",
-    "ts": "2026-10-04T17:57:34.920Z",
+    "ts": "2026-10-04T21:02:02.884Z",
     "vitales": {
       "phi": "400",
       "rho": "333.219",
       "savia": "53070001",
-      "ciclo": "4623",
+      "ciclo": "4709",
       "k_tau": "2.3",
       "version": "V270"
     },
@@ -52,11 +52,11 @@
     },
     "autonomia": "TOTAL \\u2014 jardinero diagnostica + genera + inyecta + ejecuta sin intervencion humana",
     "ultimo_pulso_orquestador": {
-      "ts": "2026-10-04T17:45:01.091Z",
-      "modo": "ligero",
-      "ok": 3,
-      "fail": 0,
-      "ms": 5846
+      "ts": "2026-10-04T21:00:05.499Z",
+      "modo": "completo",
+      "ok": 8,
+      "fail": 2,
+      "ms": 16719
     },
     "endpoints": {
       "orquestador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/orquestador-maestro",
