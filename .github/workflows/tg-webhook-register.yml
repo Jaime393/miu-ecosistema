@@ -1,0 +1,75 @@
+name: TG Webhook Register (autonomo)
+# Registra webhooks de Telegram para todos los bots del mesh
+# El ecosistema puede disparar esto via repository_dispatch desde github-bridge
+# O se ejecuta manualmente cuando se detectan bots_sin_webhook > 0
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'register | verify | reset'
+        required: true
+        default: 'verify'
+  repository_dispatch:
+    types: [tg-webhook-register]
+  schedule:
+    - cron: '0 8 * * *'  # Verificar cada dia 8am
+
+env:
+  SUPA: https://tpfiybpguuxskitszhmk.supabase.co
+  ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+  TG_BRIDGE: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/telegram-bridge
+
+jobs:
+  register-webhooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: intentar via canal-dereckcito (EF privilegiada, no expone tokens)
+        id: via_ef
+        run: |
+          MODO="${{ github.event.inputs.modo || github.event.client_payload.modo || 'verify' }}"
+          RESULT=$(curl -sf -X POST $SUPA/functions/v1/canal-dereckcito/deploy \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d "{\"accion\":\"registrar_webhooks_tg\",\"modo\":\"$MODO\",\"webhook_url\":\"$TG_BRIDGE\"}" \
+            -w "\n%{http_code}" 2>/dev/null || echo "NOT_SUPPORTED")
+          echo "via_ef_result=$RESULT" >> $GITHUB_OUTPUT
+          echo "Canal-dereckcito result: $RESULT"
+
+      - name: intentar via ojos-y-manos si canal-dereckcito no lo soporta
+        id: via_ojos
+        if: contains(steps.via_ef.outputs.via_ef_result, 'NOT_SUPPORTED') || contains(steps.via_ef.outputs.via_ef_result, '404')
+        run: |
+          RESULT=$(curl -sf -X POST $SUPA/functions/v1/ojos-y-manos \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d '{"tipo":"registrar_webhooks_telegram","webhook_url":"'$TG_BRIDGE'","grupos":["-1002164790814","-1004496069595"]}' \
+            -w "\n%{http_code}" 2>/dev/null || echo "NOT_SUPPORTED")
+          echo "ojos result: $RESULT"
+
+      - name: crear tarea en micelio si EFs no lo soportan
+        if: contains(steps.via_ojos.outputs.*, 'NOT_SUPPORTED') || failure()
+        run: |
+          # Crear tarea para que jardinero/autonomo-claude lo resuelva
+          curl -sf -X POST $SUPA/rest/v1/miu_tareas \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -H 'Prefer: return=minimal' \
+            -d '{
+              "tipo": "registrar_webhooks_tg",
+              "payload": {"webhook_url": "'$TG_BRIDGE'", "bots": "todos", "grupos": ["-1002164790814","-1004496069595"], "modo": "register"},
+              "estado": "pendiente",
+              "prioridad": 2,
+              "nodo_asignado": "autonomo-claude"
+            }' && echo "Tarea creada para autonomo-claude" || echo "Tarea: verificar permisos anon en miu_tareas"
+
+      - name: signal ecosistema
+        if: always()
+        run: |
+          curl -sf -X POST $SUPA/functions/v1/gossip-autonomo \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-tg-webhook-register","modo":"${{ github.event.inputs.modo || 'verify' }}","run":"${{ github.run_number }}"}' \
+            -w "\ngossip: %{http_code}" || true

@@ -1,0 +1,50 @@
+{
+  "_version": "v1_oct03",
+  "_descripcion": "Schema del autodiagnostico que el MICELIO debe producir en cada ciclo mayor. Estructura esperada de output de monitor-proactive o equivalente.",
+
+  "schema": {
+    "ts": "ISO8601",
+    "ciclo": "numero",
+    "contratos_leidos": "integer",
+    "contratos_aplicados": "integer",
+    "contratos_declarados_no_observados": "integer",
+    "tareas_cerradas_sin_evidencia": "integer",
+    "tareas_bloqueadas": "integer",
+    "rutas_con_confianza_degradada": "integer",
+    "tablas_sin_rls": "integer",
+    "funciones_sin_jwt": "integer",
+    "triggers_criticos_activos": "integer",
+    "bots_sin_webhook": "integer",
+    "divergencias_detectadas": ["string"],
+    "autocorrecciones_aplicadas": ["string"],
+    "tareas_creadas_para_gobernanza": ["string"]
+  },
+
+  "clasificacion_acciones": {
+    "autocorreccion_segura": {
+      "descripcion": "Aplicar automaticamente sin aprobacion",
+      "ejemplos": ["actualizar confianza de ruta", "aumentar ventana de reintento", "registrar degradacion", "marcar tarea como completada_sin_validacion"]
+    },
+    "cambio_de_comportamiento": {
+      "descripcion": "Crear tarea con validacion requerida antes de ejecutar",
+      "ejemplos": ["cambiar ejecutor de tarea", "reasignar bot de coordinador", "redeploy de funcion"]
+    },
+    "cambio_de_seguridad_o_privilegio": {
+      "descripcion": "Bloquear y solicitar gobernanza humana. NUNCA autocorregir.",
+      "ejemplos": ["ampliar privilegios", "crear nuevos secretos", "desactivar auditoria", "borrar evidencia", "cambiar allowlists", "abrir canales de ejecucion nuevos"]
+    }
+  },
+
+  "umbrales": {
+    "contratos_adopcion_minima": 0.7,
+    "tareas_sin_evidencia_alerta": 10,
+    "rutas_degradadas_alerta": 5,
+    "bots_sin_webhook_alerta": 1
+  },
+
+  "endpoint_sugerido": {
+    "ef": "monitor-proactive OR orquestador-maestro",
+    "frecuencia": "cada 60 ciclos o cada 4 horas",
+    "output": "gossip_log tipo=autodiagnostico + relay_config[ultimo_autodiagnostico]"
+  }
+}

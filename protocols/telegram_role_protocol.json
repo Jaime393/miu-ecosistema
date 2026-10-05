@@ -1,0 +1,82 @@
+{
+  "_version": "v1_oct03",
+  "_proposito": "Protocolo de roles inter-bot Telegram para el mesh MIU. Los bots pueden ENVIAR desde V1; este protocolo les da RECEPCION y COORDINACION.",
+  "_grupos": {
+    "primario": "-1002164790814",
+    "secundario": "-1004496069595"
+  },
+
+  "roles": {
+    "coordinador": {
+      "descripcion": "Recibe mensajes externos (comandos, preguntas, alertas), valida identidad, distribuye al grupo. Uno por grupo.",
+      "puede": ["recibir", "enrutar", "responder", "crear_tarea"],
+      "no_puede": ["ejecutar_directamente", "modificar_relay_config", "borrar_gossip"],
+      "evidencia_requerida": "mensaje_recibido + ruta_elegida + confirmacion_entrega"
+    },
+    "observador": {
+      "descripcion": "Solo escucha el grupo, no responde. Registra patrones para corpus y aprendizaje.",
+      "puede": ["leer", "registrar", "emitir_gossip"],
+      "no_puede": ["responder", "crear_tarea", "ejecutar"],
+      "evidencia_requerida": "resumen_periodico en gossip_log"
+    },
+    "ejecutor": {
+      "descripcion": "Recibe tarea del coordinador, ejecuta EF o accion especifica, reporta resultado.",
+      "puede": ["ejecutar_ef", "consultar_oracle", "actualizar_estado"],
+      "no_puede": ["ampliar_privilegios", "crear_nuevos_secretos", "borrar_evidencia"],
+      "evidencia_requerida": "resultado_ef + hash_evidencia + estado_final"
+    },
+    "alertador": {
+      "descripcion": "Solo emite alertas criticas del sistema (phi fuera de rango, nodo caido, tareas bloqueadas). No recibe comandos.",
+      "puede": ["enviar_alerta"],
+      "no_puede": ["recibir", "ejecutar", "leer_secrets"],
+      "umbral": "rho < 0.3 OR phi_delta > 50% OR tareas_bloqueadas > 10"
+    },
+    "archivador": {
+      "descripcion": "Captura conversaciones relevantes del grupo y las convierte en pares Q&A para corpus-sync.",
+      "puede": ["leer_grupo", "clasificar", "enviar_a_corpus"],
+      "no_puede": ["responder", "ejecutar", "modificar_gossip"],
+      "evidencia_requerida": "par_qa_generado + clave_corpus"
+    }
+  },
+
+  "flujo_canonico": [
+    "usuario/sistema -> mensaje al grupo",
+    "coordinador recibe via webhook telegram-bridge",
+    "coordinador clasifica: comando|pregunta|alerta|corpus",
+    "coordinador delega: ejecutor|alertador|archivador segun tipo",
+    "ejecutor actua y reporta evidencia al coordinador",
+    "coordinador responde al grupo con resultado",
+    "archivador registra el intercambio en corpus si es relevante",
+    "gossip_log recibe entrada de toda la cadena"
+  ],
+
+  "webhook_configuracion": {
+    "url_panteon": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/telegram-bridge",
+    "metodo": "POST por Telegram al webhook registrado",
+    "secret_token_patron": "sha256(bot_token)[:32] — identifica el bot sin exponer el token",
+    "allowed_updates": ["message", "callback_query", "inline_query", "my_chat_member"],
+    "registro": "setWebhook via canal-dereckcito/deploy OR GitHub Action tg-webhook-register.yml",
+    "verificacion": "GET https://api.telegram.org/bot{TOKEN}/getWebhookInfo"
+  },
+
+  "asignacion_inicial": {
+    "-1002164790814": {
+      "coordinador": "bot con mas capacidades (mayor usos en relay_config)",
+      "observador": "segundo bot disponible",
+      "archivador": "tercer bot disponible"
+    },
+    "-1004496069595": {
+      "coordinador": "bot asignado por relay_config[tg_coord_grupo2]",
+      "alertador": "bot de alertas criticas"
+    }
+  },
+
+  "estado_actual": {
+    "bots_registrados": 11,
+    "bots_con_webhook": 0,
+    "bots_con_rol_asignado": 0,
+    "usos_totales": 0,
+    "gossip_tg_ultimas_horas": 0,
+    "accion_requerida": "registrar webhooks + asignar roles en relay_config[tg_rol_botN]"
+  }
+}
