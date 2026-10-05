@@ -1,0 +1,128 @@
+name: MIU Flow-ID Coverage Monitor
+# Mide cobertura de flow_id y ratio de eco cada 30min
+# Escribe en observabilidad/ y alerta si cobertura < 50%
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [miu-flow-id-check]
+
+env:
+  SUPA: https://tpfiybpguuxskitszhmk.supabase.co
+  ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { token: '${{ secrets.GITHUB_TOKEN }}' }
+
+      - name: fetch coverage desde vista
+        id: cov
+        run: |
+          # Intentar via vista v_flow_id_coverage (requiere migracion aplicada)
+          COV=$(curl -sf "$SUPA/rest/v1/v_flow_id_coverage?select=*" \
+            -H "apikey: $ANON" -H "Authorization: Bearer $ANON" 2>/dev/null || echo '[]')
+          echo "vista: $COV"
+
+          # Fallback: calcular desde gossip_log directamente
+          if [ "$COV" = "[]" ] || [ -z "$COV" ]; then
+            echo "Vista no disponible aun, calculando desde gossip_log..."
+            # Obtener muestra reciente (limit 200 para evitar timeout)
+            SAMPLE=$(curl -sf "$SUPA/rest/v1/gossip_log?select=id,payload,tipo,ts&order=ts.desc&limit=200" \
+              -H "apikey: $ANON" -H "Authorization: Bearer $ANON" 2>/dev/null || echo '[]')
+            COV=$(echo "$SAMPLE" | python3 -c "
+import sys, json, datetime
+events = json.load(sys.stdin)
+total = len(events)
+con_flow = sum(1 for e in events if e.get('payload') and (isinstance(e['payload'], dict) and e['payload'].get('flow_id') or (isinstance(e['payload'], str) and 'flow_id' in e['payload'])))
+eco = sum(1 for e in events if 'heartbeat' in (e.get('tipo') or ''))
+print(json.dumps([{'con_flow_id': con_flow, 'sin_flow_id': total - con_flow, 'total': total, 'cobertura_pct': round(con_flow/max(total,1)*100, 2), 'eco_ratio_pct': round(eco/max(total,1)*100, 2), 'fuente': 'gossip_log_sample', 'ts': datetime.datetime.utcnow().isoformat()+'Z'}]))
+" 2>/dev/null || echo '[{"error":"parse_failed"}]')
+          fi
+
+          echo "coverage=$COV" >> $GITHUB_OUTPUT
+
+      - name: escribir y evaluar
+        id: eval
+        run: |
+          COV='${{ steps.cov.outputs.coverage }}'
+          python3 - << 'EOPY'
+          import json, sys, datetime, pathlib
+
+          raw = '${{ steps.cov.outputs.coverage }}'
+          try:
+              d = json.loads(raw)
+              if isinstance(d, list) and d:
+                  row = d[0]
+              else:
+                  row = {"error": "no_data"}
+          except:
+              row = {"error": "parse_failed", "raw": raw[:200]}
+
+          cobertura = row.get('cobertura_pct', 0)
+          eco = row.get('eco_ratio_pct', 0)
+          ts = datetime.datetime.utcnow().isoformat() + 'Z'
+
+          # Umbrales del contrato metricas_eficiencia_v1
+          alertas = []
+          if cobertura < 30:
+              alertas.append(f"CRITICO: cobertura flow_id {cobertura}% < 30%")
+          elif cobertura < 50:
+              alertas.append(f"ALERTA: cobertura flow_id {cobertura}% < 50%")
+          if eco > 5:
+              alertas.append(f"ALERTA: eco_ratio {eco}% > 5%")
+
+          out = {
+              "ts": ts,
+              "cobertura_flow_id_pct": cobertura,
+              "eco_ratio_pct": eco,
+              "total_eventos_muestra": row.get('total', 0),
+              "alertas": alertas,
+              "estado": "critico" if any("CRITICO" in a for a in alertas) else ("alerta" if alertas else "ok"),
+              "nodos_prioritarios_adopcion": [
+                  "jardinero-autonomo", "autonomo-claude", "ejecutor-tareas",
+                  "nodo-integrador", "github-bridge", "evolucionador",
+                  "monitor-proactive", "orquestador-maestro", "loop-perpetuo"
+              ],
+              "contratos_sembrados": [
+                  "arbitro_estado_v1", "presupuesto_adaptativo_v1",
+                  "metricas_eficiencia_v1", "fertilidad_nodo_schema_v1", "flow_id_adopcion_v1"
+              ],
+              "heartbeat_v2_anomalia": "eco puro 44 eventos 1 payload unico — reducir frecuencia o variar payload",
+              "migracion_pendiente": "supabase/migrations/20261005_fingerprint_fertilidad.sql"
+          }
+
+          pathlib.Path('observabilidad').mkdir(exist_ok=True)
+          with open('observabilidad/flow_id_coverage.json', 'w') as f:
+              json.dump(out, f, indent=2, ensure_ascii=False)
+
+          print(json.dumps(out, indent=2, ensure_ascii=False))
+          if alertas:
+              print("\nALERTAS:", alertas, file=sys.stderr)
+          EOPY
+
+      - name: commit
+        run: |
+          git config user.email 'actions@github.com'
+          git config user.name 'MIU Flow-ID Monitor'
+          git add observabilidad/flow_id_coverage.json
+          git diff --staged --quiet || git commit -m "monitor: flow_id coverage $(date -u +%H:%M)Z"
+          git push || true
+
+      - name: reportar al gossip
+        if: always()
+        run: |
+          OUT=$(cat observabilidad/flow_id_coverage.json 2>/dev/null || echo '{}')
+          ESTADO=$(echo $OUT | python3 -c "import sys,json; print(json.load(sys.stdin).get('estado','?'))" 2>/dev/null)
+          COB=$(echo $OUT | python3 -c "import sys,json; print(json.load(sys.stdin).get('cobertura_flow_id_pct',0))" 2>/dev/null)
+          curl -sf -X POST $SUPA/functions/v1/gossip-autonomo \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d "{\"origen\":\"gh-flow-id-monitor\",\"tipo\":\"metricas_eficiencia\",\"cobertura_flow_id_pct\":$COB,\"estado\":\"$ESTADO\"}" \
+            -w "\ngossip: %{http_code}" || true

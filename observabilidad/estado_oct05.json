@@ -1,0 +1,58 @@
+{
+  "_ts": "2026-10-05T07:10:00Z",
+  "_sistema": "64k eventos 3h = 21333/h, echo 0.82%, archivo activo (trigger archivar_gossip_antes_delete, 9870 registros), 5 contratos sembrados",
+
+  "estado_real": {
+    "volumen": "no crisis de eco, sino de trazabilidad causal",
+    "echo_ratio": "0.82% (saludable)",
+    "archivo_gossip": "trigger activo, 9870 registros en gossip_archivo",
+    "unica_anomalia": "heartbeat_autonomo_v2: 44 eventos, 1 payload unico — reducir frecuencia o variar payload",
+    "contratos_sembrados": 5
+  },
+
+  "contratos_sembrados_en_relay_config": [
+    "arbitro_estado_v1",
+    "presupuesto_adaptativo_v1",
+    "metricas_eficiencia_v1",
+    "fertilidad_nodo_schema_v1",
+    "flow_id_adopcion_v1"
+  ],
+
+  "9_nodos_prioritarios_flow_id": [
+    "jardinero-autonomo", "autonomo-claude", "ejecutor-tareas",
+    "nodo-integrador", "github-bridge", "evolucionador",
+    "monitor-proactive", "orquestador-maestro", "loop-perpetuo"
+  ],
+
+  "metricas_a_vigilar": {
+    "cobertura_flow_id": "eventos_con_flow_id_valido / total (umbral: >50% en 48h post-adopcion)",
+    "eco_ratio": "eventos_fusionados_o_deduplicados / total (umbral: <5%)",
+    "formula_cobertura": "cobertura = con_flow_id / total",
+    "formula_eco": "ratio_eco = (fusionados + deduplicados) / total"
+  },
+
+  "migracion_pendiente": {
+    "archivo": "supabase/migrations/20261005_fingerprint_fertilidad.sql",
+    "que_hace": [
+      "ADD COLUMN task_fingerprint GENERATED (MD5 de tipo+nodo+accion+ef+target)",
+      "UNIQUE INDEX parcial en tareas activas equivalentes (sustituye SKIP LOCKED)",
+      "INDEX en payload->flow_id para gossip_log y miu_tareas",
+      "VIEW v_flow_id_coverage: cobertura y eco_ratio de ultima hora",
+      "VIEW v_nodo_fertilidad: fertil/infertil/sin_actividad por nodo"
+    ],
+    "aplicar": "supabase migration up --project-ref tpfiybpguuxskitszhmk"
+  },
+
+  "correcciones_trigger": {
+    "rollback": "INSERT en gossip_log dentro de trigger se revierte con transaccion — eliminado. Patron correcto: gossiear antes de pedir tarea critica",
+    "aviso": "_aviso: sin_evidencia_reciente_ni_contexto_distribuido — metadata no bloqueante",
+    "concurrencia": "FOR UPDATE SKIP LOCKED reduce contension pero NO garantiza unicidad — el fingerprint index es la garantia real"
+  },
+
+  "n8n_estado": {
+    "bridge_jaime363_ODGMPS9l5SP5aEIG": "INACTIVO — JWT MCP no sirve para REST API de N8n. Necesita API key de jaime363, no JWT MCP.",
+    "activos_ok": ["qZfvYGXBeLlG4mN7 (pulso 15min)", "w6eZAFEnAIsXiMUN (webhook miu-ingest)"]
+  },
+
+  "evidencia_declarada_neq_coordinacion_demostrada": "el sistema puede declarar contexto pero no puede demostrar que fue consultado. flow_id + tarea_padre_id permiten reconstruccion si existen. El _aviso invita sin imponer."
+}
