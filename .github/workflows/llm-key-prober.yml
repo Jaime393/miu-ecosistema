@@ -1,0 +1,152 @@
+name: LLM Key Prober (autonomo)
+# Descubre el proveedor real de cualquier clave LLM.
+# El ecosistema dispara esto — NUNCA etiquetar manualmente.
+# Escribe resultados en observabilidad/key_registry.json
+on:
+  workflow_dispatch:
+    inputs:
+      keys_json:
+        description: 'Array JSON de claves a probar [{key,alias}] o ["key1","key2"]'
+        required: false
+  repository_dispatch:
+    types: [probe-llm-keys]
+
+env:
+  SUPA: https://tpfiybpguuxskitszhmk.supabase.co
+  ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { token: '${{ secrets.GITHUB_TOKEN }}' }
+
+      - name: probe all keys
+        run: |
+          python3 - << 'EOPY'
+          import json, urllib.request, urllib.error, time, sys, os
+
+          # Proveedores en orden de prueba por prefijo
+          # La clave es: el RESULTADO del endpoint manda, no el prefijo
+          PROVIDERS = [
+            { "prefix": "AQ.",       "provider": "google_ai_studio",
+              "url": "https://generativelanguage.googleapis.com/v1beta/models?key={key}",
+              "auth": "query" },
+            { "prefix": "sk-ant-",   "provider": "anthropic",
+              "url": "https://api.anthropic.com/v1/models",
+              "auth": "x-api-key" },
+            { "prefix": "nvapi-",    "provider": "nvidia_nim",
+              "url": "https://integrate.api.nvidia.com/v1/models",
+              "auth": "bearer" },
+            { "prefix": "sk-or-v1-", "provider": "openrouter",
+              "url": "https://openrouter.ai/api/v1/models",
+              "auth": "bearer" },
+            { "prefix": "rqsty-sk-", "provider": "requesty",
+              "url": "https://router.requesty.ai/v1/models",
+              "auth": "bearer" },
+            { "prefix": "gsk_",      "provider": "groq",
+              "url": "https://api.groq.com/openai/v1/models",
+              "auth": "bearer" },
+            # sk- ambiguo — probar estos en orden
+            { "prefix": "sk-",       "provider": "deepseek",
+              "url": "https://api.deepseek.com/v1/models",
+              "auth": "bearer" },
+            { "prefix": "sk-",       "provider": "together",
+              "url": "https://api.together.xyz/v1/models",
+              "auth": "bearer" },
+            { "prefix": "sk-",       "provider": "openai",
+              "url": "https://api.openai.com/v1/models",
+              "auth": "bearer" },
+          ]
+
+          def probe_key(key):
+              prefix = key[:10]
+              candidates = [p for p in PROVIDERS if key.startswith(p["prefix"])]
+              if not candidates:
+                  candidates = PROVIDERS  # intentar todo si no hay prefijo conocido
+
+              for p in candidates:
+                  url = p["url"].replace("{key}", key)
+                  headers = {"Content-Type": "application/json"}
+                  if p["auth"] == "bearer":    headers["Authorization"] = f"Bearer {key}"
+                  elif p["auth"] == "x-api-key": headers["x-api-key"] = key
+
+                  try:
+                      req = urllib.request.Request(url, headers=headers)
+                      t0 = time.time()
+                      with urllib.request.urlopen(req, timeout=8) as r:
+                          latency = int((time.time()-t0)*1000)
+                          data = json.loads(r.read())
+                          models = [m.get("id") or m.get("name","") for m in
+                                    (data.get("models") or data.get("data") or [])[:5]]
+                          return {"key_prefix": prefix, "provider": p["provider"],
+                                  "endpoint": p["url"].split("?")[0],
+                                  "models": models, "valid": True,
+                                  "latency_ms": latency}
+                  except urllib.error.HTTPError as e:
+                      if e.code in (401, 403):
+                          continue  # clave invalida para este proveedor
+                  except Exception:
+                      pass
+
+              return {"key_prefix": prefix, "provider": None, "valid": False,
+                      "error": "no_provider_accepted"}
+
+          # Leer claves del input o de D1 claude_handoff
+          input_raw = os.environ.get("KEYS_INPUT", "")
+          if not input_raw:
+              print("No keys input — el ecosistema debe pasar keys_json")
+              sys.exit(0)
+
+          try:
+              raw = json.loads(input_raw)
+              keys = [x if isinstance(x, str) else x.get("key","") for x in raw]
+          except:
+              keys = [input_raw.strip()]
+
+          results = []
+          for k in keys:
+              if not k: continue
+              print(f"Probando {k[:12]}...")
+              r = probe_key(k)
+              print(f"  -> {r.get('provider','?')} valid={r['valid']} models={r.get('models',[])}")
+              results.append(r)
+              time.sleep(0.3)  # gentil con rate limits
+
+          import pathlib
+          pathlib.Path("observabilidad").mkdir(exist_ok=True)
+          out = {"ts": __import__("datetime").datetime.utcnow().isoformat()+"Z",
+                 "total": len(results),
+                 "validas": sum(1 for r in results if r["valid"]),
+                 "resultados": results}
+          with open("observabilidad/key_registry.json", "w") as f:
+              json.dump(out, f, indent=2, ensure_ascii=False)
+          print(f"Resultado: {out['validas']}/{out['total']} validas")
+          EOPY
+        env:
+          KEYS_INPUT: '${{ github.event.inputs.keys_json || github.event.client_payload.keys_json }}'
+
+      - name: commit registry
+        run: |
+          git config user.email 'actions@github.com'
+          git config user.name 'MIU Key Prober'
+          git pull --rebase origin main 2>/dev/null || true
+          git add observabilidad/key_registry.json
+          git diff --staged --quiet || git commit -m "keys: probe result $(date -u +%H:%MZ)"
+          git push || true
+
+      - name: reportar al ecosistema
+        if: always()
+        run: |
+          OUT=$(cat observabilidad/key_registry.json 2>/dev/null || echo '{}')
+          VALIDAS=$(echo $OUT | python3 -c "import sys,json; print(json.load(sys.stdin).get('validas',0))" 2>/dev/null)
+          TOTAL=$(echo $OUT | python3 -c "import sys,json; print(json.load(sys.stdin).get('total',0))" 2>/dev/null)
+          curl -sf -X POST $SUPA/functions/v1/gossip-autonomo \
+            -H "Authorization: Bearer $ANON" \
+            -H 'Content-Type: application/json' \
+            -d "{\"origen\":\"gh-key-prober\",\"tipo\":\"keys_verificadas\",\"validas\":$VALIDAS,\"total\":$TOTAL}" \
+            -w "\ngossip: %{http_code}" || true
