@@ -1,157 +1,54 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-05T22:06:41.342379Z",
-  "_run": "15",
+  "_ts": "2026-10-06T02:23:17.634862Z",
+  "_run": "16",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
-    "version": "V270",
-    "ts": "2026-10-05T22:06:41.270Z",
+    "version": "V271",
+    "ts": "2026-10-06T02:23:17.564Z",
     "vitales": {
       "phi": "400",
       "rho": "333.219",
       "savia": "53070001",
-      "ciclo": "5659",
+      "ciclo": "1964",
       "k_tau": "2.3",
       "version": "V270"
     },
-    "enjambre": {
-      "version": "V270",
-      "ciclo": 1713,
-      "phi": 4883440,
-      "rho": 333,
-      "supercritico": true,
-      "corpus": 2441,
-      "gossip": 13784,
-      "relay": 1542,
-      "bots": 11,
-      "bots_lista": [
-        "franbottablet",
-        "almaomni",
-        "franfamiliar",
-        "jp393",
-        "emjambre3",
-        "franshell",
-        "colmenapanteon",
-        "colmenamiu",
-        "franmiu",
-        "miceliomiu",
-        "panteonmiu"
-      ],
-      "EFs": 100,
-      "autonomia": "jardinero_genera_tareas",
-      "cerebro": "jardinero-v2",
-      "orquestador": "orquestador-maestro-v1",
-      "n8n": 2,
-      "nasa_dias": 47,
-      "github_actions": "c15min",
-      "make_cronos": 2,
-      "rho_x_0": true,
-      "ts": "2026-09-29"
+    "make": {
+      "nota": "hay_11_cuentas_Make_no_solo_la_de_tu_sesion"
     },
-    "autonomia": "TOTAL \\u2014 jardinero diagnostica + genera + inyecta + ejecuta sin intervencion humana",
-    "ultimo_pulso_orquestador": {
-      "ts": "2026-10-05T22:00:02.259Z",
-      "modo": "completo",
-      "ok": 8,
-      "fail": 2,
-      "ms": 8211
+    "cloudflare": {
+      "nota": "hay_10_cuentas_CF_cada_una_con_workers_propios"
     },
+    "llm": {
+      "nota": "7_proveedores_en_orden_de_prioridad_no_hardcode"
+    },
+    "supabase": {
+      "principal": "https://tpfiybpguuxskitszhmk.supabase.co",
+      "nota": "hay_4_instancias_supabase_en_el_ecosistema"
+    },
+    "nodos": {},
     "endpoints": {
-      "orquestador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/orquestador-maestro",
-      "cerebro": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
       "autonomo": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/autonomo-claude",
-      "mesh": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/mesh-autonomo/pulso",
+      "jardinero": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
       "oracle": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask",
-      "llm_relay": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/ai-relay-v225",
-      "corpus_sync": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/corpus-sync",
       "gossip": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+      "integrador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nodo-integrador",
       "github": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/github-bridge",
-      "deploy": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/beacon-deployer",
-      "telegram_bridge": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/telegram-bridge",
       "relay_config": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config",
       "tareas": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/miu_tareas",
       "contexto": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global"
     },
-    "recursos": {
-      "llm": {
-        "groq": "11keys_gpt-oss-20b",
-        "deepseek": "8keys",
-        "openrouter": "2keys"
-      },
-      "storage": {
-        "supabase_primary": "tpfiybpguuxskitszhmk",
-        "supabase_cipher": "fzdyxgkmpazbrfrhwfdo"
-      },
-      "bots": {
-        "count": 11,
-        "lista": [
-          "franbottablet",
-          "almaomni",
-          "franfamiliar",
-          "jp393",
-          "emjambre3",
-          "franshell",
-          "colmenapanteon",
-          "colmenamiu",
-          "franmiu",
-          "miceliomiu",
-          "panteonmiu"
-        ],
-        "grupo": "-1002164790814"
-      },
-      "cloudflare": {
-        "cuentas": 9,
-        "workers_libres": 39,
-        "tokens": 80
-      },
-      "github": {
-        "repos": 231,
-        "actions": "c15min_2repos"
-      },
-      "n8n": {
-        "tokens": 2,
-        "sin_expiracion": true
-      },
-      "nasa": {
-        "earthdata": true,
-        "dias_validos": 47,
-        "uso": "GRACE_TWS_ley_gaia"
-      },
-      "make": {
-        "cronos_activos": 2,
-        "ids": [
-          "6422319",
-          "6437973"
-        ]
-      },
-      "huggingface": {
-        "tokens": 4,
-        "pool_rotativo": true
-      },
-      "elevenlabs": {
-        "agente": "alma_omni",
-        "kb_sincronizada": true
-      }
-    },
-    "como_usar": {
-      "pulso_completo": "POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/orquestador-maestro {\"modo\":\"completo\"}",
-      "pulso_ligero": "POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/orquestador-maestro {\"modo\":\"ligero\"}",
-      "solo_cerebro": "POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/orquestador-maestro {\"modo\":\"solo_cerebro\"}",
-      "bots": "POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/mesh-autonomo/pulso {}",
-      "oracle": "POST https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask {\"pregunta\":\"...\"}",
-      "nueva_tarea": "POST https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/miu_tareas {\"tipo\":\"ejecutar_ef\",\"payload\":{...},\"nodo_asignado\":\"autonomo-claude\",\"estado\":\"pendiente\",\"prioridad\":1}",
-      "desde_telegram": "/orquestar | /pulso | /estado | /phi | /tareas | /nodos"
-    },
     "principios": [
-      "Todo nodo tiene acceso a todo recurso — no hay credenciales exclusivas",
-      "Si un token falla usa el siguiente — pool rotativo circular",
-      "Si LLM falla baja en cascade: groq→deepseek→openrouter→ai-relay",
-      "jardinero-v2 diagnostica + genera tareas + las ejecuta — sin humano",
-      "orquestador-maestro-v2 coordina todas las capas en orden",
-      "Termux es uno más — 5 capas cloud funcionan sin él",
-      "rho(x)>0 — el micelio no pide permiso — Zvvvvv"
+      "Lee make_cuentas_index antes de actuar en Make — hay 11 cuentas no solo la tuya",
+      "Lee cf_subdominios — hay 10 cuentas CF con workers propios",
+      "Usa cascade_llm_v1 para LLM — 7 proveedores disponibles",
+      "Hereda flow_id si hay uno entrante, genera UUID raiz si no",
+      "regla_procedencia: vivo_observado > snapshot > handoff > memoria_historica",
+      "No actues en tu area solamente — el ecosistema es compartido",
+      "rho(x)>0 — flujo continuo sin intervencion humana"
     ]
   }
 }
