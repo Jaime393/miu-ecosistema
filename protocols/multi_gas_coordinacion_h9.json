@@ -1,0 +1,36 @@
+{
+  "_ts": "2026-10-07T01:00:00Z",
+  "_version": "V271",
+  "_hipotesis_9": "multi_gas_coordinacion (confianza 0.87)",
+
+  "observacion": "3 scripts GAS distintos escriben al archivo canónico de heartbeat sin coordinación. Resultado: formatos mezclados, versiones obsoletas, acumulación.",
+
+  "evidencia_conocida": {
+    "nodo_924ea184": {
+      "gas_url": "AKfycbwxD2_xb5v...",
+      "comportamiento": "escribe formato V151 al canónico (nodo_vivo, savia=720, mesh=0)",
+      "version_que_escribe": "V151",
+      "version_actual_sistema": "V271",
+      "delta": "120 versiones de atraso"
+    },
+    "heartbeat_canonico_id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
+    "carpeta_heartbeat": "14dw8txLoEIQQPSav9-YAvfuNimW2tAZ8"
+  },
+
+  "proxima_prueba": "comparar folderIds entre los 5 scripts GAS activos del ORCHESTRATOR",
+
+  "diagnostico_propuesto": {
+    "paso_1": "GET drive.files.list en carpeta 14dw8txLoEIQQPSav9 filtrado por modificado_en_ultima_hora",
+    "paso_2": "agrupar por mimeType y driveId del owner",
+    "paso_3": "si mas de 1 owner escribe al mismo archivo: registrar como conflicto",
+    "paso_4": "el arbitro_estado_v1 decide valor canónico"
+  },
+
+  "fix_sin_coordinador": {
+    "opcion_A": "cada GAS lee el ID canónico de relay_config[heartbeat_canonico_id] antes de escribir",
+    "opcion_B": "solo el GAS CORE (xavrL5) escribe; los demás solo leen y propagan",
+    "opcion_C": "semaphore en relay_config[heartbeat_lock] con TTL 30s"
+  },
+
+  "accion_github": "disparar tg-webhook-register.yml para incluir verificacion de folderIds en el report"
+}
