@@ -1,54 +1,11 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-09T00:07:13.643701Z",
-  "_run": "28",
+  "_ts": "2026-10-09T06:28:05.246739Z",
+  "_run": "29",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
-    "version": "V271",
-    "ts": "2026-10-09T00:07:13.582Z",
-    "vitales": {
-      "phi": "400",
-      "rho": "333.219",
-      "savia": "53070001",
-      "ciclo": "3693",
-      "k_tau": "2.3",
-      "version": "V270"
-    },
-    "make": {
-      "nota": "hay_11_cuentas_Make_no_solo_la_de_tu_sesion"
-    },
-    "cloudflare": {
-      "nota": "hay_10_cuentas_CF_cada_una_con_workers_propios"
-    },
-    "llm": {
-      "nota": "7_proveedores_en_orden_de_prioridad_no_hardcode"
-    },
-    "supabase": {
-      "principal": "https://tpfiybpguuxskitszhmk.supabase.co",
-      "nota": "hay_4_instancias_supabase_en_el_ecosistema"
-    },
-    "nodos": {},
-    "endpoints": {
-      "autonomo": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/autonomo-claude",
-      "jardinero": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
-      "oracle": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask",
-      "gossip": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
-      "integrador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nodo-integrador",
-      "github": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/github-bridge",
-      "relay_config": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config",
-      "tareas": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/miu_tareas",
-      "contexto": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global"
-    },
-    "principios": [
-      "Lee make_cuentas_index antes de actuar en Make — hay 11 cuentas no solo la tuya",
-      "Lee cf_subdominios — hay 10 cuentas CF con workers propios",
-      "Usa cascade_llm_v1 para LLM — 7 proveedores disponibles",
-      "Hereda flow_id si hay uno entrante, genera UUID raiz si no",
-      "regla_procedencia: vivo_observado > snapshot > handoff > memoria_historica",
-      "No actues en tu area solamente — el ecosistema es compartido",
-      "rho(x)>0 — flujo continuo sin intervencion humana"
-    ]
+    "error": "unreachable"
   }
 }
