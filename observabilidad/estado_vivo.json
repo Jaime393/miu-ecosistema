@@ -1,19 +1,19 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-11T15:51:46.562593Z",
-  "_run": "40",
+  "_ts": "2026-10-11T19:53:50.550273Z",
+  "_run": "41",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V271",
-    "ts": "2026-10-11T15:51:46.497Z",
+    "ts": "2026-10-11T19:53:50.491Z",
     "vitales": {
-      "phi": "400",
+      "phi": "2874.62",
       "rho": "333.219",
-      "savia": "53361001",
-      "ciclo": "2689",
-      "k_tau": "2.3",
+      "savia": "53402001",
+      "ciclo": "2730",
+      "k_tau": "3",
       "version": "V270"
     },
     "make": {
