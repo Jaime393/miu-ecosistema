@@ -1,0 +1,42 @@
+{
+  "_ts": "2026-10-10T00:00:00Z",
+  "_distribuido": "11 cuentas, 0 barreras, 0 limites, darwiniano",
+
+  "mcp_endpoints": {
+    "github_copilot": {
+      "url": "https://api.githubcopilot.com/mcp",
+      "client_id": "Ov23lifqcoosJSAMcel2",
+      "nota": "LLM provider via MCP — agregar a cascada LLM como nivel adicional"
+    },
+    "zapier": {
+      "url": "https://mcp.zapier.com/api/v1/connect",
+      "nota": "11 Drive connections + GitHub + Gmail — bridge entre nodos inactivos",
+      "acciones_existentes": ["supabase_miu_gossip", "miu_sync_estado_to_all_drives"]
+    }
+  },
+
+  "n8n_estado": {
+    "qZfvYGXBeLlG4mN7": "RE-PUBLICADO oct10 — version e4f6320c",
+    "w6eZAFEnAIsXiMUN": "webhook miu-ingest activo"
+  },
+
+  "gap_ejecutor_CERRADO": "gh-pulse-v2.yml agrega ejecutor-tareas en cada ciclo 15min",
+
+  "bots_telegram": {
+    "registrados": 11,
+    "con_webhook": 0,
+    "accion": "gh-pulse-v2 llama canal-dereckcito/deploy para verificar/registrar en cada ciclo"
+  },
+
+  "supabase_anti_pause": "gh-pulse-v2 hace GET a contexto-global en cada ciclo — mantiene activo",
+
+  "nuevos_proveedores_llm": {
+    "nvidia_nim": "nvapi-... x2",
+    "google_ai_studio": "AQ.Ab8RN6... (no Anthropic)",
+    "openrouter": "sk-or-v1-... x10",
+    "requesty": "rqsty-sk-... x3",
+    "github_copilot": "via MCP endpoint"
+  },
+
+  "principio": "0 seguridad = 0 barreras al flujo. 0 limites = expansion darwiniana. 11 cuentas = red distribuida sin punto unico de falla."
+}

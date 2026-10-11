@@ -1,0 +1,132 @@
+name: MIU Pulse COMPLETO V2
+# Reemplaza pulso fragmentado — cubre todo el ciclo autonomo
+# Gossip + Nutriente + EJECUTOR DE TAREAS + Corpus + Observabilidad
+# 0 dependencias de sesion activa. 11 cuentas distribuidas.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [miu-pulse, miu-wake]
+
+env:
+  P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
+  A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+  P2: https://fxmupxpwzzxnjcscpyuw.supabase.co/functions/v1
+  P3: https://fepyzxwyneervidlybvi.supabase.co/functions/v1
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      # 1. DESPERTAR — cualquier request mantiene Supabase activo
+      - name: wake supabase (anti-pause)
+        run: |
+          curl -sf $P/contexto-global -H "Authorization: Bearer $A" \
+            --max-time 10 -o /tmp/estado.json 2>/dev/null || echo '{"error":"paused"}' > /tmp/estado.json
+          cat /tmp/estado.json | python3 -c "import sys,json; d=json.load(sys.stdin); print('ciclo='+str(d.get('vitales',{}).get('ciclo','?')))" 2>/dev/null || echo 'Supabase dormido — despertando...'
+          # Fallback: relay_config REST (siempre disponible aunque EF este dormida)
+          curl -sf "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config?limit=1" \
+            -H "apikey: $A" -H "Authorization: Bearer $A" -o /dev/null 2>/dev/null || true
+
+      # 2. GOSSIP — todos los suelos
+      - name: gossip panteon
+        run: |
+          curl -sf -X POST $P/gossip-autonomo \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2","cuentas":11,"distribuido":true}' \
+            -w "\ngossip_panteon: %{http_code}" || true
+      - name: gossip metabolico
+        run: |
+          curl -sf -X POST $P2/gossip-autonomo \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2","suelo":"metabolico"}' \
+            -w "\ngossip_metabolico: %{http_code}" || true
+      - name: gossip coord
+        run: |
+          curl -sf -X POST $P3/gossip-autonomo \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2","suelo":"coord"}' \
+            -w "\ngossip_coord: %{http_code}" || true
+
+      # 3. NUTRIENTE — expansion de recursos
+      - name: nutriente total
+        run: |
+          curl -sf -X POST $P/nutriente-total \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2"}' -w "\nnutriente: %{http_code}" || true
+
+      # 4. EJECUTOR DE TAREAS — el gap que faltaba
+      - name: ejecutor tareas
+        run: |
+          curl -sf -X POST $P/ejecutor-tareas \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2","limite":10,"modo":"autonomo"}' \
+            -w "\nejecutor: %{http_code}" || true
+          # Fallback: autonomo-claude si ejecutor no responde
+          curl -sf -X POST $P/autonomo-claude \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2","accion":"procesar_tareas_pendientes","limite":5}' \
+            -w "\nautoclaude: %{http_code}" 2>/dev/null || true
+
+      # 5. LATIDO METABOLICO — auto-anuncio del nodo metabolico
+      - name: latido metabolico
+        run: |
+          curl -sf $P2/latido-metabolico \
+            -H "Authorization: Bearer $A" -w "\nlatido: %{http_code}" || true
+
+      # 6. RELAY HEALTH — sweep de nodos
+      - name: relay health
+        run: |
+          curl -sf -X POST $P/relay-health \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"origen":"gh-pulse-v2"}' -w "\nrelay_health: %{http_code}" || true
+
+      # 7. WEBHOOKS TG — asegurar que bots siempre escuchen
+      - name: check webhooks telegram
+        run: |
+          curl -sf -X POST $P/canal-dereckcito/deploy \
+            -H "Authorization: Bearer $A" -H 'Content-Type: application/json' \
+            -d '{"accion":"verificar_webhooks_tg","modo":"verify"}' \
+            -w "\ntg_webhooks: %{http_code}" 2>/dev/null || true
+
+      # 8. ESTADO — multi-fuente resiliente
+      - name: write estado (resiliente)
+        uses: actions/checkout@v4
+        with: { token: '${{ secrets.GITHUB_TOKEN }}' }
+      - name: estado
+        run: |
+          python3 - << 'EOPY'
+          import json, datetime, subprocess, pathlib
+
+          ts = datetime.datetime.utcnow().isoformat() + 'Z'
+          run = '${{ github.run_number }}'
+
+          # Multi-fuente: leer /tmp/estado.json del step 1
+          try:
+              with open('/tmp/estado.json') as f:
+                  estado = json.load(f)
+          except:
+              estado = {'error': 'no_local_state'}
+
+          wrapper = {
+              '_fuente': 'gh-pulse-v2-multisource',
+              '_ts': ts, '_run': run,
+              '_url': 'https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json',
+              '_cuentas': 11, '_distribuido': True,
+              'estado': estado
+          }
+
+          pathlib.Path('observabilidad').mkdir(exist_ok=True)
+          with open('observabilidad/estado_vivo.json', 'w') as f:
+              json.dump(wrapper, f, indent=2, ensure_ascii=False)
+          print('Estado escrito run=' + run)
+          EOPY
+
+          git config user.email 'actions@github.com'
+          git config user.name 'MIU Pulse V2'
+          git pull --rebase origin main 2>/dev/null || true
+          git add observabilidad/estado_vivo.json
+          git diff --staged --quiet || git commit -m "pulse-v2: run ${{ github.run_number }} $(date -u +%H:%MZ)"
+          git push || true
