@@ -1,0 +1,26 @@
+name: miu-fix-now
+on:
+  push:
+    paths:
+      - .github/workflows/miu-fix-now.yml
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preview grupos_tg
+        id: preview
+        run: |
+          echo "=== PREVIEW ==="
+          curl -s https://miu-fix-now-miu4.vercel.app/api/preview | python3 -m json.tool
+      - name: Ejecutar Fix
+        id: fix
+        run: |
+          echo "=== FIX ==="
+          RESULT=$(curl -s https://miu-fix-now-miu4.vercel.app/api/fix)
+          echo "$RESULT" | python3 -m json.tool
+          echo "result=$RESULT" >> $GITHUB_OUTPUT
+      - name: Escribir resultado a D1
+        run: |
+          echo "Fix completado. Resultado guardado en el log del Action."
+          echo "URL: https://github.com/Jaime393/miu-ecosistema/actions"
