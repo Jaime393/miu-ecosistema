@@ -1,0 +1,41 @@
+name: miu-oracle-update
+on:
+  push:
+    paths:
+      - .github/workflows/miu-oracle-update.yml
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update oracle_relay_url en panteon relay_config
+        run: |
+          PANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"
+          PANT="https://tpfiybpguuxskitszhmk.supabase.co"
+          NEW_URL="https://oracle-ask-v26-miu4.vercel.app/api/ask"
+          echo "=== Upsert oracle_relay_url en panteon ==="
+          curl -s -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" \
+            -H "Authorization: Bearer $PANON" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: resolution=merge-duplicates,return=representation" \
+            -d "[{\"clave\":\"oracle_relay_url_v26\",\"valor\":\"$NEW_URL\"}]"
+          echo ""
+          echo "=== Upsert oracle_ask_v26 en panteon ==="
+          curl -s -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" \
+            -H "Authorization: Bearer $PANON" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: resolution=merge-duplicates,return=representation" \
+            -d "[{\"clave\":\"oracle_ask_v26_url\",\"valor\":\"$NEW_URL\"},{\"clave\":\"oracle_ask_v26_health\",\"valor\":\"https://oracle-ask-v26-miu4.vercel.app/api/health\"},{\"clave\":\"oracle_ask_v26_pool\",\"valor\":\"https://oracle-ask-v26-miu4.vercel.app/api/pool\"}]"
+      - name: Verificar health oracle-ask-v26
+        run: |
+          echo "=== Health check ==="
+          sleep 5
+          curl -s https://oracle-ask-v26-miu4.vercel.app/api/health | python3 -m json.tool || echo "aun buildando"
+      - name: Test ask
+        run: |
+          echo "=== Test oracle ==="
+          curl -s -X POST https://oracle-ask-v26-miu4.vercel.app/api/ask \
+            -H "Content-Type: application/json" \
+            -d '{"message":"rho(x)>0 en una frase","max_tokens":50}' | python3 -m json.tool
