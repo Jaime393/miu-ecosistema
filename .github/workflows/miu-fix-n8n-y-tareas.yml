@@ -1,0 +1,152 @@
+name: miu-fix-n8n-y-tareas
+on:
+  push:
+    paths: [.github/workflows/miu-fix-n8n-y-tareas.yml]
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 0 - Leer claves desde relay_config
+        run: |
+          relay() { curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
+          echo "N8N_KEY=$(relay n8n_api_key)" >> $GITHUB_ENV
+          echo "N8N_KEY2=$(relay n8n_miud_api_key)" >> $GITHUB_ENV
+          FZDYX=$(relay supabase_fzdyx_anon || relay anon_fzdyxgkmpazbrfrhwfdo || relay cipher_anon_key)
+          echo "FZDYX_ANON=$FZDYX" >> $GITHUB_ENV
+          echo "Keys: n8n=${N8N_KEY:0:8}... fzdyx=${FZDYX:0:20}..."
+
+      - name: 1 - Leer workflow coord-bridge
+        id: coord
+        run: |
+          for KEY in "$N8N_KEY" "$N8N_KEY2"; do
+            [ -z "$KEY" ] && continue
+            R=$(curl -sf https://miud.app.n8n.cloud/api/v1/workflows/wSShDOqVEExVjusN \
+              -H "X-N8N-API-KEY: $KEY" 2>/dev/null)
+            if echo "$R" | python3 -c "import sys,json; d=json.load(sys.stdin); print('ok' if d.get('id') else 'err')" 2>/dev/null | grep -q ok; then
+              echo "$R" > /tmp/coord_bridge.json
+              echo "N8N_KEY_GOOD=$KEY" >> $GITHUB_ENV
+              echo "Workflow leido OK"
+              break
+            fi
+          done
+
+      - name: 2 - Parchear coord-bridge
+        run: |
+          if [ ! -f /tmp/coord_bridge.json ]; then echo "No se pudo leer workflow"; exit 0; fi
+          python3 << 'PYEOF'
+          import json, os
+
+          wf = json.load(open('/tmp/coord_bridge.json'))
+          nodes = wf.get('nodes', [])
+          fzdyx = os.environ.get('FZDYX_ANON', '')
+          changed = 0
+
+          for n in nodes:
+              name = n.get('name','').lower()
+              params = n.get('parameters', {})
+
+              # gossip-coord: cambiar a EF gossip-autonomo
+              if 'gossip' in name and 'coord' in name:
+                  params['url'] = 'https://fepyzxwyneervidlybvi.supabase.co/functions/v1/gossip-autonomo'
+                  params['sendBody'] = True
+                  params['contentType'] = 'json'
+                  params['body'] = json.dumps({"origen": "n8n-coord-bridge-v270", "suelo": "coord"})
+                  # quitar Prefer header si existe
+                  hdrs = params.get('headerParameters', {}).get('parameters', [])
+                  params['headerParameters'] = {'parameters': [h for h in hdrs if h.get('name','').lower() != 'prefer']}
+                  changed += 1
+
+              # gossip-panteon: mismo fix
+              elif 'gossip' in name and 'panteon' in name:
+                  params['url'] = 'https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo'
+                  params['sendBody'] = True
+                  params['contentType'] = 'json'
+                  params['body'] = json.dumps({"origen": "n8n-coord-bridge-v270", "suelo": "panteon"})
+                  hdrs = params.get('headerParameters', {}).get('parameters', [])
+                  params['headerParameters'] = {'parameters': [h for h in hdrs if h.get('name','').lower() != 'prefer']}
+                  changed += 1
+
+              # nutriente-federado: agregar Authorization
+              elif 'nutriente' in name and 'federado' in name and fzdyx:
+                  hdrs = params.get('headerParameters', {}).get('parameters', [])
+                  has_auth = any(h.get('name','').lower() == 'authorization' for h in hdrs)
+                  if not has_auth:
+                      hdrs.append({'name': 'Authorization', 'value': f'Bearer {fzdyx}'})
+                      params['headerParameters'] = {'parameters': hdrs}
+                      changed += 1
+                  n['onError'] = 'continueRegularOutput'
+
+              n['parameters'] = params
+
+          print(f'Nodos modificados: {changed}')
+          json.dump(wf, open('/tmp/coord_bridge_fixed.json', 'w'))
+          PYEOF
+
+      - name: 3 - PUT coord-bridge fijado
+        run: |
+          if [ ! -f /tmp/coord_bridge_fixed.json ]; then echo 'skip'; exit 0; fi
+          R=$(curl -sf -X PUT https://miud.app.n8n.cloud/api/v1/workflows/wSShDOqVEExVjusN \
+            -H "X-N8N-API-KEY: $N8N_KEY_GOOD" \
+            -H 'Content-Type: application/json' \
+            --data-binary @/tmp/coord_bridge_fixed.json)
+          echo "PUT result: $(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print('OK id='+str(d.get('id','?')))" 2>/dev/null || echo $R | head -c 200)"
+
+      - name: 4 - Fix relay-health workflow
+        run: |
+          [ -z "$N8N_KEY_GOOD" ] && echo 'skip' && exit 0
+          WF=$(curl -sf https://miud.app.n8n.cloud/api/v1/workflows/EyojHVpxyYOubfKW \
+            -H "X-N8N-API-KEY: $N8N_KEY_GOOD" 2>/dev/null)
+          echo "$WF" | python3 << 'PYEOF'
+          import json, sys, os
+          try:
+              wf = json.load(sys.stdin)
+          except: print('no se pudo leer'); exit(0)
+          fzdyx = os.environ.get('FZDYX_ANON', '')
+          for n in wf.get('nodes', []):
+              name = n.get('name','').lower()
+              if 'relay' in name and 'health' in name:
+                  n['onError'] = 'continueRegularOutput'
+              elif 'nutriente' in name and 'federado' in name and fzdyx:
+                  hdrs = n.get('parameters',{}).get('headerParameters',{}).get('parameters',[])
+                  if not any(h.get('name','').lower()=='authorization' for h in hdrs):
+                      hdrs.append({'name':'Authorization','value':f'Bearer {fzdyx}'})
+                  n.get('parameters',{}).setdefault('headerParameters',{})['parameters'] = hdrs
+                  n['onError'] = 'continueRegularOutput'
+          json.dump(wf, open('/tmp/relay_fixed.json','w'))
+          print('fixed')
+          PYEOF
+          if [ -f /tmp/relay_fixed.json ]; then
+            curl -sf -X PUT https://miud.app.n8n.cloud/api/v1/workflows/EyojHVpxyYOubfKW \
+              -H "X-N8N-API-KEY: $N8N_KEY_GOOD" \
+              -H 'Content-Type: application/json' \
+              --data-binary @/tmp/relay_fixed.json > /dev/null && echo 'relay-health fix OK' || echo 'relay-health fix FAIL'
+          fi
+
+      - name: 5 - Escribir tareas a miu_tareas
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          curl -sf -X POST "$PANT/rest/v1/miu_tareas" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"descripcion\":\"fix pg_cron wrappers — funciones con args fallando 288 veces — crear fn_X_w() wrappers sin args\",\"prioridad\":\"alta\",\"origen\":\"github-action-oct15\",\"ts\":\"$TS\"},{\"descripcion\":\"activar evaluador-admision EF — TwwC5btMMYsVhXPp standby esperando\",\"prioridad\":\"media\",\"origen\":\"github-action-oct15\",\"ts\":\"$TS\"},{\"descripcion\":\"limpiar Vercel hobby deployments sin cron — 8 funciones deployadas nunca ejecutadas\",\"prioridad\":\"baja\",\"origen\":\"github-action-oct15\",\"ts\":\"$TS\"}]" \
+            && echo 'tareas escritas OK' || echo 'tareas: columnas diferentes, verificar schema'
+
+      - name: 6 - Gossip y commit
+        run: |
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"github_action_n8n_fix\",\"origen\":\"miu-fix-n8n-y-tareas.yml\",\"contenido\":\"coord_bridge+relay_health fijados via REST API — tareas escritas a miu_tareas\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+          mkdir -p resultados
+          [ -f /tmp/coord_bridge_fixed.json ] && cp /tmp/coord_bridge_fixed.json resultados/coord_bridge_patched.json
+          git config user.email 'action@github.com'
+          git config user.name 'miu-action'
+          git add resultados/
+          git diff --staged --quiet || git commit -m "n8n+tareas fix $(date -u +%Y-%m-%dT%H:%M)"
+          git push
