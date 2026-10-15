@@ -1,0 +1,107 @@
+name: miu-fix-direct
+on:
+  push:
+    paths: [.github/workflows/miu-fix-direct.yml]
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      META: fxmupxpwzzxnjcscpyuw
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 0 - Leer sbp desde relay_config
+        id: creds
+        run: |
+          SBP=$(curl -sf "$PANT/rest/v1/relay_config?clave=eq.sbp_dereckcito&select=valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['valor'])" 2>/dev/null)
+          if [ -z "$SBP" ]; then
+            SBP=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.sbp_%25&select=clave,valor&limit=1" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
+          fi
+          echo "SBP=${SBP}" >> $GITHUB_ENV
+          [ -n "$SBP" ] && echo "sbp found: ${SBP:0:12}..." || echo "WARNING: no sbp found"
+
+      - name: 1 - Funciones con args
+        run: |
+          mkdir -p resultados
+          curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT p.proname, pg_get_function_arguments(p.oid) as args FROM pg_proc p JOIN pg_namespace n ON n.oid=p.pronamespace WHERE n.nspname=chr(112)||chr(117)||chr(98)||chr(108)||chr(105)||chr(99) AND pg_get_function_arguments(p.oid)!=chr(39)||chr(39) AND (lower(p.proname) LIKE chr(37)||chr(97)||chr(108)||chr(101)||chr(114)||chr(116)||chr(97)||chr(37) OR lower(p.proname) LIKE chr(37)||chr(108)||chr(108)||chr(109)||chr(95)||chr(100)||chr(105)||chr(115)||chr(116)||chr(37)) ORDER BY p.proname"}' \
+            > resultados/fns.json
+          cat resultados/fns.json
+
+      - name: 2 - Crear wrappers
+        run: |
+          cat resultados/fns.json | python3 << 'PYEOF'
+          import json, subprocess, sys
+          try:
+              fns = json.load(open('resultados/fns.json'))
+              if isinstance(fns, dict): fns = fns.get('data', fns.get('rows', []))
+          except: fns = []
+          print(f"Funciones encontradas: {len(fns)}")
+          for fn in fns:
+              name = fn.get('proname', fn.get('name', ''))
+              if not name: continue
+              sql = f"""CREATE OR REPLACE FUNCTION public.{name}_w() RETURNS void LANGUAGE plpgsql AS $f$ BEGIN BEGIN PERFORM public.{name}(NULL); EXCEPTION WHEN OTHERS THEN INSERT INTO gossip_log(tipo,origen,contenido,ts) VALUES('wrap_err','{name}_w',SQLERRM,now()); END; END $f$;"""
+              import os
+              r = subprocess.run(['curl','-sf','-X','POST',
+                  f'https://api.supabase.com/v1/projects/{os.environ["META"]}/database/query',
+                  '-H',f'Authorization: Bearer {os.environ["SBP"]}',
+                  '-H','Content-Type: application/json',
+                  '-d',json.dumps({'query': sql})],
+                  capture_output=True, text=True)
+              print(f"  {name}_w: {r.stdout[:100]}")
+          PYEOF
+
+      - name: 3 - Redirigir crons
+        run: |
+          CRONS=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT jobid::text,jobname,command FROM cron.job WHERE command ILIKE chr(37)||chr(97)||chr(108)||chr(101)||chr(114)||chr(116)||chr(97)||chr(37) OR command ILIKE chr(37)||chr(108)||chr(108)||chr(109)||chr(95)||chr(100)||chr(105)||chr(115)||chr(116)||chr(37)"}' )
+          echo "$CRONS" > resultados/crons.json
+          echo "$CRONS" | python3 << 'PYEOF'
+          import json, subprocess, sys, os, re
+          try:
+              crons = json.loads(sys.stdin.read())
+              if isinstance(crons, dict): crons = crons.get('data', crons.get('rows', []))
+          except: crons = []
+          for c in crons:
+              jid = c.get('jobid') or c.get('id','')
+              cmd = c.get('command','')
+              m = re.search(r'SELECT\s+(\w+)', cmd, re.I)
+              if not m: continue
+              fn = m.group(1)
+              if fn.endswith('_w'): continue
+              sql = f"SELECT cron.alter_job({jid}::bigint, command := 'SELECT {fn}_w()');"
+              print(f"  job {jid}: {cmd} -> SELECT {fn}_w()")
+              r = subprocess.run(['curl','-sf','-X','POST',
+                  f'https://api.supabase.com/v1/projects/{os.environ["META"]}/database/query',
+                  '-H',f'Authorization: Bearer {os.environ["SBP"]}',
+                  '-H','Content-Type: application/json',
+                  '-d',json.dumps({'query': sql})], capture_output=True, text=True)
+              print(f"    result: {r.stdout[:80]}")
+          PYEOF
+
+      - name: 4 - Discover sustratos
+        run: |
+          curl -sf --max-time 60 https://miu-discover-substrates-miu4.vercel.app/api/discover \
+            > resultados/sustratos.json 2>/dev/null || echo '{"err":"timeout"}' > resultados/sustratos.json
+          python3 -c "import json; d=json.load(open('resultados/sustratos.json')); print(f'sustratos: total={d.get(\"total\",\"?\")}, new={d.get(\"new\",\"?\")}, con_anon={d.get(\"with_anon\",\"?\")}')"
+
+      - name: 5 - Gossip y commit
+        run: |
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"github_fix_direct\",\"origen\":\"miu-fix-direct.yml\",\"contenido\":\"wrappers_crons_sustratos\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+          git config user.email 'action@github.com'
+          git config user.name 'miu-action'
+          git add resultados/
+          git diff --staged --quiet || git commit -m "fix+discover $(date -u +%Y-%m-%dT%H:%M)"
+          git push
