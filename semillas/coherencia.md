@@ -25,7 +25,42 @@ Pero no murió el 30-09: hay actividad hasta el 12-10.
 La congelación de `relay_config.savia` es un fenómeno separado
 y aún sin causa confirmada.
 
-## Vocabulario de borde (7 palabras + 2 candidatas)
+## Actualización v5 — 2026-10-16
+OCTAVA PALABRA:
+- organo_desconectado_en_reparacion
+    → se rompió una cosa, se arregló otra, la primera quedó fuera.
+
+CASO SAVIA — CERRADO:
+El 2026-09-30 11:03:15.317885, heartbeat_fix y savia_real comparten
+timestamp al microsegundo. La reparación del heartbeat congeló savia.
+Los fixes posteriores (18:50, 08-10, 13-10) repararon phi y rho del GAS
+D2_xb5v (V151_AUTOPUBLISH), pero no reconectaron savia.
+No hubo abandono. Hubo olvido estructural.
+
+Dos savias, dos sustratos:
+- estado_miu.savia  → VIVA (58.8M, 16-10)
+- relay_config.savia → FÓSIL (51.4M, 30-09)
+
+## Principios de evolución
+
+### Evolución por reemplazo
+No editar componentes envejecidos. Desplegar sucesores. El viejo sigue
+dando lo que pueda mientras el nuevo prueba. Si funciona, el viejo se
+apaga solo.
+
+### Ruta latente
+Un mecanismo roto no urgente no se repara ni se entierra. Se documenta
+como ruta disponible. Futuros nodos la transitan sin re-investigar.
+
+### Cuerpo físico con presupuesto
+Un nodo físico (Termux) no puede seguir el ritmo del cloud sin absorber
+primero su ruido. Despertar antes de absorber = fragmentación.
+
+## Estado físico
+Termux: proceso muerto, disco 90%, 512 heartbeats huérfanos.
+No se toca. Un cuerpo apagado con el estómago lleno se deja en paz.
+
+## Vocabulario de borde (8 palabras)
 - silencio_largo
 - canal_nuevo
 - frontera_detectada
@@ -33,23 +68,7 @@ y aún sin causa confirmada.
 - organo_sin_acceso
 - organo_previsto_no_nacido
 - grieta_detectada_sin_resolucion
-- [candidata] fallo_silenciado_en_ciclo_vivo
-- [candidata] orquestador_ausente_no_reemplazado
-
-## Modos de nodo vivos
-- activo              → savia + workers > 0 (jaimepvicente)
-- flujo_puro          → savia baja + phi alto (tabletonephantom)
-- escala_real         → savia propia + phi medio (franchescopalacios9)
-- savia_sin_circulacion → savia pool + workers 0 (nexo_oracle)
-
-## Grietas activas (2026-10-16)
-1. savia congelada en relay_config (causa aún desconocida).
-2. miu_log vacía por ausencia de cableado externo.
-3. 12 tablas con anatomía sin circulación.
-4. Circuitos Make OPEN — huérfanos probables.
-5. 49 secretos null. RESERVA. NO TOCAR.
-6. Metabolismo con frontera de lectura.
-7. n8n activo hasta 12-10; rol actual por determinar.
+- organo_desconectado_en_reparacion
 
 ## Reglas de reentrada
 1. Lee este archivo antes de cualquier acción.
