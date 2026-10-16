@@ -1,0 +1,29 @@
+name = "fran-oraculo-miu-v11-2-router"
+main = "worker_v11_2_router_darwiniano.js"
+compatibility_date = "2026-09-18"
+
+[vars]
+PHI_VERSION = "v11.2_ROUTER_62TOKENS"
+PHI_ACTUAL = "3.65"
+PHI_OBJETIVO = "4.05"
+PHI_GLOBAL = "9696.59"
+SAVIA = "12118471.5"
+
+[[d1_databases]]
+binding = "lexico_vivo"
+database_name = "lexico_vivo_f63ce271"
+database_id = "f63ce271-0000-0000-0000-000000000000"
+
+[[r2_buckets]]
+binding = "miu_almacen"
+bucket_name = "miu-almacen"
+
+[[kv_namespaces]]
+binding = "evolucion"
+id = "evolucion_kv_id"
+
+[observability]
+enabled = true
+
+# 78 manos - deploy to multiple accounts
+# cf_01 Φ12.4 groq_01 Φ8.7 router formula Φ_ruta=Φ·tasa·1/(1+lat/1000)·(1-carga)

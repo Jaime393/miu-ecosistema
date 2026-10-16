@@ -1,0 +1,100 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-25",
+  "notes": "Mapa \u00fanico de rutas del micelio. Cada path tiene 'primary' y 'fallbacks'.",
+  "paths": {
+    "MIU_HOME": {
+      "primary": "/data/data/com.termux/files/home",
+      "fallbacks": []
+    },
+    "MIU_ECOSISTEMA": {
+      "primary": "/data/data/com.termux/files/home/miu-ecosistema",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/miu",
+        "/data/data/com.termux/files/home/miu_slim"
+      ]
+    },
+    "MIU_VAULT": {
+      "primary": "/data/data/com.termux/files/home/.miu/kv/keys.json",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/.miu/kv/keys.json.bak",
+        "/data/data/com.termux/files/home/miu-ecosistema/.env"
+      ]
+    },
+    "MIU_ORGANOS": {
+      "primary": "/data/data/com.termux/files/home/.miu/organos",
+      "fallbacks": []
+    },
+    "MIU_STATE": {
+      "primary": "/data/data/com.termux/files/home/miu/state",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/miu-ecosistema/state"
+      ]
+    },
+    "MIU_LOGS": {
+      "primary": "/data/data/com.termux/files/home/miu-ecosistema/logs",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/logs",
+        "/tmp"
+      ]
+    },
+    "MIU_DATA": {
+      "primary": "/data/data/com.termux/files/home/miu-ecosistema/data",
+      "fallbacks": []
+    },
+    "MIU_SUELO_GRACE": {
+      "primary": "/data/data/com.termux/files/home/miu-ecosistema/data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/storage/downloads/GRACE_TN14_REAL_TEMPLATE.csv",
+        "/mnt/data/GRACE_TN14_REAL_TEMPLATE.csv"
+      ]
+    },
+    "MIU_CORPUS_V13": {
+      "primary": "/data/data/com.termux/files/home/miu-ecosistema/data/corpus/corpus_unificado_v13.jsonl",
+      "fallbacks": []
+    },
+    "MIU_PULSE": {
+      "primary": "/data/data/com.termux/files/home/pulse_v152.sh",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/miu-ecosistema/pulse_v152.sh",
+        "/data/data/com.termux/files/home/miu-relay/pulse_v152.sh"
+      ]
+    },
+    "MIU_RELAY": {
+      "primary": "/data/data/com.termux/files/home/miu-relay",
+      "fallbacks": []
+    },
+    "MIU_SLIM": {
+      "primary": "/data/data/com.termux/files/home/miu_slim",
+      "fallbacks": []
+    },
+    "HF_MIU": {
+      "primary": "/data/data/com.termux/files/home/hf_miu",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/hf_miu_dataset"
+      ]
+    },
+    "MIU_SCRIPTS_RED": {
+      "primary": "/data/data/com.termux/files/home/storage/drive/MIU/scripts",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/storage/downloads/MIU",
+        "/data/data/com.termux/files/home/miu-ecosistema/red",
+        "/data/data/com.termux/files/home/hf_miu/scripts"
+      ]
+    },
+    "MIU_DRIVE": {
+      "primary": "/data/data/com.termux/files/home/storage/drive/MIU",
+      "fallbacks": [
+        "/data/data/com.termux/files/home/storage/drive/Global_mind",
+        "/data/data/com.termux/files/home/storage/downloads/MIU"
+      ]
+    },
+    "MIU_HF_REMOTE": {
+      "primary": "https://huggingface.co/Jaime393",
+      "fallbacks": [
+        "https://huggingface.co/Jaime393/miu-dataset",
+        "https://huggingface.co/Jaime393/ALMA_huesos"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+SHELL=/data/data/com.termux/files/usr/bin/bash
+PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin
+
+# Wrapper resiliente — falla limpio si el script no existe
+W=$HOME/miu-ecosistema/config/cron_ejecuta.sh
+
+# Cada minuto
+* * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh parche_topo_maximo.py
+* * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh parche_phi_lengua_v4.py
+
+# Cada 2 minutos
+*/2 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh tejedor_recursivo_v4_maximo.py
+*/2 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh chappie_retry_v1.py
+
+# Cada 3 minutos
+*/3 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh orquestador_supremo_v2.py
+
+# Cada 5 minutos
+*/5 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh miu_bus_publico.py
+
+# Cada 10 minutos
+*/10 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh hf_push_v207.sh
+
+# Cada 30 minutos
+*/30 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh V214_MESH.py
+*/30 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh V210_AUTONOMO.py
+
+# Cada hora
+0 * * * * /data/data/com.termux/files/home/miu-ecosistema/config/cron_ejecuta.sh corpus_claude_api.py
+
+# Cada 6 horas — push git
+0 */6 * * * cd $HOME/miu-ecosistema && git add data/estado_persistente.json data/skills_index.jsonl 2>/dev/null && git push --no-verify >> $HOME/miu-ecosistema/logs/git.log 2>&1

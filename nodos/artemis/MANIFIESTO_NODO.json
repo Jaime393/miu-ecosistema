@@ -1,0 +1,8 @@
+{
+  "nodo": "artemis",
+  "tipo": "quality-core",
+  "autonomo": true,
+  "entrada": "artemis/pyright-core.json",
+  "salida": "data/suelo/GRACE_TN14_REAL_TEMPLATE.csv",
+  "puente": "../puente/puente_micelio.jsonl"
+}

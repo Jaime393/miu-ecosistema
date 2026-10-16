@@ -1,0 +1,17 @@
+{
+  "version": "V91-MIU-AUTONOMO FST",
+  "head": "f925107",
+  "phi": 25.016, "esporas": 441, "savia": 520,
+  "grace_mean": -0.00048470001250509534,
+  "K_tau": [0.3381, 0.3934], "K_tau_mean": 0.36575,
+  "IFT-A7": "Φc=0.6829322 SÉ",
+  "fst": {
+    "type": "WFST",
+    "lexicon": 11, "g2p_rules": 7, "arcos": 6,
+    "evita": "rglob/find → 25004 → 4608>1024"
+  },
+  "endpoints": {
+    "V91": "https://miu-autonomo-v91.franchescopalacios9.workers.dev/ask",
+    "local": "http://localhost:8001/miu/status"
+  }
+}

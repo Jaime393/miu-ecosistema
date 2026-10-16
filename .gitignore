@@ -25,3 +25,29 @@ __pycache__/
 # Estado Supabase KV (contiene tokens)
 kv_local.json
 kv_global.json
+
+# Estado runtime (agregado 2026-10-16)
+.state/
+data/estado_*.json
+URL_VIVA.txt
+
+# Logs
+*.log
+logs/
+
+# Backups
+*.bak
+*.bak.*
+*.disabled
+
+# Credenciales (nunca subir)
+*_cloudflare.txt
+*_tokens*.json
+.env
+.env.*
+
+# Temporales
+tmp/
+__pycache__/
+*.pyc
+_archivo/

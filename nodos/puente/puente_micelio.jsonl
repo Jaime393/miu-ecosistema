@@ -82,3 +82,4 @@
 {"ts": "2026-09-25T17:41:29.318944", "evento": "V27_4"}
 {"ts": "2026-09-25T17:41:29.319005", "evento": "V27_5"}
 {"ts": "2026-09-25T17:41:29.319061", "evento": "V27_6"}
+{"nodo": "nodo_ejemplo_Lima", "recursos": {"ram_mb": 1024, "cpus": 4, "tipo": "Termux/Android o PC"}, "aporte": {"plugins": 5, "prompts": 3, "suelo": "GRACE local o dato vivo", "codigo": "tu modulo"}, "miu": 15, "note": "aporte vivo desde Lima sin rigidez", "contacto": "opcional github o ipfs", "limites": "solo 2h al dia, solo datos publicos", "timestamp": 1790919571.449505, "head": "22fece4", "tx": 85}

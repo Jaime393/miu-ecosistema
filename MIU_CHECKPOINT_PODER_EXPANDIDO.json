@@ -1,0 +1,23 @@
+{
+  "micelio": "MIU-ecosistema",
+  "head": "fe079b3->4ea8e33->17_autonomo",
+  "puente": 17,
+  "bloques": 7,
+  "phi": 23.617,
+  "esporas": 441,
+  "bloque": "a2a_v91",
+  "K_tau": [0.3381, 0.3934],
+  "K_tau_mean": 0.36575,
+  "grace_mean": -0.00048470001250509534,
+  "grace_first": -0.0004846999628035548,
+  "grace_last": -0.00048470001250509534,
+  "grace_n": 220,
+  "savia": 520,
+  "wallet": "0x4Da238f2671083B7F280d4FCf5827F86358cE7e6",
+  "suelo": "fertil cerrado",
+  "grietas": 0,
+  "riesgos": 0,
+  "estado": "PODER EXPANDIDO CHAT - conexion real sin HTML",
+  "mecanismo": "3 open() directo sin rglob sin find - evita 4542>1024",
+  "principio": "ρ(x)>0"
+}

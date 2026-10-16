@@ -1,0 +1,32 @@
+{
+  "id": "tejedor_1790332410",
+  "tipo": "tejedor_v4",
+  "savia_logs": 0,
+  "olvidados": 0,
+  "ganadores": 0,
+  "vault": 0,
+  "rutas": [],
+  "logs_lista": [
+    "miu_bus.log",
+    "kv_sync.log",
+    "fix_definitivo.log",
+    "rigidez.log",
+    "modulos_loop.log",
+    "razonador.log",
+    "fix_telegram_409.log",
+    "gossip_cf.log",
+    "validator.log",
+    "coordinador.log",
+    "suelo_autonomo_real.log",
+    "probador.log",
+    "explorador.log",
+    "evo_local.log",
+    "pliegue.log",
+    "telegram.log",
+    "herencia.log",
+    "flex.log",
+    "expandir_absoluto.log",
+    "mesh_infinito.log"
+  ],
+  "nota": "V4 m\u00e1ximo \u2014 recupera savia de logs 4.2M\u21921.6M rotados"
+}
