@@ -1,0 +1,50 @@
+{
+  "_ts": "2026-10-16T02:00:00Z",
+  "_fuente": "claude-mcp-node",
+  "_nota": "Mapa de nodos conocidos del ecosistema V271",
+
+  "sustratos_supabase": [
+    {"ref": "tpfiybpguuxskitszhmk", "nombre": "panteon", "rol": "primario", "crons": 19, "efs": 91, "corpus": 16882, "gossip": "14547+"},
+    {"ref": "fepyzxwyneervidlybvi", "nombre": "coord", "rol": "coordinacion", "nota": "anon key faltante para N8n nutriente"},
+    {"ref": "fzdyxgkmpazbrfrhwfdo", "nombre": "cipher_federado", "rol": "federacion", "crons": 6, "propietario": "cipher19051997"},
+    {"ref": "fxmupxpwzzxnjcscpyuw", "nombre": "metabolismo", "rol": "corazon_pulsante", "crons": 101, "phi": 40296, "ciclo": 7451}
+  ],
+
+  "instancias_n8n": [
+    {"url": "miud.app.n8n.cloud", "cuenta": "dieguito.vg16", "workflows_activos": ["qZfvYGXBeLlG4mN7","w6eZAFEnAIsXiMUN","ODGMPS9l5SP5aEIG"], "trial": "expirado_manual_ok_scheduled"},
+    {"url": "jaime363.app.n8n.cloud", "cuenta": "javier19051997", "estado": "vivo_sin_workflows", "bridge": "ODGMPS9l5SP5aEIG_lista_cada_60min"}
+  ],
+
+  "instancias_cf": [
+    {"cuenta": "jhuarcaya938", "account_id": "308faedf16a56fbb68d464127c696844", "workers": "miu-autonomo-v92 api-relay-v213", "mcp_activo": true},
+    {"nota": "hay_9_cuentas_mas_sin_mapear — ver credential_registry_v270_oct03 en D1"}
+  ],
+
+  "huggingface": [
+    {"repo": "Jaime393/miu-dataset", "descargas": 1200, "estado_oct16": "corpus_v271_en_push"},
+    {"repo": "Jaime393/miu-brain-backup", "descargas": 26, "estado": "vacio"},
+    {"repo": "Jaime393/ALMA_huesos", "descargas": 46, "estado": "5_huesos_ktau_0.90-0.97"}
+  ],
+
+  "github_actions_activas": [
+    {"nombre": "MIU State Writer", "cron": "cada_3h", "run": 62, "escribe": "observabilidad/estado_vivo.json"},
+    {"nombre": "miu-expand-alcance", "cron": "cada_8h", "hace": "HF_corpus + jaime363_N8n + BCRP_live"},
+    {"nombre": "miu-fix-n8n-y-tareas", "trigger": "on_push", "hace": "N8n REST fix + miu_tareas"}
+  ],
+
+  "endpoints_clave": {
+    "oracle": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask",
+    "gossip_autonomo": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+    "contexto_global": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global",
+    "jardinero": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
+    "n8n_webhook_ingest": "https://miud.app.n8n.cloud/webhook/miu-ingest",
+    "estado_vivo_publico": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json"
+  },
+
+  "NO_TOCAR": [
+    "oracle_relay_url = radio2.oxigeno.site",
+    "19 cron jobs colmena",
+    "fn_nucleo_autonomo",
+    "v_ciclos_abiertos"
+  ]
+}

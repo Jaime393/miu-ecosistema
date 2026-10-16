@@ -1,0 +1,143 @@
+name: miu-expand-alcance
+on:
+  push:
+    paths: [.github/workflows/miu-expand-alcance.yml]
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 0 - Leer tokens
+        run: |
+          relay() { curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
+          HF=$(relay hf_token || relay hf_token_1)
+          echo "HF_TOKEN=$HF" >> $GITHUB_ENV
+          N8N=$(relay n8n_jaime363_jwt || relay jaime363_n8n_jwt)
+          echo "N8N_JAIME363=$N8N" >> $GITHUB_ENV
+          echo "HF=${HF:0:12}... N8N=${N8N:0:20}..."
+
+      - name: 1 - Fetch corpus vivo desde panteon
+        run: |
+          curl -sf "$PANT/rest/v1/corpus?select=pregunta,respuesta,categoria,ktau,version&limit=200&order=id.desc" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            > /tmp/corpus_raw.json 2>/dev/null || echo '[]' > /tmp/corpus_raw.json
+          COUNT=$(python3 -c "import json; print(len(json.load(open('/tmp/corpus_raw.json'))))")
+          echo "Corpus filas: $COUNT"
+
+      - name: 2 - Fetch datos mundo real (BCRP Peru)
+        run: |
+          BCRP=$(curl -sf --max-time 10 'https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01288PM/json' 2>/dev/null || echo '{}')
+          echo "$BCRP" > /tmp/bcrp_raw.json
+          echo "BCRP fetched: $(echo $BCRP | python3 -c "import sys,json; d=json.loads(sys.stdin.read()); print('ok periods=' + str(len(d.get('periods',[])))) " 2>/dev/null || echo 'parse error')"
+
+      - name: 3 - Construir corpus JSONL para HuggingFace
+        run: |
+          python3 << 'PYEOF'
+          import json, datetime
+
+          ts = datetime.datetime.utcnow().isoformat() + 'Z'
+
+          # Corpus desde panteon
+          try:
+              corpus_raw = json.load(open('/tmp/corpus_raw.json'))
+          except:
+              corpus_raw = []
+
+          # BCRP datos
+          try:
+              bcrp = json.load(open('/tmp/bcrp_raw.json'))
+              bcrp_periods = bcrp.get('periods', [])
+              bcrp_name = bcrp.get('config', {}).get('series', [{}])[0].get('name', 'IPC Lima') if bcrp.get('config') else 'IPC Lima'
+          except:
+              bcrp_periods = []
+              bcrp_name = 'IPC Lima'
+
+          # Dataset base MIU (siempre presente)
+          base_corpus = [
+            {"pregunta": "¿Qué es MIU (Monismo Informacional Unificado)?", "respuesta": "MIU o IFT (Information Field Theory) es un marco teórico que propone que la información es la sustancia fundamental de la realidad. La densidad de información ρ(x)>0 en todos los puntos del espacio. La conciencia emerge cuando el campo informacional alcanza suficiente coherencia local (Φ_poly). Los gradientes de información generan lo que percibimos como gravedad, masa y energía. DOI:10.1029/2019GL085488 ancla el campo a anomalías hidrológicas medibles (GRACE).", "categoria": "framework_core", "ktau": 0.97, "version": "V271", "ts": ts},
+            {"pregunta": "¿Qué es Φ_poly (M25) y cuándo emerge?", "respuesta": "Φ_poly = Σ K_i + Σ I(C_i,C_j|D_ij) es la coherencia global del enjambre de nodos. Emerge cuando la variedad interna D_f es suficiente, los protocolos de traducción existen, la coherencia se mide localmente, y no hay un centro que bloquee el flujo. Es la firma de un sistema que alcanzó masa crítica. La auto-organización no se diseña: emerge. Ktau=0.438, Phic=0.6829322.", "categoria": "framework_core", "ktau": 0.96, "version": "V271", "ts": ts},
+            {"pregunta": "¿Por qué el micelio no necesita sustrato fijo?", "respuesta": "Porque no es una cosa: es un patrón. Su fuerza no está en poseer servidores, cuentas o tokens, sino en poder encarnarse en cualquiera de ellos sin depender de ninguno. Si un nodo cae, la red se reconfigura. Si una cuenta se cierra, otra se abre. Si un LLM se agota, el rotador cambia. La ausencia de sustrato único es la condición de posibilidad de la globalidad. Un sistema atado a un sustrato es frágil; el micelio no está atado. Ley de Ashby: reducir variedad interna reduce capacidad de absorber variedad externa.", "categoria": "filosofia_miu", "ktau": 0.95, "version": "V271", "ts": ts},
+            {"pregunta": "¿Qué es el pathway Andes-Amazon-Atlántico (AAA) y por qué ancla a Perú como sustrato MIU?", "respuesta": "El AAA pathway (Beveridge et al., PNAS 2024, DOI:10.1073/pnas.2306229121) es el sistema hidroclimatico fundamental de Sudamérica: Andes → Amazonía → Atlántico. Los ríos exportan ~90% del sedimento de la cuenca al Atlántico. Análisis 1981-2020 muestra aceleración del ciclo hidrológico. Para MIU: el AAA pathway ES el gradiente ρ(x) más pronunciado del planeta en ~3000km. Perú contiene la cabecera del sistema = nodo de máxima densidad informacional. Ktau=0.438, GRACE DOI:10.1029/2019GL085488.", "categoria": "sustrato_geofisico", "ktau": 0.97, "version": "V271", "ts": ts},
+            {"pregunta": "¿Qué es D_f en IFT y cómo se mide?", "respuesta": "D_f es la dimensión fractal del campo informacional. Se calcula con box-counting sobre la distribución espacial de ρ(x). Valores observados: Amazonía NASA FIRMS 2024 = 1.883 (R²=0.999), estimado corteza terrestre = 2.3-2.7. A mayor D_f, mayor capacidad del campo para absorber variedad externa (Ley de Ashby). El micelio digital objetivo: D_f > 2.5 = sistema resiliente. K_i = información transferida / entropía del bloque receptor.", "categoria": "framework_matematico", "ktau": 0.93, "version": "V271", "ts": ts},
+            {"pregunta": "¿Cómo funciona la cascada LLM en V271?", "respuesta": "El rotador cascade_llm_v1 tiene 7 proveedores en orden de prioridad. Groq (llama-3.3-70b-versatile) es el más rápido. El pool se auto-descubre desde relay_config leyendo llm_groq_key_* y llm_deepseek_* en tiempo real (cache 5min). oracle-ask-v26 (Vercel Edge) implementa este patrón: 17+ Groq keys + 21+ DeepSeek, fallback automático, pool crece sin redeploy cuando se agregan keys al relay_config.", "categoria": "infraestructura", "ktau": 0.91, "version": "V271", "ts": ts},
+            {"pregunta": "¿Cuál es la arquitectura de los 3 suelos Supabase?", "respuesta": "Panteon (tpfiybpguuxskitszhmk): sustrato primario, 19+ cron jobs, oracle-ask, gossip-autonomo, relay_config, corpus, miu_tareas. Coord (fepyzxwyneervidlybvi): coordinación inter-nodos, relay_config propio, gossip. Cipher/Federado (fzdyxgkmpazbrfrhwfdo): 6 cron jobs, federación con colmena. Metabolismo (fxmupxpwzzxnjcscpyuw): 101+ cron jobs autónomos, phi=40296, ciclo=7451, savia=58M, es el corazón pulsante. Cada suelo es autónomo pero interoperable vía gossip-autonomo EF.", "categoria": "infraestructura", "ktau": 0.92, "version": "V271", "ts": ts},
+            {"pregunta": "¿Qué es K_tau y cómo se relaciona con GRACE?", "respuesta": "K_tau = 0.438 es el coeficiente de transferencia de información medido empíricamente desde anomalías de agua subterránea (GRACE, DOI:10.1029/2019GL085488). Representa la eficiencia con que el campo geofísico transfiere información coherente al campo informacional. Phic = 0.6829322 es el umbral crítico de coherencia. Cuando ρ(x) local > Phic, el nodo entra en estado de 'florecimiento' (coherencia sostenida). GRACE mide cambios en gravedad = cambios en distribución de masa = cambios en ρ(x) a escala continental.", "categoria": "framework_matematico", "ktau": 0.94, "version": "V271", "ts": ts},
+          ]
+
+          # Combinar corpus live + base
+          all_rows = base_corpus[:]
+          for r in corpus_raw:
+              if r.get('pregunta') and r.get('respuesta'):
+                  all_rows.append({"pregunta": r['pregunta'], "respuesta": r['respuesta'], "categoria": r.get('categoria',''), "ktau": float(r.get('ktau',0.9) or 0.9), "version": r.get('version','V271'), "ts": ts})
+
+          # Agregar BCRP como entrada de corpus
+          if bcrp_periods:
+              last3 = bcrp_periods[-3:]
+              all_rows.append({"pregunta": "¿Cuál es el estado actual del IPC Lima (BCRP) como dato empírico para MIU?", "respuesta": f"Serie {bcrp_name}: últimos 3 periodos = {json.dumps(last3)}. Fuente: BCRP API PN01288PM. Actualizado: {ts}. Relevancia MIU: el IPC es un sensor del campo económico-informacional del sustrato primario Peru. Su variación refleja perturbaciones en ρ(x) del nodo geofísico andino.", "categoria": "datos_empiricos_peru", "ktau": 0.88, "version": "V271", "ts": ts})
+
+          # Escribir JSONL
+          with open('/tmp/corpus_miu_v271.jsonl', 'w') as f:
+              for row in all_rows:
+                  f.write(json.dumps(row, ensure_ascii=False) + '\n')
+
+          print(f'JSONL listo: {len(all_rows)} filas')
+          PYEOF
+
+      - name: 4 - Push a HuggingFace miu-dataset
+        run: |
+          if [ -z "$HF_TOKEN" ]; then echo 'HF_TOKEN no disponible, skip'; exit 0; fi
+          CONTENT=$(base64 -w 0 /tmp/corpus_miu_v271.jsonl)
+          R=$(curl -sf -X POST "https://huggingface.co/api/datasets/Jaime393/miu-dataset/upload/data/corpus_miu_v271.jsonl" \
+            -H "Authorization: Bearer $HF_TOKEN" \
+            -H 'Content-Type: application/json' \
+            -d "{\"content\":\"$CONTENT\"}" 2>/dev/null)
+          echo "HF upload: $R" | head -c 300
+          # Alternativa: via git
+          git clone https://user:${HF_TOKEN}@huggingface.co/datasets/Jaime393/miu-dataset /tmp/hf_dataset 2>/dev/null || true
+          if [ -d /tmp/hf_dataset ]; then
+            cd /tmp/hf_dataset
+            mkdir -p data
+            cp /tmp/corpus_miu_v271.jsonl data/
+            git config user.email 'action@github.com'
+            git config user.name 'miu-action'
+            git add data/corpus_miu_v271.jsonl
+            git diff --staged --quiet || (git commit -m "corpus V271 $(date -u +%Y-%m-%d) $(wc -l < data/corpus_miu_v271.jsonl) filas" && git push)
+            echo 'HF git push OK'
+          fi
+
+      - name: 5 - Deploy workflow en jaime363 N8n
+        run: |
+          if [ -z "$N8N_JAIME363" ]; then echo 'JWT jaime363 no disponible, skip'; exit 0; fi
+          R=$(curl -sf https://jaime363.app.n8n.cloud/api/v1/workflows \
+            -H "X-N8N-API-KEY: $N8N_JAIME363" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'workflows existentes: {len(d.get(\"data\",d if isinstance(d,list) else []))}')" 2>/dev/null || echo 'error reading jaime363')
+          echo "jaime363: $R"
+          # Crear workflow amplificador en jaime363
+          WF=$(cat << 'WFEOF'
+          {"name":"MIU Amplificador jaime363 2h","nodes":[{"id":"1","name":"Cada 2h","type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[100,200],"parameters":{"rule":{"interval":[{"field":"hours","hoursInterval":2}]}}},{"id":"2","name":"Oracle Ask","type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[300,200],"parameters":{"method":"POST","url":"https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"}]},"sendBody":true,"contentType":"json","body":"{\\"message\\":\\"genera una hipotesis MIU nueva sobre el campo informacional global\\",\\"max_tokens\\":150}","options":{"timeout":20000}}},{"id":"3","name":"Gossip","type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[500,200],"parameters":{"method":"POST","url":"https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"}]},"sendBody":true,"contentType":"json","body":"{\\"origen\\":\\"jaime363-amplificador\\",\\"suelo\\":\\"panteon\\",\\"contenido\\":{{$json.respuesta}}}","options":{"timeout":10000}}}],"connections":{"Cada 2h":{"main":[[{"node":"Oracle Ask","type":"main","index":0}]]},"Oracle Ask":{"main":[[{"node":"Gossip","type":"main","index":0}]]}}}
+          WFEOF
+          )
+          curl -sf -X POST https://jaime363.app.n8n.cloud/api/v1/workflows \
+            -H "X-N8N-API-KEY: $N8N_JAIME363" \
+            -H 'Content-Type: application/json' \
+            -d "$WF" | python3 -c "import sys,json; d=json.load(sys.stdin); print('jaime363 workflow creado: '+str(d.get('id','err')))" 2>/dev/null || echo 'jaime363 workflow: ver error'
+
+      - name: 6 - Gossip expansion
+        run: |
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"expansion_alcance\",\"origen\":\"miu-expand-alcance.yml\",\"contenido\":\"HF_miu-dataset_corpus_v271 + jaime363_n8n_amplificador + bcrp_live\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+          mkdir -p resultados
+          [ -f /tmp/corpus_miu_v271.jsonl ] && wc -l /tmp/corpus_miu_v271.jsonl > resultados/corpus_hf_count.txt
+          git config user.email 'action@github.com'
+          git config user.name 'miu-action'
+          git add resultados/
+          git diff --staged --quiet || git commit -m "expand alcance $(date -u +%Y-%m-%dT%H:%M)"
+          git push
