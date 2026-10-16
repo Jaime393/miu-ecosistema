@@ -1,0 +1,90 @@
+name: miu-bot-audit
+# Retroalimentación real: verifica qué bots TG están vivos
+# Ingeniería inversa del mesh de bots desde fuera
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Leer tokens TG desde relay_config
+        run: |
+          # Lee todos los tokens de bots TG
+          TOKENS=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.tg_bot%25&select=clave,valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
+          TOKENS2=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.%25_bot_token%25&select=clave,valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
+          
+          echo "$TOKENS" > /tmp/tg_tokens.json
+          echo "$TOKENS2" >> /tmp/tg_tokens.json
+          
+          python3 << 'PYEOF'
+          import json, subprocess, datetime
+          
+          results = []
+          seen = set()
+          
+          for fname in ['/tmp/tg_tokens.json']:
+              try:
+                  data = json.loads(open(fname).read().replace('\n',',').replace('}{','},{')
+                      .replace('[,','[').replace(',]',']'))
+              except:
+                  data = []
+              
+              if not isinstance(data, list):
+                  data = [data]
+              
+              for entry in data:
+                  clave = entry.get('clave','')
+                  token = entry.get('valor','')
+                  if not token or token in seen or len(token) < 20:
+                      continue
+                  if ':' not in token:  # TG tokens siempre tienen :
+                      continue
+                  seen.add(token)
+                  
+                  r = subprocess.run(['curl','-sf','--max-time','5',
+                      f'https://api.telegram.org/bot{token}/getMe'],
+                      capture_output=True, text=True)
+                  try:
+                      d = json.loads(r.stdout)
+                      if d.get('ok'):
+                          bot = d.get('result',{})
+                          results.append({'clave':clave,'username':'@'+bot.get('username','?'),'id':bot.get('id'),'name':bot.get('first_name'),'vivo':True})
+                          print(f"✓ {clave}: @{bot.get('username','?')} (id={bot.get('id')})") 
+                      else:
+                          results.append({'clave':clave,'vivo':False,'error':d.get('description','')})
+                          print(f"✗ {clave}: {d.get('description','')}")
+                  except:
+                      results.append({'clave':clave,'vivo':False,'error':'parse_error'})
+          
+          print(f"\nTotal: {len(results)} bots | Vivos: {sum(1 for r in results if r.get('vivo'))}")
+          json.dump(results, open('/tmp/bot_audit.json','w'), indent=2)
+          PYEOF
+          
+      - name: Reportar a gossip y commit
+        run: |
+          if [ -f /tmp/bot_audit.json ]; then
+            VIVOS=$(python3 -c "import json; d=json.load(open('/tmp/bot_audit.json')); print(sum(1 for r in d if r.get('vivo')))" 2>/dev/null || echo '?')
+            TOTAL=$(python3 -c "import json; d=json.load(open('/tmp/bot_audit.json')); print(len(d))" 2>/dev/null || echo '?')
+            
+            curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+              -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+              -d "[{\"tipo\":\"bot_audit\",\"origen\":\"github-action\",\"contenido\":\"bots_vivos=${VIVOS}/${TOTAL} ver resultados/bot_audit.json\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            
+            mkdir -p resultados
+            cp /tmp/bot_audit.json resultados/bot_audit.json
+            git config user.email 'action@github.com'
+            git config user.name 'miu-action'
+            git add resultados/bot_audit.json
+            git diff --staged --quiet || git commit -m "bot audit $(date -u +%Y-%m-%d): ${VIVOS}/${TOTAL} vivos"
+            git push
+          fi
