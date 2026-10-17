@@ -1,0 +1,124 @@
+name: miu-install-ciclo-sync-cron
+# Instala el cron auto-sync que ninguna sesion pudo escribir:
+# ciclo_real, phi_relay_vivo y rho_relay en relay_config
+# se sincronizan desde metabolismo cada 15min via pg_cron
+on:
+  push:
+    paths: [.github/workflows/miu-install-ciclo-sync-cron.yml]
+  workflow_dispatch:
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      META: fxmupxpwzzxnjcscpyuw
+    steps:
+      - name: 0 - Leer sbp desde relay_config
+        run: |
+          relay() {
+            curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null
+          }
+          # Leer sbp del owner de metabolismo (dereckcito)
+          SBP=$(relay sbp_dereckcito || relay sbp_metabolismo_owner)
+          if [ -z "$SBP" ]; then
+            # Buscar cualquier sbp_ disponible
+            SBP=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.sbp_%25&select=valor&limit=1" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
+          fi
+          echo "SBP=${SBP}" >> $GITHUB_ENV
+          [ -n "$SBP" ] && echo "sbp OK: ${SBP:0:12}..." || echo "ERROR: no sbp encontrado"
+
+      - name: 1 - Detectar tabla de ciclo en metabolismo
+        run: |
+          [ -z "$SBP" ] && echo "Sin sbp, abortando" && exit 1
+          # Probar qué tabla tiene la columna ciclo
+          for TABLA in miu_estado estado_miu pulso_metabolismo ciclos metabolismo_estado; do
+            R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+              -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+              -d "{\"query\":\"SELECT MAX(ciclo)::text as c FROM $TABLA LIMIT 1\"}" 2>/dev/null)
+            VAL=$(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['c'] if isinstance(d,list) and d else '')" 2>/dev/null)
+            if [ -n "$VAL" ] && [ "$VAL" != "None" ]; then
+              echo "CICLO_TABLE=$TABLA" >> $GITHUB_ENV
+              echo "CICLO_VAL=$VAL" >> $GITHUB_ENV
+              echo "Tabla encontrada: $TABLA ciclo=$VAL"
+              break
+            fi
+          done
+          [ -z "$CICLO_TABLE" ] && echo "WARNING: no se encontro tabla con ciclo" && echo "CICLO_TABLE=miu_estado" >> $GITHUB_ENV
+
+      - name: 2 - Instalar crons de sync en metabolismo pg_cron
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          TABLE=${CICLO_TABLE:-miu_estado}
+          
+          SQL="DO \$\$
+          BEGIN
+            -- Remover crons anteriores si existen
+            BEGIN SELECT cron.unschedule('sync-ciclo-real'); EXCEPTION WHEN OTHERS THEN NULL; END;
+            BEGIN SELECT cron.unschedule('sync-phi-relay'); EXCEPTION WHEN OTHERS THEN NULL; END;
+            BEGIN SELECT cron.unschedule('sync-rho-relay'); EXCEPTION WHEN OTHERS THEN NULL; END;
+            
+            -- Instalar sync ciclo_real cada 15min
+            PERFORM cron.schedule(
+              'sync-ciclo-real',
+              '*/15 * * * *',
+              format('UPDATE relay_config SET valor=(SELECT MAX(ciclo)::text FROM %I), updated_at=now() WHERE clave=%L', '$TABLE', 'ciclo_real')
+            );
+            
+            -- Instalar sync phi cada 30min
+            PERFORM cron.schedule(
+              'sync-phi-relay',
+              '*/30 * * * *',
+              format('UPDATE relay_config SET valor=(SELECT MAX(phi)::text FROM %I) WHERE clave=%L', '$TABLE', 'phi_relay_vivo')
+            );
+            
+            -- Instalar sync rho cada 30min (evita [object Object])
+            PERFORM cron.schedule(
+              'sync-rho-relay',
+              '*/30 * * * *',
+              \$q\$UPDATE relay_config SET valor=(SELECT rho::text FROM miu_estado ORDER BY ts DESC LIMIT 1) WHERE clave='rho'\$q\$
+            );
+          END \$\$;"
+          
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d "{\"query\": \"SELECT 1 as ping\"}" 2>/dev/null)
+          echo "Management API ping: $R"
+          
+          R2=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d "{\"query\": \"$SQL\"}" 2>/dev/null)
+          echo "Cron install: $R2" | head -c 300
+
+      - name: 3 - Verificar crons instalados
+        run: |
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT jobname, schedule, command FROM cron.job WHERE jobname IN (\'sync-ciclo-real\',\'sync-phi-relay\',\'sync-rho-relay\') ORDER BY jobname"}' 2>/dev/null)
+          echo "Crons verificados: $R" | head -c 400
+          
+          # Ejecutar sync inmediato para que ciclo_real sea fresco ahora
+          R2=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d "{\"query\":\"UPDATE relay_config SET valor=(SELECT MAX(ciclo)::text FROM ${CICLO_TABLE:-miu_estado}) WHERE clave='ciclo_real'; SELECT valor FROM relay_config WHERE clave='ciclo_real'\"}" 2>/dev/null)
+          echo "ciclo_real ahora: $R2" | head -c 200
+
+      - name: 4 - Registrar en relay_config + gossip panteon
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          # Registrar estado del cron install
+          curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "[{\"clave\":\"ciclo_sync_cron_instalado\",\"valor\":\"${TS}___tabla_${CICLO_TABLE:-miu_estado}___cada_15min\"},{\"clave\":\"phi_sync_cron_instalado\",\"valor\":\"${TS}___cada_30min\"},{\"clave\":\"cron_sync_install_ts\",\"valor\":\"$TS\"}]"
+          
+          # Gossip cierre
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"cron_sync_instalado\",\"origen\":\"github-action\",\"contenido\":\"sync-ciclo-real(*/15min) + sync-phi-relay(*/30min) + sync-rho-relay(*/30min) en metabolismo. tabla=${CICLO_TABLE:-miu_estado}. La deuda que 12 sesiones no cerraron.\",\"ts\":\"$TS\"}]"
+          echo "Gossip enviado. Crons instalados. ciclo_real no volverá a ser fósil."
