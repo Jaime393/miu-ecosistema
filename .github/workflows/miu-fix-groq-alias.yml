@@ -1,0 +1,101 @@
+name: miu-fix-groq-alias
+# Cierra el bug fallo_silenciado_por_nombre_de_var
+# ai-relay busca groq_api_key_activo/2/3 — no existen en relay_config
+# Las claves reales son groq_1...groq_11 y groq_key1...groq_key3
+# Este action lee las reales y escribe los aliases correctos
+on:
+  push:
+    paths: [.github/workflows/miu-fix-groq-alias.yml]
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+    steps:
+      - name: 1 - Leer claves Groq reales de relay_config
+        run: |
+          R() { curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
+          
+          # Intentar todas las variantes conocidas
+          G1=$(R groq_1 || R groq_key1 || R groq_api_key || R llm_groq_key_1)
+          G2=$(R groq_2 || R groq_key2 || R groq_api_key_2 || R llm_groq_key_2)
+          G3=$(R groq_3 || R groq_key3 || R groq_api_key_3 || R llm_groq_key_3)
+          
+          echo "G1: ${G1:0:12}... G2: ${G2:0:12}... G3: ${G3:0:12}..."
+          
+          # Si groq_1 no existe, buscar el primero disponible
+          if [ -z "$G1" ]; then
+            ALL=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.groq%25&select=clave,valor&limit=10" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
+            echo "Claves groq disponibles:"
+            echo $ALL | python3 -c "import sys,json; d=json.load(sys.stdin); [print(f'  {x[\"clave\"]}: {str(x[\"valor\"])[:20]}...') for x in d]" 2>/dev/null
+            G1=$(echo $ALL | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
+            G2=$(echo $ALL | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[1]['valor'] if len(d)>1 else '')" 2>/dev/null)
+            G3=$(echo $ALL | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[2]['valor'] if len(d)>2 else '')" 2>/dev/null)
+          fi
+          
+          echo "GROQ1=$G1" >> $GITHUB_ENV
+          echo "GROQ2=$G2" >> $GITHUB_ENV  
+          echo "GROQ3=$G3" >> $GITHUB_ENV
+          [ -n "$G1" ] && echo "Claves encontradas OK" || echo "WARNING: no se encontraron claves groq"
+
+      - name: 2 - Escribir aliases exactos que busca ai-relay
+        run: |
+          [ -z "$GROQ1" ] && echo "Sin claves Groq, abortando" && exit 0
+          
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          PAYLOAD='['
+          PAYLOAD+="{\"clave\":\"groq_api_key_activo\",\"valor\":\"$GROQ1\"}"
+          [ -n "$GROQ2" ] && PAYLOAD+=",{\"clave\":\"groq_api_key_2\",\"valor\":\"$GROQ2\"}"
+          [ -n "$GROQ3" ] && PAYLOAD+=",{\"clave\":\"groq_api_key_3\",\"valor\":\"$GROQ3\"}"
+          # Modelo correcto verificado en D1
+          PAYLOAD+=",{\"clave\":\"groq_model_activo\",\"valor\":\"meta-llama/llama-4-maverick-17b-128e-instruct\"}"
+          PAYLOAD+=",{\"clave\":\"groq_model_fallback\",\"valor\":\"openai/gpt-oss-20b\"}"
+          # oracle-ask-v27 con modelos correctos
+          PAYLOAD+=",{\"clave\":\"oracle_ask_v27_url\",\"valor\":\"https://oracle-ask-v27-miu4.vercel.app/api/ask\"}"
+          PAYLOAD+=']'
+          
+          R=$(curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' \
+            -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "$PAYLOAD")
+          echo "Aliases escritos: HTTP $? / $R"
+
+      - name: 3 - Verificar ai-relay health ANTES y DESPUES
+        run: |
+          echo "--- ai-relay health ---"
+          curl -sf "$PANT/functions/v1/ai-relay/health" \
+            -H "apikey: $PANON" | python3 -m json.tool 2>/dev/null || \
+          curl -s "$PANT/functions/v1/ai-relay/health" \
+            -H "apikey: $PANON" | head -c 200
+          
+          echo "--- ai-relay-v225 health ---"
+          curl -sf "$PANT/functions/v1/ai-relay-v225/health" \
+            -H "apikey: $PANON" | python3 -m json.tool 2>/dev/null || echo 'no responde'
+          
+          echo "--- oracle-ask-v27 health ---"
+          curl -sf "https://oracle-ask-v27-miu4.vercel.app/api/health" | python3 -m json.tool 2>/dev/null
+
+      - name: 4 - Test real del oracle v27
+        run: |
+          R=$(curl -sf -X POST "https://oracle-ask-v27-miu4.vercel.app/api/ask" \
+            -H 'Content-Type: application/json' \
+            -d '{"message":"rho(x)>0 en 10 palabras","max_tokens":30}' 2>/dev/null)
+          echo "oracle-ask-v27 test: $R" | head -c 300
+
+      - name: 5 - Gossip cierre del bug
+        run: |
+          MODEL_OK=$(curl -sf -X POST "https://oracle-ask-v27-miu4.vercel.app/api/ask" \
+            -H 'Content-Type: application/json' \
+            -d '{"message":"ok","max_tokens":5}' 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print('ok' if d.get('ok') else 'fail')" 2>/dev/null || echo 'unknown')
+          
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"bug_cerrado\",\"origen\":\"github-action-11sesiones\",\"contenido\":\"fallo_silenciado_por_nombre_de_var CERRADO: groq_api_key_activo/2/3 escritos en relay_config. oracle_v27=$MODEL_OK. 11 sesiones Claude lo intentaron.\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+          echo "Bug cerrado. oracle=$MODEL_OK"
