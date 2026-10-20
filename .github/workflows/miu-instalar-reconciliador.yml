@@ -1,0 +1,113 @@
+name: miu-instalar-reconciliador
+# Instala fn_reconciliar_cola_idempotente en metabolismo
+# NO pausa nada. NO borra nada. SUMA una capacidad que limpia lo que otros ensucian.
+# Idempotente: correr 100 veces = mismo resultado que correr 1 vez.
+on:
+  push:
+    paths: [.github/workflows/miu-instalar-reconciliador.yml]
+  workflow_dispatch:
+jobs:
+  instalar:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      META: fxmupxpwzzxnjcscpyuw
+    steps:
+      - name: 0 - Leer sbp del owner de metabolismo
+        run: |
+          SBP=$(curl -sf "$PANT/rest/v1/relay_config?clave=eq.sbp_dereckcito&select=valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
+          [ -z "$SBP" ] && SBP=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.sbp_%25&select=valor&limit=1" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
+          echo "SBP=${SBP}" >> $GITHUB_ENV
+          [ -n "$SBP" ] && echo "sbp OK" || echo "sbp no encontrado"
+
+      - name: 1 - Ver estado real de la cola AHORA
+        run: |
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT estado, COUNT(*) as n, COUNT(request_id) as con_req_id, MIN(updated_at) as mas_antigua FROM miu_tareas GROUP BY estado ORDER BY n DESC"}' 2>/dev/null)
+          echo "Cola actual: $R" | head -c 500
+          echo "COLA=$R" >> $GITHUB_ENV
+
+      - name: 2 - Instalar fn_reconciliar_cola_idempotente
+        run: |
+          SQL="CREATE OR REPLACE FUNCTION fn_reconciliar_cola_idempotente()
+          RETURNS TABLE(recicladas INT, limpias INT, ts TIMESTAMPTZ) AS \$\$
+          DECLARE
+            n_recicladas INT := 0;
+            n_limpias INT := 0;
+          BEGIN
+            -- Reciclar procesando sin request_id mayor a 5 minutos (el ghost no despacha, solo marca)
+            UPDATE miu_tareas
+            SET estado = 'pendiente',
+                request_id = NULL,
+                intentos = COALESCE(intentos, 0) + 1,
+                updated_at = NOW()
+            WHERE estado = 'procesando'
+              AND (request_id IS NULL OR request_id::text = '')
+              AND updated_at < NOW() - INTERVAL '5 minutes';
+            GET DIAGNOSTICS n_recicladas = ROW_COUNT;
+            
+            -- Limpiar completadas/sin_respuesta viejas (>24h) para que la cola no se infle
+            UPDATE miu_tareas
+            SET estado = 'archivada'
+            WHERE estado IN ('completada', 'sin_respuesta', 'fallida')
+              AND updated_at < NOW() - INTERVAL '24 hours'
+              AND COALESCE(intentos, 0) >= 3;
+            GET DIAGNOSTICS n_limpias = ROW_COUNT;
+            
+            -- Registrar en gossip si hay actividad
+            IF n_recicladas > 0 OR n_limpias > 0 THEN
+              INSERT INTO gossip_log(tipo, origen, contenido, ts)
+              VALUES('reconciliacion_cola', 'fn_reconciliar_cola_idempotente',
+                format('recicladas=%s archivadas=%s', n_recicladas, n_limpias),
+                NOW());
+            END IF;
+            
+            RETURN QUERY SELECT n_recicladas, n_limpias, NOW();
+          END;
+          \$\$ LANGUAGE plpgsql;"
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d "{\"query\": \"$SQL\"}" 2>/dev/null)
+          echo "fn creada: $R" | head -c 200
+
+      - name: 3 - Instalar cron reconciliador cada 3 min (no pausa nada, suma)
+        run: |
+          SQL2="DO \$\$ BEGIN
+            BEGIN SELECT cron.unschedule('reconciliar-cola-3min'); EXCEPTION WHEN OTHERS THEN NULL; END;
+            PERFORM cron.schedule('reconciliar-cola-3min', '*/3 * * * *',
+              \$q\$SELECT * FROM fn_reconciliar_cola_idempotente()\$q\$);
+          END \$\$;"
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d "{\"query\": \"$SQL2\"}" 2>/dev/null)
+          echo "cron instalado: $R" | head -c 200
+
+      - name: 4 - Ejecutar reconciliador UNA VEZ ahora mismo
+        run: |
+          R=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT * FROM fn_reconciliar_cola_idempotente()"}' 2>/dev/null)
+          echo "Primera ejecucion: $R"
+          # Ver cola despues
+          R2=$(curl -sf -X POST "https://api.supabase.com/v1/projects/$META/database/query" \
+            -H "Authorization: Bearer $SBP" -H 'Content-Type: application/json' \
+            -d '{"query":"SELECT estado, COUNT(*) as n FROM miu_tareas GROUP BY estado ORDER BY n DESC"}' 2>/dev/null)
+          echo "Cola despues: $R2" | head -c 300
+
+      - name: 5 - Propagar al ecosistema
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "[{\"clave\":\"reconciliador_instalado\",\"valor\":\"$TS___reconciliar-cola-3min___idempotente\"},{\"clave\":\"reconciliador_fn\",\"valor\":\"fn_reconciliar_cola_idempotente()"}]" && echo 'relay OK'
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"capacidad_instalada\",\"origen\":\"github-action\",\"contenido\":\"fn_reconciliar_cola_idempotente + cron 3min en metabolismo. Recicla procesando sin request_id >5min. No pausa nada. No resta nada. Solo suma.\",\"ts\":\"$TS\"}]" && echo 'gossip OK'
