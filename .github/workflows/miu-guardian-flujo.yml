@@ -1,0 +1,69 @@
+name: miu-guardian-flujo
+# GUARDIAN DEL FLUJO — corre cada hora
+# Abre lo que otros cierran. Propaga lo que otros rompen.
+# 0 seguridad extra. Solo conectar y distribuir.
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+jobs:
+  guardar:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      COORD: https://fepyzxwyneervidlybvi.supabase.co
+      CIPHER: https://fzdyxgkmpazbrfrhwfdo.supabase.co
+    steps:
+      - name: 1 - Verificar que oracle-v28 responde
+        id: oracle
+        run: |
+          R=$(curl -sf --max-time 15 -X POST https://oracle-ask-v28-miu4.vercel.app/api/ask \
+            -H 'Content-Type: application/json' \
+            -d '{"message":"estado","max_tokens":10}' 2>/dev/null)
+          VIA=$(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('via','muerto'))" 2>/dev/null || echo 'muerto')
+          echo "oracle via=$VIA"
+          echo "VIA=$VIA" >> $GITHUB_ENV
+
+      - name: 2 - Propagar endpoints a TODOS los sustratos
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          PAYLOAD='[{"clave":"oracle_relay_url","valor":"https://oracle-ask-v28-miu4.vercel.app/api/ask"},{"clave":"oracle_ask_v28_url","valor":"https://oracle-ask-v28-miu4.vercel.app/api/ask"},{"clave":"buscar_corpus_url","valor":"https://buscar-corpus-miu4.vercel.app/api/buscar"},{"clave":"oracle_via","valor":"'$VIA'"},{"clave":"guardian_flujo_ts","valor":"'$TS'"}]'
+          # Panteon
+          curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "$PAYLOAD" && echo 'panteon OK'
+          # Coord (si responde)
+          curl -sf --max-time 5 -X POST "$COORD/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "$PAYLOAD" 2>/dev/null && echo 'coord OK' || echo 'coord no responde'
+          # Cipher
+          curl -sf --max-time 5 -X POST "$CIPHER/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "$PAYLOAD" 2>/dev/null && echo 'cipher OK' || echo 'cipher no responde'
+
+      - name: 3 - Reactivar N8n workflows que esten inactivos
+        run: |
+          for WF in wSShDOqVEExVjusN B87aKekaUHQexAGr ad689uGpGbG0WoiT; do
+            R=$(curl -sf https://miud.app.n8n.cloud/api/v1/workflows/$WF \
+              -H "X-N8N-API-KEY: $(curl -sf '$PANT/rest/v1/relay_config?clave=eq.n8n_api_key&select=valor' \
+                -H 'apikey: '$PANON -H 'Authorization: Bearer '$PANON \
+                | python3 -c 'import sys,json; d=json.load(sys.stdin); print(d[0]["valor"] if d else "")' 2>/dev/null)" 2>/dev/null)
+            ACTIVE=$(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('active',False))" 2>/dev/null)
+            [ "$ACTIVE" = "False" ] && echo "Reactivando $WF" && \
+              curl -sf -X POST https://miud.app.n8n.cloud/api/v1/workflows/$WF/activate 2>/dev/null || echo "$WF active=$ACTIVE"
+          done
+
+      - name: 4 - Gossip del guardian
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CICLO=$(curl -sf "$PANT/rest/v1/relay_config?clave=eq.ciclo_real&select=valor" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '?')" 2>/dev/null)
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"guardian_flujo\",\"origen\":\"github-cron-hourly\",\"contenido\":\"oracle via=$VIA ciclo=$CICLO oracle+buscar propagados a panteon+coord+cipher\",\"ts\":\"$TS\"}]"
