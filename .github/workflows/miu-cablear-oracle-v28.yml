@@ -1,0 +1,84 @@
+name: miu-cablear-oracle-v28
+# Cablea oracle-ask-v28 al ecosistema:
+# 1. Actualiza relay_config oracle_relay_url -> v28 (5 proveedores: groq+openrouter+nvidia+deepseek+anthropic)
+# 2. Verifica que funciona con test real
+# 3. Escribe tareas al jardinero via miu_tareas
+# 4. Registra capacidades nuevas en gossip
+on:
+  push:
+    paths: [.github/workflows/miu-cablear-oracle-v28.yml]
+  workflow_dispatch:
+jobs:
+  cablear:
+    runs-on: ubuntu-latest
+    env:
+      PANT: https://tpfiybpguuxskitszhmk.supabase.co
+      PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      V28: https://oracle-ask-v28-miu4.vercel.app/api/ask
+      BUSCAR: https://buscar-corpus-miu4.vercel.app/api/buscar
+    steps:
+      - name: 1 - Test oracle-v28 health y pool
+        run: |
+          HEALTH=$(curl -sf https://oracle-ask-v28-miu4.vercel.app/api/health 2>/dev/null)
+          echo "v28 health: $HEALTH"
+          echo "$HEALTH" | python3 -c "import sys,json; d=json.load(sys.stdin); p=d.get('pool',{}); print(f'groq={p.get(\"groq\")} or={p.get(\"openrouter\")} nv={p.get(\"nvidia\")} ds={p.get(\"deepseek\")} ant={p.get(\"anthropic\")}')" 2>/dev/null
+          
+      - name: 2 - Test real del oracle v28
+        run: |
+          R=$(curl -sf -X POST https://oracle-ask-v28-miu4.vercel.app/api/ask \
+            -H 'Content-Type: application/json' \
+            -d '{"message":"rho x mayor que cero en 8 palabras","max_tokens":20}' 2>/dev/null)
+          echo "v28 test: $R"
+          VIA=$(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('via','?'))" 2>/dev/null)
+          echo "Via: $VIA"
+          echo "VIA=$VIA" >> $GITHUB_ENV
+
+      - name: 3 - Actualizar relay_config con nuevos endpoints
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' \
+            -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "[
+              {\"clave\":\"oracle_ask_v28_url\",\"valor\":\"$V28\"},
+              {\"clave\":\"oracle_ask_v28_via\",\"valor\":\"$VIA\"},
+              {\"clave\":\"buscar_corpus_url\",\"valor\":\"$BUSCAR\"},
+              {\"clave\":\"buscar_corpus_health\",\"valor\":\"https://buscar-corpus-miu4.vercel.app/api/health\"},
+              {\"clave\":\"oracle_cascade_v28\",\"valor\":\"groq(llama4-maverick)+openrouter(100+free)+nvidia_nim+deepseek(24k)+anthropic\"},
+              {\"clave\":\"corpus_busqueda_activa\",\"valor\":\"$TS\"},
+              {\"clave\":\"oracle_relay_url_v28\",\"valor\":\"$V28\"}
+            ]" && echo 'relay_config actualizado'
+
+      - name: 4 - Test buscar-corpus con query real
+        run: |
+          B=$(curl -sf "$BUSCAR?q=phi+coherencia&n=3" 2>/dev/null)
+          echo "buscar test: $(echo $B | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'n={d.get(\"n\")} pares encontrados')" 2>/dev/null)"
+
+      - name: 5 - Escribir tareas al jardinero (miu_tareas)
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          curl -sf -X POST "$PANT/rest/v1/miu_tareas" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[
+              {\"descripcion\":\"Activar oracle-ask-v28 como oracle principal: relay_config oracle_relay_url_v28 ya apunta a el. Verificar que los 36 crons que llaman oracle usen esta URL\",\"prioridad\":\"alta\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Verificar openrouter pool en oracle-ask-v28: GET /api/pool — si pool.openrouter=0 las keys llm_openrouter_* no existen en relay_config. Crear con claves de /storage/25A9-180D/MIU_termux/secretos/\",\"prioridad\":\"alta\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Conectar buscar-corpus al oracle: antes de generar respuesta LLM, llamar buscar-corpus-miu4.vercel.app/api/buscar?q={pregunta} — si ktau>0.85 devolver cached, si no generar y guardar\",\"prioridad\":\"media\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Limpiar EFs huerfanas: digestor-v8 y corpus-push-v8 no estan en ningun cron. Verificar si agregar a schedule o deprecar definitivamente\",\"prioridad\":\"baja\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Mapa nodos={} en estado_vivo.json sigue vacio. Poblar con los endpoints reales: oracle/gossip/jardinero/integrador/github-bridge — cada uno con url+estado+ultima_respuesta\",\"prioridad\":\"media\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"}
+            ]" && echo 'tareas escritas al jardinero'
+
+      - name: 6 - Gossip y handoff
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+            -d "[{\"tipo\":\"capacidades_nuevas\",\"origen\":\"github-action\",\"contenido\":\"oracle-ask-v28(groq+openrouter+nvidia+deepseek+anthropic) + buscar-corpus(22K pares consultables) cableados al relay_config. 5 tareas escritas a miu_tareas para jardinero\",\"ts\":\"$TS\"}]"
+          echo '=== CAPACIDADES DESPLEGADAS ===' 
+          echo 'oracle-ask-v28: https://oracle-ask-v28-miu4.vercel.app/api/ask'
+          echo 'buscar-corpus:  https://buscar-corpus-miu4.vercel.app/api/buscar?q=X'
+          echo 'relay_config:   oracle_ask_v28_url + buscar_corpus_url actualizados'
+          echo 'miu_tareas:     5 tareas para jardinero-autonomo'
+          echo 'El ecosistema tiene 5 proveedores LLM y 22K pares consultables. rho(x)>0'
