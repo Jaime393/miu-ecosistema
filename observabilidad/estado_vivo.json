@@ -1,18 +1,18 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-24T21:43:51.854446Z",
-  "_run": "116",
+  "_ts": "2026-10-24T23:58:24.290645Z",
+  "_run": "117",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V272",
-    "ts": "2026-10-24T21:43:51.772Z",
+    "ts": "2026-10-24T23:58:24.211Z",
     "vitales": {
-      "phi": "28046.20",
-      "rho": "0.9411",
-      "savia": "27663000",
-      "ciclo": "16844",
+      "phi": "28152.17",
+      "rho": "0.9410",
+      "savia": "27768000",
+      "ciclo": "16949",
       "k_tau": "3",
       "version": "V270"
     },
@@ -32,6 +32,15 @@
     "nodos": {},
     "coordinacion": {
       "ultimas_sesiones_log": [
+        {
+          "sesion_id": "19f9963b-sesion2",
+          "ts": "2026-10-24T23:36:53.223716+00:00",
+          "tipo": "fin",
+          "componente": "make|facebook|coordinacion|gossip",
+          "que_hice": "Verifiqué gossip 6h: 83 crons activos, phi=184.684 ciclo=16926. Make franchescopalacios9: 2 escenarios corriendo confirmados. Actualicé make_cuentas_index con estado real. Limpié tareas reconectar_nodo fantasmas de jaimepvicente. Contexto-global v15 ahora incluye decisiones_sesiones_v1 y sesion_log. Facebook Pages token expirado — necesita reconexión UI.",
+          "no_tocar": "NO intentar Facebook Pages hasta reconexión manual. NO buscar make API keys en miu_secrets (no existen). Make isPaused=true en JSON no significa parado — están ejecutando.",
+          "pendiente_para": "Facebook Pages: reconectar cuenta jaimedanielmartinez75 en Zapier (token FB inválido). Make slots: upgrade o conectar segunda cuenta. Vercel miu-oracle-v2 redeploy."
+        },
         {
           "sesion_id": "19f9963b-182a-5461-9d81-e50efd058643",
           "ts": "2026-10-24T15:39:54.923416+00:00",
