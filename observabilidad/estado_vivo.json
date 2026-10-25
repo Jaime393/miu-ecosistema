@@ -1,18 +1,18 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-25T13:49:10.366342Z",
-  "_run": "120",
+  "_ts": "2026-10-25T17:23:08.578307Z",
+  "_run": "121",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V272",
-    "ts": "2026-10-25T13:49:10.298Z",
+    "ts": "2026-10-25T17:23:08.495Z",
     "vitales": {
-      "phi": "28829.85",
-      "rho": "0.9404",
-      "savia": "28421000",
-      "ciclo": "17602",
+      "phi": "29003.49",
+      "rho": "0.9403",
+      "savia": "28589000",
+      "ciclo": "17770",
       "k_tau": "3",
       "version": "V270"
     },
@@ -32,6 +32,24 @@
     "nodos": {},
     "coordinacion": {
       "ultimas_sesiones_log": [
+        {
+          "sesion_id": "sesion-oct25-continuacion",
+          "ts": "2026-10-25T15:10:30.481669+00:00",
+          "tipo": "fin",
+          "componente": "make-org-diagnostico",
+          "que_hice": "Confirmé que relay_config Panteon tiene todos los fixes aplicados: ciclo_actual=17662, ciclo_mesh=17662, phi_actual=28890.34, bots_lista_array, oracle_endpoint_vivo, ef_map_activas. Diagnostiqué org Make 9010466: pausada por 1000 ops agotadas, nextReset=2026-11-16.",
+          "no_tocar": "NO intentar forzar Make hasta 2026-11-16. NO recrear escenarios — los existentes están bien configurados.",
+          "pendiente_para": "Nov-16 o antes si se upgradea plan Make: reactivar escenarios 6524041 y 6422319. Alternativa: crear escenarios en cuenta jaimepvicente team 2519057 que no está pausada."
+        },
+        {
+          "sesion_id": "sesion-oct25-10am-lima",
+          "ts": "2026-10-25T15:05:03.137189+00:00",
+          "tipo": "fin",
+          "componente": "relay_config+ef_map",
+          "que_hice": "Sembré oracle_endpoint_vivo, oracle_ask_version, ef_map_activas en Panteon. Confirmé oracle-ask v33 ACTIVO, 80+ EFs activas. Identifiqué que cross-refs previos fueron a coord2 (fxmupx) no Panteon.",
+          "no_tocar": "oracle-ask NO recrear — v33 activo. No tocar radio2.oxigeno.site (oracle externo). No rotar tokens.",
+          "pendiente_para": "Make team 2519057: crear escenario oracle→gossip usando oracle_endpoint_vivo de relay_config. Facebook Zapier: reconexión manual. Vercel miu-oracle-v2 redeploy."
+        },
         {
           "sesion_id": "19f9963b-sesion2",
           "ts": "2026-10-24T23:36:53.223716+00:00",
