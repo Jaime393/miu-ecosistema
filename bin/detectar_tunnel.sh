@@ -1,41 +1,37 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -u
-STATE_DIR="$HOME/miu-ecosistema/.state"
-TUNNEL_FILE="$STATE_DIR/tunnel_url.txt"
-LOG_FILE="$STATE_DIR/detectar_tunnel.log"
-mkdir -p "$STATE_DIR"
+ST="$HOME/miu-ecosistema/.state"
+STABLE="$ST/tunnel_stable.txt"; TUN="$ST/tunnel_url.txt"; CAND="$ST/tunnel_candidate.txt"
+LOG="$ST/detectar_tunnel.log"
+mkdir -p "$ST"
+log() { echo "[$(date -u +%FT%TZ)] $*" >> "$LOG"; }
 
-URL_VIVA=""
+URL=$(grep -Eo 'https://[a-z0-9-]+\.trycloudflare\.com' "$HOME/cloudflared_live.log" 2>/dev/null | grep -v 'api\.trycloudflare' | tail -1)
 
-# Prioridad 1: log manual (el más fiable)
-if [ -r "$HOME/cloudflared_live.log" ]; then
-  URL_VIVA=$(grep -Eo 'https://[a-z0-9-]+\.trycloudflare\.com' "$HOME/cloudflared_live.log" 2>/dev/null | tail -1)
-fi
+if [ -z "$URL" ]; then log "sin candidata"; exit 0; fi
+echo "$URL" > "$CAND"
+log "candidata: $URL"
 
-# Prioridad 2: verificar que responde
-if [ -n "$URL_VIVA" ]; then
-  CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 6 "$URL_VIVA" 2>/dev/null)
-  case "$CODE" in
-    200|502|404) ;;
-    *) URL_VIVA="" ;;
-  esac
-fi
+# Excluir api.trycloudflare.com explícitamente
+case "$URL" in
+  *api.trycloudflare.com*|*cloudflare.com/tunnel*) log "URL del API, no promuevo"; exit 0 ;;
+esac
 
-# Prioridad 3: fallback a logs antiguos
-if [ -z "$URL_VIVA" ]; then
-  for CANDIDATA in $(grep -hEo 'https://[a-z0-9-]+\.trycloudflare\.com' \
-      ~/cloudflared_live.log ~/cloudflared_v27.log ~/.state/cf_tunnel.log 2>/dev/null \
-      | sort -u | tail -8); do
-    CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 6 "$CANDIDATA" 2>/dev/null)
-    if [ "$CODE" = "200" ] || [ "$CODE" = "502" ]; then
-      URL_VIVA="$CANDIDATA"; break
-    fi
-  done
-fi
-
-if [ -n "$URL_VIVA" ]; then
-  echo "$URL_VIVA" > "$TUNNEL_FILE"
-  echo "[$(date -u +%FT%TZ)] URL: $URL_VIVA" >> "$LOG_FILE"
-else
-  echo "[$(date -u +%FT%TZ)] sin URL viva" >> "$LOG_FILE"
-fi
+CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "${URL}/health" 2>/dev/null)
+case "$CODE" in
+  200|404|502)
+    CUR=""
+    [ -r "$STABLE" ] && CUR=$(cat "$STABLE" | tr -d '[:space:]')
+    if [ "$CUR" != "$URL" ]; then
+      if [ -n "$CUR" ]; then
+        OLD=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 "${CUR}/health" 2>/dev/null)
+        case "$OLD" in
+          200|404|502) log "actual $CUR viva ($OLD), no cambio" ;;
+          *) echo "$URL" > "$STABLE"; echo "$URL" > "$TUN"; log "PROMOVIDA (actual murió: $OLD)" ;;
+        esac
+      else
+        echo "$URL" > "$STABLE"; echo "$URL" > "$TUN"; log "PROMOVIDA (primera)"
+      fi
+    fi ;;
+  *) log "candidata NO responde (HTTP $CODE)" ;;
+esac

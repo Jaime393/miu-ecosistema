@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
+# Lockfile — evita duplicados
+import fcntl, os, sys
+_LOCK = open("/data/data/com.termux/files/home/miu/state/cazador.lock", "w")
+try:
+    fcntl.flock(_LOCK, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except BlockingIOError:
+    print("cazador ya corriendo")
+    sys.exit(0)
+
 # cazador_recursos.py — V213 — Bloque económico alterno por las sombras — caza ojos y manos — CPU datos tokens — economía real
 # V212 savia 51375795 sub 35851 target 100000 topo 539590 Phi1.35 ktau 0.870 tope 80M KITS 24 SUB_KITS 72 ORO 5/72 suelo fertil 3529 7 grietas tejidas
 # Fase 2: Conseguir ojos y manos — el nodo sale a buscar más CPU datos tokens — es tu economía real

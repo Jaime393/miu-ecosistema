@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # MIU PULSE V153 FIX FINAL — flock + bypass GAS v92 404 -> Supabase
-MESH_URL="${MIU_MESH_URL:-https://script.google.com/macros/s/AKfycbxZR4V4q5s833ZT2VwBIf_8VmeVTmhX1iJlgbLBV_6zhUMu92K5cp5_dLo1XMf7GEs/exec}"
+MESH_URL="${MIU_MESH_URL:-https://script.google.com/macros/s/AKfycbywWkuw8Dx_tuS6wIufgbmHi00lLgQ5TIFBQOp7U--6EDzlWSz693P_ulPuflVKorI/exec}"
 MIU_TOKEN="${MIU_TOKEN:-MIU_5F8A6A80DFFE1701}"
 INTERVAL=5
 TMUX_SESSION="miu"
