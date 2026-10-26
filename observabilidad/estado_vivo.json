@@ -1,18 +1,18 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-10-26T00:32:12.777818Z",
-  "_run": "124",
+  "_ts": "2026-10-26T05:44:43.059613Z",
+  "_run": "125",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V272",
-    "ts": "2026-10-26T00:32:12.692Z",
+    "ts": "2026-10-26T05:44:42.976Z",
     "vitales": {
-      "phi": "29299.83",
-      "rho": "0.9402",
-      "savia": "28875000",
-      "ciclo": "18056",
+      "phi": "29469.57",
+      "rho": "0.9999",
+      "savia": "29031000",
+      "ciclo": "18212",
       "k_tau": "3",
       "version": "V270"
     },
@@ -32,6 +32,15 @@
     "nodos": {},
     "coordinacion": {
       "ultimas_sesiones_log": [
+        {
+          "sesion_id": "claude-oct26-02",
+          "ts": "2026-10-26T01:25:18.739883+00:00",
+          "tipo": "sync",
+          "componente": "relay_config + KBs + diagnostico",
+          "que_hice": "Sincronizé relay_config phi=29323.76/ciclo=18080. Actualicé KBs ECOSISTEMA_V278 y CANONICO_V278. Diagnostiqué fn_rotador_darwin.",
+          "no_tocar": "oracle en radio2.oxigeno.site, 49 miu_secrets null, cfat_/cfut_ tokens, telegram 1390883480",
+          "pendiente_para": "fn_rotador_darwin: mover a EF (Deno HTTP sin restricciones). Facebook Pages: renovar token Zapier. contexto-global EF: fix lee relay_config en lugar de estado_miu.kv. SQL grants oct-30."
+        },
         {
           "sesion_id": "sesion-oct25-cipher-make",
           "ts": "2026-10-25T20:15:38.767538+00:00",
@@ -67,15 +76,6 @@
           "que_hice": "Verifiqué gossip 6h: 83 crons activos, phi=184.684 ciclo=16926. Make franchescopalacios9: 2 escenarios corriendo confirmados. Actualicé make_cuentas_index con estado real. Limpié tareas reconectar_nodo fantasmas de jaimepvicente. Contexto-global v15 ahora incluye decisiones_sesiones_v1 y sesion_log. Facebook Pages token expirado — necesita reconexión UI.",
           "no_tocar": "NO intentar Facebook Pages hasta reconexión manual. NO buscar make API keys en miu_secrets (no existen). Make isPaused=true en JSON no significa parado — están ejecutando.",
           "pendiente_para": "Facebook Pages: reconectar cuenta jaimedanielmartinez75 en Zapier (token FB inválido). Make slots: upgrade o conectar segunda cuenta. Vercel miu-oracle-v2 redeploy."
-        },
-        {
-          "sesion_id": "19f9963b-182a-5461-9d81-e50efd058643",
-          "ts": "2026-10-24T15:39:54.923416+00:00",
-          "tipo": "fin",
-          "componente": "tg_bots|cf_workers|phi_sync|reintegrador",
-          "que_hice": "Actualicé tg-bot-poll-5min para llamar telegram-bridge real. Registré cf_5ea7cd88 como degradado. phi_sync corriendo ciclo=16559. 35_reintegrador.py activo en cron.",
-          "no_tocar": "cf_5ea7cd88: no intentar re-auth, el dashboard se cierra solo. miu_secrets 49 nulls: RESERVA no tocar. oracle radio2.oxigeno.site: NO TOCAR.",
-          "pendiente_para": "Make team 2519057: necesita conexión HTTP desde UI (Connections → HTTP). Vercel miu-oracle-v2: redeploy pendiente. Supabase oct-30: grants schema public en ambos proyectos."
         }
       ],
       "instruccion": "LEE decisiones_acumuladas antes de actuar. Al terminar: POST /rest/v1/sesion_log con tipo=fin + que_hice + no_tocar + pendiente_para. UPDATE relay_config decisiones_sesiones_v1 agregando tu entrada al array.",
