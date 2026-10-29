@@ -1,60 +1,40 @@
-# Estado runtime local
-.state/
-logs/
-tmp/
-*.pid
 
-# Secretos y credenciales
-**/wallet.json
-**/creds*.json
-**/*secret*
-.env
-.env.*
-
+# Backups
 # Caches Python
-__pycache__/
-*.pyc
-*.pyo
-*.egg-info/
-
-# Backups
-*.bak_*
-*.bak
-*~
-
+# Credenciales (nunca subir)
 # Estado Supabase KV (contiene tokens)
-kv_local.json
-kv_global.json
-
 # Estado runtime (agregado 2026-10-16)
-.state/
-data/estado_*.json
-URL_VIVA.txt
-
+# Estado runtime local
 # Logs
-*.log
-logs/
-
-# Backups
+# Secretos y credenciales
+# Temporales
+**/*secret*
+**/creds*.json
+**/wallet.json
 *.bak
 *.bak.*
+*.bak_*
 *.disabled
-
-# Credenciales (nunca subir)
+*.egg-info/
+*.log
+*.pid
+*.pyc
+*.pyo
 *_cloudflare.txt
 *_tokens*.json
+*~
 .env
 .env.*
-
-# Temporales
-tmp/
-__pycache__/
-*.pyc
-_archivo/
-hf_token
-bin/miu-hf-push*.sh
-bin/*.bak_*
 .state/
-*.bak_*
+URL_VIVA.txt
+__pycache__/
+_archivo/
+bin/*.bak_*
+bin/miu-hf-push*.sh
+data/estado_*.json
 hf_token
+kv_global.json
+kv_local.json
+logs/
+tmp/
 tokens_vivos.txt
