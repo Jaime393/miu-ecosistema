@@ -51,3 +51,10 @@ tmp/
 __pycache__/
 *.pyc
 _archivo/
+hf_token
+bin/miu-hf-push*.sh
+bin/*.bak_*
+.state/
+*.bak_*
+hf_token
+tokens_vivos.txt

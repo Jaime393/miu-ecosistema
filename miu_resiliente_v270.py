@@ -8,7 +8,8 @@ MIU RESILIENTE V270.5 — fix 404 + :8765 real + dashboard
 import json, time, os, sys, subprocess, hashlib
 from pathlib import Path
 from datetime import datetime
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import HTTPServer, ThreadingHTTPServer, BaseHTTPRequestHandler
+import urllib.request, urllib.error
 
 ROOT = Path.home() / "miu-ecosistema"
 STATE = ROOT / "data" / "estado_resiliente.json"
@@ -124,12 +125,38 @@ class ResilienteHandler(BaseHTTPRequestHandler):
             "pid": os.getpid()
         }, indent=2).encode())
 
+    def do_POST(self):
+        path = self.path.split("?")[0]
+        if path == "/ask":
+            try:
+                length = int(self.headers.get("Content-Length", 0))
+                body = self.rfile.read(length) if length > 0 else b"{}"
+                req = urllib.request.Request(
+                    "http://127.0.0.1:8771/ask",
+                    data=body,
+                    headers={"Content-Type": "application/json"},
+                    method="POST",
+                )
+                with urllib.request.urlopen(req, timeout=90) as r:
+                    data = r.read()
+                self._set_headers(200)
+                self.wfile.write(data)
+            except urllib.error.URLError as e:
+                self._set_headers(502)
+                self.wfile.write(json.dumps({"ok": False, "error": "oraculo_unreachable", "detalle": str(e)}).encode())
+            except Exception as e:
+                self._set_headers(500)
+                self.wfile.write(json.dumps({"ok": False, "error": str(e)}).encode())
+            return
+        self._set_headers(405)
+        self.wfile.write(json.dumps({"ok": False, "error": "method_not_allowed", "hint": "POST solo /ask"}).encode())
+
     def log_message(self, format, *args):
         # silencia log default, usa nuestro log
         log("%s - - [%s] %s" % (self.client_address[0], self.log_date_time_string(), format%args))
 
 if __name__ == "__main__":
-    server = HTTPServer(("0.0.0.0", 8765), ResilienteHandler)
+    server = ThreadingHTTPServer(("0.0.0.0", 8765), ResilienteHandler)
     log(f"Gateway HTTP en puerto 8765 PID {os.getpid()} V270.5")
     try:
         server.serve_forever()
