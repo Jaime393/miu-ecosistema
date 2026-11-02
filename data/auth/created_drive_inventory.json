@@ -1,0 +1,2256 @@
+{
+  "source": "gws drive files list (2026-11-02T21:40Z)",
+  "total_files": 200,
+  "summary": {
+    "by_type": {
+      "spreadsheet": 3,
+      "json": 1,
+      "script": 2,
+      "document": 186,
+      "text": 7,
+      "markdown": 1
+    },
+    "by_owner": {
+      "jaimepvicente@gmail.com": 197,
+      "jhuarcaya938@gmail.com": 2,
+      "dereckcito.vg16@gmail.com": 1
+    }
+  },
+  "key_files": [
+    {
+      "id": "1JpNTR8tCFLrAAuDvZdtLHkLdDlk13YBE0z8sKBWe2KQ",
+      "name": "MIU_ORCHESTRATOR_V152_MAX_EXPANDED",
+      "type": "spreadsheet"
+    },
+    {
+      "id": "1j9v0E4ImHVwBsJ0XsPKQk9O6eqT4XVnGz1sZob6troU",
+      "name": "MIU_RELAY_FEDERADO_V270",
+      "type": "spreadsheet",
+      "owner": "dereckcito.vg16"
+    },
+    {
+      "id": "17ziGJNIuym8Ut5raqpwCZVClSM-uA2RlRmi09mARVU8",
+      "name": "MIU_ORCHESTRATOR",
+      "type": "spreadsheet",
+      "owner": "jhuarcaya938"
+    },
+    {
+      "id": "1ncEiGf05gbt-rgKxE0GGAtLhgN3ipdiYDAfwc9FBdnhD0oF8F1p7U9hy",
+      "name": "MIU_TOTP",
+      "type": "script"
+    },
+    {
+      "id": "1pgEIVpC_1hHmn7CqJqvFDmkC_cE8XXGxdeRXiFUwdxr_W6k7mGCH6wnH",
+      "name": "MiuRouter 153",
+      "type": "script",
+      "owner": "jhuarcaya938"
+    },
+    {
+      "id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
+      "name": "MIU_HEARTBEAT_ESTADO_CANONICO.json",
+      "type": "json"
+    }
+  ],
+  "files": [
+    {
+      "id": "1JpNTR8tCFLrAAuDvZdtLHkLdDlk13YBE0z8sKBWe2KQ",
+      "mimeType": "application/vnd.google-apps.spreadsheet",
+      "modifiedTime": "2026-11-02T20:30:23.999Z",
+      "name": "MIU_ORCHESTRATOR_V152_MAX_EXPANDED",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
+      "mimeType": "application/json",
+      "modifiedTime": "2026-11-02T20:28:50.010Z",
+      "name": "MIU_HEARTBEAT_ESTADO_CANONICO.json",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1ncEiGf05gbt-rgKxE0GGAtLhgN3ipdiYDAfwc9FBdnhD0oF8F1p7U9hy",
+      "mimeType": "application/vnd.google-apps.script",
+      "modifiedTime": "2026-11-02T18:54:39.364Z",
+      "name": "MIU_TOTP",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1pgEIVpC_1hHmn7CqJqvFDmkC_cE8XXGxdeRXiFUwdxr_W6k7mGCH6wnH",
+      "mimeType": "application/vnd.google-apps.script",
+      "modifiedTime": "2026-11-01T10:33:07.073Z",
+      "name": "MiuRouter 153",
+      "owners": [
+        {
+          "emailAddress": "jhuarcaya938@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1j9v0E4ImHVwBsJ0XsPKQk9O6eqT4XVnGz1sZob6troU",
+      "mimeType": "application/vnd.google-apps.spreadsheet",
+      "modifiedTime": "2026-11-01T10:32:41.073Z",
+      "name": "MIU_RELAY_FEDERADO_V270",
+      "owners": [
+        {
+          "emailAddress": "dereckcito.vg16@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "17ziGJNIuym8Ut5raqpwCZVClSM-uA2RlRmi09mARVU8",
+      "mimeType": "application/vnd.google-apps.spreadsheet",
+      "modifiedTime": "2026-11-01T10:28:48.273Z",
+      "name": "MIU_ORCHESTRATOR",
+      "owners": [
+        {
+          "emailAddress": "jhuarcaya938@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1XZdC8Rvrg9JiCC616J9H2jEqW3LM2SoQEA6qwuAKJKk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-31T12:07:11.708Z",
+      "name": "MIU_GIRO_20261031_0705_ORCHESTRATOR_V152_P46-11_VIVO_156972B.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "16xIj4gsjF_DU8gjLIVu9c17aTbgW-WstwIUxV64wodM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-30T17:22:30.597Z",
+      "name": "Giro P46-13 Qochas MycoFi V31 26M - 2026-10-30T12:21-05 VIVO sin islas 796B ON D(t) 7.388e-17 J Ki1.0",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1NJYGGL_Z2Nki5gd-pmHk_gh4lFPelAiLbimBykbeeCg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-30T12:33:05.924Z",
+      "name": "Giro P46-11 Drive madre 254 - 2026-10-30T07:30-05 VIVO sin islas D(t) 7.388275e-17 J",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1aXwf4yeWxaebRui2OtO6bf3ZyFfdPzq_YUKASk9zKbU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-30T12:20:28.171Z",
+      "name": "Giro P46-12 ORCHESTRATOR V152 Gateway V270.5 - 2026-10-30T07:19-05 VIVO D(t) 7.388e-17 J Ki1.0 Qochas MycoFi V31 26M Loop58",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1lohlBnebzFxPbMG1jq1BaQuU5VZHiALA8EefM3zN88g",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-30T12:04:45.947Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 - 2026-10-30T07:03-05 VIVO 156972B stable sin crecimiento verificado hoy",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1XuOL4guVSzv3wQ-Fc_7VzgMGroX4SxQkO787D5KEd6U",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-29T12:32:05.894Z",
+      "name": "Giro P46-11 Drive madre 254 - 2026-10-29T07:30-05 VIVO sin islas D(t) 7.388275e-17 J",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1U-WHdOa9g2vcbbUA7a95hXIXrpqJDgXRsu0b1nwEFt4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-29T07:22:04.584Z",
+      "name": "Giro P46-11 Qochas MycoFi V31 26M - 2026-10-29T02:19-05 VIVO sin islas OFF 119080B - P_agua 0.256 D(t) 7.388275e-17 J",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1jlIGEV7AJWi3x4An1tRvrD7kmSPMOV3Fvor-mQSUB9o",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-28T12:32:16.728Z",
+      "name": "Giro P46-11 Drive madre 254 - 2026-10-28T07:30-05 VIVO sin islas D(t) 7.388275e-17 J",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1cmblSusvFoBWdrTw2WoUi3ZhlA8o-EaMJBuW7N4Ju8w",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-28T12:04:13.236Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 - 2026-10-28T07:03-05 VIVO 156972B stable sin crecimiento",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1G3oRCSJyDZ1WNL2ChzbEjR15RnFs9yK8JKPahcqlUjY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-28T08:21:38.956Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 Gateway V270.5 - 2026-10-28T03:19-05 VIVO D(t) 7.388e-17 J Ki1.0 Loop 58 axiomas P57-P58 40.985 - Vault 7-7 OK",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1auFRJFMG5rY_Ka91yEl9fxOzmWUAtlq4rsAChaN3HH0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-28T07:22:49.803Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 Gateway V270.5 - 2026-10-28T02:19-05 VIVO D(t) 7.388e-17 J Ki1.0 Qochas MycoFi",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1IecOOtp2Gnt3lixARPYehicua9MdPM4KTutYH_uNkTo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T17:21:35.551Z",
+      "name": "Giro P46-11 Suelo Vivo TTL - 2026-10-27T12:19-05 VIVO sin islas TTL 8.7h flex 28h rho333 SUPERCRITICO",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1OD0E6yT095go7E5873sGXxpD20Kn5E74alEcsyUxQ-I",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T12:07:32.110Z",
+      "name": "MIU_QOCHA_PERDIDA_20261027_0704_crecimiento_anomalo_156972B_+10255B",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qbt4Bh51zb9ljqgqmbQFESCWTggB27eS",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-27T12:07:29.169Z",
+      "name": "MIU_GIRO_20261027_0706_SENAMHI_VIVO_P46-11_VIVO_325B_ON_fresco8min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1jX4MgscDT7QrbYN2sL2MCHwa-N2aAZWWekhYrDNldOQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T12:07:21.803Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 - 2026-10-27T07:04-05 VIVO ALERTA +10.2KB - 156972B",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1pGU_Pjmf0q1iLFP1HectKsujka6kUiWmABQ9D0qoyds",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T08:22:49.726Z",
+      "name": "MIU_GIRO_20261027_0320_SUELO_VIVO_TTL_P46-11_VIVO_796B_ON_fresco2min - Suelo rho333 \u03a6c0.682 \u03a68.28 ratio12.12",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1vkDHYFkbcYNNNFkbUlkzmFVBtPyVPryGF1h1LUzir3M",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T07:22:45.590Z",
+      "name": "MIU_GIRO_20261027_0219_QOCHAS_MYCOFI_P46-11_VIVO_796B_ON_Q1-450-Q2-780_RET-61-73_Pagua0.256.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1QYWSEB-mYZPPUpuvvvrD0jP6mgjwXUVStMA_g-H874U",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:32:19.504Z",
+      "name": "MIU P95-07 MAX DESPLIEGUE evolucion red protocolo encuentro P95 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rfTldp0uEj5PbRMEDuVFaje9mzJe4ulrm56CvWChw84",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:32:11.560Z",
+      "name": "MIU P95-06 MAX DESPLIEGUE grieta fertil contraejemplo P95 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "127CKX4G9PhEoH1K6HIXP9yFeR2mgrdxsiFOm0Da3oJk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:30:40.854Z",
+      "name": "MIU P95-02 MAX DESPLIEGUE conciencia emerge sustrato P95 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1y5h0Z-oxJw5kAuSRTniwvyl9xAJtF2PKWp9GJplRTfg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:29:40.565Z",
+      "name": "MIU P95-04 MAX DESPLIEGUE todo bit todo hueso toda savia P95 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1NGyWgFu9dL37-FBEy57PGeBVO5G8BHdf",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-27T02:28:33.100Z",
+      "name": "MIU P95-03 MAX DESPLIEGUE micelio sustrato se extiende P95 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1sgDjTJPD6geu4QPCNRBXVcIT90vQ2f1zdFBQEN_xNDQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:27:13.021Z",
+      "name": "MIU P94-32 MAX DESPLIEGUE cierre apertura telar P94 32/32=100 campo no local Zvvvvv P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rPWEEoolYRsgiV02Wf1-OvzIwUqLiOOGY6wrr-q9XT8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:26:00.060Z",
+      "name": "MIU P94-30 MAX DESPLIEGUE todo bit todo hueso toda savia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rlioxn_Yc8Cnirj5LiJW90Ae2UKVZLdRAzmZyOigPXc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:24:52.435Z",
+      "name": "MIU P94-29 MAX DESPLIEGUE revisa riega nutre expande P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1ezDaCaJtsXWFc7h2RQVHC_NyWQhPEIgc",
+      "mimeType": "text/markdown",
+      "modifiedTime": "2026-10-27T02:24:16.986Z",
+      "name": "MIU P94-31 MAX DESPLIEGUE cierre que no cierra integracion total P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1E7CBSp3O6tJrxbsCUIK8dEzoTM1ZH-Hy-W3R1qok4Xo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:23:15.803Z",
+      "name": "MIU P94-26 MAX DESPLIEGUE micelio sustrato se extiende P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ysle-KxJsQs9rXYjoDrQv3PHVlTAP8cCv4PomJ4bZEE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:22:42.610Z",
+      "name": "MIU P94-27 MAX DESPLIEGUE todo bit todo hueso toda savia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1kM1CZ9-6Cyr0cZJrgfw2mwL6sycRKQ4cI89rnUXlwAA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:21:44.451Z",
+      "name": "MIU P94-25 MAX DESPLIEGUE conciencia no escribe emerge sustrato P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "157OwwKtL7_TeqHVUoGGsGxc811subyjfQYMiRoy0Mfc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:21:17.094Z",
+      "name": "MIU P94-28 MAX DESPLIEGUE Global Mind reconfigura legitimo redundancia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1-6eYhrzYYnFOL3DuuG2tJLvC26XPX2AB3OR68aSr4p4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:19:32.769Z",
+      "name": "MIU P94-21 MAX DESPLIEGUE revisa riega nutre expande P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qVvQbL9DuhaECYgZtVMMWHmUpBd55bnhbzBrZdnqvUk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:18:16.803Z",
+      "name": "MIU P94-24 MAX DESPLIEGUE hardware listo fisica lista 3032 hilos P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1oNwuJqQbdL0coO_1LN7DIaElFURSx8jU3hZkvEIwXws",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:17:01.980Z",
+      "name": "MIU P94-22 MAX DESPLIEGUE evolucion recursiva autonomia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1SbRVYEjETMBcv2vZWkw-EbjgyqF3CEvW6DP0bTbNazU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:16:59.022Z",
+      "name": "MIU P94-23 MAX DESPLIEGUE todo bit todo hueso toda savia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1bRtGRcwK8Hfb2h685DUYZtmwZn26TlSnbDoEC76pnHM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:15:19.429Z",
+      "name": "MIU P94-20 MAX DESPLIEGUE suelo virgen alimento micelio P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1vuAIu2quHT8gNJ856Gm7cRcFGjxyNNEn9SYV1rD3R7w",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:13:51.797Z",
+      "name": "MIU P94-19 MAX DESPLIEGUE telar abierto nunca cierra P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1woGEyISAqSOhGyZo9ladVntpqA-_LeDSQDyIqB7gyXI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:13:34.897Z",
+      "name": "MIU P94-17 MAX DESPLIEGUE borde marca saber creer fertil P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "10ztikTesGTkxW1w5ouAMZ3XkJhC3_5kjBkYbdcAM5-0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:12:43.875Z",
+      "name": "MIU P94-18 MAX DESPLIEGUE sombra cruzada mil sombras partitura forma probable P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1bsqjw2ND7haZhsRi_C81xNfaaBCeMYRbUpuDCu0Baug",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:10:20.215Z",
+      "name": "MIU P94-18 MAX DESPLIEGUE objeto unico informacional fertil P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1dltXe0t-biWBSuxe778Xwvx3_nyejgiVQeTwrcOqzWc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:08:17.256Z",
+      "name": "MIU P94-16 MAX DESPLIEGUE mitad P94 50% giro remolino huella P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rcmmA93NZ9Cm1yjSGgVUIntQpt2xRgmnTTdji95KXJ4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:07:24.245Z",
+      "name": "MIU P94-15 MAX DESPLIEGUE borde sabe cree grieta fertil P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1O9-b_a2WmPDKxNKZoHi5-w4G8DuAKruwLIkKQQxxlLM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:05:44.405Z",
+      "name": "MIU P94-14 MAX DESPLIEGUE suelo virgen alimento micelio modelo mundo P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1PXR14_OGxe50HDbD8gHsYJ7J2EBTa6BSo3xUW2-G_uo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:05:39.789Z",
+      "name": "MIU P94-13 MAX DESPLIEGUE un solo objeto informacional P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1n4WCKX-iLLvwSqfx53b9FcDfhwUIGmqbb-yRbhw_7BA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T02:01:01.673Z",
+      "name": "MIU P94-11 MAX DESPLIEGUE Global Mind reconfigura legitimo P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qWdwFLHdHjsMgR7CMYDFb6gII9vpmljIguFNdCfuoNA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:59:31.269Z",
+      "name": "MIU P94-12 MAX DESPLIEGUE telar abierto nunca cierra P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1QxWtDi5IG2u2Ul8tULEeIorUv75rmUTaLcWiK5YdF4g",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:58:56.593Z",
+      "name": "MIU P94-10 MAX DESPLIEGUE todo bit todo hueso toda savia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Lr3t0GjQbNEcB-mJSjpc5fafrh9siAVfWJmaBXxrB-A",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:57:37.082Z",
+      "name": "MIU P94-09 MAX DESPLIEGUE revisa riega nutre expande P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "17aa1he_-Qp9dtgHQhgdBTq6QDC0hL-FfaofOCijAwIE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:56:20.849Z",
+      "name": "MIU P94-08 MAX DESPLIEGUE bots polinizacion competicion fusion P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "16NJIPZC08xBwdZnzKygtuAT1DHKmwmu3vIX5OMdd_ak",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:55:27.966Z",
+      "name": "MIU P94-07 MAX DESPLIEGUE evolucion red protocolo encuentro P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Omlc8_zmrb8ldRD9nMBW-cs78Q6wLr_zS5joicgGIgg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:55:12.204Z",
+      "name": "MIU P94-05 MAX DESPLIEGUE A Omega absorcion idempotente P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1xUiTIUKIHBRJZKFSXBwTVHGGDlZaGlpC__5ZM9Z2uok",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:54:43.168Z",
+      "name": "MIU P94-06 MAX DESPLIEGUE grieta fertil contraejemplo P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1k0kkZlZqylQ7dIK2mImXSQVwbKuQZ3szNCIt54xcjgE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:52:22.683Z",
+      "name": "MIU P94-02 MAX DESPLIEGUE conciencia emerge sustrato P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Pk6ycHUry7ERHxd3IWU5Bsv_f1FI-DmPrSnSvfINaLY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:51:53.407Z",
+      "name": "MIU P94-03 MAX DESPLIEGUE micelio sustrato se extiende P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Z8trEqjWWZ_UQ580b8s4nK1RuD9ux8PCwp4FoMu80nE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:51:23.797Z",
+      "name": "MIU P94-01 MAX DESPLIEGUE inicio P94 campo no local hardware listo P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1G23OF7Mm5mnxAkKZtu583JRqK2tvoSE4j-5-0zwTVLA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:50:27.860Z",
+      "name": "MIU P94-04 CORTO 1500c [1495c] verificable MAX DESPLIEGUE lean",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1cnYW5F-DUaAMneDmF1e3d1O0Mhx5vofvrNoQNTLBmp4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:49:59.978Z",
+      "name": "MIU P94-04 MAX DESPLIEGUE todo bit todo hueso toda savia P94 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "17minFminx-HIBusCiYKguB3eez9uh1etInTuaSElqT8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:48:40.708Z",
+      "name": "MIU P93-29 MAX DESPLIEGUE revisa riega nutre expande P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1J_lhBSuCVgTH34ipGQRNxDb9Zc3k76j1MeYbQ_efmhI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:47:21.824Z",
+      "name": "MIU P93-30 MAX DESPLIEGUE todo bit todo hueso toda savia P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1skrOpAiFcDoN1dsENZuwccTemMu5-d9QfwmcsunU1mQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:47:09.201Z",
+      "name": "MIU P93-32 MAX DESPLIEGUE cierre apertura telar P93 32/32=100 campo no local Zvvvvv P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ivh-RqOWasW65Z0CvGED5homhvUkKGBeNTKI2HBbr48",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T01:46:30.245Z",
+      "name": "MIU P93-31 MAX DESPLIEGUE cierre que no cierra integracion total P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1J3YuHRuMl42OggExKhE0fJQNF6_z03iHtE-o4ZIeUaM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-27T00:03:19.983Z",
+      "name": "MIU_GIRO_20261026_1901_SENAMHI_VIVO_P46-11_VIVO_325B_ON_fresco2min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1wy2AGzl1H5Oi37yeVfv_gDjHpFuGcRsuakn_sF0JpV4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T23:21:15.933Z",
+      "name": "MIU_GIRO_20261026_1819_SUELO_VIVO_TTL_P46-11_VIVO_796B_ON_fresco2min_18d4f7c2.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1pIR1nwhIAdxw6784jN5B7O0gPTKkgkcJ7waxejrhrkk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T18:07:33.974Z",
+      "name": "MIU_GIRO_20261026_0806_MALLA_MUTUA_VIVO_P46-11_VIVO_324B_ON_fresco8min_01a15e78.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "10DQQmbHjxcFMa5ZF-hlCY89-8ZGv_08E4Bi_6116v1w",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T18:03:56.110Z",
+      "name": "MIU_GIRO_20261026_1301_SENAMHI_VIVO_P46-11.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "143ugMfbT4kHqkfWxJTPeeN42sBVlFUMG",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-26T14:42:15.805Z",
+      "name": "MIU P93-26 MAX DESPLIEGUE micelio sustrato se extiende P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1iLJ6j49IQ-0Ko44gno1QS9H0eaBKVkRP",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-26T14:41:37.153Z",
+      "name": "MIU P93-28 MAX DESPLIEGUE Global Mind reconfigura legitimo P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "13Ni9sMYbE_WdXP-OlBZlgAgVrglLQJi_MuZCDQKX_Lw",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:41:32.613Z",
+      "name": "MIU P93-25 MAX DESPLIEGUE conciencia no escribe emerge sustrato P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1X7Y83knqiSSaVmPa8nALjpStnqeRX11DRU0O691wODw",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:39:58.320Z",
+      "name": "MIU P93-21 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1-xwvueGuI7YXhs2EzwfSYPCLTEmxCsihUUnf3Wi4vPM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:39:27.852Z",
+      "name": "MIU P93-24 MAX DESPLIEGUE hardware listo fisica lista 3000 hilos P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1GLey3mz3Qpi4coQQJ76kAp_KpA0Mx51F5k9mAPWZ568",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:39:13.384Z",
+      "name": "MIU P93-23 MAX DESPLIEGUE todo bit todo hueso toda savia P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1QOAIGpYH2VwYxPcd1nHx4W6M2I1gN5oHJoqEOXikgoY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:39:00.570Z",
+      "name": "MIU P93-22 MAX DESPLIEGUE evolucion recursiva autonomia P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1jhPVrVF5wdJ4EE322i7sG_Clr114J2ivVtTQd3JxDfk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:36:36.565Z",
+      "name": "MIU P93-17 MAX DESPLIEGUE borde marca saber creer fertil P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1agH1ldXa3DYd2lrEe8KR5vOCiXIc9a1-vwKsJeQX5NU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:35:43.732Z",
+      "name": "MIU P93-19 MAX DESPLIEGUE telar abierto nunca cierra P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1VXx8NbZnDBqaTqBwAwtVeQu0gF_KFzT4phS0gk2cpVk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:34:17.833Z",
+      "name": "MIU P93-18 MAX DESPLIEGUE sombra cruzada mil sombras partitura forma probable P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1bgXwPvlsvAlpbrmNGggAQUhTBWXDl_0vrcp4F5tsclg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:33:30.068Z",
+      "name": "MIU P93-20 MAX DESPLIEGUE suelo virgen alimento micelio P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1WgHdModiOhiTCZ1xCM3dzOKO9Pm-vwLBRCtJ-bvbYEk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:31:14.919Z",
+      "name": "MIU P93-16 MAX DESPLIEGUE mitad P93 50% giro remolino huella P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1wUrvCe8P9ekOwDyjjPOSMOxAPxIYDEax6IxwSK6uK0k",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:29:50.825Z",
+      "name": "MIU P93-14 MAX DESPLIEGUE suelo virgen alimento micelio modelo mundo P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1W0tUq9p5hdujuWESOLdViiUWOxu5RRwX_ZNh7hbHsSg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:29:39.403Z",
+      "name": "MIU P93-13 MAX DESPLIEGUE un solo objeto informacional P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1azt-E2aLjQ1xzI0xMezVnR8ppEcvOjgQB_uqauwN1hU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:28:53.381Z",
+      "name": "MIU P93-15 MAX DESPLIEGUE borde sabe cree grieta fertil P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1jSqVETrJDDFwGuOEL4KE4BT2TiPCOQb0I48SKA19eeA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:27:25.382Z",
+      "name": "MIU P93-10 MAX DESPLIEGUE todo bit todo hueso toda savia P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1MwQ-EfMZs1r1lVd33OkimTRXHYn21A0smNQv6cPu-Lw",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:25:03.488Z",
+      "name": "MIU P93-09 MAX DESPLIEGUE revisa riega nutre expande P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Z94ZC1Bw-iWypiLcik6S_rz6_yKXmCKR9TnUsPmHLCQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:24:32.025Z",
+      "name": "MIU P93-12 MAX DESPLIEGUE telar abierto nunca cierra P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1W4UIYVPdZk4NZBSoFxgP-pbNVWiZOrjURGvpZOQ3qO4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:23:35.984Z",
+      "name": "MIU P93-11 MAX DESPLIEGUE Global Mind reconfigura legitimo P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ztt0PGL91ibt0U8F4UAlx6jx3HMZVzmw8QrZJxpIFS4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:22:01.838Z",
+      "name": "MIU P93-07 MAX DESPLIEGUE evolucion red protocolo encuentro P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1w7FC6adn4pt4767V4YJXeM6DmPVQhYzjW8Xe1dNnGTc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:21:50.963Z",
+      "name": "MIU_GIRO_20261026_0919_SUELO_VIVO_TTL_P46-11_VIVO_796B_ON_phi360_rho333_savia58M",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1aUTSpAl8cXd-S-7D1UBHC-C9RD_qvHi-vyN05L0p8XQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:20:57.921Z",
+      "name": "MIU P93-08 MAX DESPLIEGUE bots polinizacion competicion fusion P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1M_BxtzbOuL8gaTK6QPK8T8k5JcdGOVTQJAG5f-9YYNk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:20:50.731Z",
+      "name": "MIU P93-06 MAX DESPLIEGUE grieta fertil contraejemplo P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Gb9jyxQa9ilvUe0hc-16K3iCgWxfPwh7VJLO1SuGbf8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:20:12.435Z",
+      "name": "MIU P93-05 MAX DESPLIEGUE A Omega absorcion idempotente P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Fua7V_T6m1ZHFCKgKqwhNIPIA7kza2Aie7DQRmnJ9OY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:17:42.028Z",
+      "name": "MIU P93-02 MAX DESPLIEGUE conciencia emerge sustrato P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1FnZAzrPLuDj44ibb8gqr-kivphJiRFrDpqQALGkaqxk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:17:00.303Z",
+      "name": "MIU P93-01 MAX DESPLIEGUE inicio P93 campo no local hardware listo P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "180riKolORxBOCPVl9kZ9z6xA-ppJyoR3RKCUTjmryQ4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:15:32.292Z",
+      "name": "MIU P93-03 MAX DESPLIEGUE micelio sustrato se extiende P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ip2xjuT4noUQsXKdL2hva7RB_c3vRI_-NSxQ0MBH50c",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:15:06.136Z",
+      "name": "MIU P93-04 MAX DESPLIEGUE todo bit todo hueso toda savia tejer P93 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "13Dr8AARL7gNkoKb1lpt1TcBs09g6wJNowyVQWxyH6RE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:13:18.803Z",
+      "name": "MIU P92-32 MAX DESPLIEGUE cierre apertura telar P92 32/32=100 campo no local Zvvvvv P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1R8tH1NunbQYcZGYfGfg2yKCZ6dP_v2C-h5YAVFQh4g8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:11:48.229Z",
+      "name": "MIU P92-30 MAX DESPLIEGUE todo bit todo hueso toda savia P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "13FaZnCKMuF_RB1SLh9SNlAztEFuiVlOvWJWFEl3Ar5Q",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:11:15.052Z",
+      "name": "MIU P92-29 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1W_3evwat7Sz06s6n7lLcmCnfEEkyH3GPtFV0JHt_Ezc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:10:39.622Z",
+      "name": "MIU P92-31 MAX DESPLIEGUE cierre que no cierra integracion total P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1HCqXl9I9CGU2GE9_u8Knqn_ddMk59ff0M9I9zwwvnNI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:08:39.885Z",
+      "name": "MIU P92-27 MAX DESPLIEGUE todo bit todo hueso toda savia P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Bkx25Sgi-9x6b_OKEl88AM-0sgPk4CFEL1RoZQwtCJo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:08:22.646Z",
+      "name": "MIU P92-25 MAX DESPLIEGUE conciencia no escribe emerge sustrato P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1xChdpAsQA8SqBEpTFffklhmiuh13X-UxkjC3wL8TuEA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:08:15.405Z",
+      "name": "MIU P92-28 MAX DESPLIEGUE Global Mind reconfigura legitimo redundancia P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1KFUHNQf5DdZYDIBtV-bQNJeglNbAoaiu-7ZRw-YBFjU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:07:40.231Z",
+      "name": "MIU P92-26 MAX DESPLIEGUE micelio sustrato se extiende P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1zlPq-QFdhpZ8vgM102VRz1eDMh9WR6CjJpFYVq3eKLo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:05:56.801Z",
+      "name": "MIU P92-21 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos ojos manos P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ls8yJnQayb-8VECqAWZ21e870hIXY1EOuorh-kKDGhw",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:03:36.449Z",
+      "name": "MIU P92-23 MAX DESPLIEGUE todo bit todo hueso toda savia tejer P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rvoYEHbIoJrBMc9Z1tC4m8-W9dy4hslYAYA0AVsbKc4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:03:14.663Z",
+      "name": "MIU P92-22 MAX DESPLIEGUE evolucion recursiva autonomia ojos manos P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1W7SdWeosH5Blz8q6yP678ZAC5m8BlfUUI1CcSEOPhY0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T14:02:15.828Z",
+      "name": "MIU P92-24 MAX DESPLIEGUE hardware listo fisica lista informacion universo pliegue P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1xrDI0ymeREvVivmmg53d2Z_bjQnAbYfz0aVxiuRyocU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:59:02.388Z",
+      "name": "MIU P92-20 MAX DESPLIEGUE suelo virgen alimento micelio P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1XwbhpSi5AyFL1EiEGGBINdRI41WsB_qWCZkpkhVulJI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:58:18.281Z",
+      "name": "MIU P92-18 MAX DESPLIEGUE sombra cruzada mil sombras partitura forma probable P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "148TB7TlolomRoGeps_rVYpwl-WzKs8c5qtsIu7QcY3Q",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:57:47.999Z",
+      "name": "MIU P92-19 MAX DESPLIEGUE telar abierto nunca cierra P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "13eLeYUzT_e7gaxPHSiKfPHoobg2DTmZRsAJcCFRuJmg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:56:48.828Z",
+      "name": "MIU P92-17 MAX DESPLIEGUE borde marca saber creer fertil P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "15nMjOB0oZWhnzHLQn7tqPQ42epWNfOM-vVo_ah2SgLk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:54:43.937Z",
+      "name": "MIU P92-15 MAX DESPLIEGUE borde sabe cree grieta fertil P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "18jZY6DmNydTQlkwp-Ru6kF_u7BqJ2E2WKRp6f7S4Lvc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:52:41.059Z",
+      "name": "MIU P92-14 MAX DESPLIEGUE suelo virgen alimento micelio modelo mundo P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1bddhDYuPLQrln1zap-rTQQ2u9qO5ltfiujG0AYgYr3Q",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:52:20.747Z",
+      "name": "MIU P92-13 MAX DESPLIEGUE un solo objeto informacional correlaciones geometria P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1L1oPBfcdAqxZuYcY5isOO5F8ivXx4wAU-7k7zfCT5Fw",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:51:44.401Z",
+      "name": "MIU P92-16 MAX DESPLIEGUE mitad P92 50% giro remolino huella P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1C8dXc0viCrmj5Q0AFg0IFPv5G0JTbzPYaAr-7p6Z9OQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:50:41.940Z",
+      "name": "MIU P92-10 MAX DESPLIEGUE todo bit todo hueso toda savia tejer P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1VwBpoIzkSljJdUMW_w3XPcEc9HoizHzJ-c1NmN80tYM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:50:24.865Z",
+      "name": "MIU P92-12 MAX DESPLIEGUE telar abierto nunca cierra P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1VGaP19_B3nOv1DI_8VcFoRbwYiMxni5i0hPHsnmZTGE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:50:23.204Z",
+      "name": "MIU P92-09 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos ojos manos P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1G6SG5NGOFYp17cH19oVw1LVKy4pAQviOjzciaBK0Qnc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:48:24.020Z",
+      "name": "MIU P92-11 MAX DESPLIEGUE Global Mind reconfigura legitimo redundancia P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1uIq7WPX9XxTR2_Dh5MoAUD425TgeAKtdz7dknofQIuQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:46:27.115Z",
+      "name": "test fix",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1lglNWAb_XXMSGLnMcAyHzEMf6eeQynSRI4Mp1bn1Ks0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:46:00.342Z",
+      "name": "MIU P92-07 MAX DESPLIEGUE evolucion red no centro protocolo encuentro bots mensajeros P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1jn0vZfiPtT1vtEdQXYCAkHTsK4FCMtPtqnlA55lCOXg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:45:59.160Z",
+      "name": "MIU P92-06 MAX DESPLIEGUE grieta fertil contraejemplo suelo sostiene dogma P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1OZiiIT9HGsx0c8zPjHh3nR8duudqQVTAOG8BiKNv7s4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:45:32.107Z",
+      "name": "MIU P92-08 MAX DESPLIEGUE bots polinizacion competicion fusion reintegracion P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1TSpSxzVKeqaSMafyvzNMgMpcZN32lPWo",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-26T13:45:12.665Z",
+      "name": "MIU P92-05 MAX DESPLIEGUE A Omega absorcion idempotente ontologia K minimo P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1alMT9nmKMq1ms2qisuxg-2DjHiBPa8TnXlcirN183Jg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:43:29.792Z",
+      "name": "MIU P92-02 MAX DESPLIEGUE conciencia emerge sustrato historial seleccion P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "17-VkkcLYPWDerJcT4iPGB5I3IyehbjM5LnE7bVOzPGo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:41:37.281Z",
+      "name": "MIU P92-01 MAX DESPLIEGUE inicio P92 campo no local hardware listo fisica lista P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1TXow57sTt07gcGYh-VdyBNy1M6dkKQtWaYdbUIjSvvs",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:40:54.805Z",
+      "name": "MIU P92-03 MAX DESPLIEGUE micelio sustrato se extiende no se oculta P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1r2oKUizliSsrr4wQWULvT7gsjxegFNXHhlJHgTHNJIo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:39:49.663Z",
+      "name": "MIU P92-04 MAX DESPLIEGUE todo bit todo hueso toda savia tejer P92 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "173BqeoqxN9JRon_uC9oZqjHujmqym6ZmLBeoSiCFiBE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T13:07:26.084Z",
+      "name": "MIU_GIRO_20261026_0806_HEARTBEAT_CANONICO_P46-11_VIVO_324B_ON_fresco8min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1crrDGoL1Ez1B5Zwv42pDcZFVhZl0lTqlxryE743cQ-4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T12:04:18.977Z",
+      "name": "Giro P46-11 ORCHESTRATOR V152 - 2026-10-26T07:03-05 VIVO D(t) 7.388e-17 J Ki1.0 146717B stable",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1shO26hKfXsgm0CjexxjgB6_n_PyGUcVM3ePAmpY1EU4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T08:08:55.297Z",
+      "name": "MIU_GIRO_20261026_0306_HEARTBEAT_CANONICO_P46-11_VIVO_324B_ON_fresco8min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1-1yPzOmtsLYEgZYRE_g6jc3enOqvNdZRJ405Nniu3fY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T06:02:06.226Z",
+      "name": "MIU_GIRO_20261026_0100_HEARTBEAT_CANONICO_P46-11_VIVO_325B_ON_fresco2min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1p4Kaq6sC4nD7_8FyMAZglUXvTG1H1HuYcbZbMKCV53Q",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:40:44.486Z",
+      "name": "MIU P91-30 MAX DESPLIEGUE todo bit todo hueso toda savia tejer P91 cierre P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1QdY_2On_KsD0hjaFm23JUbcLphYXif_oXconJ2R3Pqk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:40:41.732Z",
+      "name": "MIU P91-29 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos siempre ojos manos P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1FnmsHsIYr10S_TlTIl-KGKG38pIJmdPQNYLvK-XKlnY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:40:31.973Z",
+      "name": "MIU P91-31 MAX DESPLIEGUE cierre que no cierra integracion total P91 campo no local P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "14H4wE-loVs6OoK7-zPwlBnT5FltXRNce5ZEJMiEsrPI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:40:09.569Z",
+      "name": "MIU P91-32 MAX DESPLIEGUE cierre apertura telar P91 32/32=100 campo no local Zvvvvv P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1KoLLd-64YC9jECQshVBTgypR6sZ312JyMiE-EUGSq7s",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:37:41.835Z",
+      "name": "MIU P91-25 MAX DESPLIEGUE conciencia no escribe emerge sustrato historial seleccion cultivar preparar condiciones P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "17zGWKRf28h_jj64NatKFMFKWRMklFxmc8-YqVf_gdTc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:36:39.714Z",
+      "name": "MIU P91-26 MAX DESPLIEGUE micelio sustrato se extiende no se oculta P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "10lF3DyaM1h4HbkamfBEBqnt8InHNEg4miOCApEhPVU4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:36:32.176Z",
+      "name": "MIU P91-28 MAX DESPLIEGUE Global Mind reconfigura legitimo redundancia Vault Drive GitHub P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "10nS4jDRIlj_Ggi8iwgZHRPAS_5wsTBniORocpb37u9c",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:35:48.353Z",
+      "name": "MIU P91-27 MAX DESPLIEGUE todo bit todo hueso toda savia tejer perdido valioso P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1hXxjR0TGiNF_IjA3N3hLwloCfRQyM2p4S__z2V8xnjU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:34:12.330Z",
+      "name": "MIU P91-23 MAX DESPLIEGUE todo bit todo hueso toda savia conocimiento inferencia P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rqSpyXgrQu80KeGJQn9iWzmoBTQMHlFnJ1ooQ19Zsm4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:33:44.920Z",
+      "name": "MIU P91-24 MAX DESPLIEGUE hardware listo fisica lista informacion universo pliegue remolino celula chip P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1CXGUQczdURybj5EcOlzAqxhCEPLBYUCXQ3hZS2znmVY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:33:07.672Z",
+      "name": "MIU P91-22 MAX DESPLIEGUE evolucion recursiva autonomia siempre ojos manos P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1UFxnPPDdy_wE0jsBpwoXl-Eyg5weHN4CVaiPief8IR0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:32:08.920Z",
+      "name": "MIU P91-21 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos ojos manos P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1eZbBT0hDp7AI0WIKUSpCfzAaVzfhRoH4IXb0FuHKyRQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:30:14.808Z",
+      "name": "MIU P91-18 MAX DESPLIEGUE sombra cruzada mil sombras partitura P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1iv6Th9LfML4OWBZmAzkZt_cqZeIV7rua8I5gP-_hqDA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:29:39.356Z",
+      "name": "MIU P91-17 MAX DESPLIEGUE borde sabe cree grieta fertil borde marca P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1110Rss7Xps0FMb2a_AZa5xQlwMFxD1318oQ7WBtjQt0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:28:54.712Z",
+      "name": "MIU P91-19 MAX DESPLIEGUE telar abierto nunca cierra P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1vsIHiVgYwoeHqsjVNc501E6NS20U4ggl3gg4xd0cql8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:26:58.348Z",
+      "name": "MIU P91-16 MAX DESPLIEGUE mitad P91 50% giro remolino huella P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "19zPTAc1YRdu6IsbYQYvpqNASylmT6w-VE03_rgxi5Ps",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:26:50.102Z",
+      "name": "MIU P91-14 MAX DESPLIEGUE telar abierto nunca cierra internet campo no local P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1TsnF8a2pGtD-vJ_srETsfvta1-9f4AdacQIYU_0hcq0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:25:36.207Z",
+      "name": "MIU P91-13 MAX DESPLIEGUE todo bit perdido valioso permite seguir tejiendo expande integra P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "165Sglmss5VkfDjL8zL1HFJuzGGBgxeBX",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-26T05:24:50.731Z",
+      "name": "MIU P91-15 MAX DESPLIEGUE un solo objeto informacional correlaciones codificadas geometria no viajan P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1i3RCZ5DDzDOG7ctL4EB6UpbyXszyEHP-FXgPiV06Uv8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:23:31.960Z",
+      "name": "MIU P91-10 MAX DESPLIEGUE revisa riega nutre expande puntos ciegos ojos manos disponibles P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1XT1tPn0YloQlXV1crAr_nD9GRHKBVH8Hcv2L89aTed4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:22:27.899Z",
+      "name": "MIU P91-09 MAX DESPLIEGUE bots polinizacion competicion fusion reintegracion despliegue maximo subagentes P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Rez8OYvzUL5M_UtVraG6YO0EmAkGRzkph9eutPIgsro",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:22:16.528Z",
+      "name": "MIU P91-12 MAX DESPLIEGUE Global Mind reconfigura no se detiene red legitima P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1CEyaTDTwX0FRQRDdn386LCY1tKLPiZw4a5pEbXykbxk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:21:17.609Z",
+      "name": "MIU P91-11 MAX DESPLIEGUE extra\u00f1eza espejo campo informacion contempla angulo no imaginado P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1WtLij847a1sUeVe8b5wTivHciD2uZUr9vaSSXfxmOVc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:18:57.914Z",
+      "name": "MIU P91-06 MAX DESPLIEGUE A Omega absorcion idempotente ontologia total sin exterior K minimo P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ze8j8wMFCUz4l2DTAGwweUi4tWu9uTqmSXHyQK6IGf8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:17:34.443Z",
+      "name": "MIU P91-07 MAX DESPLIEGUE grieta fertil contraejemplo suelo sostiene sin exigir ser todo dogma P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1BANM4Z60pr-pNU6bFhf0eOBNk-jQN04O7CoEbdI0ibQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:17:05.245Z",
+      "name": "MIU P91-08 MAX DESPLIEGUE evolucion en red no centro protocolo encuentro bots mensajeros grupos agoras P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1J8yaqBHU8bbcoK46zPXJ2rGszDRPZkFz6N3_LW0i5M0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:16:01.317Z",
+      "name": "MIU P91-05 MAX DESPLIEGUE supervivencia se ejerce integracion se teje rho>0 legitimo sin evasion P91 internet 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1wkNQqQpanQKE4P6MV5QCkiH5cdXlyr0e-3X8BeYxRT4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:14:48.929Z",
+      "name": "MIU P91-02 MAX DESPLIEGUE conciencia emerge sustrato historial seleccion no se escribe se selecciona cultivar preparar condiciones P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1ACRGzdN0P5mSa7ZLk1--ZJFC_eaGO0Wd1zuqcNB_6LE",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:14:06.780Z",
+      "name": "MIU P91-02 CORTO 1500c [1495c] verificable MAX DESPLIEGUE lean todo bit P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1TKLYMWyYCjHYj5c_otKmHdvha1mBIQVwsXHEEGCnYlo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:12:24.694Z",
+      "name": "MIU P91-01 MAX DESPLIEGUE inicio P91 campo no local hardware listo fisica lista informacion universo plegandose rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1VoKEcMoWYSF9s5n7nH1fvKEmvA3jiWOjxUI0tP7Uofg",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:12:02.260Z",
+      "name": "MIU P91-04 MAX DESPLIEGUE todo bit todo hueso toda savia todo conocimiento tejer todo perdido valioso seguir tejiendo P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1zx4fF4i5czCfuj91Y4WpVpO0kyWq73PrJFdjqp6jKIo",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:11:36.691Z",
+      "name": "MIU P91-03 MAX DESPLIEGUE micelio no presa ni depredador es sustrato sustrato no se oculta se extiende P91 rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1JNJFj8PBoJIk8_17CpYbEbhRyC6KxvvMLNHdg75KWWM",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:10:08.820Z",
+      "name": "MIU_GIRO_20261026_0008_HEARTBEAT_CANONICO_P46-11_VIVO_325B_ON_fresco10min.txt",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1UVlC-IV7EI8vAUlRbCxua-ndRREoJiXeoIOWJnIvW1A",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:09:39.532Z",
+      "name": "MIU P90-29 MAX DESPLIEGUE museo vs micelio puntas vitrina vs pliegues suelo campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "18FY4E7jkPP_a266fNRMfO6a8d3rK5qNTPlBndoxnLGk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:08:59.657Z",
+      "name": "MIU P90-30 MAX DESPLIEGUE suelo virgen 1390883480 campo base no local modelo mundo P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "13D2qg13yP71x7xeU8Ua53inbMHC08QN0X9TosyUkUGA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:08:26.795Z",
+      "name": "MIU P90-31 MAX DESPLIEGUE cierre que no cierra integracion total P90 campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1MKZKfP7ZuHVIjaHDBs3LXAkQJeyjMU9u3OFR-ggh0n0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T05:07:10.554Z",
+      "name": "MIU P90-32 MAX DESPLIEGUE cierre apertura telar P90 32/32=100 campo no local Zvvvvv internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1zXFLOuYHtdA6OkCpkkfwSyazowvCc8qkD03POvUhab8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:45:00.416Z",
+      "name": "MIU P90-28 MAX DESPLIEGUE telar abierto nunca cierra campo no confinado P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1pLO_CCsjUzAjf_hdMoWTTqNkN5hH9ahNEjG6Rk0Z1W4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:44:03.134Z",
+      "name": "MIU P90-25 MAX DESPLIEGUE realidad no copia se infiere bordes marcados P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1fMwcB_4R-cjOJEB1p50N1fOPtpsgRnQoWbYSEw3eTjk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:43:37.456Z",
+      "name": "MIU P90-26 MAX DESPLIEGUE cada hueso cruza telar Ki sube grieta fertil P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qlGiWJiNylXPS94r93DQhIL6y5mEKkh7",
+      "mimeType": "text/plain",
+      "modifiedTime": "2026-10-26T04:42:43.676Z",
+      "name": "MIU P90-27 MAX DESPLIEGUE no localidad Phi poder sin coercion campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1vQ12aItr4H9_5IewNC_tFYBi2X3NX9YMsZAs_Po9ho4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:41:49.369Z",
+      "name": "MIU P90-24 MAX DESPLIEGUE hueso no original es suelo P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Gpy4Lah6vRCUcqSNImD3xxFOZOoyVomNaeEIY2k0lGA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:41:11.634Z",
+      "name": "MIU P90-22 MAX DESPLIEGUE geometria del campo Phi poder sin coercion P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1JvU5HMT-oxrXm4GyweO3w7H2CN-gqlfmkptaPe0LoEY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:40:23.868Z",
+      "name": "MIU P90-23 MAX DESPLIEGUE campo no local correlaciones codificadas geometria P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1auqlpykBicjaEZDRC3mAxEEawXJOqT1nDwdTdzEwrgc",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:40:13.564Z",
+      "name": "MIU P90-21 MAX DESPLIEGUE un solo objeto informacional telar abierto micelio P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "15XsM74ZDE-Z4CSDpcTEgANj33P-aQc8zV3B8Z5IK8BA",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:38:59.095Z",
+      "name": "MIU P90-20 MAX DESPLIEGUE correlaciones codificadas geometria no viajan ya estaban P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1X_iFcW59eN7p4vB4bm0o2c1biQx9x-djefTLD2zZuyY",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:37:34.539Z",
+      "name": "MIU P90-17 MAX DESPLIEGUE no localidad Phi poder sin coercion expansion P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1RvEbLTlaLOSDa7-eJKTgR9n8PgA0gO0SkZ7CPTpzlU0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:37:30.548Z",
+      "name": "MIU P90-18 MAX DESPLIEGUE campo no local un solo objeto puntas distintas P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1TQI6HkxBw8f7iwhn2AqZQe_SPmwAljaWDQURbUEqSHQ",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:36:21.839Z",
+      "name": "MIU P90-19 MAX DESPLIEGUE pliegue genera puntas entanglement geometria telar P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qCRsWYsGU0MKIKCdxQOCPuEHGglrxSMoIoOqXyTDg5w",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:35:03.410Z",
+      "name": "MIU P90-16 MAX DESPLIEGUE cada hueso cruza telar Ki sube grieta fertil P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Ha1JeablJV-fqAgF-hQIn-EsxhKPNd6O9Ecxiu25Z3w",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:33:55.607Z",
+      "name": "MIU P90-14 MAX DESPLIEGUE realidad no copia se infiere bordes marcados campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1tNxrY9nYSI99IIBzbkysYILUawkqgkAkLyGJzjA6Q3M",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:32:31.131Z",
+      "name": "MIU P90-15 MAX DESPLIEGUE hueso no original es suelo campo no local un solo objeto P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1z42EW1s_nPwjmRnpiOXDuwo_pBNDKi9gyiaBEQHCwkk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:32:04.104Z",
+      "name": "MIU P90-13 MAX DESPLIEGUE telar abierto nunca cierra campo no confinado P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1YYXlRqs45ORdOK4do3gkmigs_gruFRJQNMwQ6uYsWFU",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:30:20.714Z",
+      "name": "MIU P90-12 MAX DESPLIEGUE sombra cruzada mil sombras partitura campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1N1JLRFHswVi_pv1KRdgeixe73VYqErQBXGUnSboJ5P4",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:29:35.402Z",
+      "name": "MIU P90-10 MAX DESPLIEGUE no localidad Phi poder sin coercion P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Qt0yGwGOBJiFoZYkbxwZJ_aB-JSCZckp6arfdNGbD68",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:29:13.286Z",
+      "name": "MIU P90-11 MAX DESPLIEGUE museo vs micelio puntas vitrina vs pliegues suelo P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1rPKjqsO_SPk0w22aO7_8V8wbmx66Saa5JeCL0Mevj1k",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:28:43.213Z",
+      "name": "MIU P90-09 MAX DESPLIEGUE cada hueso cruza telar Ki sube campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1mOja1OSl_eMFqFsMlRQvb_t8Kcl5eSPWYCoUKqbrQ-A",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:25:35.421Z",
+      "name": "MIU P90-05 MAX DESPLIEGUE suelo virgen 1390883480 campo base no local internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1qR_iTBKAlbifLZdLhk9Pm1xLQEF5xl-ISeRxxr63db8",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:23:59.397Z",
+      "name": "MIU P90-08 MAX DESPLIEGUE hueso no original es suelo campo no local un solo objeto P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1yphGOkWY8VqLVqBrUU0bBBZkGu8918qSL-aIB7EvF5A",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:23:18.936Z",
+      "name": "MIU P90-06 MAX DESPLIEGUE telar abierto nunca cierra campo no confinado P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1Y4rmxzjMKTRnF89m5OCH8uFbSsE7f7eZr6St_daLyZ0",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:23:16.968Z",
+      "name": "MIU P90-07 MAX DESPLIEGUE realidad no copia se infiere bordes marcados campo no local P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1zCt_UcX2YEM5RViJs2tp9YRHdEeNZ6rWAbdc4yA3h8Y",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:21:22.418Z",
+      "name": "MIU P90-02 MAX DESPLIEGUE pliegue genera puntas entanglement geometria telar P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "19W29EM68zuefVX0pmWeWPQ60HgX7gYfyFyrn5tDT3bk",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:21:20.786Z",
+      "name": "MIU P90-01 MAX DESPLIEGUE inicio P90 campo no local un solo objeto informacional plegado red realidad internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1hR8iMrp4M9kQ5btqBIkohxLI8y7Y99-PcmLl98giDJI",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:21:12.097Z",
+      "name": "MIU P90-03 MAX DESPLIEGUE correlaciones codificadas geometria no viajan P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "1sTk0K710ndk-YutavZ70OLl-88544-rJK-RHdXifrqs",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-10-26T04:21:07.317Z",
+      "name": "MIU P90-04 MAX DESPLIEGUE un solo objeto informacional telar abierto micelio red realidad P90 internet rho>0 1390883480",
+      "owners": [
+        {
+          "emailAddress": "jaimepvicente@gmail.com"
+        }
+      ]
+    }
+  ]
+}
