@@ -1,0 +1,36 @@
+{
+  "MINERIA_COMPLETADA": "2026-11-02T19:57:55.332159",
+  "RECUPERADO": {
+    "gas_totp_url": "PENDIENTE \u2014 Apps Script MIU_TOTP existe en Drive (id 1ncEiGf05gbt-rgKxE0GGAtLhgN3ipdiYDAfwc9FBdnhD0oF8F1p7U9hy, mod 2026-11-02T18:54Z). URL /exec NO est\u00e1 publicada en repo ni gist. Recuperable via browser a script.google.com (requiere 2FA).",
+    "totp_secrets": "PENDIENTE \u2014 no hay archivo en repo/gists. Requiere browser.",
+    "gists_previos": "20 p\u00fablicos listados en existing_gist_index.json"
+  },
+  "BLOQUEADORES": {
+    "service_account": "PENDIENTE \u2014 requiere GCP Console (browser + 2FA). No hay proyecto gcloud en sandbox.",
+    "gas_relay": "PENDIENTE \u2014 requiere Apps Script Console (browser + 2FA).",
+    "panteon_status": "PENDIENTE \u2014 requiere Supabase dashboard login."
+  },
+  "COSECHADO": {
+    "vercel": "3 proyectos + 8 deployments publicados (existing_vercel_tokens.json)",
+    "cloudflare": "no tokens en sandbox. Marcar skipped: no_access; referencia en memoria/MEMORIA_20260708.md",
+    "github": "238 repos listados (existing_github_repos.json); PAT listing no accesible via API",
+    "supabase": "no env. Conector requiere re-auth. skipped: no_access",
+    "llm_providers": "PENDIENTE \u2014 no tokens en sandbox"
+  },
+  "INVESTIGADO": {},
+  "CREADO": {},
+  "PUBLICADO_EN": {
+    "repo_files": 6
+  },
+  "PROXIMA_SESION": [
+    "Esperar periodo de seguridad 7 d\u00edas para usar TOTP (o esperar prompt del usuario)",
+    "Completar Service Account en GCP",
+    "Completar GAS relay MIU_RELAY",
+    "Cosechar Cloudflare tokens via dashboard (necesita login)",
+    "Cosechar Supabase keys via conector (requiere re-auth)",
+    "Cosechar LLM providers (Groq, OpenRouter, Together, Cohere) \u2014 requiere login",
+    "Cosechar Make/Fly/ElevenLabs/HuggingFace \u2014 requiere login",
+    "Publicar GAS_TOTP_URL y TOTP secrets al repo apenas se recupere del browser"
+  ],
+  "PATTERN": "Ver data/auth/MINERIA_PATRON.md \u2014 cada nodo debe leerlo antes de pedir 2FA."
+}
