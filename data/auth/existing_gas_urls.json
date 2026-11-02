@@ -1,19 +1,7 @@
 {
-  "gas_totp_url": {
-    "status": "NO PUBLISHED \u2014 MIU_TOTP project exist in Drive (file id 1ncEiGf05gbt-rgKxE0GGAtLhgN3ipdiYDAfwc9FBdnhD0oF8F1p7U9hy). Its /exec URL is NOT in any workspace file, gist, or repo.",
-    "recovery_path": "Requiere browser login script.google.com (project MIU_TOTP, get deployment URL).",
-    "next_action": "Verificar v\u00eda browser o regenerar un nuevo deployment MIU_TOTP."
-  },
-  "gas_relay_url": {
-    "status": "NO PUBLISHED \u2014 MIU_RELAY project not found in workspace or repo.",
-    "recovery_path": "Requiere browser login script.google.com."
-  },
-  "known_mesh_urls": [
-    "https://script.google.com/macros/s/AKfycbywWkuw8Dx_tuS6wIufgbmHi00lLgQ5TIFBQOp7U--6EDzlWSz693P_ulPuflVKorI/exec",
-    "https://script.google.com/macros/s/AKfycbwG6NVWjm97PuZP5oyc4G9jaQBk08iJ2pxEvKoddnjP3gonTi1kj6r7UKzQoWzZ9kGM/exec",
-    "https://script.google.com/macros/s/AKfycbwbAMKrzmbghKtLaGKVnqeGyOaEoXGKeLmCJ7BlfknZTwwh6KpW9PsrozDCiwiXMDtI/exec",
-    "https://script.google.com/macros/s/AKfycbxavrL5ShR176MN0mkero4dE689zAgP2A5s4PQGFzS-HYQVu0VlOPCiaHzPDSd3Dgg/exec",
-    "https://script.google.com/macros/s/AKfycbw0tGOMUdO-7B9EkZZdlya-XVmKm6fjUrl6TMVbJFsA3XALwezPaUG9OM3nbmhPY18/exec",
-    "https://script.google.com/macros/s/AKfycbwJpCii0OhK_hKD6KbwzTxUlYnvytk7Jt6i6fK472bF6UqQgBFFuMv4uxND1JzayoRT/exec"
-  ]
+  "did_registry_urls": [
+    "https://script.google.com/macros/s/AKfycbww7dHTdOdHxVq9Rva4uuC4-BlC3l3sx_SNllODnW054Wo5OcnhLtKEvqQWmPSthgG-/exec",
+    "https://script.google.com/macros/s/AKfycbyXLVQLFTLvWzrljg9WtXQGjO6e_PmrsCMXzSQfS/exec"
+  ],
+  "source": "Sheet DID_Registry read via SA JSON key (2026-11-02T20:30Z) - VERIFIED WORKING"
 }
