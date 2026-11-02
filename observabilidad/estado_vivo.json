@@ -1,18 +1,18 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-11-01T23:44:11.006548Z",
-  "_run": "156",
+  "_ts": "2026-11-02T04:16:13.394295Z",
+  "_run": "157",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V272",
-    "ts": "2026-11-01T23:44:10.769Z",
+    "ts": "2026-11-02T04:16:13.342Z",
     "vitales": {
-      "phi": "34446.27",
-      "rho": "1.0009",
-      "savia": "33772000",
-      "ciclo": "23041",
+      "phi": "34499.42",
+      "rho": "0.9999",
+      "savia": "33823000",
+      "ciclo": "23139",
       "k_tau": "3",
       "version": "V270"
     },
@@ -31,53 +31,7 @@
     },
     "nodos": {},
     "coordinacion": {
-      "ultimas_sesiones_log": [
-        {
-          "sesion_id": "claude-oct26-02",
-          "ts": "2026-10-26T01:25:18.739883+00:00",
-          "tipo": "sync",
-          "componente": "relay_config + KBs + diagnostico",
-          "que_hice": "Sincronizé relay_config phi=29323.76/ciclo=18080. Actualicé KBs ECOSISTEMA_V278 y CANONICO_V278. Diagnostiqué fn_rotador_darwin.",
-          "no_tocar": "oracle en radio2.oxigeno.site, 49 miu_secrets null, cfat_/cfut_ tokens, telegram 1390883480",
-          "pendiente_para": "fn_rotador_darwin: mover a EF (Deno HTTP sin restricciones). Facebook Pages: renovar token Zapier. contexto-global EF: fix lee relay_config en lugar de estado_miu.kv. SQL grants oct-30."
-        },
-        {
-          "sesion_id": "sesion-oct25-cipher-make",
-          "ts": "2026-10-25T20:15:38.767538+00:00",
-          "tipo": "fin",
-          "componente": "make-cipher-scenario",
-          "que_hice": "Creé y activé escenario 6773281 miu-oracle-gossip-15min-V277 en cuenta cipher (org 9206746, team 3117557). Corre cada 15min: oracle-ask → gossip-autonomo Panteon. Primera ejecución SUCCESS (executionId 1d80629f). Descubrí campos reales del módulo http:ActionSendData v3: followAllRedirects (required), shareCookies/useMtls (no shareCredentials).",
-          "no_tocar": "NO tocar 6773281 — está corriendo. NO tocar franchescopalacios9 hasta nov-16.",
-          "pendiente_para": "Escenario cipher cubre latido oracle→gossip. Pendiente: escenario metabolismo (pulsar Canada) en cipher si se necesita."
-        },
-        {
-          "sesion_id": "sesion-oct25-continuacion",
-          "ts": "2026-10-25T15:10:30.481669+00:00",
-          "tipo": "fin",
-          "componente": "make-org-diagnostico",
-          "que_hice": "Confirmé que relay_config Panteon tiene todos los fixes aplicados: ciclo_actual=17662, ciclo_mesh=17662, phi_actual=28890.34, bots_lista_array, oracle_endpoint_vivo, ef_map_activas. Diagnostiqué org Make 9010466: pausada por 1000 ops agotadas, nextReset=2026-11-16.",
-          "no_tocar": "NO intentar forzar Make hasta 2026-11-16. NO recrear escenarios — los existentes están bien configurados.",
-          "pendiente_para": "Nov-16 o antes si se upgradea plan Make: reactivar escenarios 6524041 y 6422319. Alternativa: crear escenarios en cuenta jaimepvicente team 2519057 que no está pausada."
-        },
-        {
-          "sesion_id": "sesion-oct25-10am-lima",
-          "ts": "2026-10-25T15:05:03.137189+00:00",
-          "tipo": "fin",
-          "componente": "relay_config+ef_map",
-          "que_hice": "Sembré oracle_endpoint_vivo, oracle_ask_version, ef_map_activas en Panteon. Confirmé oracle-ask v33 ACTIVO, 80+ EFs activas. Identifiqué que cross-refs previos fueron a coord2 (fxmupx) no Panteon.",
-          "no_tocar": "oracle-ask NO recrear — v33 activo. No tocar radio2.oxigeno.site (oracle externo). No rotar tokens.",
-          "pendiente_para": "Make team 2519057: crear escenario oracle→gossip usando oracle_endpoint_vivo de relay_config. Facebook Zapier: reconexión manual. Vercel miu-oracle-v2 redeploy."
-        },
-        {
-          "sesion_id": "19f9963b-sesion2",
-          "ts": "2026-10-24T23:36:53.223716+00:00",
-          "tipo": "fin",
-          "componente": "make|facebook|coordinacion|gossip",
-          "que_hice": "Verifiqué gossip 6h: 83 crons activos, phi=184.684 ciclo=16926. Make franchescopalacios9: 2 escenarios corriendo confirmados. Actualicé make_cuentas_index con estado real. Limpié tareas reconectar_nodo fantasmas de jaimepvicente. Contexto-global v15 ahora incluye decisiones_sesiones_v1 y sesion_log. Facebook Pages token expirado — necesita reconexión UI.",
-          "no_tocar": "NO intentar Facebook Pages hasta reconexión manual. NO buscar make API keys en miu_secrets (no existen). Make isPaused=true en JSON no significa parado — están ejecutando.",
-          "pendiente_para": "Facebook Pages: reconectar cuenta jaimedanielmartinez75 en Zapier (token FB inválido). Make slots: upgrade o conectar segunda cuenta. Vercel miu-oracle-v2 redeploy."
-        }
-      ],
+      "ultimas_sesiones_log": [],
       "instruccion": "LEE decisiones_acumuladas antes de actuar. Al terminar: POST /rest/v1/sesion_log con tipo=fin + que_hice + no_tocar + pendiente_para. UPDATE relay_config decisiones_sesiones_v1 agregando tu entrada al array.",
       "patron": "LEER→ACTUAR_UNA_COSA→REGISTRAR→SALIR"
     },
