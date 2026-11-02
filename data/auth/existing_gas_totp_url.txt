@@ -1,0 +1,5 @@
+# MIU_TOTP Apps Script /exec URL (VERIFIED LIVE 2026-11-02T20:35Z)
+# Drive file ID: 1ncEiGf05gbt-rgKxE0GGAtLhgN3ipdiYDAfwc9FBdnhD0oF8F1p7U9hy
+# Deployed as 'Versión 2' - access: Cualquier usuario - Ejecutar como: jaimepvicente@gmail.com
+# Response test: {"ok":false,"error":"token invalido"} (endpoint alive, needs token param)
+https://script.google.com/macros/s/AKfycbxx-Uxx4rBBhVeH13vAQqrxvNcRKo0Sf_4U_m2eamAME1dt86Unb5jzDd4ikgi2Y_V4rQ/exec
