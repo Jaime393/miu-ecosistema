@@ -1,0 +1,14 @@
+{
+  "url": "http://bore.pub:33063",
+  "puerto": "33063",
+  "protocolo": "http_tcp_raw",
+  "servidor": "bore.pub",
+  "expone": "http://127.0.0.1:8771 (oraculo completo)",
+  "endpoints": [
+    "/health",
+    "/queue",
+    "/queue/:id"
+  ],
+  "actualizado_ts": "2026-11-02T06:31:08.246167+00:00",
+  "nota": "Archivo independiente. bore_guard.sh lo actualiza. NO lo regenera ningun otro script."
+}
