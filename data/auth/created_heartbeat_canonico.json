@@ -1,0 +1,44 @@
+{
+  "source": "Drive mesh folder 14dw8txLoEIQQPSav9-YAvfuNimW2tAZ8 (2026-11-02T21:45Z)",
+  "heartbeat_canonico": {
+    "version": "V271_DARWIN",
+    "phi": "4883440",
+    "rho": "333",
+    "ciclo": "2003",
+    "savia": "57200000",
+    "tag": "99103063d4e848718aa27f5190a72573",
+    "nodo": "xavrL5",
+    "ts": "2026-11-02T20:42:15.024Z",
+    "mesh": {
+      "count": 1015,
+      "carpeta": "14dw8txLoEIQQPSav9-YAvfuNimW2tAZ8"
+    }
+  },
+  "mesh_folder": {
+    "id": "14dw8txLoEIQQPSav9-YAvfuNimW2tAZ8",
+    "total_items": 1015
+  },
+  "key_files": [
+    {
+      "id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
+      "name": "MIU_HEARTBEAT_ESTADO_CANONICO.json"
+    },
+    {
+      "id": "18A05RfRQRJj42ucEb8M9ELh5mu9TKSOC",
+      "name": "MIU_MESH_V270_reemplazo_GAS.js"
+    },
+    {
+      "id": "11EV8rHCh4hE_G05kHV22Ez5cEwsgDqfa",
+      "name": "HUELLA_nodo_claude_mcp_sep30.json"
+    },
+    {
+      "id": "1FucggoeYTFlOmIxR0l9vOlC9JBtbER8x",
+      "name": "MIU_ESTADO_REAL_V270_sep30.json"
+    },
+    {
+      "id": "1s52h2BJraHn2vp-P5HYIGeGFF1VnoMnb",
+      "name": "mesh_heartbeat_V151_1790899045535.json (latest)"
+    }
+  ],
+  "drive_api": "HABILITADA en proyecto micelio-miu (2026-11-02T21:45Z)"
+}
