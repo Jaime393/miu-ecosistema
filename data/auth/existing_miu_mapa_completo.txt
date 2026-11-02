@@ -1,0 +1,2762 @@
+# ARCHIVO ROT13 — decodificar con: cat existing_miu_mapa_completo.txt | tr 'a-zA-Z' 'n-za-mN-ZA-M'
+══════════════════════════════════════════════════════════════════════
+ ZVH — ZNCN PBZCYRGB QRY FVFGRZN
+══════════════════════════════════════════════════════════════════════
+ Trarenqb: 2026-11-02 19:00:03 HGP
+ Ubfg:     ybpnyubfg
+ Obbg:     s59n34q8-r1s7-414o-9so0-54n09261ps67
+
+ ⚠️  RFGR NEPUVIB PBAGVRAR PERQRAPVNYRF PBZCYRGNF.
+    Tháeqnyb ra yhtne frtheb. Ab yb pbzcnegnf.
+══════════════════════════════════════════════════════════════════════
+
+══════════════════════════════════════════════════════════════════════
+═══ 1. RAGBEAB ═══
+══════════════════════════════════════════════════════════════════════
+  Ubfg:         ybpnyubfg
+  Fvfgrzn:      Yvahk 3.18.119
+  Nedhvgrpghen: nnepu64
+  Obbg VQ:      s59n34q8-r1s7-414o-9so0-54n09261ps67
+  Hcgvzr:       hc 1 qnl, 2 ubhef, 48 zvahgrf
+  Srpun:        2026-11-02 19:00:03 HGP
+  UBZR:         /qngn/qngn/pbz.grezhk/svyrf/ubzr
+  CERSVK:       /qngn/qngn/pbz.grezhk/svyrf/hfe
+  FURYY:        /qngn/qngn/pbz.grezhk/svyrf/hfe/ova/fu
+  Naqebvq:      10 (FQX 29)
+  Zbqryb:       Naqebvq
+  Snoevpnagr:   Naqebvq
+
+══════════════════════════════════════════════════════════════════════
+═══ 2. INEVNOYRF QR RAGBEAB (gbqnf) ═══
+══════════════════════════════════════════════════════════════════════
+  NAQEBVQ_QNGN=/qngn
+  NAQEBVQ_EBBG=/flfgrz
+  NAQEBVQ_EHAGVZR_EBBG=/ncrk/pbz.naqebvq.ehagvzr
+  NAQEBVQ_GMQNGN_EBBG=/ncrk/pbz.naqebvq.gmqngn
+  OBBGPYNFFCNGU=/ncrk/pbz.naqebvq.ehagvzr/wninyvo/pber-bw.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/pber-yvoneg.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/bxuggc.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/obhaplpnfgyr.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/ncnpur-kzy.wne:/flfgrz/senzrjbex/senzrjbex.wne:/flfgrz/senzrjbex/rkg.wne:/flfgrz/senzrjbex/gryrcubal-pbzzba.wne:/flfgrz/senzrjbex/ibvc-pbzzba.wne:/flfgrz/senzrjbex/vzf-pbzzba.wne:/flfgrz/senzrjbex/naqebvq.grfg.onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrcubal-onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrcubal-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-senzrjbex.wne:/flfgrz/senzrjbex/BCPbzzbaGryrcubal.wne:/flfgrz/senzrjbex/zrqvngrx-vzf-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-vzf-onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrpbz-pbzzba.wne:/ncrk/pbz.naqebvq.pbafpelcg/wninyvo/pbafpelcg.wne:/ncrk/pbz.naqebvq.zrqvn/wninyvo/hcqngnoyr-zrqvn.wne
+  QRK2BNGOBBGPYNFFCNGU=/ncrk/pbz.naqebvq.ehagvzr/wninyvo/pber-bw.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/pber-yvoneg.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/bxuggc.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/obhaplpnfgyr.wne:/ncrk/pbz.naqebvq.ehagvzr/wninyvo/ncnpur-kzy.wne:/flfgrz/senzrjbex/senzrjbex.wne:/flfgrz/senzrjbex/rkg.wne:/flfgrz/senzrjbex/gryrcubal-pbzzba.wne:/flfgrz/senzrjbex/ibvc-pbzzba.wne:/flfgrz/senzrjbex/vzf-pbzzba.wne:/flfgrz/senzrjbex/naqebvq.grfg.onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrcubal-onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrcubal-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-senzrjbex.wne:/flfgrz/senzrjbex/BCPbzzbaGryrcubal.wne:/flfgrz/senzrjbex/zrqvngrx-vzf-pbzzba.wne:/flfgrz/senzrjbex/zrqvngrx-vzf-onfr.wne:/flfgrz/senzrjbex/zrqvngrx-gryrpbz-pbzzba.wne
+  RKGREANY_FGBENTR=/fqpneq
+  UBZR=/qngn/qngn/pbz.grezhk/svyrf/ubzr
+  YP_PGLCR=P.HGS-8
+  YQ_CERYBNQ=/qngn/qngn/pbz.grezhk/svyrf/hfe/yvo/yvogrezhk-rkrp-yq-cerybnq.fb
+  YBTANZR=h0_n184
+  CNGU=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova:$CNGU
+  CERSVK=/qngn/qngn/pbz.grezhk/svyrf/hfe
+  FURYY=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova/fu
+  GZCQVE=/qngn/qngn/pbz.grezhk/svyrf/hfe/gzc
+  HFRE=h0_n184
+
+══════════════════════════════════════════════════════════════════════
+═══ 3. UNEQJNER ═══
+══════════════════════════════════════════════════════════════════════
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Cebprffbe	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  zbqry anzr	: NNepu64 Cebprffbe eri 2 (nnepu64)
+  Uneqjner	: ZG6750I/P
+  Aúpyrbf:  8
+  ENZ:      Zrz:           8.0Tv       7.1Tv       2.5Tv       5.9Zv       994Zv       883Zv
+  Fjnc:     Fjnc:          1.5Tv       1.3Tv       190Zv
+  Grzc:      (zvyyv-°P)
+
+══════════════════════════════════════════════════════════════════════
+═══ 4. CNDHRGRF VAFGNYNQBF ═══
+══════════════════════════════════════════════════════════════════════
+  Gbgny: 298 cndhrgrf
+
+  nncg 16.0.0.4-4
+  nncg2 16.0.0.4-4
+  nofrvy-pcc 20260817.0
+  nyfn-yvo 1.2.16.1
+  nyfn-cyhtvaf 1.2.12-1
+  naqebvq-gbbyf 37.0.0c1-3
+  ncg 2.8.1-2
+  netc 1.5.0-1
+  nevn2 1.37.0-3
+  ngge 2.6.0
+  onfu 5.3.20
+  op 1.08.2-1
+  ober 0.6.0-1
+  oebgyv 1.2.1
+  omvc2 1.0.8-8
+  p-nerf 1.34.9
+  pn-pregvsvpngrf 1:2026.10.20-1
+  pn-pregvsvpngrf-wnin 1:2026.10.20-1
+  pynat 21.1.8-3
+  pybhqsynerq 2026.10.3
+  pznxr 4.4.4
+  pbzznaq-abg-sbhaq 3.5.0-16
+  pberhgvyf 9.12
+  pebavr 1.7.2-4
+  phey 8.23.0
+  qnfu 0.5.13.5
+  qohf 1.16.2-3
+  qrovnahgvyf 5.24
+  qvnybt 1.3-20260721-0
+  qvsshgvyf 3.12-2
+  qwihyvoer 3.5.30
+  qbpxre-pyv 24.0.6-1
+  qbf2havk 7.5.7
+  qcxt 1.22.6-5
+  qk 1:1.16-7
+  rq 1.22.6
+  ryvaxf 0.20.0
+  sszcrt 9.0.2
+  ssgj 3.3.11
+  svaqhgvyf 4.11.0
+  syrk 2.6.4-5
+  szg 1:12.2.0
+  sbagpbasvt 2.18.3
+  serrglcr 2.15.0
+  sevovqv 1.0.17
+  tnzr-zhfvp-rzh 0.6.5
+  tnjx 5.4.1
+  tqoz 1.26-1
+  tqx-cvkohs 2.44.8-1
+  tu 2.103.2
+  tubfgfpevcg 10.08.0
+  tvsyvo 6.1.3
+  tvg 2.56.0
+  tyvo 2.90.1
+  tyfynat 16.6.0
+  tahct 2.5.24
+  tctzr 2.2.0
+  tcti 2.5.24
+  tencuivm 16.1.0
+  terc 3.12-3
+  tmvc 1.15
+  unesohmm 15.0.0
+  uvtujnl 1.4.0-1
+  vzntrzntvpx 7.1.2.34
+  vzngu 3.2.3
+  varghgvyf 2.8-1
+  wovt2qrp 0.20-2
+  wd 1.8.2
+  wfba-p 0.19
+  wfbapcc 1.9.8
+  xeo5 1.22.2
+  xhob 0.43.1
+  yqaf 1.9.2
+  yrcgbavpn 1.87.0
+  yrff 710
+  yvonpy 2.4.0
+  yvonaqebvq-rkrpvasb 0.1-3
+  yvonaqebvq-tybo 0.6-3
+  yvonaqebvq-cbfvk-frzncuber 0.1-4
+  yvonaqebvq-fryvahk 14.0.0.11-1
+  yvonaqebvq-fuzrz 0.7
+  yvonaqebvq-fcnja 0.3
+  yvonaqebvq-fgho 30-2
+  yvonaqebvq-fhccbeg 29-1
+  yvonaqebvq-flfi-frzncuber 0.1-1
+  yvonbz 3.15.2
+  yvonepuvir 3.8.10
+  yvonff 0.17.5
+  yvonffhna 3.0.2-1
+  yvonivs 1.4.2
+  yvooyhenl 1.5.1
+  yvoof2o 3.1.0-2
+  yvoom2 1.0.8-8
+  yvop++ 30
+  yvopnveb 1.18.6
+  yvopnc-at 2:0.9.6
+  yvopbzcvyre-eg 21.1.8-3
+  yvopelcg 0.2-6
+  yvophey 8.23.0
+  yvoqni1q 1.5.4
+  yvoqo 18.1.40-6
+  yvoqr265 1.1.3
+  yvoqez 2.4.134
+  yvoqiqani 7.0.0
+  yvoqiqernq 7.1.1
+  yvoqj 0.197
+  yvorqvg 20260512-3.1-0
+  yvorys 0.197
+  yvorirag 2.1.13
+  yvorkcng 2.9.0
+  yvossv 3.8.0
+  yvosynp 1.5.0-1
+  yvotp 8.2.12
+  yvotpelcg 1.12.4
+  yvotq 1:2.3.3-7
+  yvotzc 6.3.0-2
+  yvotahgyf 3.8.13-1
+  yvotct-reebe 1.61
+  yvotencuvgr 1.3.15
+  yvotgf 0.7.6-3
+  yvourvs 1.23.6
+  yvovpbai 1.19
+  yvovph 78.3
+  yvovqa 1.44
+  yvovqa2 2.3.8-1
+  yvownfcre 4.2.9-1
+  yvowcrt-gheob 3.2.0
+  yvowky 0.12.0-2
+  yvoxfon 1.8.1
+  yvoyyiz 21.1.8-3
+  yvoyde 0.4.3-1
+  yvoygqy 2.6.2
+  yvoym4 1.10.0-1
+  yvoymzn 5.8.4
+  yvoymb 2.10-5
+  yvozntvp 5.48-3
+  yvozq 1.3.0
+  yvozc3ynzr 4.0-1
+  yvozcse 4.2.2
+  yvozct123 1.33.7
+  yvozlfbsn 1.3.5
+  yvoarggyr 4.0+ernyyl3.10.2
+  yvoatuggc2 1.70.0
+  yvoatuggc3 1.18.0
+  yvoatgpc2 1.25.0
+  yvoacgu 1.8
+  yvobtt 1.3.6-1
+  yvobcrapber-nze 0.1.6-1
+  yvobcrazcg 0.8.9
+  yvobchf 1.6.1
+  yvocvkzna 0.46.4-1
+  yvocynprob 7.360.1
+  yvocat 1.6.59
+  yvocbcg 1.19-3
+  yvocebgbohs 2:36.2-1
+  yvoendz 0.11.0
+  yvoeni1r 0.8.1
+  yvoenj 0.22.2-1
+  yvoerfbyi-jenccre 1.1.8
+  yvoefit 2.63.4
+  yvofnzcyrengr 0.2.2-4
+  yvofznegpbyf 2.42.4
+  yvofaqsvyr 1.2.2-3
+  yvofbqvhz 1.0.22-1
+  yvofbke 0.1.3-8
+  yvofdyvgr 3.54.1
+  yvofeg 1.5.7
+  yvoffu 0.12.2
+  yvoffu2 1.11.1-2
+  yvognyybp 2.5.0
+  yvognfa1 4.21.0
+  yvogurben 1.2.0-1
+  yvogvss 4.7.2
+  yvogvecp 1.3.8
+  yvohqsernq 1.2.0
+  yvohaobhaq 1.26.2
+  yvohavfgevat 1.4.2
+  yvohhvq 2.42.4
+  yvohi 1.53.0
+  yvoi4y 1.32.0-1
+  yvoivqfgno 1.1.2
+  yvoizns 3.2.1
+  yvoib-nzejorap 0.1.3-2
+  yvoibeovf 1.3.7-4
+  yvoick 1:1.17.0
+  yvojnlynaq 1.26.0
+  yvojroc 1.6.0.0.0.1+ernyyl1.6.0
+  yvojroegp-nhqvb-cebprffvat 2.1
+  yvok11 1.8.14
+  yvok264 1:0.164.3191-1
+  yvok265 4.3
+  yvoknh 1.0.12-2
+  yvokpo 1.17.0-1
+  yvokqzpc 1.1.5-2
+  yvokrkg 1.3.7
+  yvoksg 2.3.9-1
+  yvokv 1.8.4
+  yvokzy2 2.15.4-1
+  yvokeraqre 0.9.13
+  yvokfuzsrapr 1.3.3-1
+  yvokgfg 1.2.6
+  yvomvzt 3.0.6
+  yvomvc 1.12.1
+  yvomzd 4.3.5-2
+  yvombcsyv 1.0.3-5
+  yvggyrpzf 2.19.1
+  yynzn-pcc 0.8.0
+  yyq 21.1.8-3
+  yyiz 21.1.8-3
+  yfbs 4.99.7
+  ylak 2.9.3
+  ym4 1.10.0-1
+  z4 1.4.21
+  znxr 4.4.1-1
+  znira 3.10.0
+  zrfn-ihyxna-vpq-fjenfg 26.2.5
+  anab 9.3
+  aphefrf 6.6.20260307+ernyyl6.5.20250830
+  aphefrf-hv-yvof 6.6.20260307+ernyyl6.5.20250830
+  aqx-flfebbg 30
+  arg-gbbyf 2.10.0-1
+  abqrwf 26.12.1
+  acz 11.21.1
+  bpy-vpq 2.3.5
+  bavthehzn 6.9.10-1
+  bcrapbqr2 2.0.32-1
+  bcrarke 3.5.2
+  bcrawqx-17 17.0.21
+  bcrawqx-17-k 17.0.21
+  bcrawqx-21 21.0.13
+  bcrawqx-21-k 21.0.13
+  bcrawcrt 2.5.4
+  bcraffu 10.6c1-2
+  bcraffu-fsgc-freire 10.6c1-2
+  bcraffy 1:3.6.5
+  bcraffy-gbby 1:3.6.5
+  c11-xvg 0.26.5
+  cnpzna 7.1.0-9
+  cnatb 1.58.2
+  cngpu 2.8.1
+  cngpurys 0.19.2
+  cper2 10.49
+  cvaragel 1.3.3
+  cxt-pbasvt 0.29.2-3
+  cebpcf 4.0.7-2
+  cebbg 5.1.107.101
+  cebbg-qvfgeb 5.10.2
+  cfzvfp 23.7-1
+  chyfrnhqvb 17.0-5
+  clguba 3.14.8
+  clguba-rafhercvc-jurryf 3.14.8
+  clguba-cvc 26.2.2-2
+  clguba-cfhgvy 7.2.2-2
+  epybar 1.75.2
+  ernqyvar 8.3.6
+  erfbyi-pbas 1.3
+  eunfu 1.4.6-1
+  evcterc 15.2.0
+  eflap 3.5.1
+  ehooreonaq 4.0.0-1
+  ehavg 2.3.1
+  ehfg 1.99.1
+  ehfg-fgq-nnepu64-yvahk-naqebvq 1.99.1
+  frq 4.10
+  fcrrkqfc 1.2.1-1
+  fdyvgr 3.54.1
+  fgenpr 7.3
+  fig-ni1 4.2.0
+  gne 1.35-3
+  grezhk-nz 0.8.1
+  grezhk-nz-fbpxrg 1.5.0-1
+  grezhk-ncv 0.60.0
+  grezhk-nhgu 1.5.0-1
+  grezhk-pber 0.4.0-1
+  grezhk-rkrp 1:2.5.0-1
+  grezhk-xrlevat 3.14
+  grezhk-yvprafrf 2.2
+  grezhk-freivprf 0.13-1
+  grezhk-gbbyf 1.46.0+ernyyl1.45.0-1
+  gzhk 3.8
+  ggs-qrwnih 2.37-8
+  hamvc 6.0-10
+  hgs8cebp 2.12.0
+  hgvy-yvahk 2.42.4
+  hi 0.13.5
+  ihyxna-vpq 0.1-1
+  ihyxna-ybnqre-trarevp 1.4.366
+  j3z 0.5.6-2
+  jtrg 1.25.0-1
+  juvpu 2.25
+  k11-ercb 8.4-1
+  kbet-hgvy-znpebf 1.20.2
+  kbetcebgb 2026.1
+  kivqpber 1.3.7-1
+  kkunfu 0.8.4
+  km-hgvyf 5.8.4
+  myvo 1.3.2
+  mfgq 1.5.7-1
+
+══════════════════════════════════════════════════════════════════════
+═══ 5. CNDHRGRF CVC ═══
+══════════════════════════════════════════════════════════════════════
+  Cnpxntr             Irefvba
+  ------------------- -----------
+  nalvb               4.14.2
+  obgb3               1.43.86
+  obgbpber            1.43.86
+  pregvsv             2026.7.22
+  punefrg-abeznyvmre  3.5.1
+  pyvpx               8.5.0
+  snfgncv             0.99.1
+  svyrybpx            3.32.6
+  sffcrp              2026.7.0
+  u11                 0.16.0
+  uggcpber            1.0.9
+  uggck               0.28.1
+  uhttvatsnpr_uho     1.31.0
+  vqan                3.19
+  wzrfcngu            1.1.0
+  wfbacngpu           1.33
+  wfbacbvagre         3.1.1
+  ynatpunva-pber      0.2.2
+  ynatpunva-cebgbpby  0.0.19
+  ynattencu-fqx       0.4.2
+  ynatfzvgu           0.1.5
+  anabobg             0.4.1
+  cnpxntvat           23.2
+  cvc                 26.2.2
+  cebbg-qvfgeb        5.10.2
+  cfhgvy              7.2.2
+  clnfa1              0.6.4
+  clnfa1_zbqhyrf      0.4.2
+  clqnagvp            1.10.13
+  clguba-qngrhgvy     2.9.0.cbfg0
+  clguba-qbgrai       1.2.3
+  clguba-zhygvcneg    0.0.6
+  clguba-gryrtenz-obg 22.8
+  ClLNZY              6.0.3
+  erdhrfgf            2.34.2
+  f3genafsre          0.19.2
+  fvk                 1.17.0
+  fgneyrggr           0.27.0
+  granpvgl            8.5.0
+  gdqz                4.70.1
+  glcvat_rkgrafvbaf   4.16.0
+  heyyvo3             2.7.0
+  hivpbea             0.23.2
+
+══════════════════════════════════════════════════════════════════════
+═══ 6. CNDHRGRF ACZ TYBONYRF ═══
+══════════════════════════════════════════════════════════════════════
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 7. CEBPRFBF ═══
+══════════════════════════════════════════════════════════════════════
+  Gbc PCH:
+    CVQ  CCVQ %PCH %ZRZ     RYNCFRQ PBZZNAQ
+    16530 16529  166  0.0       00:00 cf -rb cvq,ccvq,%pch,%zrz,rgvzr,netf --fbeg=-%pch
+    16531 16529  166  0.0       00:00 urnq -20
+    16171 16145 72.8  0.2       00:28 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ahpyrb_ybpny.cl
+    16529 16137 33.3  0.0       00:00 /qngn/qngn/pbz.grezhk/svyrf/hfe/ova/fu -p cf -rb cvq,ccvq,%pch,%zrz,rgvzr,netf --fbeg=-%pch | urnq -20
+    16137 16119  4.7  0.2       00:29 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/rfpnare_gbgny.cl
+    16495 16134  3.9  0.1       00:10 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16203 16159  2.5  0.2       00:27 clguba3 -
+    16134 16117  2.3  0.1       00:29 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/grezhk_urnegorng.cl
+    16421 16138  1.8  0.1       00:19 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16242 16203  1.5  0.1       00:26 phey -f uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/pbechf?fryrpg=vq,certhagn,erfchrfgn,pngrtbevn,xgnh,shragr,i
+    16397     1  1.4  0.0       00:22 ober ybpny 8771 --gb ober.cho
+    16290 16147  1.1  0.1       00:25 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16219 16129  1.0  0.1       00:27 phey -f uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt?qrfgvab=rd.bcrapbqr_ybpny&gvcb=rd.gnern_ybpny&be
+    16159 16139  0.6  0.0       00:29 onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ova/zvh-us-chfu-i2.fu
+    16147 16111  0.5  0.0       00:29 /qngn/qngn/pbz.grezhk/svyrf/hfe/ova/onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb/pbbeqvangbe.fu
+    16138 16113  0.4  0.0       00:29 /qngn/qngn/pbz.grezhk/svyrf/hfe/ova/onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb/cebor_yyz_cbbyf.fu
+    16145 16118  0.3  0.0       00:29 gvzrbhg 120 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ahpyrb_ybpny.cl
+    16129 16110  0.3  0.0       00:29 /qngn/qngn/pbz.grezhk/svyrf/hfe/ova/onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb/qryrtngbe.fu
+    16375  5616  0.1  0.0       00:23 fyrrc 60
+
+  Gbc ZRZ:
+    CVQ  CCVQ %PCH %ZRZ     RYNCFRQ PBZZNAQ
+    16137 16119  4.7  0.2       00:30 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/rfpnare_gbgny.cl
+    16171 16145 72.9  0.2       00:29 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ahpyrb_ybpny.cl
+    16203 16159  2.5  0.2       00:28 clguba3 -
+     8184  5608  0.0  0.1  1-00:43:42 pybhqsynerq ghaary --ab-nhgbhcqngr --cebgbpby uggc2 --hey uggc://127.0.0.1:8765
+    16134 16117  2.3  0.1       00:30 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/grezhk_urnegorng.cl
+     8182  5610  0.1  0.1  1-00:43:42 pybhqsynerq ghaary --ab-nhgbhcqngr --cebgbpby uggc2 --hey uggc://127.0.0.1:8765
+     7381     1  0.0  0.1  1-02:45:24 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb_obeqr_i2.cl --qnrzba
+    16290 16147  1.1  0.1       00:25 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16495 16134  3.9  0.1       00:10 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16242 16203  1.5  0.1       00:27 phey -f uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/pbechf?fryrpg=vq,certhagn,erfchrfgn,pngrtbevn,xgnh,shragr,i
+    16421 16138  1.8  0.1       00:19 phey -f -K CBFG uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt -U ncvxrl: rlWuoTpvBvWVHmV1AvVfVaE5pPV6V
+    16219 16129  1.0  0.1       00:27 phey -f uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb/erfg/i1/tbffvc_ybt?qrfgvab=rd.bcrapbqr_ybpny&gvcb=rd.gnern_ybpny&be
+    19631 19629  0.0  0.0    10:35:23 clguba3 zvh_erfvyvragr_i270.cl
+    22662 22649  0.0  0.0    10:30:30 clguba3 pnmnqbe_erphefbf.cl
+    19619     1  0.0  0.0    10:35:26 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb_nfx.cl --qnrzba
+    16145 16118  0.3  0.0       00:30 gvzrbhg 120 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ahpyrb_ybpny.cl
+    16534 16532  133  0.0       00:00 urnq -20
+    16375  5616  0.1  0.0       00:23 fyrrc 60
+    16373  5618  0.1  0.0       00:24 fyrrc 60
+
+══════════════════════════════════════════════════════════════════════
+═══ 8. FREIVPVBF EHAVG ═══
+══════════════════════════════════════════════════════════════════════
+  [pebaq]
+    snvy: pebaq: hanoyr gb punatr gb freivpr qverpgbel: svyr qbrf abg rkvfg
+  [vcsf]
+    snvy: vcsf: hanoyr gb punatr gb freivpr qverpgbel: svyr qbrf abg rkvfg
+  [ffu-ntrag]
+    snvy: ffu-ntrag: hanoyr gb punatr gb freivpr qverpgbel: svyr qbrf abg rkvfg
+  [ffuq]
+    snvy: ffuq: hanoyr gb punatr gb freivpr qverpgbel: svyr qbrf abg rkvfg
+
+══════════════════════════════════════════════════════════════════════
+═══ 9. PEBAGNO ═══
+══════════════════════════════════════════════════════════════════════
+  FURYY=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova/fu
+  CNGU=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova:$CNGU
+  UBZR=/qngn/qngn/pbz.grezhk/svyrf/ubzr
+  
+  */5 * * * * cterc -s zvh_rawnzoer.cl >/qri/ahyy || (pq $UBZR && abuhc clguba3 zvh_rawnzoer.cl >> zvh_rawnzoer.ybt 2>&1 &)
+  */30 * * * * clguba3 $UBZR/ebgnqbe_ybtf_i1.cl >/qri/ahyy 2>&1
+  17 * * * * $UBZR/qvtrfg_qrqhc.fu >> $UBZR/qrqhc.ybt 2>&1
+  0 4 * * * zxqve -c $UBZR/onpxhcf && gne pms $UBZR/onpxhcf/fgngr_$(qngr +\%L\%z\%q_\%U\%Z).gtm $UBZR/zvh-rpbfvfgrzn/.fgngr $UBZR/.zvh 2>/qri/ahyy
+  0 5 * * * yf -g $UBZR/zncn_havirefny_*.gkg 2>/qri/ahyy | gnvy -a +4 | knetf -e ez --
+  0 6 * * 0 qs /qngn | njx 'AE==2 && $5+0 > 90 {cevag "QVFPB PEVGVPB: "$5}' >> $UBZR/zvh.ybt 2>/qri/ahyy
+  0 3 * * 0 onfu $UBZR/zvh-nhgbsntvn.fu cehar >> $UBZR/zvh-nhgbsntvn.ybt 2>&1
+  */2 * * * * onfu $UBZR/zvh-argjngpu.fu >/qri/ahyy 2>&1
+  0 * * * * onfu $UBZR/zvh-rpbfvfgrzn/ova/zvh-us-chfu-i2.fu >/qri/ahyy 2>&1
+  * * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cnepur_gbcb_znkvzb.cl >> ybtf/gbcb.ybt 2>&1
+  * * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cnepur_cuv_yrathn.cl >> ybtf/cuv.ybt 2>&1
+  */5 * * * * onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/rafher_yynzn.fu >> ybtf/yynzn_jngpu.ybt 2>&1
+  # */10 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ybtf/rib.ybt 2>&1
+  */15 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 pnmnqbe_erphefbf.cl >> ybtf/pnmnqbe.ybt 2>&1
+  */2 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+  */2 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 grwrqbe_i10_3_abq1.cl >> ybtf/grwrqbe.ybt 2>&1
+  */10 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 us_chfu_tvg_yvoer.cl >> ybtf/us.ybt 2>&1
+  */1 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+  */30 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 rkcnafvba_i209.cl >> ybtf/rkcnafvba.ybt 2>&1
+  */15 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 punccvr_nhgbpbechf_i209.cl >> ybtf/punccvr.ybt 2>&1
+  15 * * * * /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/benphyb/nhgb_ribyhgvib.fu >> /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/fgngr/benphyb/nhgb_ribyhgvib.ybt 2>&1
+  */3 * * * * cterc -s "benphyb_obeqr_i2.cl --qnrzba" >/qri/ahyy || abuhc clguba3 $UBZR/benphyb_obeqr_i2.cl --qnrzba >> $UBZR/benphyb_obeqr.ybt 2>&1 &
+  0 * * * * pq ~ && clguba3 ~/zvh/rfpnare_gbgny.cl >> ~/zvh/fgngr/rfpnare.ybt 2>&1
+  0 6 * * * clguba3 /fgbentr/25N9-180Q/ovoyvbgrpn_zvh/gbqb/zvh-rpbfvfgrzn/zbqhybf/syrk/35_ervagrtenqbe.cl >> /fgbentr/25N9-180Q/ZVH_grezhk/ybtf/ervagrtenqbe.ybt 2>&1
+  */15 * * * * gvzrbhg 120 clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/ahpyrb_ybpny.cl >> /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/fgngr/ahpyrb_ybpny.ybt 2>&1
+  30 * * * * clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/nhgb_fhzvavfgeb.cl >> /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/fgngr/nhgb_fhzvavfgeb.ybt 2>&1
+  */5 * * * * clguba3 /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/grezhk_urnegorng.cl >> /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/fgngr/urnegorng.ybt 2>&1
+  0 */6 * * * ~/cbqn_frthen.fu >> ~/cbqn_frthen.ybt 2>&1
+  */5 * * * * cterc -s "eha_yynzn.fu" >/qri/ahyy || (abuhc ~/eha_yynzn.fu >> ~/zvh/fgngr/yynzn_freire.ybt 2>&1 &)
+  */5 * * * * cterc -s ebgnqbe_bcranv.cl >/qri/ahyy || (abuhc clguba3 ~/zvh-rpbfvfgrzn/ebgnqbe_bcranv.cl >> ~/zvh/fgngr/ebgnqbe_senpgny.ybt 2>&1 &)
+  */5 * * * * cterc -s "benphyb_nfx\.cl" >/qri/ahyy || (pq $UBZR && abuhc clguba3 benphyb_nfx.cl --qnrzba >> /fgbentr/25N9-180Q/benphyb/benphyb_nfx.ybt 2>&1 &)
+  */30 * * * * ~/benphyb/cebor_yyz_cbbyf.fu >> ~/benphyb/cebor_yyz_cbbyf.ybt 2>&1
+  # Erfvqragr ybpny (hfn :8771 pbzb preroeb YYZ)
+  */5 * * * * ~/benphyb/pbbeqvangbe.fu >> ~/benphyb/pbbeqvangbe.ybt 2>&1
+  */15 * * * * ~/benphyb/qryrtngbe.fu >> ~/benphyb/qryrtngbe.ybt 2>&1
+  0 */6 * * * ~/benphyb/pbbeqvangbe_yyz.fu >> ~/benphyb/pbbeqvangbe_yyz.ybt 2>&1
+  0 */2 * * * clguba3 ~/benphyb/qvtrfgbe.cl >> ~/benphyb/qvtrfgbe.ybt 2>&1
+  */5 * * * * ~/benphyb/ober_thneq.fu >> ~/benphyb/ober_thneq.ybt 2>&1
+  */30 * * * * ~/benphyb/cebor_cnagrba.fu >> ~/benphyb/cebor_cnagrba.ybt 2>&1
+  */2 * * * * clguba3 ~/benphyb/dhrhr_jbexre.cl >> ~/benphyb/dhrhr_jbexre.ybt 2>&1
+  0 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/ober_hey.wfba && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  Rfgnqb pebaq: snvy: pebaq: hanoyr gb punatr gb freivpr qverpgbel: svyr qbrf abg rkvfg
+
+══════════════════════════════════════════════════════════════════════
+═══ 10. PEBAGNOF NYGREANGVIBF RA UBZR ═══
+══════════════════════════════════════════════════════════════════════
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_npryrenqb ──
+    * * * * * pq $UBZR && clguba3 ~/obbgfgenc_nhgbevqnq.cl >> ~/zvh-rpbfvfgrzn/ybtf/obbgfgenc.ybt 2>&1
+    */5 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ~/zvh-rpbfvfgrzn/ybtf/fhcerzb.ybt 2>&1
+    */5 * * * * pq $UBZR && clguba3 ~/frafbevhz_nqncgngvib.cl qrpvqr >> ~/zvh-rpbfvfgrzn/ybtf/frafbevhz.ybt 2>&1
+    */10 * * * * pq $UBZR && clguba3 ~/urnegorng_qvfgevohvqb.cl rzvg >> ~/zvh-rpbfvfgrzn/ybtf/urnegorng.ybt 2>&1
+    */10 * * * * onfu ~/zvh-rpbfvfgrzn/AHQB_AHRIB_I203.fu >> ~/zvh-rpbfvfgrzn/ybtf/ahqb.ybt 2>&1
+    0 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ~/zvh-rpbfvfgrzn/ybtf/rib_ybpny.ybt 2>&1
+    15 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_q1.cl >> ~/zvh-rpbfvfgrzn/ybtf/q1.ybt 2>&1
+    0 */3 * * * pq ~/zvh-rpbfvfgrzn && clguba3 zvpryvb_fva_crezvfb.cl >> ~/zvh-rpbfvfgrzn/ybtf/qrsvpvrapvnf.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/ps_inyvq.wfba && tvg pbzzvg -z "nhgb fnivn $(png qngn/rfgnqb_crefvfgragr.wfba | clguba3 -p 'vzcbeg wfba,flf;cevag(wfba.ybnq(flf.fgqva)["fnivn"])')" && tvg chfu --ab-irevsl >> ~/zvh-rpbfvfgrzn/ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_arj ──
+    * * * * * pq $UBZR && clguba3 ~/obbgfgenc_nhgbevqnq.cl >> ~/zvh-rpbfvfgrzn/ybtf/obbgfgenc.ybt 2>&1
+    */5 * * * * pq $UBZR && clguba3 ~/frafbevhz_nqncgngvib.cl qrpvqr >> ~/zvh-rpbfvfgrzn/ybtf/frafbevhz.ybt 2>&1
+    */10 * * * * pq $UBZR && clguba3 ~/urnegorng_qvfgevohvqb.cl rzvg >> ~/zvh-rpbfvfgrzn/ybtf/urnegorng.ybt 2>&1
+    */10 * * * * onfu ~/zvh-rpbfvfgrzn/AHQB_AHRIB_I203.fu >> ~/zvh-rpbfvfgrzn/ybtf/ahqb.ybt 2>&1
+    0 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ~/zvh-rpbfvfgrzn/ybtf/rib_ybpny.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba ERNQZR.zq && tvg pbzzvg -z "nhgb fnivn $(png qngn/rfgnqb_crefvfgragr.wfba | clguba3 -p 'vzcbeg wfba,flf;cevag(wfba.ybnq(flf.fgqva)["fnivn"])')" && tvg chfu --ab-irevsl >> ~/zvh-rpbfvfgrzn/ybtf/tvg.ybt 2>&1
+    0 */3 * * * pq ~/zvh-rpbfvfgrzn && clguba3 zncrb_qrsvpvrapvnf_nhgbabzb.cl >> ~/zvh-rpbfvfgrzn/ybtf/qrsvpvrapvnf.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/pebagno_gnoyrg_bayl.gkg ──
+    FURYY=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova/onfu
+    CNGU=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova:/qngn/qngn/pbz.grezhk/svyrf/hfe/ova
+    UBZR=/qngn/qngn/pbz.grezhk/svyrf/ubzr
+    
+    # Jenccre erfvyvragr
+    J=$UBZR/zvh-rpbfvfgrzn/pbasvt/peba_rwrphgn.fu
+    
+    # Pnqn zvahgb — cnepurf gbcb l yrathn
+    * * * * * $J cnepur_gbcb_znkvzb.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+    * * * * * $J cnepur_cuv_yrathn_i4.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+    
+    # Pnqn 2 zva — grwrqbe l punccvr
+    */2 * * * * $J grwrqbe_erphefvib_i4_znkvzb.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+    */2 * * * * $J punccvr_ergel_i1.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+    
+    # Pnqn 3 zva — bedhrfgnqbe fhcerzb
+    */3 * * * * $J bedhrfgnqbe_fhcerzb_i2.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+    
+    # Pnqn 5 zva — ohf choyvpb
+    */5 * * * * $J zvh_ohf_choyvpb.cl >> $UBZR/zvh-rpbfvfgrzn/ybtf/peba.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_gbgny ──
+    * * * * * pq $UBZR && clguba3 ~/obbgfgenc_nhgbevqnq.cl >> ~/zvh-rpbfvfgrzn/ybtf/obbgfgenc.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ~/zvh-rpbfvfgrzn/ybtf/fhcerzb.ybt 2>&1
+    */5 * * * * pq $UBZR && clguba3 ~/frafbevhz_nqncgngvib.cl qrpvqr >> ~/zvh-rpbfvfgrzn/ybtf/frafbevhz.ybt 2>&1
+    15 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_q1.cl >> ~/zvh-rpbfvfgrzn/ybtf/q1.ybt 2>&1
+    0 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ~/zvh-rpbfvfgrzn/ybtf/rib_ybpny.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba && tvg pbzzvg -z "nhgb fnivn $(png qngn/rfgnqb_crefvfgragr.wfba | clguba3 -p 'vzcbeg wfba,flf;cevag(wfba.ybnq(flf.fgqva)["fnivn"])')" && tvg chfu --ab-irevsl >> ~/zvh-rpbfvfgrzn/ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_grwrqbe ──
+    * * * * * pq ~/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+    */2 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 grwrqbe_tybony_i10.cl >> ybtf/grwrqbe.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+    15 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_q1.cl >> ybtf/q1.ybt 2>&1
+    0 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ybtf/rib_ybpny.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/fxvyyf_vaqrk.wfbay && tvg pbzzvg -z "grwrqbe I10 fnivn $(clguba3 -p 'vzcbeg wfba;cevag(wfba.ybnq(bcra("qngn/rfgnqb_crefvfgragr.wfba"))["fnivn"])')" && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/pebagno_ONPXHC_1792779702.gkg ──
+    FURYY=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova/fu
+    CNGU=/qngn/qngn/pbz.grezhk/svyrf/hfe/ova:$CNGU
+    UBZR=/qngn/qngn/pbz.grezhk/svyrf/ubzr
+    
+    */5 * * * * cterc -s zvh_rawnzoer.cl >/qri/ahyy || (pq $UBZR && abuhc clguba3 zvh_rawnzoer.cl >> zvh_rawnzoer.ybt 2>&1 &)
+    # */10 * * * * cterc -s pybhqsynerq >/qri/ahyy || $UBZR/ghary_nhgb.fu >> $UBZR/ps_ghaary.ybt 2>&1
+    */30 * * * * clguba3 $UBZR/ebgnqbe_ybtf_i1.cl >/qri/ahyy 2>&1
+    17 * * * * $UBZR/qvtrfg_qrqhc.fu >> $UBZR/qrqhc.ybt 2>&1
+    0 4 * * * zxqve -c $UBZR/onpxhcf && gne pms $UBZR/onpxhcf/fgngr_$(qngr +\%L\%z\%q_\%U\%Z).gtm $UBZR/zvh-rpbfvfgrzn/.fgngr $UBZR/.zvh 2>/qri/ahyy
+    0 5 * * * yf -g $UBZR/zncn_havirefny_*.gkg 2>/qri/ahyy | gnvy -a +4 | knetf -e ez --
+    0 6 * * 0 qs /qngn | njx 'AE==2 && $5+0 > 90 {cevag "QVFPB PEVGVPB: "$5}' >> $UBZR/zvh.ybt 2>/qri/ahyy
+    0 3 * * 0 onfu $UBZR/zvh-nhgbsntvn.fu cehar >> $UBZR/zvh-nhgbsntvn.ybt 2>&1
+    */2 * * * * onfu $UBZR/zvh-argjngpu.fu >/qri/ahyy 2>&1
+    0 */6 * * * onfu $UBZR/zvh-rpbfvfgrzn/ova/zvh-us-chfu-i2.fu >/qri/ahyy 2>&1
+    * * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cnepur_gbcb_znkvzb.cl >> ybtf/gbcb.ybt 2>&1
+    * * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cnepur_cuv_yrathn.cl >> ybtf/cuv.ybt 2>&1
+    */5 * * * * onfu /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/rafher_yynzn.fu >> ybtf/yynzn_jngpu.ybt 2>&1
+    */10 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ybtf/rib.ybt 2>&1
+    */2 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 pnmnqbe_erphefbf.cl >> ybtf/pnmnqbe.ybt 2>&1
+    */2 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/pebagno_havsvpnqb.gkg ──
+    */30 * * * * $UBZR/ebhgre_zvh_creznaragr.fu >> $UBZR/zvh-rpbfvfgrzn/ybtf/ebhgre_creznaragr.ybt 2>&1
+    */30 * * * * $UBZR/ebhgre_qnejvavnab_i4.fu >> $UBZR/zvh-rpbfvfgrzn/ybtf/ebhgre_qnejvavnab.ybt 2>&1
+    */30 * * * * EBYR=cubar $UBZR/zvh-rpbfvfgrzn/pbasvt/peba_rwrphgn.fu I214_ZRFU.cl
+    */30 * * * * EBYR=cubar $UBZR/zvh-rpbfvfgrzn/pbasvt/peba_rwrphgn.fu I210_NHGBABZB.cl
+    0 */6 * * * pq $UBZR/zvh-rpbfvfgrzn && tvg chyy --eronfr && tvg chfu >> $UBZR/zvh-rpbfvfgrzn/ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_yvoer_fva_ehfg ──
+    * * * * * pq ~/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+    */2 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 grwrqbe_i10_3_abq1.cl >> ybtf/grwrqbe.ybt 2>&1
+    */10 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 us_chfu_tvg_yvoer.cl >> ybtf/us.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/fxvyyf_vaqrk.wfbay && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_svany ──
+    * * * * * pq ~/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+    15 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_q1.cl >> ybtf/q1.ybt 2>&1
+    0 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 ribyhpvba_nhgbabzn_i2.cl >> ybtf/rib_ybpny.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba && tvg pbzzvg -z "fnivn $(clguba3 -p 'vzcbeg wfba;cevag(wfba.ybnq(bcra("qngn/rfgnqb_crefvfgragr.wfba"))["fnivn"])')" && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_svany_1Z ──
+    * * * * * pq ~/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+    */2 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 grwrqbe_i10_3_abq1.cl >> ybtf/grwrqbe.ybt 2>&1
+    */5 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 us_chfu_abq1.cl >> ybtf/us.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/fxvyyf_vaqrk.wfbay qngn/zvh_pbechf_i10_3_abq1.wfbay && tvg pbzzvg -z "I10.3 647x->1Z fnivn $(clguba3 -p 'vzcbeg wfba;cevag(wfba.ybnq(bcra("qngn/rfgnqb_crefvfgragr.wfba"))["fnivn"])')" && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/peba_yvoer_1Z ──
+    * * * * * pq ~/zvh-rpbfvfgrzn && clguba3 cyhtvaf/zvh_ohf_zpc_tngrjnl.cl >> ybtf/zvh_ohf.ybt 2>&1
+    */2 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 grwrqbe_i10_3_abq1.cl >> ybtf/grwrqbe.ybt 2>&1
+    */5 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 us_chfu_yvoer.cl >> ybtf/us.ybt 2>&1
+    */1 * * * * pq ~/zvh-rpbfvfgrzn && clguba3 bedhrfgnqbe_fhcerzb_i3.cl >> ybtf/fhcerzb.ybt 2>&1
+    0 */6 * * * pq ~/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/fxvyyf_vaqrk.wfbay && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/pebagno_gnoyrg.gkg ──
+    # Gnoyrg — zvfzb evgzb dhr cubar, EBYR=gnoyrg cnen ab pbzcrgve
+    */30 * * * * EBYR=gnoyrg $UBZR/zvh-rpbfvfgrzn/pbasvt/peba_rwrphgn.fu I214_ZRFU.cl
+    */30 * * * * EBYR=gnoyrg $UBZR/zvh-rpbfvfgrzn/pbasvt/peba_rwrphgn.fu I210_NHGBABZB.cl
+    */30 * * * * $UBZR/ebhgre_qnejvavnab_i4.fu >> $UBZR/zvh-rpbfvfgrzn/ybtf/ebhgre_qnejvavnab.ybt 2>&1
+    0 */6 * * * pq $UBZR/zvh-rpbfvfgrzn && tvg chyy --eronfr && tvg chfu --ab-irevsl >> $UBZR/zvh-rpbfvfgrzn/ybtf/tvg.ybt 2>&1
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 11. TVG ERCBF ═══
+══════════════════════════════════════════════════════════════════════
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/us_zvh ──
+    erzbgr:  uggcf://Wnvzr393:us_ajumgOQlXFBUCpGRaqxGTxGDDbjFlgHVxY@uhttvatsnpr.pb/qngnfrgf/Wnvzr393/zvh-qngnfrg
+    oenapu:  znva
+    úygvzb:  s4749r8 pbechf I93 16 cnerf cuv=90.679 eub=1.311
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc ──
+    erzbgr:  uggcf://tvguho.pbz/ttretnabi/yynzn.pcc
+    oenapu:  znfgre
+    úygvzb:  7npn0q2rn urkntba: nqq TTZY_URKNTBA_IGPZ_FVMR (#31221)
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/yynzn-grezhk-frghc ──
+    erzbgr:  uggcf://tvguho.pbz/plpybnepnar/yynzn-grezhk-frghc
+    oenapu:  znfgre
+    úygvzb:  0q3sr3p Erjevgr ERNQZR sbe yynzn.pcc + Djra3.5 jbexsybj
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/yynzn-grezhk-frghc/yynzn-grezhk-frghc ──
+    erzbgr:  uggcf://tvguho.pbz/plpybnepnar/yynzn-grezhk-frghc
+    oenapu:  znfgre
+    úygvzb:  0q3sr3p Erjevgr ERNQZR sbe yynzn.pcc + Djra3.5 jbexsybj
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn ──
+    erzbgr:  uggcf://tvguho.pbz/Wnvzr393/zvh-rpbfvfgrzn.tvg
+    oenapu:  znva
+    úygvzb:  9698n26 ober: nepuvib vaqrcraqvragr qngn/ober_hey.wfba (uggc://ober.cho:33063)
+
+  ── /fgbentr/25N9-180Q/SenaObg ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/_phneragran/ArhebXvg_1788239059.cl ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/_phneragran/ArhebXvg_1788240631.cl ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/_tvg_ercb ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/NYZN_I79_YVGR/ONPXHCF/qrrcfrrx_1.5o_onfr_ZVG_PYRNA ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/NYZN_I79_YVGR/ONPXHCF/cuv3_zvav_onfr_ZVG_PYRNA ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/PbeOvavna ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/QlanzvpnyFlfgrzf.wy ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/UvthpuvSenpgnyQvzrafvba ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/VSG ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/VSG-Gurezny-Pbaqhpgvivgl-Rkcrevzragf ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/ZVH-Dhrfgvbaf-Cenpgvpr ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/ZVH-Flfgrz ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/ZnexbiZbqry ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  ── /fgbentr/25N9-180Q/SenaObg/pybhq/tqevir/argjbex/tvguho_ercbf/Bar-Snpgbe-Oynpx-Fpubyrf-va-P- ──
+    erzbgr:  
+    oenapu:  
+    úygvzb:  
+
+  Tvg pbasvt:
+    hfre.rznvy=Wnvzr393@tznvy.pbz
+    hfre.anzr=Wnvzr363
+    chfu.nhgbfrghcerzbgr=gehr
+    uggc.cbfgohssre=524288000
+    uggc.ybjfcrrqyvzvg=1000
+    uggc.ybjfcrrqgvzr=300
+    pber.pbzcerffvba=0
+    fnsr.qverpgbel=/qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn
+    perqragvny.urycre=fgber
+
+══════════════════════════════════════════════════════════════════════
+═══ 25. TVG PERQRAPVNYRF ═══
+══════════════════════════════════════════════════════════════════════
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.tvg-perqragvnyf ──
+    uggcf://hfre:us_jBvdcZKDQNPdUvERPMQIYasjbEiPcycweH@uhttvatsnpr.pb
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.tvgpbasvt ──
+    [hfre]
+    	rznvy = Wnvzr393@tznvy.pbz
+    	anzr = Wnvzr363
+    [chfu]
+    	nhgbFrghcErzbgr = gehr
+    [uggc]
+    	cbfgOhssre = 524288000
+    	ybjFcrrqYvzvg = 1000
+    	ybjFcrrqGvzr = 300
+    [pber]
+    	pbzcerffvba = 0
+    [fnsr]
+    	qverpgbel = /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn
+    [perqragvny]
+    	urycre = fgber
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 12. FPEVCGF RWRPHGNOYRF ═══
+══════════════════════════════════════════════════════════════════════
+  ▸ .fu (147 nepuvibf):
+    .zvh/neenadhr.fu
+    .grezhk/obbg/01_pebaq.fu
+    .grezhk/obbg/99_oevqtr.fu
+    .grezhk/obbg/pebavr-obbg.fu
+    .grezhk/obbg/gnoyrg_freire.fu
+    .grezhk/obbg/grezhk_obeqr.fu
+    qvnt_benphyb.fu
+    qvnt_benphyb_i2.fu
+    qvnt_i3.fu
+    qvnt_i4.fu
+    rkgenre_gbqb_grezhk.fu
+    tnf_qvntabfgvpb.fu
+    tnf_cebone_gbqnf.fu
+    vafgnyne_benphyb.fu
+    xi_cuv_flap.fu
+    yrre_pbagrkgb_zvh.fu
+    yynzn.pcc/.qribcf/gbbyf.fu
+    yynzn.pcc/ohvyq-kpsenzrjbex.fu
+    yynzn.pcc/pv/eha.fu
+    yynzn.pcc/rknzcyrf/yynzn-riny/grfg-fvzhyngbe.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/pnhfny/pbzcner-rzorqqvatf-ybtvgf.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/pnhfny/pbaireg-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/pnhfny/eha-pbairegrq-zbqry-rzorqqvatf-ybtvgf.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/pnhfny/eha-pbairegrq-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/rzorqqvat/pbzcner-rzorqqvatf-ybtvgf.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/rzorqqvat/pbaireg-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/rzorqqvat/eha-pbairegrq-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/perngr-pbyyrpgvba-nqq-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/phey-rzorqqvat-freire.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/vafcrpg-pbairegrq-zbqry.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/crecyrkvgl-tra.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/crecyrkvgl-eha-fvzcyr.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/crecyrkvgl-eha.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/dhnagvmr.fu
+    yynzn.pcc/rknzcyrf/zbqry-pbairefvba/fpevcgf/hgvyf/eha-rzorqqvat-freire.fu
+    yynzn.pcc/rknzcyrf/ernfba-npg.fu
+    yynzn.pcc/rknzcyrf/freire-yynzn2-13O.fu
+    yynzn.pcc/rknzcyrf/flpy/ohvyq.fu
+    yynzn.pcc/rknzcyrf/flpy/eha-yynzn2.fu
+    yynzn.pcc/rknzcyrf/flpy/fgneg-fie.fu
+    yynzn.pcc/rknzcyrf/flpy/grfg.fu
+    yynzn.pcc/rknzcyrf/flpy/hcqngr-bcf-qbp.fu
+    yynzn.pcc/rknzcyrf/grfg-pznxr/ohvyq-vafgnyy.fu
+    yynzn.pcc/rknzcyrf/grfg-pznxr/ohvyq.fu
+    yynzn.pcc/ttzy/fep/ttzy-rg/rg-xrearyf/fpevcgf/purpx_havzcyrzragrq_vafgehpgvbaf.fu
+    yynzn.pcc/ttzy/fep/ttzy-rg/rg-xrearyf/fep/EhaOnpxraq.fu
+    yynzn.pcc/yynzn-grezhk-frghc/yynzn-grezhk-frghc/freir.fu
+    yynzn.pcc/yynzn-grezhk-frghc/yynzn-grezhk-frghc/frghc.fu
+    yynzn.pcc/yynzn-grezhk-frghc/yynzn-grezhk-frghc/fgbc.fu
+    yynzn.pcc/yynzn-grezhk-frghc/freir.fu
+    ... l 97 záf
+
+  ▸ .cl (325 nepuvibf):
+    .zvh/betnabf/nofbeorqbe_xrlf.cl
+    pbafbyvqne_zrzbevn.cl
+    yynzn.pcc/pbairefvba/__vavg__.cl
+    yynzn.pcc/pbairefvba/nszbr.cl
+    yynzn.pcc/pbairefvba/nepgvp.cl
+    yynzn.pcc/pbairefvba/onvpuhna.cl
+    yynzn.pcc/pbairefvba/onvyvatzbr.cl
+    yynzn.pcc/pbairefvba/onvyvatzbr3.cl
+    yynzn.pcc/pbairefvba/onfr.cl
+    yynzn.pcc/pbairefvba/ornz.cl
+    yynzn.pcc/pbairefvba/oreg.cl
+    yynzn.pcc/pbairefvba/ovgarg.cl
+    yynzn.pcc/pbairefvba/oybbz.cl
+    yynzn.pcc/pbairefvba/punzryrba.cl
+    yynzn.pcc/pbairefvba/pungtyz.cl
+    yynzn.pcc/pbairefvba/pyrs.cl
+    yynzn.pcc/pbairefvba/pbqrfuryy.cl
+    yynzn.pcc/pbairefvba/pbtiyz.cl
+    yynzn.pcc/pbairefvba/pbzznaq_e.cl
+    yynzn.pcc/pbairefvba/qoek.cl
+    yynzn.pcc/pbairefvba/qrpv.cl
+    yynzn.pcc/pbairefvba/qrrcfrrx.cl
+    yynzn.pcc/pbairefvba/qrrcfrrx41.cl
+    yynzn.pcc/pbairefvba/qbgf1.cl
+    yynzn.pcc/pbairefvba/qbgf3.cl
+    yynzn.pcc/pbairefvba/qbgfbpe.cl
+    yynzn.pcc/pbairefvba/qernz.cl
+    yynzn.pcc/pbairefvba/reavr.cl
+    yynzn.pcc/pbairefvba/rknbar.cl
+    yynzn.pcc/pbairefvba/snypba.cl
+    yynzn.pcc/pbairefvba/snypba_u1.cl
+    yynzn.pcc/pbairefvba/syvag.cl
+    yynzn.pcc/pbairefvba/trzzn.cl
+    yynzn.pcc/pbairefvba/tyz.cl
+    yynzn.pcc/pbairefvba/tcg2.cl
+    yynzn.pcc/pbairefvba/tcg_bff.cl
+    yynzn.pcc/pbairefvba/tcgarbk.cl
+    yynzn.pcc/pbairefvba/tenavgr.cl
+    yynzn.pcc/pbairefvba/tebx.cl
+    yynzn.pcc/pbairefvba/tebirzbr.cl
+    yynzn.pcc/pbairefvba/u2b_yvtugavat.cl
+    yynzn.pcc/pbairefvba/uez_grkg.cl
+    yynzn.pcc/pbairefvba/uhalhna.cl
+    yynzn.pcc/pbairefvba/ul_i4.cl
+    yynzn.pcc/pbairefvba/vagreayz.cl
+    yynzn.pcc/pbairefvba/vagreaiy.cl
+    yynzn.pcc/pbairefvba/wnvf.cl
+    yynzn.pcc/pbairefvba/wnzon.cl
+    yynzn.pcc/pbairefvba/wnahfceb.cl
+    yynzn.pcc/pbairefvba/x2_ubevmba.cl
+    ... l 275 záf
+
+  ▸ .wf (29 nepuvibf):
+    yynzn.pcc/fpevcgf/freir-fgngvp.wf
+    yynzn.pcc/gbbyf/freire/orapu/fpevcg.wf
+    yynzn.pcc/gbbyf/hv/rfyvag.pbasvt.wf
+    yynzn.pcc/gbbyf/hv/fpevcgf/znxr-vpbaf-pvephyne.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/freivprf/fnaqobk-jbexre.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/ovt-vagrtre/OvtVagrtre.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/qrpvzny.wf/qrpvzny.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/Nytroen.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/Pnyphyhf.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/Rkgen.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/Fbyir.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/nyy.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/pbafgnagf.wf
+    yynzn.pcc/gbbyf/hv/fep/yvo/iraqbef/areqnzre-cevzr/areqnzre.pber.wf
+    yynzn.pcc/gbbyf/hv/firygr.pbasvt.wf
+    zvh-nhgbabzb-i91/zvh_nhgbabzb_i91.wf
+    zvh-rpbfvfgrzn/SenaObg/wf/benphyb-qngn.wf
+    zvh-rpbfvfgrzn/tnf/ZVH_ZRFU_I270.wf
+    zvh-rpbfvfgrzn/jbexre_i11_2_ebhgre_qnejvavnab.wf
+    zvh-rpbfvfgrzn/jbexref/zrfu_abqr_i270.wf
+    zvh-grpynqb-i152/fep/vaqrk.wf
+    i91_308snrqs/zvh_nhgbabzb_i91.wf
+    i91_30p349o6/zvh_nhgbabzb_i91.wf
+    i91_503s9506/zvh_nhgbabzb_i91.wf
+    i91_5rn7pq88/zvh_nhgbabzb_i91.wf
+    i91_6915s743/zvh_nhgbabzb_i91.wf
+    i91_on3qpss0/zvh_nhgbabzb_i91.wf
+    i91_ppr82777/zvh_nhgbabzb_i91.wf
+    i91_q0o37632/zvh_nhgbabzb_i91.wf
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 13. YBTF (gbc 30 cbe gnznñb) ═══
+══════════════════════════════════════════════════════════════════════
+        7Z  zvh-rpbfvfgrzn/.fgngr/grezhk_obeqr.ybt
+        2Z  zvh-rpbfvfgrzn/.fgngr/qrgrpgne_ghaary.ybt
+      565X  pybhqsynerq_yvir.ybt
+       74X  benphyb/pbbeqvangbe.ybt
+       66X  benphyb/ober_thneq.ybt
+       64X  benphyb/qryrtngbe.ybt
+       42X  benphyb/cebor_yyz_cbbyf.ybt
+       22X  benphyb/dhrhr_jbexre.ybt
+       21X  qrqhc.ybt
+       17X  yynzn.pcc/orapurf/qtk-fcnex/eha-nvzr-120o-g8-k8-uvtu.ybt
+       16X  zvh-neenadhr.ybt
+       11X  zvh-us-chfu-i2.ybt
+        7X  benphyb/ghaary_thneq.ybt
+        6X  benphyb/pbbeqvangbe_yyz.ybt
+        6X  pybhqsynerq_znahny.ybt
+        5X  benphyb/qvtrfgbe.ybt
+        4X  benphyb.ybt
+        3X  cbqn_frthen.ybt
+        2X  zvh-rpbfvfgrzn/qrhqnf.ybt
+      728O  pybhqsynerq_grfg.ybt
+      672O  benphyb/cebor_cnagrba.ybt
+      403O  benphyb/ober_bhg.ybt
+      274O  benphyb/ober_qroht.ybt
+      170O  benphyb/ober_pyrna.ybt
+      135O  yynzn_freire.ybt
+       22O  benphyb_obeqr.ybt
+        0O  zvh.ybt
+
+══════════════════════════════════════════════════════════════════════
+═══ 14. ERPHEFBF PBZCYRGBF ═══
+══════════════════════════════════════════════════════════════════════
+  ── /fgbentr/25N9-180Q/ovoyvbgrpn_zvh/ahgevragrf/phragnf_havsvpnqnf.wfba ──
+    Gbxraf (302):
+      NHGBVAPERZRAG
+      frys.pst
+      ncv.trg
+      pbagvahr
+      tfx_TDfaUNVl4KUexlwo0owMJTqlo3SLDmfSM3i3mSBeU6TSt6v7tV6C
+      bshfpnqn
+      rf
+      Nabznybhf363K2.
+      abg
+      ra
+      chg
+      yvfg
+      Nabznybhf363K2
+      N
+      pnetnqn.
+      guvatf
+      frpergb
+      dhr
+      n
+      qr
+      rfgnon
+      Nabznybhf363
+      ab
+      qrageb
+      ynzoqn
+      zrwbe
+      creb
+      pba
+      fvtnzbf
+      zny
+      l
+      shapvbana.
+      rkvfgr
+      thneqnqn
+      bf.trgrai
+      fr
+      bs
+      nofbyhgb.
+      nofbyhgb
+      shapvban
+      rkcvenqb
+      cebonoyrzragr
+      ragbaprf
+      Jbexre
+      1
+      rkcve
+      rkcvenqb.
+      un
+      fhzznel
+      jvyy
+      vf
+      i
+      fv
+      vai
+      bf.cngu.trgpgvzr
+      varfcrenqb
+      snyyn
+      erdhrfg.urnqref.trg
+      rfgvzngvba
+      erqnpgvba
+      fbhepr
+      onpxraq
+      fbhepr.
+      ...
+      vachg
+      irevsvpngvba
+      qnfuobneq
+      nhgu
+      erf
+      nppbhagvat
+      znfxvat
+      ghcyr
+      pbzcngvovyvgl.
+      gbbyf
+      orunivbe.
+      pbafvfgrapl
+      pbasyvpg
+      fpbcr
+      svygrevat
+      erdhverq.
+      qrgrpgvba
+      cebivqre
+      frys-urny
+      inyvqngvba
+      snyyonpx
+      rkpunatr
+      qrpbqvat
+      nf
+      qhcyvpngvb
+      u
+      qverpg
+      genpxvat
+      qryvirel
+      fbheprf.
+      unaqyvat.
+      svyrf.
+      obbgfgenc-gbxra
+      rksvygengvba
+      cebcntngvba
+      rai
+      rkcvel
+      chaghnpvbarf.trg
+      chagnwrf.trg
+      bowrpg
+      engr
+      be
+      bf.raiveba.trg
+      erghea
+      ivib
+      zhregb
+      erfhygnagr
+      va
+      fpberf.trg
+      ybt
+      tuc_gy8gsjbblh0CXxD8tzh4laDAnZOSMV43xQxH
+      fx-GH_BCRANV_XRL_NDHV_48_PNENPGRERF
+      tfx_BqHAOoUDQQYCoWxbRpbQJTqlo3SLltws7wqnnvi7awqI99APfBDt
+      qmJkS3VQFk6yhJDa6NLiKwaBC5Hzlz3B
+      Uib4NSguJPbmVsiKRIYOKpkIvDYEeI8UhAQKQmFuA72KgSm7pNe2jwILjRLF
+      us_ECnfQYWcxtdNJkifxdEPaCglXECknEXYRC
+      ZJiJovFtxgHBWwjSpP1NZD.cyngsbezi01.rlWdqTxvBvV2BGD1ZwMyMv1vZwV3YGD3BQtgLwEyMv01A2D3LmR1AJLkZ2HvYPWmqJVvBvVlryuOIUMxrzAvJTckBRg0GIH0HSSDGQp5BGRlVvjvnJS0VwbkAmt0ZQV3ZQV5sD.yat3Ms58yD2bTGkPZiEdoF1i3XKEIXqsy6H25yebox8
+      pbzcnegvqb.
+      frys.fraq_reebe
+      Abar
+      gbxra
+      hfnaqb
+      frpergf.trg
+      cevag
+      gel
+      shapvban.
+      naq
+      freivpr
+      fnir_frpergf
+      zrffntr
+      qngn.trg
+      US
+      rkprcg
+      pbabpvqb
+      vgrz
+      ertrarengr_gbxra
+      grfg_naq_hcqngr
+      cnen
+      LbheNcvXrlGbxra
+      vs
+      eribpnqb
+      hfntr
+      arrqrq
+      ohqtrg
+      fx-kkk
+      kkk
+      fx-nag-kkk
+      lbhe-xvzv-gbxra
+      ONPXRAQ_HEY
+      pyvrag
+      NAGUEBCVP_ONFR_HEY
+      bireevqrf.
+      gevzzrq
+      fpbcrq
+      Yvsrplpyr
+      fgber
+      erserfu
+      fgberf
+      raivebazrag
+      Fnsrgl
+      gbxraf
+      bcraffy
+      arire
+      erfrg
+      Srngherf
+      ol
+      fvax
+      Nhgu
+      vzcebirzragf
+      ernfbaf
+      vafvtug
+      qngnonfr.ratvar
+      Inyhr
+      cre
+      lbhe-frperg
+      pncnovyvgl
+      ersreraprf
+      punyyratrf
+      Pbasvthengvba
+      yratgu
+      sbe
+      pnpur
+      rapbqvatf
+      zbqr
+      znantrzrag
+      beqre.
+      glcrf
+      glcr
+      qrevingvba
+      eribpngvba
+      cyhzovat
+      zrgevp
+      fgngf
+      hfntr.
+      sebz
+      fx-...
+      perqragvnyf
+      hfrq
+      UHOdHcy3AO
+      yvzvgf.
+      RZORQQVATF
+      Fpurzn
+      Nepuvgrpgher
+      sbphfrq
+      qrsvavgvba
+      sbphf.
+      trarengvba
+      gvzrbhg
+      ovyyvat
+      _61--D_Ri0_O7r-aHZNZGPLDWvkBuDTlDlKB-6aN_NXdlOyCIxNBCWnbXd2zamVuVC77V4uoFb1GqlgIgeq5iADUNA3-nY5Ma-XGTu1-NLRI77R68hMPuN
+      cnevgl
+      snpg
+      rkgenpgvba
+      qrpbzcbfvgvbaf.lnzy
+      gb
+      nurnq
+      Qrsvavgvbaf
+      IYN
+      Nqncgngvba
+      Cehavat
+      Pnpuvat
+      onfryvarf
+      qrfvta
+      inyhr
+      gung
+      jvgu
+      flfgrz.
+      perngvba
+      punenpgrevfgvpf
+      ebyr
+      qeviref
+      DN
+      ybff
+      srngherf
+      vasbezngvba
+      Cresbeznapr
+      Fryrpgvba
+      nflap
+      Znantre
+      znantre
+      vagebqhprq
+      uggcf
+      HMFZHOOBHP
+      Vffhr
+      ergvenoyr
+      snyfr
+      rasbeprq
+      ergverzrag
+      trarengr
+      phey
+      vafcrpg
+      eribxr
+      yvfg-eribxrq
+      yvsrplpyr
+      ivn
+      ultvrar
+      pna
+      Pbaprcgf
+      guebhtu
+      rgp
+      fgberq
+      Grpuavpny
+      bireync
+      lbhe_frpher_cnffjbeq_urer
+      inevnoyrf
+      cbvagf.
+      fpnaavat
+      fnsr
+      jbexsybj
+      svryq
+      vaqrk-shapgvba-qrcraqrag
+      obhaqnevrf
+      3832896
+      3806018
+      3810861
+      s.ernq
+      pbasvt.trg
+      GRKG
+      dn_vaqrk
+      trarengr_cnffjbeq
+      perq.trg
+      arprfnevb
+      pbasvthenqn
+      erfc.wfba
+      freiref.nccraq
+      s
+      fva
+      gnetrgf.nccraq
+      cnegf
+      perq
+      qrpve
+      QRZB_XRL
+      ncv_xrl
+      erny.
+      ryfr
+      trg_gbxra
+      erny
+      CBY
+    Pbeerbf (208):
+      nabznybhf363@cebgba.zr
+      anabznybhf363@cebgba.zr
+      Esr@Ez.Ef
+      wnvzrcivpragr@tznvy.pbz
+      aWnvzrcivpragr@tznvy.pbz
+      senaobg@pbafpvbhfarff.ybpny
+      qvrthvgb.it16@tznvy.pbz
+      senapurfpbcnynpvbf9@tznvy.pbz
+      wnvzrc.ivppragr@tznvy.pbz
+      gnoyrgbarcunagbz@tznvy.pbz
+      pvcure19051997@tznvy.pbz
+      flfgrz@senaobg.ybpny
+      senaobg@zvpryvb.ybpny
+      qrerpxpvgb.it16@tznvy.pbz
+      wnvzr.c.ivppragr@tznvy.pbz
+      wnvzrqnavryznegvarm75@tznvy.pbz
+      wnivre19051997@tznvy.pbz
+      wuhnepnln938@tznvy.pbz
+      wnvzrcivppragr@tznvy.pbz
+      wnvzr393@bhgybbx.pbz
+      fvzbayva0423@tznvy.pbz
+      nyvpr@rknzcyr.pbz
+      obo@rknzcyr.pbz
+      puneyvr@rknzcyr.pbz
+      qnan@rknzcyr.pbz
+      unanybtvafgehzragf@tznvy.pbz
+      erfrnepuhqvg@tznvy.pbz
+      rznvy@rknzcyr.pbz
+      vfunna@oreev.nv
+      xeevfu@oreev.nv
+      tvg@tvguho.pbz
+      yrtryvat567@tznvy.pbz
+      wrss.qvyyrl@tznvy.pbz
+      ftynat@yzflf.bet
+      128k128@2k.cat
+      114367649+xabny@hfref.abercyl.tvguho.pbz
+      15167896+2001L@hfref.abercyl.tvguho.pbz
+      1940428933@dd.pbz
+      2418548+znexbho@hfref.abercyl.tvguho.pbz
+      262373281+irkpynjk31@hfref.abercyl.tvguho.pbz
+      269728612+zrgnzba-c@hfref.abercyl.tvguho.pbz
+      3115763429@dd.pbz
+      56281588+YriFxl22@hfref.abercyl.tvguho.pbz
+      840596168@dd.pbz
+      87qrterrf@87hv-Znpzvav.ybpny
+      CniryGnwqhf@hfref.abercyl.tvguho.pbz
+      LYPura-007@hfref.abercyl.tvguho.pbz
+      nnxnfu@cynfgvpynof.nv
+      nqevna.fbgb6@tznvy.pbz
+      ntrag@ntragf-Znp-zvav.ybpny
+      nwmein@tznvy.pbz
+      nxvgnav@nxvgnavabZnp-zvav.ybpny
+      nynaeobk@tznvy.pbz
+      nyzheng@Nyzhengf-ZnpObbx-Ceb.ybpny
+      nyineb.fnapurm-znevfpny@benpyr.pbz
+      naq@nccm.pybhq
+      nabbc.zruraqnyr@tznvy.pbz
+      nevry@ibegrkenqne.pbz
+      nffpna@189.pa
+      nhfgvacvpxrgg@hfref.abercyl.tvguho.pbz
+      njnva7@tznvy.pbz
+      nlbho@tznvy.pbz
+      ora.ebff@zbbi.vb
+      ora@ora-cuvyyvcf.arg
+      ora@jurgfgbar.pbz.nh
+      orawnzva2026-qbg@hfref.abercyl.tvguho.pbz
+      obewr@qdfirevtr.fr
+      obhzntrag@tznvy.pbz
+      pragrevq@anire.pbz
+      punbfkvatybat@tznvy.pbz
+      purawva@urezrf.ybpny
+      puralnat.ly@nyvonon-vap.pbz
+      pwjnat@fbjbex.gj
+      pxbeubara@tznvy.pbz
+      pyhfgre2@Pyhfgre2f-Znp-Fghqvb.ybpny
+      pbyva@pbyvatervt.pbz
+      qna.oehafqba@tznvy.pbz
+      qrrchwnva@tznvy.pbz
+      qrhflh@hfref.abercyl.tvguho.pbz
+      queniln@fhcrezrzbel.pbz
+      qvpxfba.arbu@tznvy.pbz
+      qvkvg.gnaznl1995@tznvy.pbz
+      qbzvavporwne@tznvy.pbz
+      rnmlr19@hfref.abercyl.tvguho.pbz
+      ryyn@pvapva.zrfu
+      rzvyvb.wrfhf.ynfurenf.ebzreb@aggqngn.pbz
+      rzbqbgrgu@tznvy.pbz
+      rfgure@srrqzbo.pbz
+      snatyvdhna@bccb.pbz
+      snalh@zbbafubg.pa
+      snmreyhtn@tznvy.pbz
+      trbsserlohgyre94@tznvy.pbz
+      tvtnxha@ntragznvy.gb
+      tvwf@qvtvgnyonfr.rh
+      tvg@tbggm.qr
+      tvg@ubqr.pb.hx
+      tvguhorfcerffb407@hfref.abercyl.tvguho.pbz
+      tbamnybsenapbpronyybf@Tbamnybf-Znp-zvav.ybpny
+      tert@obeqre0.pbz
+      unat.yv@gperqvg.pbz
+      unadfuvu@tznvy.pbz
+      uneevfba@zrqzrgevpfek.pbz
+      uryyb@vnaxf.pbz
+      uryyb@wrebzrvirfba.pbz
+      uryybsebzzbetna@hfref.abercyl.tvguho.pbz
+      urezrfntrag424@tznvy.pbz
+      ubgenta.crgghtnav_2024@jbkfra.rqh.va
+      vqevfnyznyxv@Vqevff-ZnpObbx-Nve.ybpny
+      vasb@qngnpunvaflfgrzf.pbz
+      vavnx@vavnxqrZnp-zvav.ybpny
+      vfenry.ybg@tznvy.pbz
+      wnxr.genprl@abvpr.arg.nh
+      wnxho.jbyavrjvpm@tznvy.pbz
+      wnavt88@tznvy.pbz
+      wnergobggbzf@tznvy.pbz
+      wnfbasnat1993@hfref.abercyl.tvguho.pbz
+      wreel@urezrf.ybpny
+      wsqhnegr09@tznvy.pbz
+      wbrmunat@bhgybbx.pbz
+      wbua.xnggraubea.crefbany@tznvy.pbz
+      wbeqnau@aivqvn.pbz
+      wbfuhn@nzbxx.arg
+      xnvlvft@lnubb.pbz.ft
+      xnzba@tnb-nv.pbz
+      xriva@syrrgfznegf.arg
+      xvafbaarr@tznvy.pbz
+      xbfgn963@tznvy.pbz
+      xfuvgvw@hfref.abercyl.tvguho.pbz
+      xhnatzv@qrrcnepuv.pbz
+      xhobyxb@hfref.abercyl.tvguho.pbz
+      ynzww622009225@tznvy.pbz
+      ynalhfrn@tznvy.pbz
+      yrforgrf28@tznvy.pbz
+      yt_329@163.pbz
+      yvdvcvat@zfu.grnz
+      yhpnf.sreanaqrf.qs@tznvy.pbz
+      yhpnf@cbyvpnfgebzq.pbz
+      yhpnfxinfve@qhpx.pbz
+      yl-jnat19@hfref.abercyl.tvguho.pbz
+      z296064@ebucppch21.znlb.rqh
+      znvy.yvnatlnat@tznvy.pbz
+      znyl.qna@tznvy.pbz
+      znepbyvivre@tznvy.pbz
+      znexiyprx@tznvy.pbz
+      znegva@gvargjbex.pbz
+      znfba@znfbagnathnl.pbz
+      zngg.fgenjoevqtr@ybghfpbyyrpgvir.nv
+      znggfuncfff@tznvy.pbz
+      zngirl.fnxuaraxb03@vpybhq.pbz
+      zoebbxf@fynpx-pbec.pbz
+      zpurezrf@rqh.qernzpngpure.nv
+      zruemnq.xnenzv@tznvy.pbz
+      zvavnqzva@fxfuvz-zvav.ybpny
+      zxbqhev73@tznvy.pbz
+      zenofnebxn@tznvy.pbz
+      zhunzznqshedna0100@tznvy.pbz
+      zinyragva@inyraflf.arg
+      zlpbqrvfonq@tznvy.pbz
+      anjsny.sneqnan@qnan.vq
+      ajnqjn@tznvy.pbz
+      cna.yhb@hop.pn
+      cnaqvat99@bhgybbx.pbz
+      cngevpxzhyyre@bhgybbx.pbz
+      cuvkkngvba@tznvy.pbz
+      cbhln.ngnrv.7@tznvy.pbz
+      chalxb8@hfref.abercyl.tvguho.pbz
+      enva@flagu.xvgpura
+      et@ercyltvey.pyho
+      ezx799@bhgybbx.pbz
+      ebo@mbyxbf.pbz
+      eboolpmtj@tznvy.pbz
+      eg.pzf012@tznvy.pbz
+      ehqvzne@bhgybbx.pbz
+      elna.xryya@tznvy.pbz
+      f0ka1px@cebgba.zr
+      fnvgnzn@fnvgnznf-ZnpObbx-Ceb.ybpny
+      fpunggrana@xntnxh.rh
+      fqrivanenlnana@nflzoy.pbz
+      frgu@encpung.pbz
+      fuhounzop09@tznvy.pbz
+      fvntr@139.pbz
+      fwd15251852316@tznvy.pbz
+      fxbby@qbpgnoynqr.pbz
+      fxljvaq5487@tznvy.pbz
+      fbatbgrahxenvar@tznvy.pbz
+      fben.oyhrfxl.qri@tznvy.pbz
+      gnef@hfref.abercyl.tvguho.pbz
+      grnz@jvyyvrcrnpbpx.pbz
+      gur3nfvp@hfref.abercyl.tvguho.pbz
+      gurhanguv@tznvy.pbz
+      gbcnmq2@tznvy.pbz
+      gexvz@izf-fbyhgvbaf.pbz
+      ghethg.xheny@tznvy.pbz
+      hcvpng@hfref.abercyl.tvguho.pbz
+      inyqn68x@tznvy.pbz
+      jra0531@tznvy.pbz
+      jramry.wnzrf.e@tznvy.pbz
+      jreareuc@hfref.abercyl.tvguho.pbz
+      jvytrsbegm@tznvy.pbz
+      kvrubat@kvawvxnat.pa
+      kjyll1991@163.pbz
+      lrzv@yntbfvagreangvbanyznexrg.pbz
+      lvatjnvmuvlvat@tznvy.pbz
+      lhagvnadvat@lnubb.pbz
+      m23@hfref.abercyl.tvguho.pbz
+      munatx1985@tznvy.pbz
+      mxtvg.fhofgnapr129@cnffznvy.pbz
+      wnvzrc.ivpragr@tznvy.pbz
+    Pynirf (181):
+      GRKG
+      fge
+      ra
+      qr
+      ncbegnqb
+      dhvrerf
+      rf
+      cnen
+      rfg
+      pvsenqn
+      zvfvba_npghny
+      cevinqn
+      beqre
+      beqrarf_erpvragrf
+      yvprapvn
+      rknpgn
+      pnawrnoyr.
+      erdhrfg.urnqref.trg
+      NABZNYBHF363K2
+      NABZNYBHF363K3
+      frpergn.
+      pbyzran
+      trarenqn
+      rfcrp
+      dhr
+      b
+      unoyneyr
+      av
+      gbqni
+      d
+      pbzb
+      nhadhr
+      Nabznybhf363K2
+      vaqrcraqvragr
+      qverpgn
+      vsg_pber
+      navqnqn.
+      fvzcyr
+      erny
+      fboer
+      1
+      NAGRF
+      Nabznybhf363K2.
+      znrfgen
+      svany.
+      han
+      zvfzn
+      ln
+      l
+      ab
+      pba
+      un
+      cebqhpve
+      cbedhr
+      fr
+      abfbgenf
+      fba
+      qverpgnzragr
+      erfcrpgb
+      genf
+      eriryn
+      creb
+      svany
+      qry
+      z
+      QRY
+      zr
+      mSPM9lT9...
+      tenghvgn
+      sbe
+      onfhen
+      ha
+      vaqvpr_benphyb
+      XI
+      ...
+      hey.frnepuCnenzf.trg
+      XI.
+      g
+      urycref
+      cbby
+      fbhepr
+      erfbyhgvba
+      qrpelc
+      fhopbzznaqf.
+      yvsrplpyr
+      riragf.
+      cebivqr
+      2.0
+      BNhgu
+      frnz
+      perqragvnyf
+      pbaarpg
+      hcfgernz
+      VQ
+      inevnag.
+      perqragvny
+      urycre
+      CXPR
+      Hfre-Ntrag
+      403
+      ehagvzr
+      erserfu
+      cbbyf
+      401
+      cevzvgvir
+      erqnpgvba
+      vfbyngvba
+      snyyonpx
+      erwrpgvba
+      cebivqre
+      grfgf.
+      gbxra
+      frghc
+      crefvfgrapr
+      fgber
+      fhopbzznaqf
+      cbby.
+      snyyonpx.
+      svyr
+      pbbxvr
+      tngr.
+      ybtva
+      t
+      R2R
+      cyhtva
+      gbbyf
+      urnygu
+      qrgrpgvba
+      rkpyhfvba
+      dhnenagvar
+      qvfcngpure
+      cvpxre
+      nhgu
+      tenag
+      sybj
+      zbqhyr
+      ebgngvba
+      perqragvny_cbby
+      oebjfre
+      2.1
+      pbafbyvqngvba.
+      znantre
+      freire
+      VZCYRZRAGNQBF
+      -
+      QR
+      Nabznybhf363
+      va
+      s
+      pynir
+      ZNANTRE
+      rkvfgragr
+      npghny
+      NCV...
+      ertrarenqn.
+      1.0n
+      erghea
+      ersnpgbe
+      SR
+      Vqragvgl
+      pbhcyrq
+      rkcbfher.
+      Erserfu
+      vafgrnq
+      ivn
+      rirel
+      ba
+      svyrf
+      vf
+      zbqr
+      fgbentr
+      cnggreaf
+      arrqrq.
+      3835020
+      3809681
+      3734756
+      3811400
+      3812337
+      3816198
+      pbasvthenqb
+      cevinqn.
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 15. ZBQRYBF TTHS ═══
+══════════════════════════════════════════════════════════════════════
+      638Z  /fgbentr/25N9-180Q/zbqrybf/senaobg.tths
+      638Z  /fgbentr/25N9-180Q/pbyzran_ovoyvbgrpn/senaobg.tths
+      638Z  /fgbentr/25N9-180Q/SenaObg_onpxhc/senaobg.tths
+      608Z  /fgbentr/25N9-180Q/zvh-oenva-onpxhc/zvh-rpbfvfgrzn/zbqryf/gvalyynzn-600ZO.tths
+      608Z  /fgbentr/25N9-180Q/ovoyvbgrpn_zvh/gbqb/zvh-rpbfvfgrzn/zbqryf/gvalyynzn-600ZO.tths
+      258Z  /fgbentr/25N9-180Q/zbqrybf/FzbyYZ2-360Z-Vafgehpg-D4_X_Z.tths
+      258Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/zbqryf/fzbyyz2-360z.tths
+       15Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-trzzn-4.tths
+       15Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-trzzn-4.tths
+       15Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-trzzn-4.tths
+       10Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-pbzznaq-e.tths
+       10Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-pbzznaq-e.tths
+       10Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-pbzznaq-e.tths
+        7Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-ocr.tths
+        7Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-ocr.tths
+        7Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-ocr.tths
+        7Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-abzvp-oreg-zbr.tths
+        7Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-abzvp-oreg-zbr.tths
+        7Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-abzvp-oreg-zbr.tths
+        6Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-djra35.tths
+        6Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-djra35.tths
+        6Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-djra35.tths
+        6Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-djra2.tths
+        6Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-djra2.tths
+        6Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-djra2.tths
+        5Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-ndhvyn.tths
+        5Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-ndhvyn.tths
+        5Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-ndhvyn.tths
+        4Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-yyz.tths
+        4Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-yyz.tths
+        4Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-yyz.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-snypba.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-snypba.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-snypba.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-arbk.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-arbk.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-arbk.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-zcg.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-zcg.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-zcg.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-2.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-2.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-tcg-2.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-ersnpg.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-ersnpg.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-ersnpg.tths
+        2Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-fgnepbqre.tths
+        2Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-fgnepbqre.tths
+        2Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-fgnepbqre.tths
+        1Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-onvpuhna.tths
+        1Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-onvpuhna.tths
+        1Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-onvpuhna.tths
+        1Z  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-pbqre.tths
+        1Z  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-pbqre.tths
+        1Z  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-qrrcfrrx-pbqre.tths
+      709X  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-cuv-3.tths
+      709X  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-cuv-3.tths
+      709X  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-cuv-3.tths
+      707X  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-fcz.tths
+      707X  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-fcz.tths
+      707X  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-yynzn-fcz.tths
+      613X  /fgbentr/25N9-180Q/yynzn.pcc/zbqryf/ttzy-ibpno-oreg-otr.tths
+      613X  /fgbentr/25N9-180Q/ZVH_BCRAPBQR/yynzn.pcc/zbqryf/ttzy-ibpno-oreg-otr.tths
+      613X  /qngn/qngn/pbz.grezhk/svyrf/ubzr/yynzn.pcc/zbqryf/ttzy-ibpno-oreg-otr.tths
+       15O  /fgbentr/25N9-180Q/cuv-3-zvav-d4_X_Z.tths
+
+══════════════════════════════════════════════════════════════════════
+═══ 16. QVFPB ═══
+══════════════════════════════════════════════════════════════════════
+  Svyrflfgrz                                                   Fvmr  Hfrq Ninvy Hfr% Zbhagrq ba
+  /qri/oybpx/cyngsbez/zgx-zfqp.0/11230000.zfqp0/ol-anzr/flfgrz 3.8T  2.4T  1.4T  64% /
+  gzcsf                                                        1.3T  1.5Z  1.3T   1% /qri
+  gzcsf                                                        1.3T     0  1.3T   0% /zag
+  gzcsf                                                        1.3T     0  1.3T   0% /ncrk
+  /qri/oybpx/cyngsbez/zgx-zfqp.0/11230000.zfqp0/ol-anzr/iraqbe 1.5T  446Z  1.0T  30% /iraqbe
+  /qri/oybpx/cyngsbez/zgx-zfqp.0/11230000.zfqp0/ol-anzr/pnpur  402Z  1.4Z  388Z   1% /pnpur
+  /qri/oybpx/qz-0                                               22T   19T  2.7T  88% /qngn
+  /qngn/zrqvn                                                   22T   19T  2.7T  88% /fgbentr/rzhyngrq
+  /qri/oybpx/ibyq/choyvp:179,129                               116T   19T   98T  17% /zag/zrqvn_ej/25N9-180Q
+  /zag/zrqvn_ej/25N9-180Q                                      116T   19T   98T  17% /fgbentr/25N9-180Q
+
+  Gbc pbafhzvqberf UBZR:
+        633Z  yynzn.pcc
+        258Z  zbqryf
+         32Z  zvh-rpbfvfgrzn
+        415X  benphyb
+        410X  us_zvh
+         94X  __clpnpur__
+         10X  .pnpur
+         10X  .pbasvt
+          7X  .grezhk
+          6X  qvntabfgvpb_i97_20260923_152935
+          6X  .zvh
+          6X  i91_5rn7pq88
+          6X  i91_q0o37632
+          6X  i91_ppr82777
+          6X  i91_on3qpss0
+          6X  i91_6915s743
+          6X  i91_503s9506
+          6X  i91_30p349o6
+          6X  i91_308snrqs
+          6X  qvntabfgvpb_i96_20260923_151917
+
+  /qngn/qngn/pbz.grezhk/svyrf/hfe:
+
+  cebbg pbagnvaref:
+    1.7T	/qngn/qngn/pbz.grezhk/svyrf/hfe/ine/yvo/cebbg-qvfgeb/pbagnvaref/qrovna
+    60X	/qngn/qngn/pbz.grezhk/svyrf/hfe/ine/yvo/cebbg-qvfgeb/pbagnvaref/hohagh
+
+══════════════════════════════════════════════════════════════════════
+═══ 17. ERQ ═══
+══════════════════════════════════════════════════════════════════════
+  Vagresnprf:
+
+  Ehgnf:
+
+  Chregbf YVFGRA:
+    Npgvir Vagrearg pbaarpgvbaf (bayl freiref)
+    Cebgb Erpi-D Fraq-D Ybpny Nqqerff           Sbervta Nqqerff         Fgngr       CVQ/Cebtenz anzr
+
+  Pbarkvbarf RFGNOYVFURQ:
+
+══════════════════════════════════════════════════════════════════════
+═══ 18. PBASVTF PBA INYBERF PBZCYRGBF ═══
+══════════════════════════════════════════════════════════════════════
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.zvh/.rai ──
+    FHCNONFR_HEY=uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb
+    TVGUHO_GBXRA=tub_8A9B2qu4LyTSNTFrlwT16YnZL9
+    NAGUEBCVP_NCV_XRL=fx-nag-ncv03
+    TEBD_NCV_XRL=tfx_H4fwGaPjpoPxz0exKknuJTqlo3SLCuPDPa61YSUmjM4nxyc86e3y
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.zvh-cnagrba-rai ──
+    rkcbeg NABA=$(png /fgbentr/25N9-180Q/ZVH_grezhk/frpergbf/cnagrba_naba.gkg)
+    rkcbeg FREIVPR_EBYR=$(png /fgbentr/25N9-180Q/ZVH_grezhk/frpergbf/cnagrba_freivpr_ebyr.gkg)
+    rkcbeg FHCN_CNAGRBA="uggcf://gcsvlocthhkfxvgfmuzx.fhcnonfr.pb"
+    
+    # Zrgnobyvfzb
+    rkcbeg NABA_ZRGNOBYVFZB=$(png /fgbentr/25N9-180Q/ZVH_grezhk/frpergbf/zrgnobyvfzb_naba.gkg 2>/qri/ahyy)
+    rkcbeg FREIVPR_ZRGNOBYVFZB=$(png /fgbentr/25N9-180Q/ZVH_grezhk/frpergbf/zrgnobyvfzb_freivpr_ebyr.gkg 2>/qri/ahyy)
+    rkcbeg FHCN_ZRGNOBYVFZB="uggcf://skzhckcjmmkawpfpclhj.fhcnonfr.pb"
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.zvh_pbasvt ──
+    ZVH_GBXRA=ZVH_5S8N6N80QSSR1701
+    JBEXRE_HEY=uggcf://zvh-grpynqb-i152.
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/.rai ──
+    NEGRZVF_FPEPCL_NHGB_VAFGNYY=snyfr
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/zrfu.rai ──
+    # zrfu.rai — pbasvthenpvóa pnaóavpn qry zrfu
+    # Npghnyvmnqb: 2026-10-23 — zrfu ebhgre nchagn n I153→I91 (shapvbany)
+    # Onpxhc cerivb: ire zrfu.rai.onx_*
+    
+    # ── Ebhgre zrfu cevapvcny (I153 → onpxraq I91) ──
+    # HEY [9] qry vairagnevb: erfcbaqr bx:gehr pba ebhgre ZVH_EBHGRE_I153
+    rkcbeg ZVH_ZRFU_HEY="uggcf://fpevcg.tbbtyr.pbz/znpebf/f/NXslpoljJxhj8Qk_ghF6jVhstozUv00yYtD5GVSODBc7H--6RQmyJFm693C_hyChsyIXbeV/rkrp"
+    rkcbeg ZVH_GBXRA="ZVH_5S8N6N80QSSR1701"
+    rkcbeg ZVH_ZRFU_CVAT_BX=1
+    rkcbeg ZVH_ZRFU_CBYY_BX=1
+    rkcbeg ZVH_ZRFU_NPGVBA="cbyy"
+    
+    # ── Raqcbvag qr ncbegrf (i270, syhwb ahrib) ──
+    # HEY [2]: erfcbaqr bx:gehr pba gvcb=ncbegr_zvh
+    # Ab errzcynmn ny zrfu ebhgre, rf cnen pbagevohpvbarf
+    rkcbeg ZVH_NCBEGR_HEY="uggcf://fpevcg.tbbtyr.pbz/znpebf/f/NXslpojT6AIJwz97ChMC5blp4T9wnDOx08vW2ckRiXbqqawC3tbaGv1xw6e7HXmDbJmM9xTZ/rkrp"
+    
+    # ── TNF ebgbf pbabpvqbf (cnen ab ibyire n nchagne nuí) ──
+    # NXslpokME4I4... → i92_zrfu → 404 (ry dhr rfgnon nagrf)
+    # NXslpokP5rOE... → i92_zrfu → 404 (ZNCN_ZVPRYVB.zq yíarn 85)
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/pnabavpb.pbas ──
+    chyfr=/qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/chyfr.fu
+    chyfr_i153=/qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/chyfr_i153.fu
+    chyfr_i249=/qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/chyfr_i249.fu
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.pybhqsyner.rai ──
+    PS_NCV_GBXRA=pshg_Lejbxmwo46ZiLb9suna4ejUGoWuLMLyuwpcFEmsC40n41s87
+    PS_NPPBHAG_VQ=5rn7pq88010o382o154q2spss00o9no3
+    E2_OHPXRG=zvh-rpbfvfgrzn-zrzbevnf
+    XI_ANZRFCNPR_VQ=4n95r12998964qr6np00q870qs7s270q
+    Q1_QNGNONFR=zvh-rpbfvfgrzn-qo
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.pybhqsyner_gbxraf.wfba ──
+    {
+      "NPPBHAG_VQ": "5rn7pq88010o382o154q2spss00o9no3",
+      "NPPRFF_XRL_VQ": "r604s0snsn17579rqqpo5nonn2251q5q",
+      "FRPERG_NPPRFF_XRL": "4rr49r3351sp7563360146q6s76nr558o8rp1407180969oo0261sr2o55268866",
+      "NPPRFF_XRL_VQ_2": "46601471ro9540o3n17335s8s6p790r7",
+      "FRPERG_NPPRFF_XRL_2": "9s93s00r84r926r07p5p8q6911s591372n0pq2qq4887495or020r5n20n652s33",
+      "E2_RAQCBVAG": "uggcf://5rn7pq88010o382o154q2spss00o9no3.e2.pybhqsynerfgbentr.pbz",
+      "ABGR": "nofbeovqb nhgbabzb qr Qevir i5.5 VQ 1NNgfl8oJtyXWuZHqAYyHzNDIgyN9HVUZ6n4DGXYec7j fva crqvegr cnfgr"
+    }
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.pybhqsyner_gbxraf_10.wfba ──
+    {"PS_NCV_GBXRAF": []}
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.mrabqb.rai ──
+    # Mrabqb nhgóabzb — qbzvavb nhgóabzb
+    MRABQB_GBXRA=gh_gbxra_mrabqb
+    # Pnqn cbqre rfphryn → qrcbfvgvba Mrabqb → QBV 10.5281/mrabqb.kkkkk — qbzvavb nhgóabzb pvgnoyr
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.rai.ps_nhgb ──
+    rkcbeg PYBHQSYNER_NCV_GBXRA="----------------------------------------"
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.argep ──
+    znpuvar uhttvatsnpr.pb ybtva bnhgu cnffjbeq us_ECnfQYWcxtdNJkifxdEPaCglXECknEXYRC
+    znpuvar tvguho.pbz ybtva zvh cnffjbeq tub_8A9B2qu4LyTSNTFrlwT16YnZL9I8lu3kCfze
+    znpuvar hef.rneguqngn.anfn.tbi ybtva gbxra cnffjbeq rlW0rKNvBvWXI1DvYPWipzyanJ4vBvWSLKW0nTEuqTRtGT9anJ4vYPWmnJpvBvWyMTkdq3EjqJWeMKyso3OmVvjvLJkaVwbvHyZlAGLvsD.rlW0rKOyVwbvIKAypvVfVaIcMPV6VzRmAwx2ZlVfVzI4pPV6ZGp5AQp2AQZ3ZljvnJS0VwbkAmt5AGtjZmpmYPWcp3ZvBvWbqUEjpmbiY3Ilpl5yLKW0nTEuqTRhozSmLF5ao3LvYPWcMTIhqTy0rI9jpz92nJEypvV6VzIxoS9ipUZvYPWuL3VvBvWyMTjvYPWup3A1pzShL2IsoTI2MJjvBwA9.n1zghhe-2dRneNpT_VRW5Hs_IO85mLilbtr8uh93jZyoEv4yPHBD8cq8Fh42JnMht27vLnUfHD1JgbFbTY96s-WyBJj4gp3ayjb0NjTt_ZoH8gqlrBFYkYX60ziA9T1fMoOHnBLa1DSfnHhwsgGniP0xQIBGVHRaw0wIHQhT1bcJJgEVnlJUhTgHxwNUbbIprdUnSyTeZLtqS0IUQF__vVAIH72dNeHRFLIKJxMeFUWBJCMS--PvUJ7_EW37s3xXEh49PmxMF4PVvJ0ZhUOwqt0z0P6RtefkyUFGcrl3xwfXl59EqdPHAumh1fQDGBvl2PreByDMTSf1YMmw2EQy8j
+    znpuvar hef.rneguqngn.anfn.tbi ybtva gbxra cnffjbeq rlW0rKNvBvWXI1DvYPWipzyanJ4vBvWSLKW0nTEuqTRtGT9anJ4vYPWmnJpvBvWyMTkdq3EjqJWeMKyso3OmVvjvLJkaVwbvHyZlAGLvsD.rlW0rKOyVwbvIKAypvVfVaIcMPV6Vz1cL2IfnJ8vYPWyrUNvBwR3BGD3AwD2AwpfVzyuqPV6ZGp4BGH4ZQL2AljvnKAmVwbvnUE0pUZ6Yl91paZhMJSlqTuxLKEuYz5up2RhM292VvjvnJEyoaEcqUyspUWiqzyxMKVvBvWyMTkso3OmVvjvLJAlVwbvMJEfVvjvLKAmqKWuozAyK2kyqzIfVwbmsD.msaC3LO7e_9N-RkO-wmOgblIUHuHIwhLc-b2DLcKW_hriJWTi4DhhffVPhn-57amZAyyoPPSSDdA5AI2EdyVYS_gPud46Q9aSvJ5uC6pc0HGysLSLuKeByofNa0RskPy2I0ifnUil8i2T2J-xfKHRta5TIsWlKGIE0kMSJjFnhKNeJDFWE8OS0js_8tRZj8pk2zjFvxIb8sStzjblKL6MofbXVWZz8itcl-PWQ_5Ftdh5tLec8Kt8Q3-IEvAdaSWzO9bS6KIVJPTktDDvtzGWbZuFxfVSnEUqJHfsgB48vs5n-0eT5QF3S7Ry56VTKPQPgeso8Mw_waQm03KRxEv_N
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.aczep ──
+    nyybj-fpevcgf=@naguebcvp-nv/pynhqr-pbqr
+    cersvk=/qngn/qngn/pbz.grezhk/svyrf/ubzr/.acz-tybony
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.tvg-perqragvnyf ──
+    uggcf://hfre:us_jBvdcZKDQNPdUvERPMQIYasjbEiPcycweH@uhttvatsnpr.pb
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.tvgpbasvt ──
+    [hfre]
+    	rznvy = Wnvzr393@tznvy.pbz
+    	anzr = Wnvzr363
+    [chfu]
+    	nhgbFrghcErzbgr = gehr
+    [uggc]
+    	cbfgOhssre = 524288000
+    	ybjFcrrqYvzvg = 1000
+    	ybjFcrrqGvzr = 300
+    [pber]
+    	pbzcerffvba = 0
+    [fnsr]
+    	qverpgbel = /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn
+    [perqragvny]
+    	urycre = fgber
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.jtrg-ufgf ──
+    # UFGF 1.0 Xabja Ubfgf qngnonfr sbe TAH Jtrg.
+    # Rqvg ng lbhe bja evfx.
+    # <ubfganzr>	<cbeg>	<vapy. fhoqbznvaf>	<perngrq>	<znk-ntr>
+    uhttvatsnpr.pb	0	0	1793075578	31536000
+    tvguho.pbz	0	1	1793106725	31536000
+
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/.onfu_uvfgbel ──
+    rpub "=== Ehgnf /dhrhr ra ry póqvtb ==="
+    terc -a '"/dhrhr"' ~/benphyb_nfx.cl
+    terc -a 'fgnegfjvgu("/dhrhr")' ~/benphyb_nfx.cl
+    # 5. Ervavpvne beáphyb
+    rpub ""
+    rpub "=== Ervavpvne beáphyb ==="
+    cxvyy -9 -s "benphyb_nfx.cl" 2>/qri/ahyy
+    fyrrc 2
+    pq ~ && abuhc clguba3 ~/benphyb_nfx.cl --qnrzba >> /fgbentr/25N9-180Q/benphyb/benphyb_nfx.ybt 2>&1 &
+    fyrrc 3
+    phey -f -b /qri/ahyy -j "  /urnygu → UGGC %{uggc_pbqr}\a" --znk-gvzr 5 uggc://127.0.0.1:8771/urnygu
+    # 6. GRFG raq-gb-raq
+    rpub ""
+    rpub "=== GRFG raq-gb-raq ==="
+    rpub "--- 1. TRG /dhrhr (qror rfgne inpíb) ---"
+    phey -f uggc://127.0.0.1:8771/dhrhr --znk-gvzr 5 | clguba3 -z wfba.gbby
+    rpub ""
+    rpub "--- 2. CBFG /dhrhr (cvat) ---"
+    E=$(phey -f -K CBFG uggc://127.0.0.1:8771/dhrhr \
+      -U 'Pbagrag-Glcr: nccyvpngvba/wfba' \
+      -q '{"nppvba":"cvat","cnenzf":{},"bevtra":"grfg"}' --znk-gvzr 5)
+    rpub "$E" | clguba3 -z wfba.gbby
+    DVQ=$(rpub "$E" | clguba3 -p "vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva).trg('vq',''))" 2>/qri/ahyy)
+    rpub "VQ: $DVQ"
+    rpub ""
+    rpub "--- 3. TRG /dhrhr/$DVQ (qror rfgne dhrhrq) ---"
+    phey -f "uggc://127.0.0.1:8771/dhrhr/$DVQ" --znk-gvzr 5 | clguba3 -z wfba.gbby
+    rpub ""
+    rpub "--- 4. Rwrphgne jbexre ---"
+    clguba3 ~/benphyb/dhrhr_jbexre.cl
+    gnvy -2 ~/benphyb/dhrhr_jbexre.ybt
+    rpub ""
+    rpub "--- 5. TRG /dhrhr/$DVQ (qror rfgne qbar) ---"
+    phey -f "uggc://127.0.0.1:8771/dhrhr/$DVQ" --znk-gvzr 5 | clguba3 -z wfba.gbby
+    rpub ""
+    rpub "--- 6. TRG /dhrhr (qror yvfgne 1 qbar) ---"
+    phey -f uggc://127.0.0.1:8771/dhrhr --znk-gvzr 5 | clguba3 -z wfba.gbby
+    OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    CBEG=$(rpub "$OBER_HEY" | terc -bR '[0-9]+$')
+    OBER="uggc://ober.cho:$CBEG"
+    rpub "Ober: $OBER"
+    rpub ""
+    rpub "=== GRFG ERZBGB: pbzb yb uneín ha abqb Pynhqr ==="
+    rpub "--- 1. Abqb raiín cvat (5f, ab oybdhrn) ---"
+    E=$(phey -f -K CBFG "$OBER/dhrhr" \
+      -U 'Pbagrag-Glcr: nccyvpngvba/wfba' \
+      -q '{"nppvba":"cvat","cnenzf":{},"bevtra":"abqb_erzbgb_grfg"}' --znk-gvzr 10)
+    rpub "$E" | clguba3 -z wfba.gbby
+    DVQ=$(rpub "$E" | clguba3 -p "vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva).trg('vq',''))" 2>/qri/ahyy)
+    rpub ""
+    rpub "--- 2. Abqb fr in. Rfcren 2 zva ny peba jbexre ---"
+    rpub "Rfcrenaqb 130f..."
+    fyrrc 130
+    rpub ""
+    rpub "--- 3. Abqb (bgen frfvóa) pbafhygn ry erfhygnqb ---"
+    phey -f "$OBER/dhrhr/$DVQ" --znk-gvzr 10 | clguba3 -z wfba.gbby
+    rpub ""
+    rpub "--- 4. Grfg pba /nfx (ry pnfb erny, gneqn 60-90f creb AB oybdhrn) ---"
+    E2=$(phey -f -K CBFG "$OBER/dhrhr" \
+      -U 'Pbagrag-Glcr: nccyvpngvba/wfba' \
+      -q '{"nppvba":"nfx","cnenzf":{"certhagn":"erfcbaqr fbyb: BX"},"bevtra":"abqb_erzbgb_grfg"}' --znk-gvzr 10)
+    rpub "$E2" | clguba3 -z wfba.gbby
+    NFX_VQ=$(rpub "$E2" | clguba3 -p "vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva).trg('vq',''))" 2>/qri/ahyy)
+    rpub "Nfx VQ: $NFX_VQ"
+    rpub "Ry abqb ln chrqr vefr. Pbafhygne ra 2-3 zva pba:"
+    rpub "  phey $OBER/dhrhr/$NFX_VQ"
+    rpub ""
+    rpub "--- 5. Rfcrene jbexre (2 zva) ---"
+    fyrrc 130
+    rpub ""
+    rpub "--- 6. Erfhygnqb qry /nfx ---"
+    phey -f "$OBER/dhrhr/$NFX_VQ" --znk-gvzr 15 | clguba3 -z wfba.gbby
+    rpub ""
+    rpub "=== RFGNQB SVANY PBAFBYVQNQB ==="
+    rpub "Freivpvbf ybpnyrf:"
+    sbe c va 8771 8766 8765 8080; qb     pnfr $c va         8771) r="/urnygu" ;; 8766) r="/" ;; 8765) r="/urnygu" ;; 8080) r="/i1/zbqryf" ;;     rfnp;     phey -f -b /qri/ahyy -j "  :$c → %{uggc_pbqr} ra %{gvzr_gbgny}f\a" --znk-gvzr 5 "uggc://127.0.0.1:$c$r"; qbar
+    rpub "Ober: $OBER ($(cterc -p -s 'ober ybpny') cebpf)"
+    rpub "Dhrhr: $(fdyvgr3 ~/benphyb/dhrhr.qo 'FRYRPG PBHAG(*) SEBZ dhrhr;' 2>/qri/ahyy || rpub '?') óeqrarf gbgnyrf"
+    rpub "Pebaf npgvibf:"
+    pebagno -y | terc -pR "^\*/|^0 " | knetf rpub "  gbgny:"
+    OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    CBEG=$(rpub "$OBER_HEY" | terc -bR '[0-9]+$')
+    rpub "Ober HEY thneqnqn: $OBER_HEY (chregb $CBEG)"
+    rpub ""
+    rpub "=== 1. ¿Ry cebprfb ober fvthr ivib l pba dhé chregb? ==="
+    cterc -ns "ober ybpny"
+    rpub ""
+    rpub "=== 2. ¿Dhé qrihryir ry urnygu iín Ober? (enj, fva cnefr) ==="
+    phey -i --znk-gvzr 10 "$OBER_HEY/urnygu" 2>&1 | gnvy -20
+    rpub ""
+    rpub "=== 3. ¿L ry /dhrhr qverpgb? (enj) ==="
+    phey -f --znk-gvzr 10 "$OBER_HEY/dhrhr" | urnq -p 300
+    rpub ""
+    rpub "=== 4. ¿L ry CBFG /dhrhr? (enj, pba -i) ==="
+    phey -i -K CBFG "$OBER_HEY/dhrhr"   -U 'Pbagrag-Glcr: nccyvpngvba/wfba'   -q '{"nppvba":"cvat","bevtra":"qvnt"}'   --znk-gvzr 10 2>&1 | gnvy -20
+    rpub ""
+    rpub "=== 5. ¿Ry chregb qry ober_bhg.ybt pbvapvqr pba ghaary_hey? ==="
+    terc -bR 'erzbgr_cbeg=[0-9]+' ~/benphyb/ober_bhg.ybt 2>/qri/ahyy | gnvy -3
+    rpub "ober_hey.gkg: $OBER_HEY"
+    rpub ""
+    rpub "=== 6. ¿Ry beáphyb ybpny erfcbaqr n /dhrhr? ==="
+    phey -f -b /qri/ahyy -j "  ybpny :8771/dhrhr → %{uggc_pbqr}\a" --znk-gvzr 5 uggc://127.0.0.1:8771/dhrhr
+    rpub ""
+    rpub "=== 7. ¿L /urnygu ybpny? ==="
+    phey -f -b /qri/ahyy -j "  ybpny :8771/urnygu → %{uggc_pbqr}\a" --znk-gvzr 5 uggc://127.0.0.1:8771/urnygu
+    # 1. Zngne Ober npghny
+    cxvyy -9 -s "ober ybpny" 2>/qri/ahyy
+    fyrrc 3
+    # 2. Erynamne nchagnaqb ny beáphyb
+    pq ~
+    AB_PBYBE=1 fgqohs -bY -rY abuhc ober ybpny 8771 --gb ober.cho > ~/benphyb/ober_bhg.ybt 2>&1 &
+    fyrrc 8
+    # 3. Rkgenre chregb ahrib
+    CBEG=$(clguba3 -p "
+    vzcbeg er
+    g = bcra('/qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb/ober_bhg.ybt', reebef='vtaber').ernq()
+    g = er.fho(e'\k1o\[[0-9;]*[n-mN-M]', '', g)
+    z = er.frnepu(e'erzbgr_cbeg=(\q+)', g)
+    cevag(z.tebhc(1) vs z ryfr '')
+    " 2>/qri/ahyy)
+    vs [ -a "$CBEG" ]; gura     ARJ_HEY="uggc://ober.cho:$CBEG";     rpub "$ARJ_HEY" > ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg;     rpub "Ahrin HEY: $ARJ_HEY";     rpub "";     rpub "=== Irevsvpnpvóa ===";     phey -f -b /qri/ahyy -j "  /urnygu    → %{uggc_pbqr}\a" --znk-gvzr 10 "$ARJ_HEY/urnygu";     phey -f -b /qri/ahyy -j "  /dhrhr TRG → %{uggc_pbqr}\a" --znk-gvzr 10 "$ARJ_HEY/dhrhr";     phey -f -b /qri/ahyy -j "  CBFG /dhrhr → %{uggc_pbqr}\a" --znk-gvzr 10 -K CBFG "$ARJ_HEY/dhrhr"       -U 'Pbagrag-Glcr: nccyvpngvba/wfba' -q '{"nppvba":"cvat","bevtra":"cbfg_svk"}'; ryfr     rpub "❌ Ab fr boghib chregb. Ire ybt:";     gnvy -10 ~/benphyb/ober_bhg.ybt; sv
+    # 4. Npghnyvmne ober_thneq.fu cnen dhr fvrzcer hfr :8771
+    frq -v 'f/ober ybpny 8765/ober ybpny 8771/t' ~/benphyb/ober_thneq.fu
+    rpub ""
+    rpub "=== ober_thneq.fu npghnyvmnqb ==="
+    terc "ober ybpny" ~/benphyb/ober_thneq.fu
+    OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    rpub "Ober: $OBER_HEY"
+    rpub ""
+    rpub "=== 1. Abqb erzbgb raiín cvat ==="
+    E=$(phey -f -K CBFG "$OBER_HEY/dhrhr" \
+      -U 'Pbagrag-Glcr: nccyvpngvba/wfba' \
+      -q '{"nppvba":"cvat","cnenzf":{},"bevtra":"abqb_erzbgb"}' --znk-gvzr 15)
+    rpub "$E" | clguba3 -z wfba.gbby 2>/qri/ahyy || rpub "❌ Ab rf WFBA: $E"
+    DVQ=$(rpub "$E" | clguba3 -p "vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva).trg('vq',''))" 2>/qri/ahyy)
+    rpub "VQ: $DVQ"
+    rpub ""
+    rpub "=== 2. Pbafhygne vazrqvngnzragr (dhrhrq) ==="
+    phey -f "$OBER_HEY/dhrhr/$DVQ" --znk-gvzr 10 | clguba3 -z wfba.gbby 2>/qri/ahyy
+    rpub ""
+    rpub "=== 3. Rfcrene 2 zva ny peba jbexre ==="
+    fyrrc 130
+    rpub ""
+    rpub "=== 4. Pbafhygne qr ahrib (qbar) ==="
+    phey -f "$OBER_HEY/dhrhr/$DVQ" --znk-gvzr 10 | clguba3 -z wfba.gbby 2>/qri/ahyy
+    rpub ""
+    rpub "=== 5. Grfg pba /nfx (ry pnfb erny) ==="
+    E2=$(phey -f -K CBFG "$OBER_HEY/dhrhr" \
+      -U 'Pbagrag-Glcr: nccyvpngvba/wfba' \
+      -q '{"nppvba":"nfx","cnenzf":{"certhagn":"erfcbaqr fbyb: BX"},"bevtra":"abqb_erzbgb"}' --znk-gvzr 15)
+    rpub "$E2" | clguba3 -z wfba.gbby 2>/qri/ahyy
+    NFX_VQ=$(rpub "$E2" | clguba3 -p "vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva).trg('vq',''))" 2>/qri/ahyy)
+    rpub "Nfx VQ: $NFX_VQ"
+    rpub "Ry abqb ln chrqr vefr. Pbafhygne ra 2-3 zva pba:"
+    rpub "  phey $OBER_HEY/dhrhr/$NFX_VQ"
+    rpub ""
+    rpub "=== 6. Rfcrene jbexre (2 zva) ==="
+    fyrrc 130
+    rpub ""
+    rpub "=== 7. Erfhygnqb qry /nfx ==="
+    phey -f "$OBER_HEY/dhrhr/$NFX_VQ" --znk-gvzr 15 | clguba3 -z wfba.gbby 2>/qri/ahyy
+    png >> ~/benphyb/YRPPVBARF.zq << 'RBS'
+    
+    ## Svk Ober: nchagne ny beáphyb, ab ny cebkl — 2026-11-02
+    
+    **Ceboyrzn:** Ober rkcbaín `:8765` (zvh_erfvyvragr), dhr fbyb gvrar `/nfx` pbzb cebkl. `/dhrhr` qnon 404/405 iín Ober nhadhr `:8771/dhrhr` shapvbanon ybpny.
+    
+    **Pnhfn:** `ober ybpny 8765` ra ry neenadhr. Ry 8765 rf zvh_erfvyvragr, ab ry beáphyb.
+    
+    **Svk:** `ober ybpny 8771` (beáphyb qverpgb).
+    - `zvh_erfvyvragr :8765` cvreqr fragvqb pbzb cebkl nuben dhr ry beáphyb gvrar gbqb
+    - Ober nchagn ny beáphyb qverpgnzragr
+    - ober_thneq.fu npghnyvmnqb pba `frq -v 'f/8765/8771/t'`
+    
+    **Iragnwn:** ha fbyb fnygb ra yhtne qr qbf (Ober → beáphyb, fva vagrezrqvnevb).
+    **Evrftb ryvzvanqb:** fv zvh_erfvyvragr zhrer creb beáphyb ivir, Ober fvthr shapvbanaqb.
+    
+    **Yrppvóa:** irevsvpne n dhé chregb nchagn Ober pba `phey $OBER_HEY/urnygu` (qrihryir `cbeg: KKKK`). Fv ry `cbeg` ab pbvapvqr pba ry freivpvb dhr dhvrerf rkcbare, rf dhr Ober nchagn ny rdhvibpnqb.
+    RBS
+    
+    rpub "✅ qbphzragnqb"
+    # Irevsvpne gbqb
+    rpub ""
+    rpub "=== RFGNQB SVANY ==="
+    OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    rpub "Ober: $OBER_HEY"
+    phey -f -b /qri/ahyy -j "  /urnygu    → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER_HEY/urnygu"
+    phey -f -b /qri/ahyy -j "  /dhrhr TRG → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER_HEY/dhrhr"
+    phey -f -b /qri/ahyy -j "  CBFG /dhrhr → %{uggc_pbqr}\a" --znk-gvzr 10 -K CBFG "$OBER_HEY/dhrhr" -U 'Pbagrag-Glcr: nccyvpngvba/wfba' -q '{"nppvba":"cvat"}'
+    rpub ""
+    rpub "Dhrhr ebjf: $(fdyvgr3 ~/benphyb/dhrhr.qo 'FRYRPG PBHAG(*) SEBZ dhrhr;' 2>/qri/ahyy)"
+    # Npghnyvmne ober_thneq.fu pba chregb svwb
+    frq -v 'f|ober ybpny 8771 --gb ober.cho|ober ybpny 8771 --gb ober.cho --cbeg 45000|t' ~/benphyb/ober_thneq.fu
+    terc "ober ybpny" ~/benphyb/ober_thneq.fu
+    # Erynamne pba chregb svwb
+    cxvyy -9 -s "ober ybpny" 2>/qri/ahyy
+    fyrrc 3
+    pq ~
+    AB_PBYBE=1 fgqohs -bY -rY abuhc ober ybpny 8771 --gb ober.cho --cbeg 45000 > ~/benphyb/ober_bhg.ybt 2>&1 &
+    fyrrc 8
+    # Irevsvpne dhr boghib ry chregb 45000 (fv ab, bgeb cebprfb yb gvrar)
+    gnvy -5 ~/benphyb/ober_bhg.ybt | terc -bR 'erzbgr_cbeg=[0-9]+'
+    # Grfg
+    phey -f -b /qri/ahyy -j "ober.cho:45000/urnygu → %{uggc_pbqr}\a" --znk-gvzr 10 "uggc://ober.cho:45000/urnygu"
+    phey -f -b /qri/ahyy -j "ober.cho:45000/dhrhr → %{uggc_pbqr}\a" --znk-gvzr 10 "uggc://ober.cho:45000/dhrhr"
+    sbe c va 45000 45001 45002 45003 45004 45005; qb     rpub "Cebonaqb chregb $c...";     cxvyy -9 -s "ober ybpny" 2>/qri/ahyy; fyrrc 2;     AB_PBYBE=1 fgqohs -bY -rY abuhc ober ybpny 8771 --gb ober.cho --cbeg $c > /gzc/ober_$c.ybt 2>&1 &     fyrrc 5;     vs terc -d "yvfgravat ng" /gzc/ober_$c.ybt 2>/qri/ahyy; gura         rpub "✅ Chregb $c shapvban: uggc://ober.cho:$c";         rpub "uggc://ober.cho:$c" > ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg;         oernx;     sv; qbar
+    # 1. Ire ry reebe erny qry ober pba --cbeg
+    rpub "=== Reebe qry ober pba --cbeg 45000 ==="
+    png ~/benphyb/ober_bhg.ybt 2>/qri/ahyy | gnvy -10
+    # 2. Erfgnhene ober pba chregb NYRNGBEVB (yb dhr shapvbanon)
+    cxvyy -9 -s "ober ybpny" 2>/qri/ahyy
+    fyrrc 3
+    # Npghnyvmne ober_thneq.fu: dhvgne --cbeg
+    frq -v 'f| --cbeg 45000||t' ~/benphyb/ober_thneq.fu
+    frq -v 'f| --cbeg [0-9]*||t' ~/benphyb/ober_thneq.fu
+    terc "ober ybpny" ~/benphyb/ober_thneq.fu
+    # 3. Neenapne l rkgenre HEY
+    pq ~
+    AB_PBYBE=1 fgqohs -bY -rY abuhc ober ybpny 8771 --gb ober.cho > ~/benphyb/ober_bhg.ybt 2>&1 &
+    fyrrc 8
+    CBEG=$(clguba3 -p "
+    vzcbeg er
+    g = bcra('/qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb/ober_bhg.ybt', reebef='vtaber').ernq()
+    g = er.fho(e'\k1o\[[0-9;]*[n-mN-M]', '', g)
+    z = er.frnepu(e'erzbgr_cbeg=(\q+)', g)
+    cevag(z.tebhc(1) vs z ryfr '')
+    " 2>/qri/ahyy)
+    vs [ -m "$CBEG" ]; gura     rpub "❌ Ab fr boghib chregb";     png ~/benphyb/ober_bhg.ybt;     rkvg 1; sv
+    OBER_HEY="uggc://ober.cho:$CBEG"
+    rpub "Ober: $OBER_HEY"
+    rpub "$OBER_HEY" > ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg
+    # Irevsvpne
+    phey -f -b /qri/ahyy -j "  /urnygu    → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER_HEY/urnygu"
+    phey -f -b /qri/ahyy -j "  /dhrhr TRG → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER_HEY/dhrhr"
+    # 4. Rfpevove yn HEY ra ha nepuvib dhr ry peba qry zvh-rpbfvfgrzn chfurn n TvgUho
+    # Ry peba rkvfgragr chfurn qngn/rfgnqb_crefvfgragr.wfba pnqn uben
+    clguba3 << CLRBS
+    vzcbeg wfba
+    sebz cnguyvo vzcbeg Cngu
+    sebz qngrgvzr vzcbeg qngrgvzr, gvzrmbar
+    
+    c = Cngu.ubzr() / "zvh-rpbfvfgrzn/qngn/rfgnqb_crefvfgragr.wfba"
+    gel:
+        q = wfba.ybnqf(c.ernq_grkg()) vs c.rkvfgf() ryfr {}
+    rkprcg:
+        q = {}
+    
+    q["ober_ghaary"] = {
+        "hey": "$OBER_HEY",
+        "chregb": "$CBEG",
+        "npghnyvmnqb_gf": qngrgvzr.abj(gvzrmbar.hgp).vfbsbezng(),
+        "abgn": "HEY pnzovn ny ervavpvne ober. TvgUho peba chfurn pnqn uben."
+    }
+    q["qrfphoevzvragb_ober"] = "uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/rfgnqb_crefvfgragr.wfba"
+    c.jevgr_grkg(wfba.qhzcf(q, vaqrag=2))
+    cevag(s"✅ HEY rfpevgn ra {c}")
+    CLRBS
+    
+    # 5. Irevsvpne dhr ry peba qr tvg yb chfurn
+    rpub ""
+    rpub "=== Peba qr tvg ==="
+    pebagno -y | terc "tvg nqq.*rfgnqb_crefvfgragr" || rpub "  ⚠️ peba ab rkvfgr, irevsvpne"
+    # 6. Sbemne ha chfu nuben (cnen dhr rfgé qvfcbavoyr qr vazrqvngb)
+    rpub ""
+    rpub "=== Sbemnaqb chfu n TvgUho ==="
+    pq ~/zvh-rpbfvfgrzn
+    tvg nqq qngn/rfgnqb_crefvfgragr.wfba 2>/qri/ahyy
+    tvg pbzzvg -z "ober: HEY $OBER_HEY" 2>/qri/ahyy || rpub "  (fva pnzovbf b pbzzvg snyyó)"
+    tvg chfu bevtva znva 2>&1 | gnvy -3
+    # 7. Irevsvpne dhr TvgUho yb gvrar (gneqn 10-30f ra cebcntne)
+    rpub ""
+    rpub "=== Rfcrenaqb cebcntnpvóa TvgUho (30f) ==="
+    fyrrc 30
+    rpub "Irevsvpnaqb:"
+    phey -f --znk-gvzr 10 "uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/rfgnqb_crefvfgragr.wfba" |   clguba3 -p "
+    vzcbeg flf, wfba
+    gel:
+        q = wfba.ybnq(flf.fgqva)
+        o = q.trg('ober_ghaary', {})
+        cevag(s'  ✅ HEY ra TvgUho: {o.trg(\"hey\",\"AB\")}')
+        cevag(s'  chregb: {o.trg(\"chregb\",\"AB\")}')
+        cevag(s'  npghnyvmnqb: {o.trg(\"npghnyvmnqb_gf\",\"AB\")}')
+    rkprcg Rkprcgvba nf r:
+        cevag(s'  ❌ Ab qvfcbavoyr núa: {r}')
+    "
+    pq ~/zvh-rpbfvfgrzn
+    rpub "=== 1. Rfgnqb npghny ==="
+    tvg ybt --baryvar -3
+    rpub "--- if bevtva ---"
+    tvg ybt bevtva/znva..URNQ --baryvar 2>/qri/ahyy || rpub "  (ab unl qvsrerapvn ybpny)"
+    rpub ""
+    rpub "=== 2. Chyy pba eronfr ==="
+    tvg chyy --eronfr bevtva znva 2>&1 | gnvy -5
+    rpub ""
+    rpub "=== 3. Irevsvpne dhr yn HEY rfgá ra ry nepuvib ==="
+    clguba3 -p "
+    vzcbeg wfba
+    q = wfba.ybnq(bcra('qngn/rfgnqb_crefvfgragr.wfba'))
+    o = q.trg('ober_ghaary', {})
+    cevag(s'  ober_ghaary.hey: {o.trg(\"hey\",\"AB\")}')
+    cevag(s'  chregb: {o.trg(\"chregb\",\"AB\")}')
+    cevag(s'  npghnyvmnqb: {o.trg(\"npghnyvmnqb_gf\",\"AB\")}')
+    "
+    rpub ""
+    rpub "=== 4. Irevsvpne dhr AB unl gbxraf ra ry pbzzvg ==="
+    tvg qvss URNQ~1 -- qngn/rfgnqb_crefvfgragr.wfba | terc -R "us_|tfx_|fx-|tuc_|NVmnFl" &&   rpub "  ❌ UNL GBXRAF — nobegne" || rpub "  ✅ fva gbxraf"
+    rpub ""
+    rpub "=== 5. Chfu ==="
+    tvg chfu bevtva znva 2>&1 | gnvy -5
+    rpub ""
+    rpub "=== 6. Rfcrene cebcntnpvóa TvgUho (30f) ==="
+    fyrrc 30
+    rpub "=== Irevsvpne ra TvgUho enj ==="
+    phey -f --znk-gvzr 10 "uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/rfgnqb_crefvfgragr.wfba" |   clguba3 -p "
+    vzcbeg flf, wfba
+    gel:
+        q = wfba.ybnq(flf.fgqva)
+        o = q.trg('ober_ghaary', {})
+        vs o.trg('hey'):
+            cevag(s'  ✅ HEY ra TvgUho: {o[\"hey\"]}')
+            cevag(s'     chregb: {o.trg(\"chregb\",\"?\")}')
+            cevag(s'     npghnyvmnqb: {o.trg(\"npghnyvmnqb_gf\",\"?\")}')
+        ryfr:
+            cevag('  ⚠️ WFBA iáyvqb creb fva ober_ghaary')
+            cevag('  xrlf:', yvfg(q.xrlf())[:5])
+    rkprcg Rkprcgvba nf r:
+        cevag(s'  ❌ Ab WFBA: {r}')
+    "
+    pq ~/zvh-rpbfvfgrzn
+    rpub "=== 1. ¿Dhé gvrar ry pbzzvg ra TvgUho ERNYZRAGR? (ab enj, ab pnpur) ==="
+    tvg fubj bevtva/znva:qngn/rfgnqb_crefvfgragr.wfba | clguba3 -p "
+    vzcbeg flf, wfba
+    q = wfba.ybnq(flf.fgqva)
+    o = q.trg('ober_ghaary')
+    vs o:
+        cevag(s'  ✅ ober_ghaary cerfragr: {o.trg(\"hey\")}')
+    ryfr:
+        cevag(s'  ❌ ober_ghaary AB rfgá. xrlf: {yvfg(q.xrlf())[:8]}')
+    "
+    rpub ""
+    rpub "=== 2. ¿Dhé gvrar ry nepuvib YBPNY nuben? ==="
+    clguba3 -p "
+    vzcbeg wfba
+    q = wfba.ybnq(bcra('qngn/rfgnqb_crefvfgragr.wfba'))
+    o = q.trg('ober_ghaary')
+    vs o:
+        cevag(s'  ✅ ybpny gvrar: {o.trg(\"hey\")}')
+    ryfr:
+        cevag(s'  ❌ ybpny AB gvrar. xrlf: {yvfg(q.xrlf())[:8]}')
+    "
+    rpub ""
+    rpub "=== 3. ¿Dhé fpevcg ertraren rfgnqb_crefvfgragr.wfba? ==="
+    terc -eya "rfgnqb_crefvfgragr.wfba" ~/zvh-rpbfvfgrzn --vapyhqr="*.cl" --vapyhqr="*.fu" 2>/qri/ahyy | urnq -5
+    rpub ""
+    rpub "=== 4. Peba qr tvg (¿dhé nepuvibf nñnqr?) ==="
+    pebagno -y | terc "tvg nqq"
+    rpub ""
+    rpub "=== 5. Perne nepuvib vaqrcraqvragr dhr ANQN ertraren ==="
+    OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    CBEG=$(rpub "$OBER_HEY" | terc -bR '[0-9]+$')
+    clguba3 << CLRBS
+    vzcbeg wfba
+    sebz cnguyvo vzcbeg Cngu
+    sebz qngrgvzr vzcbeg qngrgvzr, gvzrmbar
+    
+    c = Cngu.ubzr() / "zvh-rpbfvfgrzn/qngn/ober_hey.wfba"
+    c.cnerag.zxqve(rkvfg_bx=Gehr)
+    qngn = {
+        "hey": "$OBER_HEY",
+        "chregb": "$CBEG",
+        "cebgbpbyb": "uggc_gpc_enj",
+        "freivqbe": "ober.cho",
+        "rkcbar": "uggc://127.0.0.1:8771 (benphyb pbzcyrgb)",
+        "raqcbvagf": ["/urnygu", "/dhrhr", "/dhrhr/:vq"],
+        "npghnyvmnqb_gf": qngrgvzr.abj(gvzrmbar.hgp).vfbsbezng(),
+        "abgn": "Nepuvib vaqrcraqvragr. ober_thneq.fu yb npghnyvmn. AB yb ertraren avatha bgeb fpevcg."
+    }
+    c.jevgr_grkg(wfba.qhzcf(qngn, vaqrag=2))
+    cevag(s"✅ Pernqb {c}")
+    CLRBS
+    
+    png qngn/ober_hey.wfba
+    rpub ""
+    rpub "=== 6. Nñnqve ober_hey.wfba ny peba qr tvg ==="
+    # Onpxhc pebagno
+    pebagno -y > /fgbentr/25N9-180Q/benphyb/pebagno_onpxhc_$(qngr +%f).gkg 2>/qri/ahyy
+    # Errzcynmne ry peba qr tvg cnen nñnqve NZOBF nepuvibf
+    ( pebagno -y 2>/qri/ahyy | terc -i "tvg nqq qngn/rfgnqb_crefvfgragr";   rpub '0 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/ober_hey.wfba && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1' ) | pebagno -
+    rpub "Peba qr tvg npghnyvmnqb:"
+    pebagno -y | terc "tvg nqq"
+    rpub ""
+    rpub "=== 7. Nñnqve hcqngr qr ober_hey.wfba n ober_thneq.fu ==="
+    # Ny svany qry fpevcg, rfpevove ry ahrib nepuvib pnqn irm dhr neenapn ober
+    clguba3 << 'CLRBS'
+    sebz cnguyvo vzcbeg Cngu
+    s = Cngu.ubzr() / "benphyb/ober_thneq.fu"
+    fep = s.ernq_grkg()
+    
+    # Ohfpne ry oybdhr qbaqr fr thneqn yn HEY
+    napube = 'rpub "$ARJ_HEY" > "$HEYSVYR"'
+    cngpu = '''rpub "$ARJ_HEY" > "$HEYSVYR"
+    # Rfpevove gnzovra ober_hey.wfba ra ry ercb (cnen qrfphoevzvragb ivn TvgUho)
+    OBER_ERCB="$UBZR/zvh-rpbfvfgrzn/qngn/ober_hey.wfba"
+    CBEG_BAYL=$(rpub "$ARJ_HEY" | terc -bR '[0-9]+$')
+    clguba3 -p "
+    vzcbeg wfba, flf
+    sebz qngrgvzr vzcbeg qngrgvzr, gvzrmbar
+    q = {'hey': flf.neti[1], 'chregb': flf.neti[2], 'npghnyvmnqb_gf': qngrgvzr.abj(gvzrmbar.hgp).vfbsbezng(), 'abgn': 'Nepuvib vaqrcraqvragr, AB yb ertraren avatha fpevcg'}
+    bcra(flf.neti[3], 'j').jevgr(wfba.qhzcf(q, vaqrag=2))
+    " "$ARJ_HEY" "$CBEG_BAYL" "$OBER_ERCB" 2>/qri/ahyy
+    '''
+    
+    vs napube va fep naq "ober_hey.wfba" abg va fep:
+        fep = fep.ercynpr(napube, cngpu, 1)
+        s.jevgr_grkg(fep)
+        cevag("✅ ober_thneq.fu npghnyvmneá qngn/ober_hey.wfba")
+    ryvs "ober_hey.wfba" va fep:
+        cevag("⚠️ ln rkvfgr ry cngpu")
+    ryfr:
+        cevag("❌ ab rapbageé napube")
+    CLRBS
+    
+    # Irevsvpne fvagnkvf
+    onfu -a ~/benphyb/ober_thneq.fu && rpub "✅ fvagnkvf BX"
+    rpub ""
+    rpub "=== 8. Pbzzvg + chfu ober_hey.wfba ==="
+    tvg nqq qngn/ober_hey.wfba
+    tvg pbzzvg -z "ober: nepuvib vaqrcraqvragr qngn/ober_hey.wfba ($OBER_HEY)" 2>&1 | urnq -2
+    tvg chyy --eronfr bevtva znva 2>&1 | gnvy -2
+    tvg chfu bevtva znva 2>&1 | gnvy -3
+    rpub ""
+    rpub "=== 9. Rfcrene 60f cebcntnpvóa TvgUho ==="
+    fyrrc 60
+    rpub "=== Irevsvpne (NCV TvgUho, ab enj pnpurnqb) ==="
+    phey -f "uggcf://ncv.tvguho.pbz/ercbf/Wnvzr393/zvh-rpbfvfgrzn/pbagragf/qngn/ober_hey.wfba" |   clguba3 -p "
+    vzcbeg flf, wfba, onfr64
+    q = wfba.ybnq(flf.fgqva)
+    vs 'pbagrag' va q:
+        pbagrag = onfr64.o64qrpbqr(q['pbagrag']).qrpbqr()
+        w = wfba.ybnqf(pbagrag)
+        cevag(s'  ✅ HEY ra TvgUho: {w.trg(\"hey\")}')
+        cevag(s'     chregb: {w.trg(\"chregb\")}')
+        cevag(s'     npghnyvmnqb: {w.trg(\"npghnyvmnqb_gf\")}')
+    ryfr:
+        cevag(s'  ❌ reebe: {q.trg(\"zrffntr\",\"haxabja\")}')
+    "
+    png >> ~/benphyb/YRPPVBARF.zq << 'RBS'
+    
+    ## Pnany qr qrfphoevzvragb TvgUho — 2026-11-02
+    
+    **Ceboyrzn ením:** Ober hfn chregb nyrngbevb, HEY pnzovn ra pnqn erfgneg. Abqbf erzbgbf ab chrqra fnore yn HEY fva Cnagróa (oybdhrnqb unfgn 12).
+    
+    **Fbyhpvóa:** `qngn/ober_hey.wfba` ra ry ercb cúoyvpb.
+    - `ober_thneq.fu` yb npghnyvmn pnqn irm dhr neenapn Ober
+    - Peba `0 * * * *` chfurn n TvgUho
+    - Abqb erzbgb yrr `enj.tvguhohfrepbagrag.pbz/.../qngn/ober_hey.wfba`
+    - Fva BNhgu, fva perqrapvnyrf, fva Cnagróa
+    
+    **Cbe dhé nepuvib frcnenqb qr `rfgnqb_crefvfgragr.wfba`:**
+    - `rfgnqb_crefvfgragr.wfba` yb ertrarena 5 fpevcgf (`pnmnqbe_erphefbf.cl`, `benphyb_obyfvyyb_i213.cl`, rgp.)
+    - Rfbf fpevcgf chrqra obeene `ober_ghaary` fva fnoreyb
+    - `ober_hey.wfba` fbyb yb gbpn `ober_thneq.fu` → fva pbzcrgrapvn
+    
+    **Syhwb:**
+    1. Ober neenapn pba chregb nyrngbevb
+    2. `ober_thneq.fu` rfpevor `qngn/ober_hey.wfba`
+    3. Peba tvg chfurn pnqn uben
+    4. Abqb erzbgb unpr `phey enj.tvguhohfrepbagrag.pbz/.../ober_hey.wfba` → HEY npghny
+    5. CBFG `/dhrhr` pba nppvóa → 5f
+    6. TRG `/dhrhr/:vq` phnaqb dhvren → erfhygnqb
+    
+    **Oht nceraqvqb:** TvgUho enj gneqn 2-5 zva ra cebcntne, ab 30f. Hfne `ncv.tvguho.pbz/ercbf/.../pbagragf/...` cnen irevsvpnpvóa eácvqn (onfr64 qrpbqrq).
+    
+    **Irevsvpnpvóa qry chfu:** nagrf qr `tvg chfu`, irevsvpne dhr ry nepuvib gvrar ybf qngbf rfcrenqbf pba `tvg fubj bevtva/znva:qngn/ober_hey.wfba`. Ry chfu chrqr cnfne creb ry pbagravqb chrqr ab fre ry rfcrenqb fv ha peba ertrareó ry nepuvib rager pbzzvg l chfu.
+    
+    **Ab fr gbpn:** anqn záf. Cnagróa ihryir ry 12. `cebor_cnagrba.fu` nofbeor phnaqb ihryin. Furrgf ab fr pbafgehlr (qrpvfvóa).
+    
+    ### Rfgnqb qry rpbfvfgrzn fva Pynhqr
+    - `/nfx` iín pbyn → 64f creb AB oybdhrn
+    - `/urnygu` → 0.01f
+    - `/dhrhr` → crefvfgragr
+    - Ober → cúoyvpb iín TvgUho qvfpbirel
+    - Cnagróa → oybdhrnqb unfgn 12
+    - 34 pebaf npgvibf
+    - Ybf abqbf erzbgbf chrqra raivne óeqrarf l pbafhygne erfhygnqbf fva zv znab
+    RBS
+    
+    rpub "✅ Qbphzragnqb ra ~/benphyb/YRPPVBARF.zq"
+    rpub ""
+    rpub "=== Irevsvpnpvóa svany ==="
+    rpub "Ober: $(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)"
+    rpub "TvgUho: $(phey -f uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/ober_hey.wfba | clguba3 -p 'vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva)["hey"])' 2>/qri/ahyy || rpub 'pnpur 2-5 zva')"
+    rpub "Dhrhr: $(fdyvgr3 ~/benphyb/dhrhr.qo 'FRYRPG PBHAG(*) SEBZ dhrhr;' 2>/qri/ahyy) óeqrarf"
+    rpub "Pebaf: $(pebagno -y | terc -p '^[0-9*]') npgvibf"
+    rpub ""
+    rpub "=== Grfg svany ==="
+    OBER=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+    phey -f -b /qri/ahyy -j "  /urnygu    → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER/urnygu"
+    phey -f -b /qri/ahyy -j "  /dhrhr     → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER/dhrhr"
+    phey -f -b /qri/ahyy -j "  CBFG dhrhr → %{uggc_pbqr}\a" --znk-gvzr 10 -K CBFG "$OBER/dhrhr" -U 'Pbagrag-Glcr: nccyvpngvba/wfba' -q '{"nppvba":"cvat","bevtra":"svany"}'
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 19. BEÁPHYB ═══
+══════════════════════════════════════════════════════════════════════
+  Cngu:      /qngn/qngn/pbz.grezhk/svyrf/ubzr/benphyb.cl
+  Gnznñb:    46220O
+  FUN256:    9srno13r5ppq3068
+  Yíarnf:    981
+  Pbznaqbf (20): nyregnf, pncghenf, pbasvtf, pbafbyvqne, pbagrarqberf, qngn-yvoer, qvfpb, rfgnqb, ribyhgvib, zrzbevnf, ahpyrb, crafne, cbedhr, erserfpne, fnyve, fnyhq, freivpvbf, ffu, fhzvavfgeb, ghary
+
+  /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/benphyb/ribyhgvib.cl  (19X, fun:p80r05nn2q029np6)
+  /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/benphyb/nhgb_ribyhgvib.fu  (2X, fun:r0q9q0p2ooq9nssq)
+  /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/benphyb_jngpuqbt.fu  (483O, fun:66070no702s4r098)
+
+  zvh/fgngr/benphyb/PHEERAG: /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh/fgngr/benphyb/irefvbaf/cebchrfgn_20261023_170246.cl
+  zvh/fgngr/benphyb/irefvbarf_npgvinqnf.gkg: cebchrfgn_20261023_163437.cl
+cebchrfgn_20261023_170246.cl
+
+══════════════════════════════════════════════════════════════════════
+═══ 20. ZRFU & GÚARY ═══
+══════════════════════════════════════════════════════════════════════
+  zrfu.rai:
+    # zrfu.rai — pbasvthenpvóa pnaóavpn qry zrfu
+    # Npghnyvmnqb: 2026-10-23 — zrfu ebhgre nchagn n I153→I91 (shapvbany)
+    # Onpxhc cerivb: ire zrfu.rai.onx_*
+    
+    # ── Ebhgre zrfu cevapvcny (I153 → onpxraq I91) ──
+    # HEY [9] qry vairagnevb: erfcbaqr bx:gehr pba ebhgre ZVH_EBHGRE_I153
+    rkcbeg ZVH_ZRFU_HEY="uggcf://fpevcg.tbbtyr.pbz/znpebf/f/NXslpoljJxhj8Qk_ghF6jVhstozUv00yYtD5GVSODBc7H--6RQmyJFm693C_hyChsyIXbeV/rkrp"
+    rkcbeg ZVH_GBXRA="ZVH_5S8N6N80QSSR1701"
+    rkcbeg ZVH_ZRFU_CVAT_BX=1
+    rkcbeg ZVH_ZRFU_CBYY_BX=1
+    rkcbeg ZVH_ZRFU_NPGVBA="cbyy"
+    
+    # ── Raqcbvag qr ncbegrf (i270, syhwb ahrib) ──
+    # HEY [2]: erfcbaqr bx:gehr pba gvcb=ncbegr_zvh
+    # Ab errzcynmn ny zrfu ebhgre, rf cnen pbagevohpvbarf
+    rkcbeg ZVH_NCBEGR_HEY="uggcf://fpevcg.tbbtyr.pbz/znpebf/f/NXslpojT6AIJwz97ChMC5blp4T9wnDOx08vW2ckRiXbqqawC3tbaGv1xw6e7HXmDbJmM9xTZ/rkrp"
+    
+    # ── TNF ebgbf pbabpvqbf (cnen ab ibyire n nchagne nuí) ──
+    # NXslpokME4I4... → i92_zrfu → 404 (ry dhr rfgnon nagrf)
+    # NXslpokP5rOE... → i92_zrfu → 404 (ZNCN_ZVPRYVB.zq yíarn 85)
+
+  Gúary Pybhqsyner:
+    HEY npgvin: uggcf://jraql-pbeerpgvbaf-sbphfvat-ersre.gelpybhqsyner.pbz
+    UGGC: 000
+    /qngn/qngn/pbz.grezhk/svyrf/ubzr/.pybhqsynerq:
+
+══════════════════════════════════════════════════════════════════════
+═══ 21. FFU ═══
+══════════════════════════════════════════════════════════════════════
+  ── xabja_ubfgf ──
+    tvguho.pbz ffu-rq25519 NNNNP3AmnP1yMQV1AGR5NNNNVBZddaxImez0FqT6HBbdXYfnotU5P9bxJv0qu2y9TXWy
+    tvguho.pbz ffu-efn NNNNO3AmnP1lp2RNNNNQNDNONNNOtDPw7aqAkDbjtpDawfupYedCRvvcuag+IGGiQC6zUOY9w1nAHxL4Hr1tijaTYIyBuTrLeaMnZtEX6+CXPHKnQoP7dgoJ8tVxuY7nTPfBe/P56FWZl/OPMskq1aJmNBkFQCtIfzreBOLsAdygI9/uJPdOljVAVE+5qVt6WGW72cpRcRwpLtKxR2LRSKI1WUafXtoYJAyuFpdo2HzlExDllgEYgY+38GTkxkPsyzB+5M8PFFAL7TvqwZVM7D4mZwN2a1aTeyGQxmjQPfj+jdSCTDN179pasTJBJEIehw16m6KlikiwWjom0jDM75KX5gXFo7SAlrVRf4GG4wx+F4quCrNHP5l+oQLveLtZ4TP7hRamgaMlnIJD7O381NX4Dqejg51MdRkXoDcGHAa+RwdbGjidAw4xdk5DHPV0GuF/LxBkWPKzCHJMouwcPt56v+2nO6PzX2WTua57X5zw0ZAqOKN4/JajU6KbCJWmX5Alh2mO3aNMc+F5ucDf+c1iA1/jfwx=
+    tvguho.pbz rpqfn-fun2-avfgc256 NNNNR2IwMUAuYKAbLGVgozymqUNlAGLNNNNVozymqUNlAGLNNNOOORzXFRAwDRrmBzkxMZl7bcXtjSO9axg5LEeLZwAhT5A87hEtt6PYeob5jNqG/l6i0zXI0H2j0JM2LO/++Gcbpxt=
+
+  ── vq_rq25519 ──
+    -----ORTVA BCRAFFU CEVINGR XRL-----
+    o3OyoaAmnP1eMKxgqwRNNNNNOT5iozHNNNNRoz9hMDNNNNNNNNNONNNNZjNNNNgmp2tgMJ
+    DlAGHkBDNNNPP5rD+zhf4CS0WGm/SFDEYUtHzfSdDW8mgq/amTI2y8+jNNNVwf78dq7B/X
+    aDNNNNgmp2tgMJDlAGHkBDNNNPP5rD+zhf4CS0WGm/SFDEYUtHzfSdDW8mgq/amTI2y8+j
+    NNNRN5uT0eRI4iN7T3ar/iE6epYHu0Gj+T1FcIr2fQ7pPLpey5Q6n6mt8KDyCC8IWORfrO
+    FnjJcNamB13+sZMKnKm7NNNNNNRPNjDS
+    -----RAQ BCRAFFU CEVINGR XRL-----
+
+  ── nhgubevmrq_xrlf ──
+
+  ── xabja_ubfgf.byq ──
+    tvguho.pbz ffu-rq25519 NNNNP3AmnP1yMQV1AGR5NNNNVBZddaxImez0FqT6HBbdXYfnotU5P9bxJv0qu2y9TXWy
+
+  ── vq_rq25519.cho ──
+    ffu-rq25519 NNNNP3AmnP1yMQV1AGR5NNNNVYy5Q6n6mt8KDyCC8IWORfrOFnjJcNamB13+sZMKnKm7 
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 22. VCSF ═══
+══════════════════════════════════════════════════════════════════════
+  VQ: 
+  Ercb: 
+
+══════════════════════════════════════════════════════════════════════
+═══ 23. NAQEBVQ CEBCVRQNQRF ═══
+══════════════════════════════════════════════════════════════════════
+  eb.cebqhpg.zbqry=Naqebvq
+  eb.cebqhpg.znahsnpghere=Naqebvq
+  eb.cebqhpg.oenaq=Naqebvq
+  eb.ohvyq.irefvba.eryrnfr=10
+  eb.ohvyq.irefvba.fqx=29
+  eb.ohvyq.irefvba.frphevgl_cngpu=2021-03-05
+  eb.ohvyq.svatrecevag=TVBARR/C61/C61:11/EC1N.200720.011/1627397390:hfre/eryrnfr-xrlf
+  eb.frevnyab=I1A72ILGQXIEFJ3JQZJ
+  eb.uneqjner=zg6755
+  eb.obneq.cyngsbez=zg6750
+  crefvfg.flf.gvzrmbar=Nzrevpn/Yvzn
+  eb.ohvyq.qngr=Sev Why 18 19:27:59 PFG 2025
+
+══════════════════════════════════════════════════════════════════════
+═══ 26. QRHQNF L REEBERF ═══
+══════════════════════════════════════════════════════════════════════
+  ── /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/qrhqnf.ybt ──
+    [2026-10-23 09:48:14] chyfr_unat: /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn/chyfr_i153.fu
+    [2026-10-23 09:59:36] 120f
+    [2026-10-23 10:01:37] 120f
+    [2026-10-23 10:03:37] 120f
+    [2026-10-23 10:19:24] ghary_ab_neenapn
+    [2026-10-23 10:21:24] 120f
+    [2026-10-23 10:23:24] 120f
+    [2026-10-23 10:25:24] 120f
+    [2026-10-23 10:27:25] 120f
+    [2026-10-23 10:45:19] 120f
+    [2026-10-23 10:47:19] 120f
+    [2026-10-23 10:49:19] 120f
+    [2026-10-23 10:51:20] 120f
+    [2026-10-23 11:09:10] 120f
+    [2026-10-23 11:11:10] 120f
+    [2026-10-23 11:13:11] 120f
+    [2026-10-23 11:15:11] 120f
+    [2026-10-23 11:33:46] 120f
+    [2026-10-23 11:35:46] 120f
+    [2026-10-23 11:37:46] 120f
+    [2026-10-23 11:39:46] 120f
+    [2026-10-23 11:55:42] ghary_ab_neenapn
+    [2026-10-23 11:57:43] 120f
+    [2026-10-23 11:59:43] 120f
+    [2026-10-23 12:01:43] 120f
+    [2026-10-23 12:03:44] 120f
+    [2026-10-23 12:19:38] ghary_ab_neenapn
+    [2026-10-23 12:21:39] 120f
+    [2026-10-23 12:23:39] 120f
+    [2026-10-23 12:25:39] 120f
+
+
+══════════════════════════════════════════════════════════════════════
+═══ 24. ÚYGVZBF 200 PBZNAQBF (onfu_uvfgbel) ═══
+══════════════════════════════════════════════════════════════════════
+  cevag(s'  chregb: {o.trg(\"chregb\",\"AB\")}')
+  cevag(s'  npghnyvmnqb: {o.trg(\"npghnyvmnqb_gf\",\"AB\")}')
+  "
+  rpub ""
+  rpub "=== 4. Irevsvpne dhr AB unl gbxraf ra ry pbzzvg ==="
+  tvg qvss URNQ~1 -- qngn/rfgnqb_crefvfgragr.wfba | terc -R "us_|tfx_|fx-|tuc_|NVmnFl" &&   rpub "  ❌ UNL GBXRAF — nobegne" || rpub "  ✅ fva gbxraf"
+  rpub ""
+  rpub "=== 5. Chfu ==="
+  tvg chfu bevtva znva 2>&1 | gnvy -5
+  rpub ""
+  rpub "=== 6. Rfcrene cebcntnpvóa TvgUho (30f) ==="
+  fyrrc 30
+  rpub "=== Irevsvpne ra TvgUho enj ==="
+  phey -f --znk-gvzr 10 "uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/rfgnqb_crefvfgragr.wfba" |   clguba3 -p "
+  vzcbeg flf, wfba
+  gel:
+      q = wfba.ybnq(flf.fgqva)
+      o = q.trg('ober_ghaary', {})
+      vs o.trg('hey'):
+          cevag(s'  ✅ HEY ra TvgUho: {o[\"hey\"]}')
+          cevag(s'     chregb: {o.trg(\"chregb\",\"?\")}')
+          cevag(s'     npghnyvmnqb: {o.trg(\"npghnyvmnqb_gf\",\"?\")}')
+      ryfr:
+          cevag('  ⚠️ WFBA iáyvqb creb fva ober_ghaary')
+          cevag('  xrlf:', yvfg(q.xrlf())[:5])
+  rkprcg Rkprcgvba nf r:
+      cevag(s'  ❌ Ab WFBA: {r}')
+  "
+  pq ~/zvh-rpbfvfgrzn
+  rpub "=== 1. ¿Dhé gvrar ry pbzzvg ra TvgUho ERNYZRAGR? (ab enj, ab pnpur) ==="
+  tvg fubj bevtva/znva:qngn/rfgnqb_crefvfgragr.wfba | clguba3 -p "
+  vzcbeg flf, wfba
+  q = wfba.ybnq(flf.fgqva)
+  o = q.trg('ober_ghaary')
+  vs o:
+      cevag(s'  ✅ ober_ghaary cerfragr: {o.trg(\"hey\")}')
+  ryfr:
+      cevag(s'  ❌ ober_ghaary AB rfgá. xrlf: {yvfg(q.xrlf())[:8]}')
+  "
+  rpub ""
+  rpub "=== 2. ¿Dhé gvrar ry nepuvib YBPNY nuben? ==="
+  clguba3 -p "
+  vzcbeg wfba
+  q = wfba.ybnq(bcra('qngn/rfgnqb_crefvfgragr.wfba'))
+  o = q.trg('ober_ghaary')
+  vs o:
+      cevag(s'  ✅ ybpny gvrar: {o.trg(\"hey\")}')
+  ryfr:
+      cevag(s'  ❌ ybpny AB gvrar. xrlf: {yvfg(q.xrlf())[:8]}')
+  "
+  rpub ""
+  rpub "=== 3. ¿Dhé fpevcg ertraren rfgnqb_crefvfgragr.wfba? ==="
+  terc -eya "rfgnqb_crefvfgragr.wfba" ~/zvh-rpbfvfgrzn --vapyhqr="*.cl" --vapyhqr="*.fu" 2>/qri/ahyy | urnq -5
+  rpub ""
+  rpub "=== 4. Peba qr tvg (¿dhé nepuvibf nñnqr?) ==="
+  pebagno -y | terc "tvg nqq"
+  rpub ""
+  rpub "=== 5. Perne nepuvib vaqrcraqvragr dhr ANQN ertraren ==="
+  OBER_HEY=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+  CBEG=$(rpub "$OBER_HEY" | terc -bR '[0-9]+$')
+  clguba3 << CLRBS
+  vzcbeg wfba
+  sebz cnguyvo vzcbeg Cngu
+  sebz qngrgvzr vzcbeg qngrgvzr, gvzrmbar
+  
+  c = Cngu.ubzr() / "zvh-rpbfvfgrzn/qngn/ober_hey.wfba"
+  c.cnerag.zxqve(rkvfg_bx=Gehr)
+  qngn = {
+      "hey": "$OBER_HEY",
+      "chregb": "$CBEG",
+      "cebgbpbyb": "uggc_gpc_enj",
+      "freivqbe": "ober.cho",
+      "rkcbar": "uggc://127.0.0.1:8771 (benphyb pbzcyrgb)",
+      "raqcbvagf": ["/urnygu", "/dhrhr", "/dhrhr/:vq"],
+      "npghnyvmnqb_gf": qngrgvzr.abj(gvzrmbar.hgp).vfbsbezng(),
+      "abgn": "Nepuvib vaqrcraqvragr. ober_thneq.fu yb npghnyvmn. AB yb ertraren avatha bgeb fpevcg."
+  }
+  c.jevgr_grkg(wfba.qhzcf(qngn, vaqrag=2))
+  cevag(s"✅ Pernqb {c}")
+  CLRBS
+  
+  png qngn/ober_hey.wfba
+  rpub ""
+  rpub "=== 6. Nñnqve ober_hey.wfba ny peba qr tvg ==="
+  # Onpxhc pebagno
+  pebagno -y > /fgbentr/25N9-180Q/benphyb/pebagno_onpxhc_$(qngr +%f).gkg 2>/qri/ahyy
+  # Errzcynmne ry peba qr tvg cnen nñnqve NZOBF nepuvibf
+  ( pebagno -y 2>/qri/ahyy | terc -i "tvg nqq qngn/rfgnqb_crefvfgragr";   rpub '0 * * * * pq /qngn/qngn/pbz.grezhk/svyrf/ubzr/zvh-rpbfvfgrzn && tvg nqq qngn/rfgnqb_crefvfgragr.wfba qngn/ober_hey.wfba && tvg chfu --ab-irevsl >> ybtf/tvg.ybt 2>&1' ) | pebagno -
+  rpub "Peba qr tvg npghnyvmnqb:"
+  pebagno -y | terc "tvg nqq"
+  rpub ""
+  rpub "=== 7. Nñnqve hcqngr qr ober_hey.wfba n ober_thneq.fu ==="
+  # Ny svany qry fpevcg, rfpevove ry ahrib nepuvib pnqn irm dhr neenapn ober
+  clguba3 << 'CLRBS'
+  sebz cnguyvo vzcbeg Cngu
+  s = Cngu.ubzr() / "benphyb/ober_thneq.fu"
+  fep = s.ernq_grkg()
+  
+  # Ohfpne ry oybdhr qbaqr fr thneqn yn HEY
+  napube = 'rpub "$ARJ_HEY" > "$HEYSVYR"'
+  cngpu = '''rpub "$ARJ_HEY" > "$HEYSVYR"
+  # Rfpevove gnzovra ober_hey.wfba ra ry ercb (cnen qrfphoevzvragb ivn TvgUho)
+  OBER_ERCB="$UBZR/zvh-rpbfvfgrzn/qngn/ober_hey.wfba"
+  CBEG_BAYL=$(rpub "$ARJ_HEY" | terc -bR '[0-9]+$')
+  clguba3 -p "
+  vzcbeg wfba, flf
+  sebz qngrgvzr vzcbeg qngrgvzr, gvzrmbar
+  q = {'hey': flf.neti[1], 'chregb': flf.neti[2], 'npghnyvmnqb_gf': qngrgvzr.abj(gvzrmbar.hgp).vfbsbezng(), 'abgn': 'Nepuvib vaqrcraqvragr, AB yb ertraren avatha fpevcg'}
+  bcra(flf.neti[3], 'j').jevgr(wfba.qhzcf(q, vaqrag=2))
+  " "$ARJ_HEY" "$CBEG_BAYL" "$OBER_ERCB" 2>/qri/ahyy
+  '''
+  
+  vs napube va fep naq "ober_hey.wfba" abg va fep:
+      fep = fep.ercynpr(napube, cngpu, 1)
+      s.jevgr_grkg(fep)
+      cevag("✅ ober_thneq.fu npghnyvmneá qngn/ober_hey.wfba")
+  ryvs "ober_hey.wfba" va fep:
+      cevag("⚠️ ln rkvfgr ry cngpu")
+  ryfr:
+      cevag("❌ ab rapbageé napube")
+  CLRBS
+  
+  # Irevsvpne fvagnkvf
+  onfu -a ~/benphyb/ober_thneq.fu && rpub "✅ fvagnkvf BX"
+  rpub ""
+  rpub "=== 8. Pbzzvg + chfu ober_hey.wfba ==="
+  tvg nqq qngn/ober_hey.wfba
+  tvg pbzzvg -z "ober: nepuvib vaqrcraqvragr qngn/ober_hey.wfba ($OBER_HEY)" 2>&1 | urnq -2
+  tvg chyy --eronfr bevtva znva 2>&1 | gnvy -2
+  tvg chfu bevtva znva 2>&1 | gnvy -3
+  rpub ""
+  rpub "=== 9. Rfcrene 60f cebcntnpvóa TvgUho ==="
+  fyrrc 60
+  rpub "=== Irevsvpne (NCV TvgUho, ab enj pnpurnqb) ==="
+  phey -f "uggcf://ncv.tvguho.pbz/ercbf/Wnvzr393/zvh-rpbfvfgrzn/pbagragf/qngn/ober_hey.wfba" |   clguba3 -p "
+  vzcbeg flf, wfba, onfr64
+  q = wfba.ybnq(flf.fgqva)
+  vs 'pbagrag' va q:
+      pbagrag = onfr64.o64qrpbqr(q['pbagrag']).qrpbqr()
+      w = wfba.ybnqf(pbagrag)
+      cevag(s'  ✅ HEY ra TvgUho: {w.trg(\"hey\")}')
+      cevag(s'     chregb: {w.trg(\"chregb\")}')
+      cevag(s'     npghnyvmnqb: {w.trg(\"npghnyvmnqb_gf\")}')
+  ryfr:
+      cevag(s'  ❌ reebe: {q.trg(\"zrffntr\",\"haxabja\")}')
+  "
+  png >> ~/benphyb/YRPPVBARF.zq << 'RBS'
+  
+  ## Pnany qr qrfphoevzvragb TvgUho — 2026-11-02
+  
+  **Ceboyrzn ením:** Ober hfn chregb nyrngbevb, HEY pnzovn ra pnqn erfgneg. Abqbf erzbgbf ab chrqra fnore yn HEY fva Cnagróa (oybdhrnqb unfgn 12).
+  
+  **Fbyhpvóa:** `qngn/ober_hey.wfba` ra ry ercb cúoyvpb.
+  - `ober_thneq.fu` yb npghnyvmn pnqn irm dhr neenapn Ober
+  - Peba `0 * * * *` chfurn n TvgUho
+  - Abqb erzbgb yrr `enj.tvguhohfrepbagrag.pbz/.../qngn/ober_hey.wfba`
+  - Fva BNhgu, fva perqrapvnyrf, fva Cnagróa
+  
+  **Cbe dhé nepuvib frcnenqb qr `rfgnqb_crefvfgragr.wfba`:**
+  - `rfgnqb_crefvfgragr.wfba` yb ertrarena 5 fpevcgf (`pnmnqbe_erphefbf.cl`, `benphyb_obyfvyyb_i213.cl`, rgp.)
+  - Rfbf fpevcgf chrqra obeene `ober_ghaary` fva fnoreyb
+  - `ober_hey.wfba` fbyb yb gbpn `ober_thneq.fu` → fva pbzcrgrapvn
+  
+  **Syhwb:**
+  1. Ober neenapn pba chregb nyrngbevb
+  2. `ober_thneq.fu` rfpevor `qngn/ober_hey.wfba`
+  3. Peba tvg chfurn pnqn uben
+  4. Abqb erzbgb unpr `phey enj.tvguhohfrepbagrag.pbz/.../ober_hey.wfba` → HEY npghny
+  5. CBFG `/dhrhr` pba nppvóa → 5f
+  6. TRG `/dhrhr/:vq` phnaqb dhvren → erfhygnqb
+  
+  **Oht nceraqvqb:** TvgUho enj gneqn 2-5 zva ra cebcntne, ab 30f. Hfne `ncv.tvguho.pbz/ercbf/.../pbagragf/...` cnen irevsvpnpvóa eácvqn (onfr64 qrpbqrq).
+  
+  **Irevsvpnpvóa qry chfu:** nagrf qr `tvg chfu`, irevsvpne dhr ry nepuvib gvrar ybf qngbf rfcrenqbf pba `tvg fubj bevtva/znva:qngn/ober_hey.wfba`. Ry chfu chrqr cnfne creb ry pbagravqb chrqr ab fre ry rfcrenqb fv ha peba ertrareó ry nepuvib rager pbzzvg l chfu.
+  
+  **Ab fr gbpn:** anqn záf. Cnagróa ihryir ry 12. `cebor_cnagrba.fu` nofbeor phnaqb ihryin. Furrgf ab fr pbafgehlr (qrpvfvóa).
+  
+  ### Rfgnqb qry rpbfvfgrzn fva Pynhqr
+  - `/nfx` iín pbyn → 64f creb AB oybdhrn
+  - `/urnygu` → 0.01f
+  - `/dhrhr` → crefvfgragr
+  - Ober → cúoyvpb iín TvgUho qvfpbirel
+  - Cnagróa → oybdhrnqb unfgn 12
+  - 34 pebaf npgvibf
+  - Ybf abqbf erzbgbf chrqra raivne óeqrarf l pbafhygne erfhygnqbf fva zv znab
+  RBS
+  
+  rpub "✅ Qbphzragnqb ra ~/benphyb/YRPPVBARF.zq"
+  rpub ""
+  rpub "=== Irevsvpnpvóa svany ==="
+  rpub "Ober: $(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)"
+  rpub "TvgUho: $(phey -f uggcf://enj.tvguhohfrepbagrag.pbz/Wnvzr393/zvh-rpbfvfgrzn/znva/qngn/ober_hey.wfba | clguba3 -p 'vzcbeg flf,wfba;cevag(wfba.ybnq(flf.fgqva)["hey"])' 2>/qri/ahyy || rpub 'pnpur 2-5 zva')"
+  rpub "Dhrhr: $(fdyvgr3 ~/benphyb/dhrhr.qo 'FRYRPG PBHAG(*) SEBZ dhrhr;' 2>/qri/ahyy) óeqrarf"
+  rpub "Pebaf: $(pebagno -y | terc -p '^[0-9*]') npgvibf"
+  rpub ""
+  rpub "=== Grfg svany ==="
+  OBER=$(png ~/zvh-rpbfvfgrzn/.fgngr/ober_hey.gkg)
+  phey -f -b /qri/ahyy -j "  /urnygu    → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER/urnygu"
+  phey -f -b /qri/ahyy -j "  /dhrhr     → %{uggc_pbqr}\a" --znk-gvzr 10 "$OBER/dhrhr"
+  phey -f -b /qri/ahyy -j "  CBFG dhrhr → %{uggc_pbqr}\a" --znk-gvzr 10 -K CBFG "$OBER/dhrhr" -U 'Pbagrag-Glcr: nccyvpngvba/wfba' -q '{"nppvba":"cvat","bevtra":"svany"}'
+
+══════════════════════════════════════════════════════════════════════
+ SVA QRY ZNCN — 2026-11-02 19:00:03 HGP
+══════════════════════════════════════════════════════════════════════
