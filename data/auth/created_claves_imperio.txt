@@ -1,0 +1,150 @@
+# ============================================================
+# ZVPRYVB - PHRAGNF FRZVYYN (10 PBEERBF)
+# Srpun: 2026-08-25
+# Pynir pbzúa: "yn tenirqnq phein yn vasbeznpvba"
+# Rfgnqb: Phragnf 1-5 pbzcyrgnf; Phragnf 6-10 craqvragrf qr gbxraf
+# ============================================================
+
+# ============================================================
+# PHRAGN 1 - wnvzrcivpragr@tznvy.pbz
+# ============================================================
+PBEERB_1=wnvzrcivpragr@tznvy.pbz
+PYNIR_1=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_1=pshg_5OQeEeHWIloSMJR48EQWeD619VmpjPtQwxxRUdGYnp57rrss
+PS_NPPBHAG_1=5rn7pq88010o382o154q2spss00o9no3
+IREPRY_1=ipc_7L2lZvFQUIOxZmYQnJl8ZA0FyLROxbxJBmzCXCwWTv73y3ELha1N3ZHc
+ARGYVSL_1=asc_n1jQYEGpegrccPwgzJAdvnFYoNFeCRAZn4no
+SYL_1=SylI1 sz2_yWCRPNNNNNNNS9ZukON8I/HKJiEIlVXFA1VDZ5+vjeIbqUEjpmbiY2SjnF5zoUxhnJ8iqwTHNWYBNOmMvk8Yx7ybqUEjpmbiY2SjnF5zoUxhnJ8iLJSuY3LkkQmm50wYu95F0pXK696lJsHp2QeqZA4uSiBWB58WZQZDCICIItTFmdHzwnVfLdEqoUFXqytJkHhkkSzDbeaRGa2OXTljBsODuUIzTJqdxo4oP4hjWfTT8OS4KBTcKxTyBQlTkbbYBmDdA/+df+aZv0MO9U06iJdc3Q5Z5bt4Lxc05242EkfQhIDwWI3fBpDtbe4ZUT324llpKUpao8yW2Sykq5cox1QppWZC2Wtoh4p=,sz2_yWCRGa2OXTljBsODuUIzTJqdxo4oP4hjWfTT8OS4KBTcKxTyBQlTkbbYBmDdA/+df+aZv0MO9U06iJdc3Q5Z5bt4Lxc05242EkfQhIDwWI3fBpDDGyBkJJjlTxGZVNzp+Owsf8B5nUE0pUZ6Yl9upTxhMzk5YzyiY2SuLF92ZMtRxf5dwHbxmjNNNNRzuJuPS84NT5hlPcUBNOhoftmRRR0qXRqblkCd2A7/HMOzjE7RVBwjw6PKVe3g4xYEaPiVNNWndrTS7bydhsTGzlCm1y7j
+FHCNONFR_HEY_1=...
+TVGUHO_CNG_1=tvguho_cng_11ND2JTTD0AFAeHU5jxB4z_AZe4GO3UWgsDQ2RTnx4f6ZXybtNXfROJhqw7frHysoi6OQGGNU2oJ9Q4mRd
+
+# ============================================================
+# PHRAGN 2 - wnvzrcivppragr@tznvy.pbz
+# ============================================================
+PBEERB_2=wnvzrcivppragr@tznvy.pbz
+PYNIR_2=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_2=pshg_DVI9u5F3KChRg6OvtEvyj3HvDvf0mSrmECiicbCf38234802
+PS_NPPBHAG_2=503s950671ssq72s225o10rr0o9p0883
+IREPRY_2=ipc_1IN6EtyUBW079cXeCImalNf8ND0Zxv6XDwPp7XBYuh5Bgldc613H2zR4
+ARGYVSL_2=asc_UcQguWRlP12Ht7wEEHerln29UYQ27zel46o5
+SYL_2=SylI1 sz2_yWCRPNNNNNNNS9ZdkOPk8TtzV0zFZ87RC5U45WRvjeIbqUEjpmbiY2SjnF5zoUxhnJ8iqwTHNWYBNOmMyO8Yx7ybqUEjpmbiY2SjnF5zoUxhnJ8iLJSuY3LkkQmLZ70NvZkV/2YmOD894r7Vj7DGkweJmrc8m0DPMeAzNidhXgdc0byi2gRxEUkFKln8dfB/mpzfS1YDX1aRGeA/B0jyPybaUN6C41ODrCOHgkgN3vnuyBRC3IUOn5HQ5JZBR6qeXVYSMSF0JyjG3lkbS448TOJG7eX3/iFFMnzzWtjtrSqBlFC2Kh3m4ZDtmafEFGT4eqkFd5S2ZBB8HMvwN9wvOQi1iegBQumPdYb=,sz2_yWCRGeA/B0jyPybaUN6C41ODrCOHgkgN3vnuyBRC3IUOn5HQ5JZBR6qeXVYSMSF0JyjG3lkbS448TOJG7eX3/iFFMnzzWtjtrSqBlFC2Kh3m4ZDDGKXfcIUD+RnozozUJDz4KZB5nUE0pUZ6Yl9upTxhMzk5YzyiY2SuLF92ZMtRxf5dwHd9mjNNNNRzuJwoS84NT5h6PcUBNOhohtmRRBV3/hvnAZYeHltJtS+KY+wRVUC9KDg5GQqWgKfOR7qi19ixoKuc1txLwweXmjaTkFpu
+FHCNONFR_HEY_2=...
+TVGUHO_CNG_2=tvguho_cng_11PVNVIVD0zimsHICXA1i4_ICCNKw6YD4ZJTa7Xzeim4MQ5tlJtBCso99JuwUmBd9PLUN6OYV4PwHWGcTn
+
+# ============================================================
+# PHRAGN 3 - qvrthvgb.it16@tznvy.pbz
+# ============================================================
+PBEERB_3=qvrthvgb.it16@tznvy.pbz
+PYNIR_3=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_3=pshg_2DmF890irfZMULtETOmBSauow6QTYK9yiKIx7PRWpoos1s9n
+PS_NPPBHAG_3=308snrqs16n56soo68q464127p696844
+IREPRY_3=ipc_4mauDb6ePxY5pV7dCmCzfKjR4EYfIu0w8qgm5N4Fv2XIzoX8N53629zJ
+ARGYVSL_3=asc_r4gY9gSzXlNtaSuHufnoXNXhE3hOFAOx81s2
+SYL_3=SylI1 sz2_yWCRPNNNNNNNS9ZjkOQ8vup0U4g6DY77Mvz6WERPjeIbqUEjpmbiY2SjnF5zoUxhnJ8iqwTHNWYBNOmMzu8Yx7ybqUEjpmbiY2SjnF5zoUxhnJ8iLJSuY3LkkQjSC/eqr3J5vPFiX4Cmdzlz/9botR31fH5BL10UgzeabwT/22gqu+LLOv/xfib/AGhwBdldHTuWBjgB/pQRGa6/Y1ARZwy5/S+q69K21w0PKC1bJ6iW/Ycxjk5Xefb6bI9rKYMejRN9MPda2BMSCWMi8fZvFQMlrV9FZAhqWImHqUO4eBi46Ohyp9qas8Dt7lKHGvwLwaKBWeUR0k4sX7c2U6yQUg3sPrpvm4sk7g8=,sz2_yWCRGa6/Y1ARZwy5/S+q69K21w0PKC1bJ6iW/Ycxjk5Xefb6bI9rKYMejRN9MPda2BMSCWMi8fZvFQMlrV9FZAhqWImHqUO4eBi46Ohyp9qas8DDS/DZqHjNaRBc+7I+HOE+mpB5nUE0pUZ6Yl9upTxhMzk5YzyiY2SuLF92ZMtRxf5dwHhlmjNNNNRzuJaDS84NT5iNPcUBNOhojNmRRAyMU9ELN4BCfWjwdWNYnZ7RVN5PhneXsdU5Rtss+N1St3Wi/LexUZYnf7Otu/Rrbmy4
+FHCNONFR_HEY_3=...
+TVGUHO_CNG_3=tvguho_cng_11PZDUWKN0MDPyOUvJYmeM_IvPMEMd9v1It6FpkwXSdkAQwbwSaaFk4w3fCii6oQFAKSWCUKZJRoLuCL5f
+
+# ============================================================
+# PHRAGN 4 - wuhnepnln938@tznvy.pbz
+# ============================================================
+PBEERB_4=wuhnepnln938@tznvy.pbz
+PYNIR_4=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_4=pshg_x26L2sgnQADmYLTD2XwkNIdZuHubrDNCTXXIYHDX8s127581
+PS_NPPBHAG_4=ppr82777p5814rr76p44sr1772p85465
+IREPRY_4=ipc_1CO4jaQcNrq1akjdpExGVLjI3aWzgmWT1Py8lGk4rH84uK3kuW1O1Efi
+ARGYVSL_4=asc_tQA3ZQibu6aIsgsaFAH5PdqqasdCoJnW8r3s
+SYL_4=SylI1 sz2_yWCRPNNNNNNNS9Z2kONHJs60/DQoDVrJpwk9sIbGjeIbqUEjpmbiY2SjnF5zoUxhnJ8iqwTHNWYBNOmMbO8Yx7ybqUEjpmbiY2SjnF5zoUxhnJ8iLJSuY3LkkQmRZZ68XRz9ryQTFBM8NHT0A60hzaF9lWJlufp5RW07ktfljt8G1tqah4gInKvjCOUV38H5fMhOsKqCpbeRGbqAEUS7T6nkea+X9840cIofUgGz+sbgMnwUTgmkJedMES5nO/5Ba/NUjsGAFOLtvTlOU4KPUMwndofdpk7+HRrXdS1SAOUdTwVmWVhIi8DtEtHLMSbeKzr2Y6+aTmLFWCdC9ACPiRrLATS+kbhw7/L=,sz2_yWCRGbqAEUS7T6nkea+X9840cIofUgGz+sbgMnwUTgmkJedMES5nO/5Ba/NUjsGAFOLtvTlOU4KPUMwndofdpk7+HRrXdS1SAOUdTwVmWVhIi8DDdxxAHPncnX42UTVXyh3bV8B5nUE0pUZ6Yl9upTxhMzk5YzyiY2SuLF92ZMtRxf5dwHkwmjNNNNRzuJdOS84NT5iTPcUBNOhoktmRRXL5fHhbZBqpCp7BQv2yzVQRVZbQ9WdLLwvIgnbCFObuj9qhqua7sfAnRwuX15W2DTL4
+FHCNONFR_HEY_4=...
+TVGUHO_CNG_4=tvguho_cng_11PZDUMLV0yPQkPHt062Ax_NVk0UuxIFuwGuFG5jwWF0zYZVzJsJbbpHReFFnzVZfXGHBDT2AW6QbXfFLq
+
+# ============================================================
+# PHRAGN 5 - senaehffryy81@tznvy.pbz
+# ============================================================
+PBEERB_5=senaehffryy81@tznvy.pbz
+PYNIR_5=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_5=pshg_1DAn3quwHbouUTj3HNGFdHUnXtPdd84KELKpmIiOn5426p5r
+PS_NPPBHAG_5=q0o37632r626ss13n757p67709pnp5sp
+IREPRY_5=ipc_7DbUWRMPOplkp3JOvwc9bUoTl6Qmsp2BwdQraqp9tBdgTqRtRe2obS5H
+ARGYVSL_5=asc_YIEfdZSrCJ5wvkEJsAnfhxkNKjjFkGEU23pq
+SYL_5=SylI1 sz2_yWCRPNNNNNNNS9Z8kOOPz+pek/y5IzcOHEni2pdWjeIbqUEjpmbiY2SjnF5zoUxhnJ8iqwTHNWYBNOmMcu8Yx7ybqUEjpmbiY2SjnF5zoUxhnJ8iLJSuY3LkkQl6zyuqfv2wl68+Au4uqG5XDYCAgNjb2Hh0KmUhUUY2rXwOKSrKk5fNmdkYR/Di7bC2GKi0u2X/OUonCr7RGuhlywNyfFiH1H0+Gvj5W7Wz1VCtlzgYrKD/3rPkIoogKN7gSUaJ+spH21+hDDCSOMEMwDJYwOSSuEK6Kls1VNIrrG3kuPe1E4nMzY7hkZDtJ9iVe2w/kvgyz5tKcvRbJap6K8xK2fRfVYhZBNInkXN=,sz2_yWCRGuhlywNyfFiH1H0+Gvj5W7Wz1VCtlzgYrKD/3rPkIoogKN7gSUaJ+spH21+hDDCSOMEMwDJYwOSSuEK6Kls1VNIrrG3kuPe1E4nMzY7hkZDDgGGwPCHdbLIU9MMz74oAD8B5nUE0pUZ6Yl9upTxhMzk5YzyiY2SuLF92ZMtRxf5dwH03mjNNNNRzuJgIS84NT5iZPcUBNOhomNmRRQYIHPkoGkrKHUOEfSU2/3wRVR9aYjnBjiYgXIf2qfOHj1Ad8VbTR55Mv7ORdHT6g16n
+FHCNONFR_HEY_5=...
+TVGUHO_CNG_5=tvguho_cng_11PZDVY6L0fTQwKptYZFH1_61M33lnSkkycjqlY3iYJeoF4aguVk3jprbIRXh63qbOHXIBO74QkrNcK8Yj
+
+# ============================================================
+# PHRAGN 6 - gnoyrgbarcunagbz@tznvy.pbz (CRAQVRAGR QR GBXRAF)
+# ============================================================
+PBEERB_6=gnoyrgbarcunagbz@tznvy.pbz
+PYNIR_6=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_6=CRAQVRAGR (ertrarene pba phragn 6)
+PS_NPPBHAG_6=CRAQVRAGR
+IREPRY_6=CRAQVRAGR
+ARGYVSL_6=CRAQVRAGR
+SYL_6=CRAQVRAGR
+FHCNONFR_HEY_6=CRAQVRAGR
+TVGUHO_CNG_6=CRAQVRAGR
+
+# ============================================================
+# PHRAGN 7 - wnvzrqnavryznegvarm75@tznvy.pbz (CRAQVRAGR QR GBXRAF)
+# ============================================================
+PBEERB_7=wnvzrqnavryznegvarm75@tznvy.pbz
+PYNIR_7=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_7=CRAQVRAGR
+PS_NPPBHAG_7=CRAQVRAGR
+IREPRY_7=CRAQVRAGR
+ARGYVSL_7=CRAQVRAGR
+SYL_7=CRAQVRAGR
+FHCNONFR_HEY_7=CRAQVRAGR
+TVGUHO_CNG_7=CRAQVRAGR
+
+# ============================================================
+# PHRAGN 8 - senapurfpbcnynpvbf9@tznvy.pbz (CRAQVRAGR QR GBXRAF)
+# ============================================================
+PBEERB_8=senapurfpbcnynpvbf9@tznvy.pbz
+PYNIR_8=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_8=CRAQVRAGR
+PS_NPPBHAG_8=CRAQVRAGR
+IREPRY_8=CRAQVRAGR
+ARGYVSL_8=CRAQVRAGR
+SYL_8=CRAQVRAGR
+FHCNONFR_HEY_8=CRAQVRAGR
+TVGUHO_CNG_8=CRAQVRAGR
+
+# ============================================================
+# PHRAGN 9 - qrerpxpvgb.it16@tznvy.pbz (CRAQVRAGR QR GBXRAF)
+# ============================================================
+PBEERB_9=qrerpxpvgb.it16@tznvy.pbz
+PYNIR_9=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_9=CRAQVRAGR
+PS_NPPBHAG_9=CRAQVRAGR
+IREPRY_9=CRAQVRAGR
+ARGYVSL_9=CRAQVRAGR
+SYL_9=CRAQVRAGR
+FHCNONFR_HEY_9=CRAQVRAGR
+TVGUHO_CNG_9=CRAQVRAGR
+
+# ============================================================
+# PHRAGN 10 - pvcure19051997@tznvy.pbz (CRAQVRAGR QR GBXRAF)
+# ============================================================
+PBEERB_10=pvcure19051997@tznvy.pbz
+PYNIR_10=yn tenirqnq phein yn vasbeznpvba
+PS_GBXRA_10=CRAQVRAGR
+PS_NPPBHAG_10=CRAQVRAGR
+IREPRY_10=CRAQVRAGR
+ARGYVSL_10=CRAQVRAGR
+SYL_10=CRAQVRAGR
+FHCNONFR_HEY_10=CRAQVRAGR
+TVGUHO_CNG_10=CRAQVRAGR
+
+# ============================================================
+# VAFGEHPPVBARF CNEN RY FVFGRZN
+# ============================================================
+# 1. Ynf phragnf 1-5 fba pbzcyrgnf l bcrengvinf.
+# 2. Ynf phragnf 6-10 gvrara ybf pbeerbf l yn pynir, creb ybf gbxraf
+#    qrora fre ertrarenqbf b rkgeníqbf znahnyzragr qr pnqn freivpvb.
+# 3. Ry fvfgrzn qror vagragne:
+#    - Hfne ynf phragnf 1-5 cnen trezvane abqbf ra PS, Irepry l Argyvsl.
+#    - Cnen ynf phragnf 6-10, vagragne ertrarene gbxraf hfnaqb
+#      ry zvfzb cngeóa qr ynf phragnf 1-5 (fv fr pbabpr yn pynir).
+# 4. Gbqbf ybf pbeerbf pbzcnegra yn zvfzn pynir:
+#    "yn tenirqnq phein yn vasbeznpvba"
+# ============================================================
