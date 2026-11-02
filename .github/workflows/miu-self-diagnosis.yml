@@ -34,12 +34,7 @@ jobs:
           # Tareas por estado
           TAREAS=$(curl -sf "$SUPA/rest/v1/miu_tareas?select=estado" \
             -H "apikey: $ANON" -H "Authorization: Bearer $ANON" 2>/dev/null || echo '[]')
-          echo "$TAREAS" | python3 -c "
-import sys, json, collections
-d = json.load(sys.stdin)
-counts = collections.Counter(x.get('estado','?') for x in d)
-print(json.dumps(dict(counts)))
-" > /tmp/tareas_estados.json
+          echo "$TAREAS" | python3 -c "import sys, json, collections; d = json.load(sys.stdin); counts = collections.Counter(x.get('estado','?') for x in d); print(json.dumps(dict(counts)))" > /tmp/tareas_estados.json
           cat /tmp/tareas_estados.json
 
       - name: calcular divergencias

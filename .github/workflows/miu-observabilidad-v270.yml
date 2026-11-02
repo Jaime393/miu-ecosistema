@@ -90,7 +90,8 @@ jobs:
 
       - name: purgar vercel (cada 96 runs = 1 dia)
         if: ${{ github.run_number % 96 == 0 }}
-        run: curl -sf $V/api/purgar -o /dev/null -w "purgar: %{http_code}\n" || true
+        run: |
+          curl -sf $V/api/purgar -o /dev/null -w "purgar: %{http_code}\n" || true
 
       - name: summary observabilidad
         run: |

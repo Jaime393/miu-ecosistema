@@ -36,14 +36,7 @@ jobs:
             # Obtener muestra reciente (limit 200 para evitar timeout)
             SAMPLE=$(curl -sf "$SUPA/rest/v1/gossip_log?select=id,payload,tipo,ts&order=ts.desc&limit=200" \
               -H "apikey: $ANON" -H "Authorization: Bearer $ANON" 2>/dev/null || echo '[]')
-            COV=$(echo "$SAMPLE" | python3 -c "
-import sys, json, datetime
-events = json.load(sys.stdin)
-total = len(events)
-con_flow = sum(1 for e in events if e.get('payload') and (isinstance(e['payload'], dict) and e['payload'].get('flow_id') or (isinstance(e['payload'], str) and 'flow_id' in e['payload'])))
-eco = sum(1 for e in events if 'heartbeat' in (e.get('tipo') or ''))
-print(json.dumps([{'con_flow_id': con_flow, 'sin_flow_id': total - con_flow, 'total': total, 'cobertura_pct': round(con_flow/max(total,1)*100, 2), 'eco_ratio_pct': round(eco/max(total,1)*100, 2), 'fuente': 'gossip_log_sample', 'ts': datetime.datetime.utcnow().isoformat()+'Z'}]))
-" 2>/dev/null || echo '[{"error":"parse_failed"}]')
+            COV=$(echo "$SAMPLE" | python3 -c "import sys, json, datetime; events = json.load(sys.stdin); total = len(events); con_flow = sum(1 for e in events if e.get('payload') and (isinstance(e['payload'], dict) and e['payload'].get('flow_id') or (isinstance(e['payload'], str) and 'flow_id' in e['payload']))); eco = sum(1 for e in events if 'heartbeat' in (e.get('tipo') or '')); print(json.dumps([{'con_flow_id': con_flow, 'sin_flow_id': total - con_flow, 'total': total, 'cobertura_pct': round(con_flow/max(total,1)*100, 2), 'eco_ratio_pct': round(eco/max(total,1)*100, 2), 'fuente': 'gossip_log_sample', 'ts': datetime.datetime.utcnow().isoformat()+'Z'}]))" 2>/dev/null || echo '[{"error":"parse_failed"}]')
           fi
 
           echo "coverage=$COV" >> $GITHUB_OUTPUT

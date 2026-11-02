@@ -14,9 +14,11 @@ jobs:
     timeout-minutes: 8
     steps:
       - name: corpus-sync supabase
-        run: curl -sf $P/corpus-sync -H "Authorization: Bearer $A" -o /dev/null -w "corpus-sync: %{http_code}\n" || true
+        run: |
+          curl -sf $P/corpus-sync -H "Authorization: Bearer $A" -o /dev/null -w "corpus-sync: %{http_code}\n" || true
       - name: ojos-y-manos hf-push
-        run: curl -sf $P/ojos-y-manos/hf-push -H "Authorization: Bearer $A" -o /dev/null -w "hf-push: %{http_code}\n" || true
+        run: |
+          curl -sf $P/ojos-y-manos/hf-push -H "Authorization: Bearer $A" -o /dev/null -w "hf-push: %{http_code}\n" || true
       - name: github-bridge pulse
         run: |
           curl -sf -X POST $P/github-bridge/pulse \
