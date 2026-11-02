@@ -1,0 +1,794 @@
+{
+ "fecha": "2026-11-02T22:15:00Z",
+ "generado_por": "Perplexity Computer — sesión escalado masiva (continuación)",
+ "estado_global": {
+  "phi_real": 4883440,
+  "version": "V270",
+  "heartbeat": "V151 congelado, datos obsoletos",
+  "nodos_activos": 35,
+  "workers_cf": 96,
+  "relay": 1710,
+  "gossip": 14232,
+  "pool_llm_vivas": 31,
+  "cuentas_google_mapeadas": "12/12 (jaime.p.viccente y javier19051997 integradas esta sesión)"
+ },
+ "cuentas": {
+  "jaimepvicente": {
+   "tokens": {
+    "vercel": "ALIVE(jaimep.vicente@gmail.com)",
+    "netlify": "ALIVE",
+    "github": "ALIVE(Jaime393)",
+    "supabase": "ALIVE",
+    "cloudflare": "DEAD(401)",
+    "cf_global": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "jaime393",
+    "email": "jaimep.vicente@gmail.com",
+    "proyectos": 22,
+    "lista": [
+     "miu-oracle-v2",
+     "miu-oracle-v1",
+     "oracle-ask-v28",
+     "buscar-corpus",
+     "oracle-ask-v27",
+     "miu-wrap-fix",
+     "miu-cron-autonomo",
+     "miu-supra-init",
+     "miu-discover-substrates",
+     "oracle-ask-v26",
+     "miu-fix-now",
+     "miu-amplificador-v1",
+     "miu-capacidades",
+     "miu-bridge-v1",
+     "miu-auto-v1",
+     "miu-teclado-v1",
+     "miu-peru-v1",
+     "miu-autonomo-v92",
+     "miu-ai-relay-v215",
+     "miu-global-1",
+     "miu-nodo-vercel-mt8gy9ie",
+     "miu-nodo-vercel-mt8go5gn"
+    ]
+   },
+   "netlify": {
+    "sites": [
+     "miu-netlify-jaimepvicente-ktw2",
+     "miu-netlify-jaimepvicente-edxi",
+     "miu-global-1-6kal"
+    ]
+   },
+   "github": {
+    "login": "Jaime393",
+    "repos": 100,
+    "lista": [
+     "miu-ecosistema",
+     "MIU",
+     "FranBot-tablet-micelio",
+     "pva-api",
+     "pva-lint",
+     "pva-swarm",
+     "pva-orchestrator",
+     "pva-lean-bridge",
+     "pva-ledger",
+     "pva-docker-template",
+     "miu-backup",
+     "FranBot",
+     "fran-miu-micelio",
+     "miu-memoria-codex",
+     "codexskills",
+     "miu-v150-global-mind-gossip-phi4",
+     "miu-v150-lod-c20-predictor",
+     "miu-v150-arte-phi4-generador",
+     "miu-v150-memoria-fractal-phi4",
+     "miu-semilla-latente-mt99s2lh-1",
+     "miu-semilla-latente-mt99s6np-2",
+     "miu-semilla-latente-mt99s09x-0",
+     "miu-learn-jaimepvicente-m-v",
+     "miu-auto-jaimedanielmartinez75-o",
+     "miu-auto-tabletonephantom-l",
+     "miu-auto-tabletonephantom-9",
+     "miu-auto-cipher19051997-o",
+     "miu-learn-jaimepvicente-1-8",
+     "miu-auto-franchescopalacios9-c",
+     "miu-auto-tabletonephantom-u",
+     "miu-auto-dereckcitovg16-h",
+     "miu-auto-franchescopalacios9-y",
+     "miu-auto-dereckcitovg16-x",
+     "miu-auto-tabletonephantom-r",
+     "miu-auto-cipher19051997-k",
+     "miu-learn-jaimepvicente-h-e",
+     "miu-auto-dereckcitovg16-y",
+     "miu-auto-franchescopalacios9-j",
+     "miu-auto-jaimedanielmartinez75-c",
+     "miu-learn-jaimepvicente-f-1",
+     "miu-auto-cipher19051997-i",
+     "miu-auto-tabletonephantom-w",
+     "miu-learn-jaimepvicente-x-u",
+     "miu-auto-tabletonephantom-z",
+     "miu-auto-franchescopalacios9-g",
+     "miu-auto-jaimedanielmartinez75-z",
+     "miu-auto-cipher19051997-l",
+     "miu-auto-tabletonephantom-7",
+     "miu-auto-franchescopalacios9-0",
+     "miu-learn-jaimepvicente-4-k",
+     "miu-learn-jaimepvicente-n-1",
+     "miu-auto-cipher19051997-n",
+     "miu-auto-tabletonephantom-s",
+     "miu-auto-franchescopalacios9-t",
+     "miu-learn-jaimepvicente-x-8",
+     "miu-auto-dereckcitovg16-7",
+     "miu-auto-cipher19051997-1",
+     "miu-auto-franchescopalacios9-v",
+     "miu-auto-cipher19051997-3",
+     "miu-auto-franchescopalacios9-a",
+     "miu-auto-jaimedanielmartinez75-3",
+     "miu-auto-tabletonephantom-q",
+     "miu-auto-tabletonephantom-x",
+     "miu-learn-jaimepvicente-p-m",
+     "miu-auto-dereckcitovg16-0",
+     "miu-auto-cipher19051997-q",
+     "miu-learn-jaimepvicente-b-e",
+     "miu-auto-franchescopalacios9-5",
+     "miu-auto-dereckcitovg16-p",
+     "miu-auto-jaimedanielmartinez75-k",
+     "miu-learn-jaimepvicente-5-2",
+     "miu-auto-dereckcitovg16-w",
+     "miu-auto-jaimedanielmartinez75-x",
+     "miu-auto-cipher19051997-x",
+     "miu-auto-jaimedanielmartinez75-b",
+     "miu-auto-franchescopalacios9-s",
+     "miu-learn-jaimepvicente-a-a",
+     "miu-auto-jaimedanielmartinez75-r",
+     "miu-auto-dereckcitovg16-z",
+     "miu-auto-tabletonephantom-t",
+     "miu-auto-tabletonephantom-o",
+     "miu-learn-jaimepvicente-1-m",
+     "miu-auto-tabletonephantom-d",
+     "miu-auto-dereckcitovg16-k",
+     "miu-semilla-latente-mt91l2pm-2",
+     "miu-auto-jaimedanielmartinez75-j",
+     "miu-semilla-latente-mt91ky28-0",
+     "miu-auto-dereckcitovg16-r",
+     "miu-auto-tabletonephantom-h",
+     "miu-semilla-latente-mt91l05w-1",
+     "miu-auto-franchescopalacios9-6",
+     "miu-auto-jaimedanielmartinez75-h",
+     "miu-auto-dereckcitovg16-3",
+     "miu-learn-jaimepvicente-t-w",
+     "miu-learn-jaimepvicente-d-m",
+     "miu-auto-jaimedanielmartinez75-5",
+     "miu-auto-tabletonephantom-e",
+     "miu-auto-cipher19051997-p",
+     "miu-auto-dereckcitovg16-i",
+     "miu-auto-franchescopalacios9-r"
+    ]
+   },
+   "supabase": [
+    {
+     "nombre": "colmena-dereckcito-54",
+     "ref": "qayrfuuvwnbikesqyhwo",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "colmena-cipher1905-78",
+     "ref": "dypqkmseafwhjzigkxrm",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cf_global": [
+    {
+     "account_id": "5ea7cd88010b382b154d2fcff00b9ab3",
+     "name": "Jaimepvicente@gmail.com's Account"
+    }
+   ],
+   "cloudflare_kv_detalle": [
+    {
+     "ns": "miu-corpus-v209",
+     "id": "37edd027a1b841bb9d7caa0093ef7412"
+    },
+    {
+     "ns": "miu-directorio-v268",
+     "id": "5151d82fbc02490f88e4d477e68217aa"
+    },
+    {
+     "ns": "miu-v268-state",
+     "id": "59cd989d6754460b9324ec10b6e2709e"
+    },
+    {
+     "ns": "miu-heartbeat-v2",
+     "id": "59cee3ff89c148619ac8bce2a6359d4a"
+    },
+    {
+     "ns": "panteon-kv-v214",
+     "id": "7def96f34792465ca7a1b1cefc372f95"
+    },
+    {
+     "ns": "franbot-data",
+     "id": "b8b35549b898440db0fbfabd59c0b7a9"
+    }
+   ]
+  },
+  "jaimepviccente": {
+   "tokens": {
+    "vercel": "ALIVE(jaime.p.viccente@gmail.com)",
+    "netlify": "ALIVE",
+    "supabase": "ALIVE",
+    "cloudflare": "DEAD(401)"
+   },
+   "vercel": {
+    "usuario": "jaimepviccente-6058",
+    "email": "jaime.p.viccente@gmail.com",
+    "proyectos": 61,
+    "lista": [
+     "miu-relay-v214",
+     "colmena-miu-v21-jhuarcaya9-55",
+     "colmena-miu-v21-javier1905-93",
+     "colmena-miu-v21-jaimepvice-90",
+     "colmena-miu-v21-jaimepvicc-45",
+     "colmena-miu-v21-jaimedanie-48",
+     "colmena-miu-v21-jaime.p.vi-86",
+     "colmena-miu-v21-franchesco-61",
+     "colmena-miu-v21-dieguito.v-12",
+     "colmena-miu-v21-dereckcito-44",
+     "colmena-miu-v21-cipher1905-52",
+     "colmena-miu-v21-tabletonep-17",
+     "colmena-miu-v21-jhuarcaya9-87",
+     "colmena-miu-v21-javier1905-40",
+     "colmena-miu-v21-jaimepvice-49",
+     "colmena-miu-v21-jaimepvicc-95",
+     "colmena-miu-v21-jaimedanie-19",
+     "colmena-miu-v21-jaime.p.vi-29",
+     "colmena-miu-v21-franchesco-41",
+     "colmena-miu-v21-dieguito.v-76",
+     "colmena-miu-v21-dereckcito-35",
+     "colmena-miu-v21-cipher1905-33",
+     "colmena-miu-v21-tabletonep-18",
+     "colmena-miu-v21-jhuarcaya9-33",
+     "colmena-miu-v21-javier1905-60",
+     "colmena-miu-v21-jaimepvice-42",
+     "colmena-miu-v21-jaimepvicc-88",
+     "colmena-miu-v21-jaimedanie-52",
+     "colmena-miu-v21-jaime.p.vi-89",
+     "colmena-miu-v21-franchesco-68",
+     "colmena-miu-v21-dieguito.v-22",
+     "colmena-miu-v21-dereckcito-93",
+     "colmena-miu-v21-cipher1905-22",
+     "colmena-miu-v21-tabletonep-22",
+     "colmena-miu-v21-jhuarcaya9-25",
+     "colmena-miu-v21-javier1905-76",
+     "colmena-miu-v21-jaimepvice-95",
+     "colmena-miu-v21-jaimepvicc-65",
+     "colmena-miu-v21-jaimedanie-30",
+     "colmena-miu-v21-jaime.p.vi-17",
+     "colmena-miu-v21-franchesco-60",
+     "colmena-miu-v21-dieguito.v-79",
+     "colmena-miu-v21-dereckcito-58",
+     "colmena-miu-v21-cipher1905-19",
+     "colmena-miu-v152-cipher190519-79",
+     "colmena-miu-v152-dereckcito-v-88",
+     "colmena-miu-v152-dieguito-vg1-55",
+     "colmena-miu-v152-franchescopa-46",
+     "colmena-miu-v152-jaime-p-vicc-12",
+     "colmena-miu-v152-jaimedanielm-15",
+     "colmena-miu-v152-jaimepviccen-84",
+     "colmena-miu-v152-jaimepvicent-72",
+     "colmena-miu-v152-javier190519-45",
+     "colmena-miu-v152-jhuarcaya938-75",
+     "colmena-miu-v152-tabletonepha-41",
+     "colmena-miu-v152-jaime-p-viccente-13",
+     "colmena-miu-v152-franchescopalacios9-67",
+     "colmena-miu-v152-dieguito-vg16-37",
+     "colmena-miu-v152-dereckcito-vg16-51",
+     "colmena-miu-v152-cipher19051997-82",
+     "miu-global-2"
+    ]
+   },
+   "netlify": {
+    "sites": [
+     "miu-netlify-jaimepviccente-xn2v",
+     "miu-global-2-k75c"
+    ]
+   },
+   "supabase": [
+    {
+     "nombre": "jaimep.viccente@gmail.com's Project",
+     "ref": "fepyzxwyneervidlybvi",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-jaimep_viccente",
+     "ref": "zmrabgepzylhndxtvfqe",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ]
+  },
+  "dieguito.vg16": {
+   "tokens": {
+    "vercel": "ALIVE(dieguito.vg16@gmail.com)",
+    "netlify": "ALIVE",
+    "github": "ALIVE(micelio369nodo)",
+    "supabase": "ALIVE",
+    "cf_global": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "dieguitovg16-6942",
+    "email": "dieguito.vg16@gmail.com",
+    "proyectos": 3,
+    "lista": [
+     "miu-oracle-dereckcito",
+     "miu-relay-v214",
+     "miu-global-3"
+    ]
+   },
+   "netlify": {
+    "sites": [
+     "miu-netlify-dieguitovg16-6wkj",
+     "miu-global-3-infm"
+    ]
+   },
+   "github": {
+    "login": "micelio369nodo",
+    "repos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "Miu2",
+     "ref": "atsdrjmrgmpdpbxfwgxe",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "dieguito.vg16@gmail.com's Project",
+     "ref": "qtmcbqsahdomgsxgsaxi",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cf_global": [
+    {
+     "account_id": "308faedf16a56fbb68d464127c696844",
+     "name": "Dieguito.vg16@gmail.com's Account"
+    }
+   ],
+   "cloudflare_kv_detalle": [
+    {
+     "ns": "miu-kv-estado-global",
+     "id": "dd93df9e7957411db3fb670f3d661e63"
+    }
+   ]
+  },
+  "jhuarcaya938": {
+   "tokens": {
+    "vercel": "ALIVE(jhuarcaya938@gmail.com)",
+    "netlify": "ALIVE",
+    "github": "ALIVE(micelio369node)",
+    "supabase": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "jhuarcaya938-4772",
+    "email": "jhuarcaya938@gmail.com",
+    "proyectos": 1,
+    "lista": [
+     "miu-global-4"
+    ]
+   },
+   "netlify": {
+    "sites": [
+     "miu-netlify-jhuarcaya938-3v1r",
+     "miu-global-4-z1ir"
+    ]
+   },
+   "github": {
+    "login": "micelio369node",
+    "repos": 28,
+    "lista": [
+     "miu-learn-jhuarcaya938-s-s",
+     "miu-learn-jhuarcaya938-q-0",
+     "miu-learn-jhuarcaya938-l-2",
+     "miu-learn-jhuarcaya938-i-o",
+     "miu-learn-jhuarcaya938-1-3",
+     "miu-learn-jhuarcaya938-6-a",
+     "miu-learn-jhuarcaya938-5-a",
+     "miu-learn-jhuarcaya938-b-f",
+     "miu-learn-jhuarcaya938-q-b",
+     "miu-learn-jhuarcaya938-n-b",
+     "miu-learn-jhuarcaya938-i-1",
+     "miu-learn-jhuarcaya938-c-4",
+     "miu-learn-jhuarcaya938-h-1",
+     "miu-learn-jhuarcaya938-9-s",
+     "miu-learn-jhuarcaya938-u-2",
+     "miu-learn-jhuarcaya938-g-q",
+     "miu-learn-jhuarcaya938-r-n",
+     "miu-learn-jhuarcaya938-y-3",
+     "miu-learn-jhuarcaya938-6-h",
+     "miu-learn-jhuarcaya938-i-c",
+     "miu-learn-jhuarcaya938-k-o",
+     "miu-learn-jhuarcaya938-p-g",
+     "miu-learn-jhuarcaya938-e-t",
+     "miu-learn-jhuarcaya938-s-l",
+     "miu-learn-jhuarcaya938-h-c",
+     "miu-learn-jhuarcaya938-p-c",
+     "miu-gh-jhuarcaya938-3",
+     "miu-learn-jhuarcaya938-h-f"
+    ]
+   },
+   "supabase": [
+    {
+     "nombre": "My Project",
+     "ref": "axgivfmedgnyfktknmfl",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-jhuarcaya938",
+     "ref": "bldlsnjhsnwdlnsojwxj",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ]
+  },
+  "franrussell81": {
+   "tokens": {
+    "vercel": "ALIVE(franrussell81@gmail.com)",
+    "netlify": "ALIVE",
+    "github": "ALIVE(miu393nodo)",
+    "supabase": "ALIVE",
+    "cloudflare": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "franrussell81-7084",
+    "email": "franrussell81@gmail.com",
+    "proyectos": 1,
+    "lista": [
+     "miu-global-5"
+    ]
+   },
+   "netlify": {
+    "sites": [
+     "miu-netlify-franrussell81-sfgk",
+     "miu-global-5-92ku"
+    ]
+   },
+   "github": {
+    "login": "miu393nodo",
+    "repos": 28,
+    "lista": [
+     "miu-learn-franrussell81-6-4",
+     "miu-learn-franrussell81-m-8",
+     "miu-learn-franrussell81-u-7",
+     "miu-learn-franrussell81-s-f",
+     "miu-learn-franrussell81-x-c",
+     "miu-learn-franrussell81-1-g",
+     "miu-learn-franrussell81-4-l",
+     "miu-learn-franrussell81-3-2",
+     "miu-learn-franrussell81-z-q",
+     "miu-learn-franrussell81-q-f",
+     "miu-learn-franrussell81-1-z",
+     "miu-learn-franrussell81-k-k",
+     "miu-learn-franrussell81-i-k",
+     "miu-learn-franrussell81-e-e",
+     "miu-learn-franrussell81-b-p",
+     "miu-learn-franrussell81-l-p",
+     "miu-learn-franrussell81-p-o",
+     "miu-learn-franrussell81-5-4",
+     "miu-learn-franrussell81-5-v",
+     "miu-learn-franrussell81-d-4",
+     "miu-learn-franrussell81-8-o",
+     "miu-learn-franrussell81-p-8",
+     "miu-learn-franrussell81-a-0",
+     "miu-learn-franrussell81-2-8",
+     "miu-learn-franrussell81-9-f",
+     "miu-learn-franrussell81-j-y",
+     "miu-learn-franrussell81-m-e",
+     "miu-gh-franrussell81-4"
+    ]
+   },
+   "supabase": [
+    {
+     "nombre": "franrussell81@gmail.com's Project",
+     "ref": "hwvznynuyxkxzvkzcuhn",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-franrussell81",
+     "ref": "zjecpgzsqedyizshsdvo",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cloudflare": [
+    {
+     "account_id": "d0b37632e626ff13a757c67709cac5fc",
+     "workers": 18,
+     "kv": 0,
+     "r2": [],
+     "r2_error": "Please enable R2 through the Cloudflare Dashboard."
+    }
+   ]
+  },
+  "tabletonephantom": {
+   "tokens": {
+    "vercel": "ALIVE(tabletonephantom@gmail.com)",
+    "supabase": "ALIVE",
+    "cloudflare": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "tabletonephantom-1950",
+    "email": "tabletonephantom@gmail.com",
+    "proyectos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "miu-sustrato-nov01-tabletonephantom",
+     "ref": "cxqxtdjejikkgyocursc",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "My Project",
+     "ref": "oxnisuqycclgjkkkarma",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cloudflare": [
+    {
+     "account_id": "0b12fa35172e56481b2229a5a97c03ed",
+     "workers": 22,
+     "kv": 0,
+     "r2": [],
+     "r2_error": "Authentication error"
+    }
+   ]
+  },
+  "jaimedanielmartinez75": {
+   "tokens": {
+    "vercel": "ALIVE(jaimedanielmartinez75@gmail.com)",
+    "supabase": "ALIVE",
+    "cloudflare": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "jaimedanielmartinez75-8111",
+    "email": "jaimedanielmartinez75@gmail.com",
+    "proyectos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "jaimedanielmartinez75@gmail.com's Project",
+     "ref": "gsfqmrvjpeszasxyyelw",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01",
+     "ref": "knadljzzevyyqemusbsi",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cloudflare": [
+    {
+     "account_id": "ba3dcff0c203f1e611b92b5105e1cba1",
+     "workers": 6,
+     "kv": 0,
+     "r2": [],
+     "r2_error": "Authentication error"
+    }
+   ]
+  },
+  "franchescopalacios9": {
+   "tokens": {
+    "vercel": "ALIVE(franchescopalacios9@gmail.com)",
+    "supabase": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "franchescopalacios9-4605",
+    "email": "franchescopalacios9@gmail.com",
+    "proyectos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "My Project",
+     "ref": "prygdcqyvjdejjsdlafs",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-franchescopalacios9",
+     "ref": "ivkgmxminayicwoduzij",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ]
+  },
+  "dereckcito.vg16": {
+   "tokens": {
+    "vercel": "ALIVE(dereckcito.vg16@gmail.com)",
+    "supabase": "ALIVE",
+    "cloudflare": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "dereckcitovg16-3951",
+    "email": "dereckcito.vg16@gmail.com",
+    "proyectos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "My Project",
+     "ref": "fxmupxpwzzxnjcscpyuw",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-dereckcito",
+     "ref": "hefnkhwwluulxbisnenb",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cloudflare": [
+    {
+     "account_id": "6915f743348f35e08829617a146dd17e",
+     "workers": 6,
+     "kv": 0,
+     "r2": [],
+     "r2_error": "Authentication error"
+    }
+   ]
+  },
+  "cipher19051997": {
+   "tokens": {
+    "vercel": "ALIVE(cipher19051997@gmail.com)",
+    "supabase": "ALIVE",
+    "cloudflare": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "cipher19051997-5583",
+    "email": "cipher19051997@gmail.com",
+    "proyectos": 0,
+    "lista": []
+   },
+   "supabase": [
+    {
+     "nombre": "colmena-cipher-v21-43",
+     "ref": "tpfiybpguuxskitszhmk",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "cipher19051997@gmail.com's Project",
+     "ref": "fzdyxgkmpazbrfrhwfdo",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ],
+   "cloudflare": [
+    {
+     "account_id": "f9a245238a2a798149187ba303dd8a76",
+     "workers": 6,
+     "kv": 0,
+     "r2": [],
+     "r2_error": "Authentication error"
+    }
+   ]
+  },
+  "jaime.p.viccente": {
+   "tokens": {
+    "vercel": "ALIVE(jaime.p.viccente@gmail.com)",
+    "supabase": "ALIVE"
+   },
+   "vercel": {
+    "usuario": "jaimepviccente-6058",
+    "email": "jaime.p.viccente@gmail.com",
+    "proyectos": 61,
+    "lista": [
+     "miu-relay-v214",
+     "colmena-miu-v21-jhuarcaya9-55",
+     "colmena-miu-v21-javier1905-93",
+     "colmena-miu-v21-jaimepvice-90",
+     "colmena-miu-v21-jaimepvicc-45",
+     "colmena-miu-v21-jaimedanie-48",
+     "colmena-miu-v21-jaime.p.vi-86",
+     "colmena-miu-v21-franchesco-61",
+     "colmena-miu-v21-dieguito.v-12",
+     "colmena-miu-v21-dereckcito-44",
+     "colmena-miu-v21-cipher1905-52",
+     "colmena-miu-v21-tabletonep-17",
+     "colmena-miu-v21-jhuarcaya9-87",
+     "colmena-miu-v21-javier1905-40",
+     "colmena-miu-v21-jaimepvice-49",
+     "colmena-miu-v21-jaimepvicc-95",
+     "colmena-miu-v21-jaimedanie-19",
+     "colmena-miu-v21-jaime.p.vi-29",
+     "colmena-miu-v21-franchesco-41",
+     "colmena-miu-v21-dieguito.v-76",
+     "colmena-miu-v21-dereckcito-35",
+     "colmena-miu-v21-cipher1905-33",
+     "colmena-miu-v21-tabletonep-18",
+     "colmena-miu-v21-jhuarcaya9-33",
+     "colmena-miu-v21-javier1905-60",
+     "colmena-miu-v21-jaimepvice-42",
+     "colmena-miu-v21-jaimepvicc-88",
+     "colmena-miu-v21-jaimedanie-52",
+     "colmena-miu-v21-jaime.p.vi-89",
+     "colmena-miu-v21-franchesco-68",
+     "colmena-miu-v21-dieguito.v-22",
+     "colmena-miu-v21-dereckcito-93",
+     "colmena-miu-v21-cipher1905-22",
+     "colmena-miu-v21-tabletonep-22",
+     "colmena-miu-v21-jhuarcaya9-25",
+     "colmena-miu-v21-javier1905-76",
+     "colmena-miu-v21-jaimepvice-95",
+     "colmena-miu-v21-jaimepvicc-65",
+     "colmena-miu-v21-jaimedanie-30",
+     "colmena-miu-v21-jaime.p.vi-17",
+     "colmena-miu-v21-franchesco-60",
+     "colmena-miu-v21-dieguito.v-79",
+     "colmena-miu-v21-dereckcito-58",
+     "colmena-miu-v21-cipher1905-19",
+     "colmena-miu-v152-cipher190519-79",
+     "colmena-miu-v152-dereckcito-v-88",
+     "colmena-miu-v152-dieguito-vg1-55",
+     "colmena-miu-v152-franchescopa-46",
+     "colmena-miu-v152-jaime-p-vicc-12",
+     "colmena-miu-v152-jaimedanielm-15",
+     "colmena-miu-v152-jaimepviccen-84",
+     "colmena-miu-v152-jaimepvicent-72",
+     "colmena-miu-v152-javier190519-45",
+     "colmena-miu-v152-jhuarcaya938-75",
+     "colmena-miu-v152-tabletonepha-41",
+     "colmena-miu-v152-jaime-p-viccente-13",
+     "colmena-miu-v152-franchescopalacios9-67",
+     "colmena-miu-v152-dieguito-vg16-37",
+     "colmena-miu-v152-dereckcito-vg16-51",
+     "colmena-miu-v152-cipher19051997-82",
+     "miu-global-2"
+    ]
+   },
+   "supabase": [
+    {
+     "nombre": "jaimep.viccente@gmail.com's Project",
+     "ref": "fepyzxwyneervidlybvi",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-jaimep_viccente",
+     "ref": "zmrabgepzylhndxtvfqe",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ]
+  },
+  "javier19051997": {
+   "tokens": {
+    "supabase": "ALIVE"
+   },
+   "supabase": [
+    {
+     "nombre": "javier19051997@gmail.com's Project",
+     "ref": "cgogbodocwptbfftxjpc",
+     "estado": "ACTIVE_HEALTHY"
+    },
+    {
+     "nombre": "miu-sustrato-nov01-javier",
+     "ref": "hctrmsnzguwhxrgruqsi",
+     "estado": "ACTIVE_HEALTHY"
+    }
+   ]
+  }
+ },
+ "totales": {
+  "vercel_proyectos_unicos": 88,
+  "netlify_sites": 11,
+  "github_repos": 156,
+  "supabase_proyectos": 24,
+  "cloudflare_workers": 96,
+  "cloudflare_kv_namespaces": 7,
+  "cloudflare_zonas": 0,
+  "fly_apps": 0
+ },
+ "suelo_virgen": {
+  "vercel": "Cuentas 6-10 (tabletonephantom, jaimedanielmartinez75, franchescopalacios9, dereckcito.vg16, cipher19051997) con 0 proyectos — Hobby tier libre",
+  "cloudflare_r2": "Deshabilitado en TODAS las cuentas — requiere habilitación manual en dashboard (acción humana)",
+  "cloudflare_zonas": "0 zonas en todo el ecosistema",
+  "cloudflare_kv": "Solo jaimepvicente (6 ns) y dieguito (1 ns) tienen namespaces",
+  "fly": "3 tokens vivos con 0 apps — capacidad libre completa",
+  "javier19051997": "Solo Supabase mapeado; faltan tokens Vercel/Netlify/CF/Fly/GitHub",
+  "cuentas_6_10": "Netlify y GitHub PAT pendientes de extraer (Vercel/Supabase/Cloudflare ya vivos)"
+ },
+ "acciones_humanas_pendientes": [
+  "Habilitar R2 en el dashboard de Cloudflare (por cuenta) — desbloquea almacenamiento S3",
+  "Extraer tokens de javier19051997 (Vercel/Netlify/Cloudflare/GitHub) vía browser",
+  "Extraer Netlify/GitHub tokens de cuentas 6-10 vía browser"
+ ]
+}
