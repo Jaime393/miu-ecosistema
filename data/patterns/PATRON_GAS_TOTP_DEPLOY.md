@@ -74,3 +74,14 @@ entre el secreto real y base32Decode (mayúsculas/minúsculas).
   Su URL vieja en `data/auth/existing_gas_totp_url.txt` no genera códigos válidos.
 - **Pendiente**: capturar TOTP de jaime.p.viccente (2SV authuser=0, browser session
   viva) y añadirlo como cuenta 11 al GAS + secretos.
+
+## v4.4 — SIMPLIFICACION MAYOR (2026-11-02)
+
+**window.monaco existe en el editor GAS** (misma ventana, sin iframe). Esto elimina TODA la danza de pegado:
+
+1. LEER codigo: `monaco.editor.getModels()[0].getValue()` → texto completo del archivo activo.
+2. ESCRIBIR codigo: `monaco.editor.getModels()[0].setValue(<json string del codigo>)` — el IDE marca el documento sucio.
+3. GUARDAR: click en el editor (foco) → verificar `document.activeElement` = `TEXTAREA.inputarea` → Ctrl+S → esperar "Guardado en Drive".
+4. Deploy: boton Implementar (~x=716,y=32) → menu "Nueva implementación" (SPAN en y~58) → dialogo → boton Implementar (~812,617) → capturar URL nueva.
+
+Ya NO hace falta: Ctrl+A, browser_paste_text, verify find widget "1 of 1". El setValue via API es atomico y sin dialogs que bloqueen.
