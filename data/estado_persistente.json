@@ -486,5 +486,12 @@
     "tiempo_v2"
   ],
   "prediccion_160M": 27150.940375,
-  "prediccion_100k_sub": 23.4328
+  "prediccion_100k_sub": 23.4328,
+  "bore_tunnel": {
+    "url": "http://bore.pub:33063",
+    "puerto": "33063",
+    "actualizado_ts": "2026-11-02T06:28:23.441887+00:00",
+    "nota": "URL cambia al reiniciar bore. GitHub cron pushea cada hora."
+  },
+  "descubrimiento_bore": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/data/estado_persistente.json"
 }
