@@ -1,0 +1,73 @@
+{
+  "cloudflare": {
+    "source": "existing_all_keys.txt (rot13) \u2014 claves.txt + MIU_CLAVES_FULL_20261020_2014.txt",
+    "accounts": [
+      {
+        "email": "jaimepvicente@gmail.com",
+        "token_name": "frosty-thunder-d1d8",
+        "account_id": "5ea7cd88010b382b154d2fcff00b9ab3",
+        "api_token": "<SEE existing_all_keys.txt rot13>",
+        "r2": {
+          "bucket": "miu-ecosistema-memorias",
+          "kv": "4a95e12998964de6ac00d870df7f270d",
+          "d1": "miu-ecosistema-db"
+        }
+      },
+      {
+        "email": "jaimepviccente@gmail.com",
+        "token_name": "polished-resonance-cf6b",
+        "account_id": "503f950671ffd72f225b10ee0b9c0883",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "jaimepviccente@gmail.com",
+        "token_name": "micelio-miu",
+        "account_id": "503f950671ffd72f225b10ee0b9c0883",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "tabletonephantom@gmail.com",
+        "token_name": "old-field-2a1d",
+        "account_id": "308faedf16a56fbb68d464127c696844",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "dieguito.vg16@gmail.com",
+        "token_name": "",
+        "account_id": "0b12fa35172e56481b2229a5a97c03ed",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "cipher19051997@gmail.com",
+        "token_name": "",
+        "account_id": "f9a245238a2a798149187ba303dd8a76",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "franrussell81@gmail.com",
+        "token_name": "",
+        "account_id": "d0b37632e626ff13a757c67709cac5fc",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "jaimedanielmartinez75@gmail.com",
+        "token_name": "",
+        "account_id": "ba3dcff0c203f1e611b92b5105e1cba1",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "dereckcito.vg16@gmail.com",
+        "token_name": "",
+        "account_id": "6915f743348f35e08829617a146dd17e",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      },
+      {
+        "email": "javier19051997@gmail.com",
+        "token_name": "",
+        "account_id": "30c349b65d9f7c2f7d9a1c9a5fc65e58",
+        "api_token": "<SEE existing_all_keys.txt rot13>"
+      }
+    ],
+    "note": "Todos los tokens tienen prefijo cfat_ o cfut_ o cfk_ en existing_all_keys.txt (ROT13). Users pueden decodificar con tr 'a-zA-Z' 'n-za-mN-ZA-M'."
+  }
+}
