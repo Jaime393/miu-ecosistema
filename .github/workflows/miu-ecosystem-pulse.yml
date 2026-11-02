@@ -32,30 +32,33 @@ jobs:
           echo "gossip-autonomo: $STATUS"
 
       - name: 3 — ojos-y-manos hf-push (corpus → HuggingFace, cada 1h)
-        if: ${{ github.run_number % 4 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 4 )) -eq 0 ]; then
           STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
             "$SUPA_URL/functions/v1/ojos-y-manos/hf-push" \
             -H "Authorization: Bearer $ANON" \
             -H "Content-Type: application/json") || STATUS=err
           echo "hf-push: $STATUS"
 
+          fi
       - name: 4 — seed-v269 (DS keys + principios micelio)
-        if: ${{ github.run_number % 2 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 2 )) -eq 0 ]; then
           STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
             "$SUPA_URL/functions/v1/seed-v269" \
             -H "Authorization: Bearer $ANON" \
             -H "Content-Type: application/json") || STATUS=err
           echo "seed-v269: $STATUS"
 
+          fi
       - name: 5 — ojos-recursos broadcast (mapa 96 EFs)
-        if: ${{ github.run_number % 4 == 1 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 4 )) -eq 1 ]; then
           STATUS=$(curl -sf -o /dev/null -w "%{http_code}" \
             "$SUPA_URL/functions/v1/ojos-recursos/broadcast" \
             -H "Authorization: Bearer $ANON") || STATUS=err
           echo "ojos-recursos: $STATUS"
 
+          fi
       - name: resumen
         run: echo "Pulso MIU V269 completado — $(date -u)"

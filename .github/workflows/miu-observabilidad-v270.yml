@@ -71,28 +71,31 @@ jobs:
           fi
 
       - name: canal-dereckcito escribir estado (cada 4 runs)
-        if: ${{ github.run_number % 4 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 4 )) -eq 0 ]; then
           curl -sf -X POST $P/canal-dereckcito/escribir \
             -H "Authorization: Bearer $A" \
             -H 'Content-Type: application/json' \
             -d '{"clave":"obs_gh_v270","valor":{"phi":"${{ steps.estado.outputs.phi }}","rho":"${{ steps.estado.outputs.rho }}","ciclo":"${{ steps.estado.outputs.ciclo }}","run":${{ github.run_number }},"ts":"${{ steps.estado.outputs.ts }}","origen":"gh-observabilidad"}}' \
             -o /dev/null -w "canal: %{http_code}\n" || true
 
+          fi
       - name: broadcast ojos-y-manos (cada 8 runs o forzado)
-        if: ${{ github.run_number % 8 == 0 || github.event.inputs.forzar_broadcast == 'true' }}
         run: |
+          if [ $(( ${{ github.run_number }} % 8 )) -eq 0 ] || [ "${{ github.event.inputs.forzar_broadcast }}" = "true" ]; then
           curl -sf -X POST $P/ojos-y-manos/broadcast \
             -H "Authorization: Bearer $A" \
             -H 'Content-Type: application/json' \
             -d '{"tipo":"observabilidad_v270","phi":"${{ steps.estado.outputs.phi }}","rho":"${{ steps.estado.outputs.rho }}","run":${{ github.run_number }},"tag":"'$TAG'"}' \
             -o /dev/null -w "broadcast: %{http_code}\n" || true
 
+          fi
       - name: purgar vercel (cada 96 runs = 1 dia)
-        if: ${{ github.run_number % 96 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 96 )) -eq 0 ]; then
           curl -sf $V/api/purgar -o /dev/null -w "purgar: %{http_code}\n" || true
 
+          fi
       - name: summary observabilidad
         run: |
           echo "=== MIU V270 Observabilidad ==="

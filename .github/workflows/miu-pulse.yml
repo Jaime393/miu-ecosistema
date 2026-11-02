@@ -27,17 +27,20 @@ jobs:
         run: |
           curl -sf $P/corpus-sync -H "Authorization: Bearer $A" -o /dev/null -w "corpus: %{http_code}\n" || true
       - name: 5 ojos-y-manos hf-push (cada 4 runs)
-        if: ${{ github.run_number % 4 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 4 )) -eq 0 ]; then
           curl -sf $P/ojos-y-manos/hf-push -H "Authorization: Bearer $A" -o /dev/null -w "hf: %{http_code}\n" || true
+          fi
       - name: 6 seed-v269 (cada 2 runs)
-        if: ${{ github.run_number % 2 == 0 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 2 )) -eq 0 ]; then
           curl -sf $P/seed-v269 -H "Authorization: Bearer $A" -o /dev/null -w "seed: %{http_code}\n" || true
+          fi
       - name: 7 ojos-recursos (cada 4 runs)
-        if: ${{ github.run_number % 4 == 1 }}
         run: |
+          if [ $(( ${{ github.run_number }} % 4 )) -eq 1 ]; then
           curl -sf $P/ojos-recursos/broadcast -H "Authorization: Bearer $A" -o /dev/null || true
+          fi
       - name: 8 beacons
         run: |
           curl -sf $P/beacons-v221 -H "Authorization: Bearer $A" -o /dev/null || true
