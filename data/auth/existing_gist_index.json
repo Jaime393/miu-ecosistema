@@ -1,0 +1,29 @@
+{
+  "gists": {
+    "public_count": 20,
+    "urls": [
+      "https://gist.github.com/Jaime393/2a1a505de29db605ff8846009f2507f5",
+      "https://gist.github.com/Jaime393/40f26841ad99ae54ac4e72d74f0be496",
+      "https://gist.github.com/Jaime393/c2e7bb3f2fdef1966dbd20ac684e50d9",
+      "https://gist.github.com/Jaime393/082fec59b1d23e059befb985c55a0148",
+      "https://gist.github.com/Jaime393/d1593a5bb8c0283a2d02b5874dd4a286",
+      "https://gist.github.com/Jaime393/a581264488f556d7135e0e30d168f908",
+      "https://gist.github.com/Jaime393/c31ceb735a4e996b53de1efcfcbae8c8",
+      "https://gist.github.com/Jaime393/d26bf3d800cf46fef0a45a01042e6a36",
+      "https://gist.github.com/Jaime393/b759d38169dc5e47d630438941577678",
+      "https://gist.github.com/Jaime393/c31cba1e68aa926be9bd203bdce13b74",
+      "https://gist.github.com/Jaime393/378da279593cead41bce2233caf660cd",
+      "https://gist.github.com/Jaime393/a0edc3132247d7fbff3b7e32c2eac913",
+      "https://gist.github.com/Jaime393/7cdfbead60fe4b128966dd5d4ab92e91",
+      "https://gist.github.com/Jaime393/4e0a3018205b2dba552b1005f12dff48",
+      "https://gist.github.com/Jaime393/6019887ef279175e901974b3c841b83a",
+      "https://gist.github.com/Jaime393/8ce32f3d9474435b1a8d0f5a13fe9f0a",
+      "https://gist.github.com/Jaime393/9c81152a7cf0f107d008ee5d2ebc5c17",
+      "https://gist.github.com/Jaime393/46397538d53ac99217a8dfa4a3535e97",
+      "https://gist.github.com/Jaime393/187fb2369adc1714298c4ac7e6f30bb5",
+      "https://gist.github.com/Jaime393/7375246c474b2650455f39bbef26c04c"
+    ],
+    "source": "GET users/Jaime393/gists (auth via gh)",
+    "note": "No data/auth/* Gist found yet; T1.3 recovered from public listing only."
+  }
+}
