@@ -1,0 +1,29 @@
+{
+  "activo": "bore",
+  "backends": {
+    "bore": {
+      "estado": "ok",
+      "ultima_ok": "2026-11-03T07:16:42Z",
+      "ultimo_fallo": null,
+      "fallos": 0
+    },
+    "cloudflared": {
+      "estado": "desconocido",
+      "ultima_ok": null,
+      "ultimo_fallo": null,
+      "fallos": 0
+    },
+    "serveo": {
+      "estado": "desconocido",
+      "ultima_ok": null,
+      "ultimo_fallo": null,
+      "fallos": 0
+    },
+    "localhost_run": {
+      "estado": "desconocido",
+      "ultima_ok": null,
+      "ultimo_fallo": null,
+      "fallos": 0
+    }
+  }
+}
