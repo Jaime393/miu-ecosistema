@@ -1,7 +1,7 @@
 {
-  "url": "http://bore.pub:42443",
-  "puerto": "42443",
+  "url": "https://far-understood-expressions-patrick.trycloudflare.com",
+  "puerto": "0",
   "backend": "activo_estable",
-  "actualizado_ts": "2026-11-03T08:10:08.710899+00:00",
+  "actualizado_ts": "2026-11-03T08:25:04.681831+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
