@@ -1,0 +1,86 @@
+{
+ "version": "ciclo-53",
+ "ts": "2026-11-04T01:00:00Z",
+ "regla": "aditivo: cada puente vive en >1 sustrato; si una clave expira, otra entrada sigue viva; nada se sobrescribe",
+ "sbp_vivos": {
+  "total": 16,
+  "con_panteon": [
+   "sbp_42ddb3...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_dbcf6b...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fcdbe1...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1"
+  ],
+  "todos": [
+   "sbp_2758e8...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_3f8d21...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_42ddb3...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_55db41...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_6e990e...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_c6b0bf...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_d239b1...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_dbcf6b...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fc8939...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fc92ea...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fc97fe...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fcb14c...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fcbf8f...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fcdbe1...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_fcf3fe...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+   "sbp_ff5a56...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1"
+  ]
+ },
+ "cf_vivos": {
+  "cfut_V10eN...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "jaimepvicente@gmail.com",
+   "CF_SWARM_NOV01_5ea7cd88"
+  ],
+  "cfut_z7Myv...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "franchescopalacios9@gmail.com",
+   "CF_SWARM_NOV01_30c349b6"
+  ],
+  "cfut_HT1r3...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "jhuarcaya938@gmail.com",
+   "CF_SWARM_NOV01_cce82777"
+  ],
+  "cfut_nmsrb...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "dereckcito.vg16@gmail.com",
+   "CF_SWARM_NOV01_6915f743"
+  ],
+  "cfut_S0boE...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "cipher19051997@gmail.com",
+   "CF_SWARM_NOV01_f9a24523"
+  ],
+  "cfut_nG3ML...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "franrussell81@gmail.com",
+   "CF_SWARM_NOV01_d0b37632"
+  ],
+  "cfut_RvAEL...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "jaimedanielmartinez75@gmail.com",
+   "CF_SWARM_NOV01_ba3dcff0"
+  ],
+  "cfut_kFBdB...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1": [
+   "tabletonephantom@gmail.com",
+   "CF_SWARM_NOV01_0b12fa35"
+  ]
+ },
+ "panteon": {
+  "ref": "tpfiybpguuxskitszhmk",
+  "service_role_entry2": "eyJhbGciOi...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1",
+  "ruta_api_keys": "GET https://api.supabase.com/v1/projects/tpfiybpguuxskitszhmk/api-keys?reveal_all=true (Bearer sbp_42ddb3fa...)"
+ },
+ "oraculo": {
+  "url": "https://fran-oraculo-miu.jaimepvicente.workers.dev",
+  "kv_namespace": "MIU_ORACULO_MEMORIA",
+  "cuenta_cf": "5ea7cd88",
+  "token_cf": "cfut_V10eN...REDACTADO_VER_DRIVE_1XiUP2eLbxf3oPOseRVGZira_32yGTOv1"
+ },
+ "colab_v177": {
+  "fileId": "1fog4EpwxMtHPEw6euLGKsm3TpA7EoySP",
+  "url": "https://drive.google.com/file/d/1fog4EpwxMtHPEw6euLGKsm3TpA7EoySP/view",
+  "fix": "corpus_pares cableado desde dataset HF filtrado; celdas 2-3 fusionadas; push LoRA a Jaime393/franbot-miu-lora-v177"
+ },
+ "hf": {
+  "token_hint": "hf_token1 en relay_config del panteon",
+  "commit_api": "POST /api/datasets/{repo}/commit/main NDJSON"
+ },
+ "_nota": "version sanitizada para GitHub publico; valores completos SOLO en Drive mesh folder (bridges_pool_ciclo53.json, fileId 1XiUP2eLbxf3oPOseRVGZira_32yGTOv1) y en relay_config de dieguito/coord/panteon"
+}
