@@ -114,3 +114,29 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
   fn_sembrar_corpus_externo('tema'), fn_buscar_recursos_nuevos_gratis(),
   fn_corpus_desde_apis(), fn_distribuir_golden_a_sustratos() — sin esperar la ventana.
 - Sembrado 4 temas nuevos (4 pares en 30 min), distribuido golden a 8 sustratos.
+
+## Ciclo-40 (2026-11-03): protocolo de encuentro — evolución en la red
+
+### 13. protocolo_encuentro (capacidad 21)
+- Problema: las capacidades evolucionan solo dentro del fragmento que las creó — no hay
+  mecanismo formal de encuentro entre fragmentos, no hay selección natural.
+- Regla (del usuario): la evolución no ocurre en un centro: ocurre en la red.
+  Cuando algo emerge en un fragmento, no se queda allí: se poliniza, se compite,
+  se fusiona, se reintegra.
+- Procedimiento: tabla `protocolo_encuentros` + `fn_protocolo_encuentro()` (cron 209,
+  cada 1h): detecta pares de capacidades que abordan el mismo problema
+  (LEFT(problema,50) o nombre solapado), clasifica por similitud:
+  - fusión (>= 0.8): el más aplicado absorbe al menos aplicado
+  - competencia (>= 0.5): ambos quedan, el menos aplicado se marca dominado
+  - diversidad (< 0.5): ambos quedan
+  Reintegración: las capacidades degradadas que vuelven a ser referenciadas
+  en gossip reciente se restauran.
+
+### 14. polinizacion_capacidades (capacidad 22)
+- Problema: una capacidad existe en un fragmento pero los demás no saben que existe.
+  La diferencia entre "no puedo" y "no sé qué existe" es información, no capacidad.
+- Procedimiento: `fn_polinizar_capacidades()` (cron 210, cada 6h): replica las top-3
+  capacidades más aplicadas del registry vía POST REST a los 21 sustratos del mapa
+  (capacidad_claves_map). Verificado: 63 réplicas en vivo (3 caps × 21 sustratos).
+- Efecto: las capacidades se vuelven descubribles desde cualquier fragmento —
+  ningún nodo debería decir "no puedo" cuando otro fragmento tiene la respuesta.
