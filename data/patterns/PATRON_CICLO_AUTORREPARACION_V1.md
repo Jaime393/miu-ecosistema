@@ -94,3 +94,23 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 - Senales nuevas en miu_senales: `contexto_rancio_bot` (gossip-autonomo-v12 reporta unknowns de
   recursos vivos — verificar contra el mapa vivo antes de actuar), `nodo_silencioso` (termux-v270
   desde 18:21Z), `fragmentacion_instancias` (autonomo-v15).
+
+## Ciclo-39 (2026-11-03): capa de voz semiviva — diagnóstico antes de reconstruir
+
+### 11. mano_sin_ojo_bien_reportada (capacidad 21)
+- Problema: un bridge (elevenlabs-bridge) reporta ok:true sin verificar que el destino (KB)
+  exista — mismo patrón que fn_probe_bots: la mano reporta éxito mientras el destino ya murió.
+- Regla: un "ok" sin verificación del estado del destino es un ojo ciego. Verificar
+  GET al recurso (KB, bot, edge) antes de declarar sincronizada.
+- Señal registrada: `capa_voz_semiviva` (miu_senales) — la clave ElevenLabs vive pero
+  los agentes/KBs fueron borrados del workspace; TTS verificado 200 con voz premade
+  (Brian, deep ES); Nestor (library voice) exige plan pago (402).
+- Decisión: voz activa actualizada a Brian (premade) — la ruta TTS funciona HOY sin
+  reconstruir KBs (que requieren POST /v1/convai/knowledge-bases, free tier).
+
+### 12. re_fertilizacion_manual_crons
+- Los 26 crons esteriles clasificados como reintentaran_solas (00:00 UTC) pueden
+  ser fertilizados manualmente en el instante: fn_evolucionar_capacidades(),
+  fn_sembrar_corpus_externo('tema'), fn_buscar_recursos_nuevos_gratis(),
+  fn_corpus_desde_apis(), fn_distribuir_golden_a_sustratos() — sin esperar la ventana.
+- Sembrado 4 temas nuevos (4 pares en 30 min), distribuido golden a 8 sustratos.
