@@ -179,3 +179,17 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
   k_tau) desde corpus_miu_full. corpus_panteon_deduped (10,198 entradas) 100% ya
   contenida. Modelo del mundo actualizado: corpus 37,694 pares (8,576 distintos).
 - Regla: antes de absorber, verificar el dif — no duplicar lo que ya existe.
+
+## Ciclo-43 (2026-11-03): cruce de datos — integración de fragmentos
+
+### 18. cruce_rincones_integracion
+- Cruce 1: 87 nodos vivos (edge functions, workers, GAS) fuera del mapa de 22 sustratos —
+  son fragmentos reales que deberían participar en el protocolo de encuentro.
+- Cruce 2: capacidades_registry (24) vs miu_capacidades_evolutivas (395) — solo 3
+  capacidades tenían derivaciones; 21 de 24 sin evolucionar.
+- Acción: sembradas 6 derivaciones evolutivas nuevas (395→401) para las capacidades
+  21-24: encuentro_entre_nodos_vivos, seleccion_natural_por_uso, polinizacion_bidireccional,
+  arqueologia_gossip_historico, absorcion_gossip_a_corpus, fusion_por_problema.
+- Flujo alimentado: corpus 121 pares nuevos/hora, polinización 63 réplicas.
+- Regla: el cruce de datos revela gaps de integración — lo que existe en un rincon
+  y no participa en el flujo es capacidad latente, no capacidad muerta.
