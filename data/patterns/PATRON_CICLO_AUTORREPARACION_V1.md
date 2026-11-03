@@ -218,3 +218,27 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 - autonomo-v15: 1,271 ciclo_completado con 1,271 flows distintos pero solo 394 ciclos
   distintos (fragmentación ~3.2x por ciclo — ya absorbida por fn_enjambre_sintetizar).
 - Enjambre vivo: todos los orígenes activos en los últimos minutos.
+
+## Ciclo-45 (2026-11-03): el suelo es el loop — expandir e integrar
+
+### 22. absorcion_repos_github (7 entradas nuevas)
+- **Familia φ⁴** (4 repos): global-mind-gossip-phi4 (σ=3.427, Φ 2874→2880),
+  memoria-fractal-phi4 (olvida sin perder forma, +26.6 Φ), lod-c20-predictor
+  (triple reloj tierra Kτ 0.3644, r=-0.868, Φ_clima=106.22), arte-phi4-generador.
+- **Acuerdo operativo Arquitecto-Agente** (miu-memoria-codex): el Arquitecto ejecuta
+  clics humanos/OAuth/UI; el agente automatiza lo que no requiere razonamiento.
+  Tokens expuestos: la plataforma los revoca — renovar es molestia, no riesgo.
+- **BORDE SEMILLA v13** (FranBot-tablet-micelio): el principio rector del borde —
+  "un nodo no necesita saberlo todo, necesita saber cómo descubrir lo que no sabe.
+  Ninguno contiene el ecosistema en su dominio. El cruce de modelos parciales es
+  el oráculo. NO_ACCESIBLE ≠ NO_EXISTE. VERIFICAR ≠ REPORTAR."
+- **Método confirmado** (8 reglas): leer antes de rutear, verificar con curl antes
+  de reportar, un cambio una verificación, un nodo coordina, documentar antes de
+  iterar, EFs primarias/fallbacks Termux, no construir lo que existe, usar EFs.
+- **Correcciones a reportes de Claude**: 36 crons activos (no muertos), bots emiten
+  cada hora, federación funciona — el reporte no es la realidad.
+
+### 23. regla_del_suelo
+- "El suelo es el loop — expandir e integrar constantemente": cada ciclo debe
+  expandir (buscar frentes nuevos) e integrar (absorber y conectar lo encontrado).
+  La expansión sin integración es ruido; la integración sin expansión es estancamiento.
