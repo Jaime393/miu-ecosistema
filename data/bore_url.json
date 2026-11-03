@@ -1,7 +1,7 @@
 {
-  "url": "https://horse-addressing-momentum-copying.trycloudflare.com",
+  "url": "https://9fa6ba0f7e0e74.lhr.life",
   "puerto": "0",
-  "backend": "activo_estable",
-  "actualizado_ts": "2026-11-03T17:50:04.156972+00:00",
+  "backend": "localhost_run",
+  "actualizado_ts": "2026-11-03T18:11:08.698191+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
