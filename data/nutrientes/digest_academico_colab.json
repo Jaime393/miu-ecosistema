@@ -1,1 +1,114 @@
-{"ts": 2, "test": true, "fuente": "colab-node-final"}
+{
+ "ts": 1793668880.8191,
+ "fuente": "colab-node",
+ "nutrientes": 20,
+ "categorias": [
+  "nlin.AO",
+  "cs.MA",
+  "math.IT"
+ ],
+ "modelo": "openai/gpt-oss-20b",
+ "digest": "## Sintesis  \nLos artículos analizados miden fenómenos de interacción sensorial y dinámica de redes, desde flujos ópticos en animales hasta redes neuronales y sistemas de ondas físicas. Se revelan leyes de autoorganización que vinculan señales locales con patrones colectivos, optimización sin supervisión, y la consolidación de información a través de memoria persistente o aprendizaje adjunto. Cada contribución aporta elementos que alimentan la axiomatización de MIU: **φ** (conjunto de contribuciones acumulativas), **ρ** (medida de actividad dinámica) y **savia** (capacidad de retención de información relevante).  \n\n## Leyes emergentes  \n1. **Flujo óptico → fuerza de interacción**  \n   Los sensores de flujo óptico generan fuerzas de interacción que autoorganizan la marcha colectiva sin reglas predefinidas. La ley emergente es la *equivalencia entre gradientes de flujo y fuerzas de repulsión/atracción* que mantienen la cohesión grupal.  \n\n2. **Sincronización de osciladores → cálculo distribuido**  \n   La sincronía de redes de osciladores se emplea para resolver problemas de optimización, memoria y tareas AI, evidenciando la ley de *“sincronización ≈ cálculo”*.  \n\n3. **Principio de acción estacionaria en crecimiento neuronal**  \n   El crecimiento neurípico minimiza una función de acción que integra señales bioquímicas, mecánicas y geométricas. La ley emergente: *“la trayectoria de crecimiento es la de acción mínima”*.  \n\n4. **Aprendizaje adjunto en ondas asimétricas**  \n   Los sistemas de ondas con acoplamientos asimétricos aprenden directamente de sus respuestas, siguiendo la ley *“gradiente adjunto = adaptación”*.  \n\n5. **Red óptica autorreguladora**  \n   Cada enlace registra el resultado de una acción y, con el tiempo, decide si un fuente es consultado. La ley emergente es *“registro persistente = atención selectiva”*.  \n\n6. **Organización modular → rango dinámico ampliado**  \n   La arquitectura jerárquica y modular aumenta la flexibilidad computacional: *“modularidad = rango dinámico”*.  \n\n7. **Interacciones de alto orden limitan chimera**  \n   Las interacciones de más de segunda orden restringen la persistencia de estados chimera en redes neuronales: *“mayor orden = menor estabilidad chimera”*.  \n\n8. **Ondas de tensión inducen compresión y pandeo**  \n   En polímeros activos, la tensión activa desencadena compresión y pandeo, según la ley *“tensión = transición de fase”*.  \n\n9. **Modelos digitales predecen transiciones de sincronía**  \n   Las máquinas de aprendizaje pueden anticipar las transiciones de sincronía en sistemas caóticos, evidenciando *“datos ≈ transiciones”*.  \n\n10. **Condensación óptima de forzamiento repetido**  \n    El objetivo de condensar la influencia de una entrada externa optimiza la difusión: *“condensación = targeting óptimo”*.  \n\n11. **Tanking estratégico en mercados de asignación**  \n    Los agentes que reducen deliberadamente su atractivo cambian el equilibrio de asignación, siguiendo la ley *“estrategia de desincentivo = nuevo equilibrio”*.  \n\n12. **Algoritmos de cobertura adaptativos**  \n    La cobertura móvil se ajusta a la dinámica del entorno, lo que demuestra la ley *“adaptabilidad ≈ estabilidad en entornos dinámicos”*.  \n\n13. **Preferencia sesgada de evaluadores AI**  \n    Los evaluadores AI favorecen ciertos modelos sin relación con la calidad, revelando la ley *“bias modelo = sesgo de evaluación”*.  \n\n14. **RL basada en resultados para 6G**  \n    La planificación de slices 6G optimiza la calidad de servicio mediante RL orientado a resultados: *“RL outcome-driven = eficiencia de slicing”*.  \n\n15. **Búsqueda de hiperparámetros distribuida**  \n    La convergencia depende de la topología de la red: *“topología ≈ eficiencia de optimización",
+ "papers": [
+  {
+   "cat": "nlin.AO",
+   "titulo": "Optic flow in the visual system determines interaction force and collective motion",
+   "id": "http://arxiv.org/abs/2610.41279v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Computing with Coupled Oscillator Networks: Optimization, Memory, and Modern AI Primitives",
+   "id": "http://arxiv.org/abs/2610.39703v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Stationary Action Principles for Neuronal Growth",
+   "id": "http://arxiv.org/abs/2610.36463v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Physical Adjoint Learning in Wave Systems with Asymmetric Couplings",
+   "id": "http://arxiv.org/abs/2610.34815v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Matter that learns what matters",
+   "id": "http://arxiv.org/abs/2610.34428v2"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "From Heterogeneity to Function: Enhanced Modular Dynamic Range in Hierarchical Brain Networks",
+   "id": "http://arxiv.org/abs/2610.32328v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "The limits of higher-order interactions in shaping chimera states",
+   "id": "http://arxiv.org/abs/2610.31997v2"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Strain Waves Generate Compression and Trigger Buckling in Active Polymers",
+   "id": "http://arxiv.org/abs/2610.30749v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Digital Twins of Networked Dynamical Systems: Machine Learning Prediction of Synchronization Transitions in Coupled Chaotic Oscillators",
+   "id": "http://arxiv.org/abs/2610.30632v1"
+  },
+  {
+   "cat": "nlin.AO",
+   "titulo": "Condensation and optimal targeting of repeated forcing in heterogeneous networks",
+   "id": "http://arxiv.org/abs/2610.29714v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Strategic Tanking in Stable Matching Markets",
+   "id": "http://arxiv.org/abs/2610.42105v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Adaptive Coverage Algorithms for Mobile Ad Hoc Networks in Dynamic Worlds",
+   "id": "http://arxiv.org/abs/2610.41936v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "AI evaluators favor job applications written by certain AI models, independent of candidate quality",
+   "id": "http://arxiv.org/abs/2610.41866v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "ORION: An Outcome-Driven LLM Advisor for RL-Based Multi-Domain 6G Slice Placement",
+   "id": "http://arxiv.org/abs/2610.41563v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Distributed Grid Search for Hyperparameter Tuning",
+   "id": "http://arxiv.org/abs/2610.41537v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Understanding LLM-Based Bargaining of Driving Agents in Mixed-Autonomy Traffic",
+   "id": "http://arxiv.org/abs/2610.41239v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "When Disclosure Is Compulsory: Evaluating Ride-Hailing Rebalancing Policies with Self-Interested LLM Driver Agents",
+   "id": "http://arxiv.org/abs/2610.41132v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "A Robust Approach to Belief Mismatch in Non-cooperative Dynamic Games",
+   "id": "http://arxiv.org/abs/2610.40999v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Renegotiable Options Fail to Prevent Hold-Up Between Two Profit-Maximizing Frontier LLM Agents",
+   "id": "http://arxiv.org/abs/2610.40961v1"
+  },
+  {
+   "cat": "cs.MA",
+   "titulo": "Agentic World Modeling for Agent Test-time Scaling without Environment Replica",
+   "id": "http://arxiv.org/abs/2610.40927v1"
+  }
+ ]
+}
