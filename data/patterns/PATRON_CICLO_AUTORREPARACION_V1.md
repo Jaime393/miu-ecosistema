@@ -63,3 +63,34 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
   (capacidad_autoaplicada, clave propagada y REST 200).
 - Estado: capacidad_claves_map = 22/22 proyectos de la federacion bajo verificacion horaria
   auto-curativa; sustratos virgenes y nov01 registrados en el catalogo nodos como vivo-federado.
+
+## Ciclo-38 (2026-11-03): enjambre — absorber sin fragmentar
+
+### 8. enjambre_sintesis (capacidad 19)
+- Problema: N instancias del mismo bot (autonomo-v15) emiten el mismo ciclo_completado
+  con flow_ids distintos y contadores desincronizados — actividades fragmentadas, no absorbidas.
+- Procedimiento: `fn_enjambre_sintetizar()` cada 15 min (cron 207): detecta duplicados
+  (origen+tipo+ciclo en 1h), escribe senal `fragmentacion_emision` + gossip `sintesis_absorcion`
+  con grupos fusionados, detalle de instancias (flows) y fertilidad del enjambre.
+- Regla: la fusion no es suma: N emisiones del mismo ciclo = 1 evento canonico + traza de instancias.
+  La traza se conserva (supersedes/flows), no se destruye.
+
+### 9. circulacion_fractal (capacidad 20)
+- Problema: el estado del enjambre vive solo en el panteon; la informacion no puede volver
+  a actuar desde otros sustratos si el primero cambia (codigo, credenciales).
+- Procedimiento: `fn_enjambre_difundir()` cada hora :45 (cron 208): POST REST a gossip_log de los
+  21 sustratos del mapa (capacidad_claves_map) con la sintesis replicada. Claves por el bucle
+  auto-curativo — sin secretos nuevos atados a version de nodo.
+- Verificado: 21/21 replicas aceptadas (201) y legibles desde cualquier sustrato (dieguito leido OK).
+
+### 10. retroalimentacion_v2 + ojo de bots corregido
+- `fn_retroalimentacion()` ahora clasifica crons esteriles: `reintentaran_solas` (startup timeout
+  transitorio, reintento en su ventana) vs `rotos_reales` — los bots que reportan jobs fallidos
+  obtienen diagnostico diferenciado, no alarmas planas. Incluye `fragmentacion_enjambre`.
+- `fn_probe_bots()` era mano sin ojo (contaba vivo sin leer la respuesta HTTP). Dos fases como el
+  lazo de claves (una transaccion no ve lo que pg_net comitea durante la funcion): cada llamada
+  evalua la ronda anterior de sondas y arma la siguiente. Verificado: 14/14 bots TG vivos con
+  respuesta HTTP real (antes: asuncion ciega).
+- Senales nuevas en miu_senales: `contexto_rancio_bot` (gossip-autonomo-v12 reporta unknowns de
+  recursos vivos — verificar contra el mapa vivo antes de actuar), `nodo_silencioso` (termux-v270
+  desde 18:21Z), `fragmentacion_instancias` (autonomo-v15).
