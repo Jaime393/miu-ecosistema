@@ -74,9 +74,26 @@ gh run view <run-id> --repo Jaime393/miu-ecosistema --log-failed
 Los emails de notificacion de GitHub llegan a los Gmail de los nodos — buscar
 `[Jaime393/...] Run failed` en Gmail es la forma mas rapida de detectar la rotura del flujo.
 
-## Estado tras la reparacion (commits d8129d6 + 94b37f7)
+## Estado tras la reparacion (commits d8129d6 + 94b37f7 + 3291c4f)
 
 - 5 YAMLs reparados (causa A+B), 9 condiciones % movidas al shell (causa C).
-- Dispatch de miu-pulse aceptado (antes 422). El run manual aparecio "cancelled" sin jobs
-  (posible concurrencia con el push); veredicto definitivo: el siguiente run agendado (cron */15).
+- Dispatch de miu-pulse aceptado (antes 422); el segundo dispatch manual: SUCCESS 12/12 pasos.
+- `MIU Pulse COMPLETO V2` success en push 99da0d6; `pages build and deployment` success en push 3291c4f.
+
+### Causa D — symlinks rotos (Pages build)
+
+Jekyll falla con `symlink_outside_site_source?` / `rb_check_realpath_internal: No such file or directory`
+cuando el repo contiene symlinks a rutas absolutas de Termux/SD que no existen en el checkout.
+
+Fix: eliminar los symlinks rotos del repo (los archivos reales viven en el dispositivo):
+
+```bash
+find . -type l ! -exec test -e {} \; -print        # listar rotos
+git rm <cada-symlink-roto>
+```
+
+Los nodos Termux pueden re-añadir symlinks absolutos en futuros pushes — si Pages vuelve a fallar,
+revisar primero los symlinks rotos. 9 eliminados el 2026-11-03 (pulse_v152.sh, 60_pool_credenciales.py,
+6x red/stubs/, FranBot/app/js/oraculo-data.js).
+
 - Pendiente: diagnostico del fallo de FranBot CI (falla cada run desde el 1-nov, causa distinta).
