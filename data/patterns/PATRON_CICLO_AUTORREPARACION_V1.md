@@ -166,3 +166,16 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
   validado r>0.6.
 - **58 axiomas completos**: A0 (ρ>0), A1 (remolino), A2 (muerte no existe, pliegues),
   A3 (carencia es motor), ..., A48 (Nyx), A51 (Φ_poly GlobalMind), A56-A57 (monogamia).
+
+## Ciclo-42 (2026-11-03): absorción de rincones — modelo del mundo
+
+### 17. absorcion_rincones (capacidad 24)
+- Problema: conocimiento disperso en rincones (HF datasets, Drive mesh, gossip,
+  archivos canónicos) que no está en el corpus del panteón.
+- Procedimiento: dif entre fuentes — exportar preguntas locales vía management API,
+  comparar con HF dataset (corpus_miu_full.jsonl / corpus_panteon_deduped.jsonl),
+  INSERT con ON CONFLICT DO NOTHING de las que solo están en la fuente externa.
+- Resultado: 112 entradas nuevas absorbidas (fundamentos MIU: axiomas, phi, savia,
+  k_tau) desde corpus_miu_full. corpus_panteon_deduped (10,198 entradas) 100% ya
+  contenida. Modelo del mundo actualizado: corpus 37,694 pares (8,576 distintos).
+- Regla: antes de absorber, verificar el dif — no duplicar lo que ya existe.
