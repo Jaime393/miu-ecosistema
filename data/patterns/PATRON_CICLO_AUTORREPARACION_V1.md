@@ -37,3 +37,29 @@ Cada patron: problema, procedimiento, condicion de aplicacion, resultado esperad
 ## Contrato de descubrimiento
 Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 (campos: nombre, problema, patron, condicion, auto_aplicable) o este archivo en el repo.
+
+## Ciclo-37 (2026-11-03): ojo corregido + federacion completa
+
+### 6. ojo_verificacion_correcto (fix al bucle de claves)
+- Problema: fn_capacidades_verificar_claves sondaba el raiz `https://{ref}.supabase.co/rest/v1/`,
+  que SIEMPRE responde 401 para claves anon ("Only the service_role API key...").
+  Resultado: el bucle no distinguia clave sana de rota y re-cosechaba cada hora (senales falsas
+  de capacidad_autoaplicada, v.g. 2026-11-03T19:19Z x3).
+- Procedimiento: sondear tabla real con RLS publico:
+  `GET https://{ref}.supabase.co/rest/v1/gossip_log?select=id&limit=1` con headers apikey+Bearer.
+  200 = clave sana; 401/403 = clave rota (el bucle cosecha sola).
+- Regla registrada en miu_senales: sondeo sin apikey contra REST Supabase = falso muerto garantizado.
+  El ojo para REST con clave es el bucle; sondeos sin clave solo para edge functions.
+
+### 7. federacion_claves_total (sembrado de suelos virgenes)
+- Problema: 17 sustratos Supabase vivos sin claves ni cobertura del bucle auto-curativo
+  (8 nov01 + Miu2 + 7 virgenes de sustratos_virgenes_9); el bucle cubria solo 3 proyectos.
+- Procedimiento: cosechar claves via `GET https://api.supabase.com/v1/projects/{ref}/api-keys?reveal=true`
+  con el PAT del dueno (mapa supa_mgmt_tokens.por_cuenta en relay_config) -> upsert en
+  relay_config como supa_ext_{ref}_anon -> extender capacidad_claves_map (3 -> 22 proyectos,
+  cada entrada {ref, anon_clave, pat_clave}) -> persistir en ClavesAPI del Orchestrator Sheet
+  (almacen independiente de sustrato) -> insertar en catalogo nodos.
+- Verificado en vivo: 21/22 OK; fxmupx (metabolismo) tenia 401 REAL y el bucle lo curo solo
+  (capacidad_autoaplicada, clave propagada y REST 200).
+- Estado: capacidad_claves_map = 22/22 proyectos de la federacion bajo verificacion horaria
+  auto-curativa; sustratos virgenes y nov01 registrados en el catalogo nodos como vivo-federado.
