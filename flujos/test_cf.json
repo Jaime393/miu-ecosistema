@@ -1,0 +1,9 @@
+{
+  "nombre": "test_cloudflare",
+  "servicio": "cloudflare",
+  "session_key": "cf_test",
+  "steps": [
+    {"action": "goto", "url": "https://dash.cloudflare.com/login"},
+    {"action": "text", "selector": "body"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "nombre": "Cloudflare via Google (usa cookies google_bootstrap)",
+  "servicio": "cloudflare",
+  "session_key": "cloudflare_jaime",
+  "preload_storage": "google_bootstrap",
+  "steps": [
+    {"action": "goto", "url": "https://dash.cloudflare.com/login", "wait_until": "domcontentloaded", "timeout": 45000},
+    {"action": "wait_for", "selector": "button:has-text('Google')", "timeout": 25000},
+    {"action": "click", "selector": "button:has-text('Google')"},
+    {"action": "sleep", "seconds": 8},
+    {"action": "wait_for", "selector": "a[href*='/']:has-text('Account Home'), text=Websites, text=Overview", "timeout": 45000, "optional": true},
+    {"action": "url"},
+    {"action": "save_session"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "nombre": "Test Google directo",
+  "servicio": "google",
+  "session_key": "google_test2",
+  "preload_storage": "google",
+  "steps": [
+    {"action": "goto", "url": "https://myaccount.google.com/personal-info", "wait_until": "networkidle", "timeout": 45000},
+    {"action": "sleep", "seconds": 4},
+    {"action": "url"},
+    {"action": "text", "selector": "body"}
+  ]
+}
