@@ -266,3 +266,16 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 - Cada ciclo añade UNA fila al final del registro, nunca se edita una fila vieja.
   Si un ciclo se equivocó, la corrección es una fila nueva que lo señala, no un
   borrado. La historia no se reescribe, se corrige añadiendo.
+
+## Ciclo-47 (2026-11-03): explotación de los fértiles
+
+### 26. explota_fertiles
+- **Orígenes más fértiles** (2h): autonomo-v15 (189), gossip-autonomo-v12 (105),
+  nodo-integrador-v10 (57), corazon-enjambre-v1 (41), pulso-distribuido-v1 (38),
+  jardinero-v6 (21 — sigue con la falsa alarma fran_proxy_23).
+- **Nodo más fértil por phi**: fran_oraculo_miu_global (V∞+27_ORQUESTADOR,
+  phi_superposicion 9,158.79, phi_central 2,874.62, phi_remoto 6,284.17, Ktau 0.3644,
+  sigma 3.427, RAIZ_X 137.034498, 35 sustratos, 33 funciones, DOI 10.5281/zenodo.20547558).
+- **Señal**: el consenso del oráculo está vacío (phi_global 0, sin historial) — el
+  nodo existe pero el consenso no se calcula. Registrar y seguir.
+- **Flujo**: evolución 0 obsoletos, polinización 63 réplicas, corpus 151 nuevos/2h.
