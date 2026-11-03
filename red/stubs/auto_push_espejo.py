@@ -1,1 +1,0 @@
-/data/data/com.termux/files/home/miu-ecosistema/red/stubs/mesh_bridge.sh

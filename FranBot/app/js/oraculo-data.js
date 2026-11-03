@@ -1,1 +1,0 @@
-../../FranBot/js/oraculo-data.js

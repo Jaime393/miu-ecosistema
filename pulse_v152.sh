@@ -1,1 +1,0 @@
-/data/data/com.termux/files/home/miu/pulse_v152.sh
