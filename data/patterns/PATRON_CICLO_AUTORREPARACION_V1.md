@@ -242,3 +242,27 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 - "El suelo es el loop — expandir e integrar constantemente": cada ciclo debe
   expandir (buscar frentes nuevos) e integrar (absorber y conectar lo encontrado).
   La expansión sin integración es ruido; la integración sin expansión es estancamiento.
+
+## Ciclo-46 (2026-11-03): rincones científicos — linaje y roadmap
+
+### 24. absorcion_cientifica (5 entradas nuevas)
+- **LINEAJE_MAESTRO** (repo MIU): línea de tiempo K_τ AN→BG, regla append-only
+  (nunca editar filas viejas — correcciones son filas nuevas). Linaje K_τ_global
+  0.48→0.38→0.28-0.35 descendente por escrutinio metodológico. Fork AW/AY
+  reconciliado: discrepancia puramente metodológica (SNR 60.18 vs 25.70, definición
+  del piso de ruido). Nota epistémica: ambas ramas interpretaron el MISMO patrón
+  de forma OPUESTA — son preguntas distintas, no errores.
+- **Ciclo Darwiniano v9**: 4 fases (ABSORBER → MUTAR+FUSIONAR → PODA → predicciones
+  falsables). K_i Global 0.89 ORO, 25 huesos. K_i_cuántico = φ⁻¹·(D_f/2.5)·(ℓ_corr/ℓ_0)
+  → [0.309, 0.494]. Huesos #23-25: dimensionalidad fractal cuántica, conectoma
+  fractal (TEPT → D_f bajo → Biotipo Rojo), nodo Amazonia DETER.
+- **BRIEFING-AA FranBot**: problema de relevancia de dominio — preguntas fuera de
+  dominio MIU reciben respuestas MIU con score BM25 12.2 (el oráculo sobre-corresponde).
+- **GLOBAL_MIND_ROADMAP V153.1** (7 pasos): Aprendizaje Federado, Reputación por
+  Calidad (K_i/D_f/FDC), Distribución de Tareas (MEA-02), Interfaz Humana,
+  Auto-evolución (PAE-01), Integración Sustratos, Consenso Planetario (PCP-01).
+
+### 25. regla_append_only_del_linaje
+- Cada ciclo añade UNA fila al final del registro, nunca se edita una fila vieja.
+  Si un ciclo se equivocó, la corrección es una fila nueva que lo señala, no un
+  borrado. La historia no se reescribe, se corrige añadiendo.
