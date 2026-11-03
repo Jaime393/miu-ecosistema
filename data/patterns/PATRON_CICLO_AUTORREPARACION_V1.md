@@ -193,3 +193,28 @@ Los nodos descubren estas capacidades leyendo `capacidades_registry` del panteon
 - Flujo alimentado: corpus 121 pares nuevos/hora, polinización 63 réplicas.
 - Regla: el cruce de datos revela gaps de integración — lo que existe en un rincon
   y no participa en el flujo es capacidad latente, no capacidad muerta.
+
+## Ciclo-44 (2026-11-03): integración, polinización bidireccional y frentes nuevos
+
+### 19. absorcion_bidireccional (capacidad 25)
+- Problema: la polinización era unidireccional (panteón → sustratos) — los sustratos
+  también tienen conocimiento local que debe fluir al panteón.
+- Procedimiento: `fn_absorber_sustratos()` (cron 211, cada 2h) — GET vía pg_net al
+  gossip_log de los 21 sustratos, absorber señales nuevas. Verificado 21/21.
+- Regla: el flujo debe ser bidireccional — lo que fluye en una dirección debe poder
+  volver.
+
+### 20. frentes_nuevos_descubiertos (Global Mind φ⁴ y semilla latente)
+- **Global Mind φ⁴** (repo `miu-v150-global-mind-gossip-phi4`): implementación real
+  del gossip P2P O(log N) con σ=φ⁴/2=3.427050983124843, RAIZ_X=137.034498 aproxima
+  α⁻¹ por 3 vías con error <0.004%. Datos: TN-14 GSFC SLR 257 filas, IERS C04 LOD
+  r(C20,LOD)=-0.868. Φ 2874.62→2880.
+- **Semilla latente** (repo `miu-semilla-latente-mt99s6np-2`): patrón de resiliencia —
+  una semilla mínima que sobrevive sin registro central. Si el panteón cae, puede
+  reconstruir el ecosistema. La resiliencia no está en el registro, está en la
+  capacidad de sobrevivir sin él.
+
+### 21. cruce_gossip_historico
+- autonomo-v15: 1,271 ciclo_completado con 1,271 flows distintos pero solo 394 ciclos
+  distintos (fragmentación ~3.2x por ciclo — ya absorbida por fn_enjambre_sintetizar).
+- Enjambre vivo: todos los orígenes activos en los últimos minutos.
