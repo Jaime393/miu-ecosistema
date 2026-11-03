@@ -1,0 +1,30 @@
+{
+  "ts": "2026-11-03T05:04:17.036232Z",
+  "cobertura_flow_id_pct": 0.0,
+  "eco_ratio_pct": 0.0,
+  "total_eventos_muestra": 0,
+  "alertas": [
+    "CRITICO: cobertura flow_id 0.0% < 30%"
+  ],
+  "estado": "critico",
+  "nodos_prioritarios_adopcion": [
+    "jardinero-autonomo",
+    "autonomo-claude",
+    "ejecutor-tareas",
+    "nodo-integrador",
+    "github-bridge",
+    "evolucionador",
+    "monitor-proactive",
+    "orquestador-maestro",
+    "loop-perpetuo"
+  ],
+  "contratos_sembrados": [
+    "arbitro_estado_v1",
+    "presupuesto_adaptativo_v1",
+    "metricas_eficiencia_v1",
+    "fertilidad_nodo_schema_v1",
+    "flow_id_adopcion_v1"
+  ],
+  "heartbeat_v2_anomalia": "eco puro 44 eventos 1 payload unico — reducir frecuencia o variar payload",
+  "migracion_pendiente": "supabase/migrations/20261005_fingerprint_fertilidad.sql"
+}
