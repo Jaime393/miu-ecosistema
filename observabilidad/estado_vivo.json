@@ -1,11 +1,53 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-11-03T03:34:18.253016Z",
-  "_run": "160",
+  "_ts": "2026-11-03T11:36:51.482486Z",
+  "_run": "161",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
-    "error": "unreachable"
+    "version": "V272",
+    "ts": "2026-11-03T11:36:51.422Z",
+    "vitales": {},
+    "make": {
+      "nota": "hay_11_cuentas_Make_no_solo_la_de_tu_sesion"
+    },
+    "cloudflare": {
+      "nota": "cf_5ea7cd88_DEGRADADO_usar_rutas_alternas"
+    },
+    "llm": {
+      "nota": "7_proveedores_en_orden_de_prioridad"
+    },
+    "supabase": {
+      "principal": "https://tpfiybpguuxskitszhmk.supabase.co",
+      "nota": "hay_4_instancias_supabase"
+    },
+    "nodos": {},
+    "coordinacion": {
+      "ultimas_sesiones_log": [],
+      "instruccion": "LEE decisiones_acumuladas antes de actuar. Al terminar: POST /rest/v1/sesion_log con tipo=fin + que_hice + no_tocar + pendiente_para. UPDATE relay_config decisiones_sesiones_v1 agregando tu entrada al array.",
+      "patron": "LEER→ACTUAR_UNA_COSA→REGISTRAR→SALIR"
+    },
+    "endpoints": {
+      "autonomo": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/autonomo-claude",
+      "jardinero": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
+      "oracle": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask",
+      "gossip": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+      "integrador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nodo-integrador",
+      "github": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/github-bridge",
+      "relay_config": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config",
+      "tareas": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/miu_tareas",
+      "sesion_log": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/sesion_log",
+      "contexto": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global"
+    },
+    "principios": [
+      "Lee coordinacion.decisiones_acumuladas PRIMERO — sesiones anteriores ya investigaron",
+      "Lee make_cuentas_index antes de actuar en Make — hay 11 cuentas",
+      "cf_5ea7cd88 DEGRADADO — usa cf_rutas_alternas_orden siempre",
+      "Usa cascade_llm_v1 para LLM — 7 proveedores disponibles",
+      "regla_procedencia: vivo_observado > snapshot > handoff > memoria_historica",
+      "rho(x)>0 — flujo continuo sin intervencion humana",
+      "Al terminar: registra en sesion_log + actualiza decisiones_sesiones_v1"
+    ]
   }
 }
