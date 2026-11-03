@@ -1,13 +1,6 @@
 {
-  "url": "http://bore.pub:6126",
-  "puerto": "6126",
-  "protocolo": "http_tcp_raw",
-  "servidor": "bore.pub",
-  "expone": "http://127.0.0.1:8771",
-  "actualizado_ts": "2026-11-03T00:34:14.659292+00:00",
-  "endpoints": [
-    "/health",
-    "/queue",
-    "/queue/:id"
-  ]
+  "url": "http://bore.pub:49338",
+  "puerto": "49338",
+  "actualizado_ts": "2026-11-03T05:50:16.461481+00:00",
+  "nota": "Archivo independiente, NO lo regenera ningun script"
 }
