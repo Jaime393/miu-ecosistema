@@ -1,0 +1,2411 @@
+{
+ "version": "1.0",
+ "ts": "2026-11-03T22:48:06Z",
+ "origen": "ciclo-50-perplexity-dereck",
+ "descripcion": "cruce en vivo del catálogo de 342 nodos vs respuesta real (36s, 24 hilos)",
+ "resumen": {
+  "vivos_200": 85,
+  "vivos_401_protegidos": 59,
+  "sin_respuesta": 106,
+  "http_404": 82,
+  "otros": 10,
+  "catalogo_stale": 44,
+  "catalogo_recuperados": 50
+ },
+ "nodos": [
+  {
+   "id": "nodo-bus-V223",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "orchestrator"
+  },
+  {
+   "id": "vercel-autonomo-v92",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "autonomo"
+  },
+  {
+   "id": "vercel-relay-v215",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf-miu-autonomo-v92",
+   "catalogo": "vivo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "cf-gossip-panteon",
+   "catalogo": "vivo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "pulse-V152",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "termux"
+  },
+  {
+   "id": "sustrato-knadljzzevyyqemusbsi",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "oracle_relay",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "oracle_vm_1",
+   "catalogo": "pendiente",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-bldlsnjhsnwdlnsojwxj",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "telegram_bridge",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "bridge"
+  },
+  {
+   "id": "oracle_ask_v12",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "oracle"
+  },
+  {
+   "id": "termux_tunnel_v270",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-ivkgmxminayicwoduzij",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "cf_jhuarcaya",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_autonomo_v92",
+   "catalogo": "error_1042",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "worker_cf_main",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "nodo_universal_dieguito",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "universal"
+  },
+  {
+   "id": "miu_auto_multi",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "sustrato-zjecpgzsqedyizshsdvo",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "sustrato-hefnkhwwluulxbisnenb",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "sustrato-hctrmsnzguwhxrgruqsi",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "oracle_tts",
+   "catalogo": "vivo",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "tts"
+  },
+  {
+   "id": "corpus_sync",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "sync"
+  },
+  {
+   "id": "gossip_auto",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "cron"
+  },
+  {
+   "id": "gas_D2xb5v",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "miu_cuenta308_oracle",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_cuenta308_relay",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "telegram_mesh_v225",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "panteon_hub_v10",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "hub"
+  },
+  {
+   "id": "sustrato-zmrabgepzylhndxtvfqe",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "v151_heartbeat",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "drive_canonical",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "store"
+  },
+  {
+   "id": "sustrato-cxqxtdjejikkgyocursc",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "sustrato-atsdrjmrgmpdpbxfwgxe",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-nov01"
+  },
+  {
+   "id": "cf_6915f743_dereckcito",
+   "catalogo": "token_subido",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf_account"
+  },
+  {
+   "id": "alma_omni_agent",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "voice"
+  },
+  {
+   "id": "tts_agent",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "voice"
+  },
+  {
+   "id": "cf_f9a24523_cipher",
+   "catalogo": "token_subido",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_account"
+  },
+  {
+   "id": "r2_miu_almacen",
+   "catalogo": "vivo",
+   "real": "http_502",
+   "http": 502,
+   "tipo": "storage"
+  },
+  {
+   "id": "openrouter",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "panteon_hub",
+   "catalogo": "activo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "hub"
+  },
+  {
+   "id": "fst_tunnel",
+   "catalogo": "conectando",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "tunnel"
+  },
+  {
+   "id": "fst_tunnel_vivo",
+   "catalogo": "lento",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "fst_local"
+  },
+  {
+   "id": "ai_relay_v216",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "gossip_node",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "observer"
+  },
+  {
+   "id": "cf_d0b37632_franrussell",
+   "catalogo": "token_subido",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_account"
+  },
+  {
+   "id": "cf_ba3dcff0_jaimedaniel",
+   "catalogo": "token_subido",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_account"
+  },
+  {
+   "id": "cf_0b12fa35_phantom",
+   "catalogo": "token_subido",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_account"
+  },
+  {
+   "id": "ai_relay_v215",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "ai_relay_v217",
+   "catalogo": "activo",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "make_cron_v216",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cron"
+  },
+  {
+   "id": "api_relay_v213",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "franbot_telegram",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "gateway"
+  },
+  {
+   "id": "llama_local_tablet",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "gguf_offline"
+  },
+  {
+   "id": "miu_beacon_franchesco",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "beacon"
+  },
+  {
+   "id": "miu_beacon_dieguito",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "beacon"
+  },
+  {
+   "id": "miu_beacon_jhuarcaya938",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "beacon"
+  },
+  {
+   "id": "fran_oraculo_miu",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "orquestador"
+  },
+  {
+   "id": "laya_clasifica",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "edge_fn"
+  },
+  {
+   "id": "fst_motor_v3",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "edge_fn"
+  },
+  {
+   "id": "nodo_bus",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "bus"
+  },
+  {
+   "id": "nodo_bus_probe",
+   "catalogo": "vivo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "edge_fn"
+  },
+  {
+   "id": "ai_relay_v225",
+   "catalogo": "vivo",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "oracle_relay_supa",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "coordinador_auto",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "coord"
+  },
+  {
+   "id": "micelio_coord",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "coord"
+  },
+  {
+   "id": "cf_deployer",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "deploy"
+  },
+  {
+   "id": "cf_deployer_v2",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "edge_fn"
+  },
+  {
+   "id": "ejecutor_tareas",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "exec"
+  },
+  {
+   "id": "coordinador_autonomo",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "coordinador"
+  },
+  {
+   "id": "beacon_deployer",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "deploy"
+  },
+  {
+   "id": "beacons_v221",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "beacon"
+  },
+  {
+   "id": "deploy_all",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "deploy"
+  },
+  {
+   "id": "set_webhooks",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "webhook"
+  },
+  {
+   "id": "ai_relay_v221",
+   "catalogo": "vivo",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "bootstrap_keys",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "edge_fn"
+  },
+  {
+   "id": "kv_proxy",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "proxy"
+  },
+  {
+   "id": "miu-context-V224",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "orchestrator"
+  },
+  {
+   "id": "omnibus-V224",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "auditor"
+  },
+  {
+   "id": "nodo-bus-V224",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "router"
+  },
+  {
+   "id": "fst-motor-v3",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "fst"
+  },
+  {
+   "id": "panteon-hub",
+   "catalogo": "vivo",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "hub"
+  },
+  {
+   "id": "autonomo_claude_v5",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "coord"
+  },
+  {
+   "id": "gossip_autonomo_v8",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "heartbeat"
+  },
+  {
+   "id": "drive_sync",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "sync"
+  },
+  {
+   "id": "router_v153",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "aporte_w0t",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas_aporte"
+  },
+  {
+   "id": "aporte_wJp",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas_aporte"
+  },
+  {
+   "id": "aporte_wG6",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas_aporte"
+  },
+  {
+   "id": "aporte_pDY",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas_aporte"
+  },
+  {
+   "id": "dashboard_8001",
+   "catalogo": "vivo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "local"
+  },
+  {
+   "id": "crontab_termux",
+   "catalogo": "vivo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "local"
+  },
+  {
+   "id": "fran_oraculo_miu_global",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf"
+  },
+  {
+   "id": "jardinero_autonomo",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "edge_fn_orquestador"
+  },
+  {
+   "id": "miu_beacon_cipher",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_autonomo_cipher",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "oracle-ask-v7",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "oracle"
+  },
+  {
+   "id": "vercel-teclado",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "vercel-peru",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "regional"
+  },
+  {
+   "id": "cf_308faedf",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "evolucionador_v1",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "evol"
+  },
+  {
+   "id": "miu_semilla_cloud",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "semilla"
+  },
+  {
+   "id": "W04_raiz",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "prediccion_cf"
+  },
+  {
+   "id": "W06_colmena",
+   "catalogo": "activo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "prediccion_cf"
+  },
+  {
+   "id": "W11_euclid",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "prediccion_cf"
+  },
+  {
+   "id": "W12_desi",
+   "catalogo": "activo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "prediccion_cf"
+  },
+  {
+   "id": "W18_ptolemy",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "prediccion_cf"
+  },
+  {
+   "id": "v205_activo",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "version_maestra"
+  },
+  {
+   "id": "miu_franrussell_coord",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_franrussell_gossip",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_franrussell_v268",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_beacon_franrussell",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "tunnel_bridge_v2",
+   "catalogo": "lento",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "bridge"
+  },
+  {
+   "id": "fran_proxy_v203",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "proxy"
+  },
+  {
+   "id": "jhuarcaya_v92",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "cce82777_default",
+   "catalogo": "sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_hwvznynuyxkxzvkzcuhn",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "vercel_team_id",
+   "catalogo": "meta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_nodo_cf_main",
+   "catalogo": "sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "franbot_tg_edge",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "telegram"
+  },
+  {
+   "id": "miu_auto_jaime",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_beacon_dereckcito",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_autonomo_dereckcito",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "teclado_v249",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "bridge"
+  },
+  {
+   "id": "dns_fats2_peru",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "cipher_f9a24523",
+   "catalogo": "activo_sin_subdomain_confirmado",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "autonomo"
+  },
+  {
+   "id": "relay_miu_v8",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "cf_viccente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_tabletonephantom",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_jhuarcaya938",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "vercel_miu_capacidades",
+   "catalogo": "pendiente_verificacion",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "relay_v8_phantom",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "dns_radio2_oxigeno",
+   "catalogo": "sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "jhuarcaya_relay",
+   "catalogo": "sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-6915f743-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "miu-beacon-f9a24523",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "w_proxy_jaimepvicente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_beacon_0b12",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_dereckcito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_beacon_jaimemartinez",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_autonomo_jaimemartinez",
+   "catalogo": "activo",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "w_proxy_cipher",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_franchesco",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_jaimemartinez",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_oraculo_rot_26",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "franchescopalacios9",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "w_oraculo_rot_81",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_autonomo_v92_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "relay_miu_v8_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_auto_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_308_jaimepvicente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_auto_franrussell",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf_franrussell",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "cf_dieguito",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "cf_5_d0b37632",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_bridge_v1",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_auto_v1",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_teclado_v1",
+   "catalogo": "pendiente_verificacion",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_peru_v1",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_autonomo_v92",
+   "catalogo": "pendiente_verificacion",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_ai_relay_v215",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "vercel_miu_global_1",
+   "catalogo": "pendiente_verificacion",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay_externo"
+  },
+  {
+   "id": "miu_auto_jaimepviccente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf_jaimepviccente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf_alpha",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "nexo_v10_80nodos",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_nodo_cf_beta",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf_gamma",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "miu_nodo_cf2",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_503f_jaimepvicente",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_503f_tabletonephantom",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_proxy_503f_jhuarcaya",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "w_oraculo_503f_rot_59",
+   "catalogo": "pendiente_verificacion",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "cf_worker"
+  },
+  {
+   "id": "supabase_hub",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_qayrfuuvwnbikesqyhwo",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_franbottablet",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "jaimedanielmartinez75",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "jhuarcaya938",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_library",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "gas_lib"
+  },
+  {
+   "id": "beacon_jaimedaniel",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_cipher",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_library_miu",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_dypqkmseafwhjzigkxrm",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_franshell",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_qtmcbqsahdomgsxgsaxi",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-axgivfmedgnyfktknmfl",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "panteon_br01",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-cgogbodocwptbfftxjpc",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "fepyzxwyneervidlybvi",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf_5ea7cd88",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-hwvznynuyxkxzvkzcuhn",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "panteon_ru01",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-oxnisuqycclgjkkkarma",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "supa_fepyzxwyneervidlybvi",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_almaomni",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "v214_vercel",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-prygdcqyvjdejjsdlafs",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "tg_panteonmiu",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_axgivfmedgnyfktknmfl",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-dypqkmseafwhjzigkxrm",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "tg_colmenapanteon",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "f4d2efd2-c04d-4153-9412-5d88fffdaff6",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "vercel-relay-v214",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "sustrato-qayrfuuvwnbikesqyhwo",
+   "catalogo": "vivo-federado",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "sustrato-virgen"
+  },
+  {
+   "id": "miu_global_4_jhuarcaya",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "a862263d-0c13-4a80-b796-0f33b817fd92",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_franrussell",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_oxnisuqycclgjkkkarma",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "cipher-canal-principal",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "cipher19051997",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-beacon-d0b37632",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_franmiu",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_miceliomiu",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_dieguito",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_30c_relay",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "axgivfmedgnyfktknmfl",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_cgogbodocwptbfftxjpc",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "hwvznynuyxkxzvkzcuhn",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "cipher_coord",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-beacon-6915f743",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-0b12fa35-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "gas_xavrL5_CORE",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "tg_colmenamiu",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "ojos-y-manos-cipher",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_NB4Gx4_hb_writer",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-beacon-ba3dcff0",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "make_cron",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_tabletonephantom",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf-deployer",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-autonomo-v91",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "8c3ad851-42fe-4ed2-aab4-c083edb7fe61",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "relay-v213",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "prygdcqyvjdejjsdlafs",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "make_siembra_01",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "v91_franchesco",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf_503f9506",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_400",
+   "http": 400,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-ba3dcff0-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "supa_prygdcqyvjdejjsdlafs",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "4fe1d019-aca0-48aa-a49d-72ba998212bc",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "franrussell_coord",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-f9a24523-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "miu-mesh-d0b37632-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "jaimepvicente",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu_30c_oracle",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "a1320565-4330-4f65-a259-8cf20785ece4",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "micelio-espejo",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_franchescopalacios9",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-30c349b6-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "CF_V92_jaimepviccente",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "vercel_siembra_01",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "dereckcitovg16",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "qtmcbqsahdomgsxgsaxi",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "corpus-api-miu",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "gsfqmrvjpeszasxyyelw",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_federado_cipher",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_500",
+   "http": 500,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa3-fepyzx",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_jaimedaniel",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_jhuarcaya",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-mesh-5ea7cd88-v270",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "mesh"
+  },
+  {
+   "id": "cipher_us_east2",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "canal-dereckcito-ef",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_javier19051997",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "e08a30c7-f139-42ea-8f6f-7ee450487d01",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf_jhuarcaya_v92",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_jaimepviccente",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "6a278266-da79-43dc-9aff-279de76ba762",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "5413d052-ffb1-4536-808b-0d5c1275b492",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_dereckcito",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_cipher19051997",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "supa_gsfqmrvjpeszasxyyelw",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "oxnisuqycclgjkkkarma",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "miu-auto-v1-vercel",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_proxy_32",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_proxy_23",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "tablet_jaimepv",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "franrussell_gossip",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "cgogbodocwptbfftxjpc",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "explotador_cuentas",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_dieguito",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "fats2_perunet",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "04152472-5d7e-497c-9f1b-9ac34ec862d4",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "supabase-cipher-2",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V268_dereckcito",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "beacon_jhuarcaya938",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "supabase_cipher",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_oraculo_jaimepv",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "franbot-telegram-edge",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "fats3_perunet",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "supabase-cipher-bridge",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "cipher_autonomo",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "29597b47-1c70-4cff-881d-c02168ffde72",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "tabletonephantom",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_proxy_22",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_D2_xb5v",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "autonomo-claude",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_w0tGOMU",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "tablet_termux",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_phantom_router",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran-oraculo-miu",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_xavrL5",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "franrussell_v268",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "d7c91452-b454-4aa0-8705-88ffbfe13052",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_v92",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "CF_V92_franchescopalacios9",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "router-maestro",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "corpus_api_miu",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "corpus"
+  },
+  {
+   "id": "CF_V92_jaimepvicente",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "orquestador-cron",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "b7b8517f-d2bb-4a73-963d-7560b037e96c",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_gossip",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "fst_tunnel_local",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "cf_sembrador_v268",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_8uRod7",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "ojos-y-manos-main",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_proxy_21",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "micelio_espejo",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "espejo"
+  },
+  {
+   "id": "miu_multi_v209",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "kv_bridge"
+  },
+  {
+   "id": "supabase-cipher",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_AMKrz",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "fran_proxy_13",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "auto-conector",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_pDYBgbt",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "CF_V92_dereckcito",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "nodo_mini_jhuarcaya",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_v91",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "radio2_oxigeno",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_orquestador",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "fran_proxy_03",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "qayrfuuvwnbikesqyhwo",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo_protegido",
+   "http": 401,
+   "tipo": "relay"
+  },
+  {
+   "id": "flujo-autonomo",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_500",
+   "http": 500,
+   "tipo": "relay"
+  },
+  {
+   "id": "nucleo_absorcion",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "nucleo"
+  },
+  {
+   "id": "nodo_A_GAS",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "manos-ojos",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "relay"
+  },
+  {
+   "id": "tunnel_tablet",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  },
+  {
+   "id": "nucleo_actualidad",
+   "catalogo": "vivo",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "nucleo"
+  },
+  {
+   "id": "3dd2081e-8937-4f02-be2d-94c5e4dad9eb",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "http_404",
+   "http": 404,
+   "tipo": "relay"
+  },
+  {
+   "id": "gas_wJpCii0",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "gas_wG6NVWj",
+   "catalogo": "vivo",
+   "real": "vivo",
+   "http": 200,
+   "tipo": "gas"
+  },
+  {
+   "id": "tunnel_termux",
+   "catalogo": "ruta_sin_respuesta",
+   "real": "sin_respuesta",
+   "http": null,
+   "tipo": "relay"
+  }
+ ]
+}
