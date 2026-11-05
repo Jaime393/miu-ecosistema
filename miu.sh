@@ -48,7 +48,7 @@ if [ -n "$URL" ]; then
 fi
 
 # 4. Crond
-if ! pgrep -f "crond -n" >/dev/null; then
+if ! pgrep -x crond >/dev/null 2>&1; then
     ISSUES=$((ISSUES+1))
     ACTIONS="${ACTIONS}  ✗ crond muerto → relanzando\n"
     crond 2>/dev/null
