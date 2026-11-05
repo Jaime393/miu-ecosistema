@@ -44,6 +44,10 @@ if [ -n "$URL" ]; then
         ISSUES=$((ISSUES+1))
         ACTIONS="${ACTIONS}  ✗ Túnel muerto → rotando backends\n"
         ~/oraculo/tunnel_pool.sh >/dev/null 2>&1
+        # Esperar a que el pool termine (bore tarda ~10-15s en generar URL)
+        sleep 15
+        # Re-leer la URL nueva
+        URL=$(cat ~/miu-ecosistema/.state/bore_url.txt 2>/dev/null)
     fi
 fi
 
