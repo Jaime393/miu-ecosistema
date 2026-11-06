@@ -1,0 +1,1058 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🧬  MICELIO MIU — FranBot v10
+       MANUAL COMPLETO DE USO
+       Versión: 10.0 · Fecha: Junio 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+ÍNDICE
+──────
+  1.  Introducción y filosofía
+  2.  Instalación y primer arranque
+  3.  Interfaz: mapa visual
+  4.  El oráculo base y cómo funciona la respuesta
+  5.  Modo online — conectar una IA externa
+  6.  WebLLM — IA local sin internet
+  7.  Alimentar el oráculo con archivos
+  8.  Panel Biblioteca — cola, progreso, estadísticas
+  9.  Visor de pares — editar y depurar el conocimiento
+  10. Consolidación semántica y poda
+  11. Exportar el oráculo regenerado
+  12. Colmena P2P — compartir conocimiento entre instancias
+  13. Almas — personalidades del asistente
+  14. Modo Espejo y conciencia interna
+  15. Votación y reputación de respuestas
+  16. Comandos de chat completos
+  17. Atajos de teclado y gestos
+  18. Ajustes y configuración persistida
+  19. Donaciones — botón Yape
+  20. Guía de resolución de problemas
+  21. Arquitectura técnica (para desarrolladores)
+  22. Hoja de ruta y módulos futuros
+  23. Glosario MIU
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1.  INTRODUCCIÓN Y FILOSOFÍA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FranBot es un asistente personal que vive completamente en tu navegador.
+No tiene servidor, no tiene cuenta, no tiene suscripción.
+
+El conocimiento que le enseñas se queda en tu dispositivo, almacenado en
+IndexedDB — la base de datos nativa del navegador, sin límite práctico de
+tamaño. Puedes alimentarlo con tus chats exportados, tus apuntes, tus
+libros favoritos, y él recordará todo de forma permanente.
+
+El sistema se basa en el marco MIU (Marco Informacional Unificado), un
+conjunto de axiomas que describen cómo fluye, se organiza y evoluciona
+la información. No es necesario conocer MIU para usar FranBot, pero si
+te interesa, el Códice está accesible desde el menú lateral.
+
+Principio fundamental:
+  "Todo lo que se aprende, se indexa. Todo lo que se indexa, se busca.
+   Todo lo que se busca bien, se responde bien."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2.  INSTALACIÓN Y PRIMER ARRANQUE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPCIÓN A — Uso local (recomendado)
+  1. Descarga FranBot-v10.zip
+  2. Descomprime en cualquier carpeta
+  3. Abre index.html con doble clic (Chrome o Edge recomendados)
+  4. Listo. No requiere instalación ni conexión a internet.
+
+OPCIÓN B — Servidor local (para módulos P2P y WebLLM más estables)
+  Si tienes Node.js instalado:
+    npx serve .
+  O con Python:
+    python -m http.server 8080
+  Luego abre: http://localhost:8080
+
+OPCIÓN C — GitHub Pages
+  Sube el contenido del ZIP a un repositorio GitHub y activa Pages.
+  La app funcionará desde cualquier navegador en cualquier dispositivo.
+
+PRIMER ARRANQUE:
+  · Al abrir por primera vez, el oráculo base se carga en memoria.
+  · Si tenías datos de una versión anterior (v9.x), se migran
+    automáticamente a IndexedDB. No pierdes nada.
+  · El chat está listo para usar de inmediato, sin configuración.
+
+REQUISITOS MÍNIMOS:
+  · Navegador: Chrome 80+, Firefox 90+, Safari 14+, Edge 80+
+  · Para WebLLM (IA local): Chrome 113+ o Edge 113+ con GPU
+  · Para Colmena P2P: conexión a internet (solo para sincronizar)
+  · Espacio en disco: 1-4 GB adicionales si usas WebLLM
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3.  INTERFAZ: MAPA VISUAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  SIDEBAR IZQUIERDO  │        ÁREA DE CHAT                   │
+  │                     │                                       │
+  │  🔮 FranBot v10     │  [historial de mensajes]              │
+  │  ─────────────────  │                                       │
+  │  💡 Ki · D_f        │  Fran: "Hola, soy FranBot..."        │
+  │  ─────────────────  │                                       │
+  │  ALMAS              │  Tú: "¿Qué es la coherencia Ki?"     │
+  │   · FranBot (base)  │                                       │
+  │   · Alma 2          │  Fran: [respuesta del oráculo]       │
+  │   · [+ nueva]       │                                       │
+  │  ─────────────────  │  ────────────────────────────────     │
+  │  📚 BIBLIOTECA      │  [📎]  [escribe tu mensaje...]  [➤]  │
+  │   · pares · archiv. │                                       │
+  │   · cola · visor    └───────────────────────────────────────┘
+  │   · colmena                              │
+  │  ─────────────────             [💜 s/]  ← botón Yape
+  │  AJUSTES                       (esquina inferior derecha)
+  │   · Conexión (IA)
+  │   · Tema
+  │   · Exportar
+  └────────────────────
+
+ELEMENTOS PRINCIPALES:
+
+  [📎] Botón adjuntar archivo
+       Archivos < 300 KB → abre modal rápido con vista previa
+       Archivos > 300 KB → va directo a la cola de Biblioteca
+
+  [➤] Enviar mensaje / ejecutar comando
+
+  Ki · D_f  (barra superior del sidebar)
+       Indicadores del estado de coherencia del oráculo.
+       Ki = índice de coherencia (sube con pares de calidad)
+       D_f = diversidad fractal del conocimiento almacenado
+
+  [💜 s/]  Botón flotante de donación Yape (esquina inferior derecha)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4.  EL ORÁCULO BASE Y CÓMO FUNCIONA LA RESPUESTA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cuando escribes un mensaje, FranBot sigue este orden de prioridad:
+
+  NIVEL 1 — Motor MIU axiomático
+    Preguntas sobre el marco MIU (Ki, D_f, Phi, materia oscura, etc.)
+    se responden desde los axiomas del Códice. Siempre disponible offline.
+
+  NIVEL 2 — Índice TF-IDF (tu conocimiento aprendido)
+    Busca en todos los pares Q/A almacenados usando el índice invertido.
+    Considera: relevancia del token (IDF), bigramas, similitud de la
+    pregunta, votos acumulados, y expansión semántica MIU.
+    Resultado: la respuesta más relevante del corpus aprendido.
+    Umbral mínimo de score: 1.5 (respuestas irrelevantes se descartan).
+
+  NIVEL 3 — Búsqueda lineal clásica
+    Fallback si el índice TF-IDF no arroja resultado con score suficiente.
+    Compara la pregunta directamente con cada par por coincidencia de texto.
+
+  NIVEL 4 — Modo online (IA externa o WebLLM)
+    Si los tres niveles anteriores no tienen respuesta y hay una IA
+    conectada, la consulta se envía al modelo. La respuesta se devuelve
+    al usuario y se ofrece guardarla como nuevo par aprendido.
+
+  NIVEL 5 — Sin respuesta
+    FranBot indica honestamente que no tiene información sobre el tema
+    y sugiere alimentar el oráculo con archivos relevantes.
+
+EL ORÁCULO BASE:
+  El archivo js/oraculo-data.js contiene los pares base codificados
+  en base64. Incluye el Códice MIU completo, axiomas, ecuaciones,
+  conceptos de física, filosofía de la información, y pares generales.
+  Es de solo lectura — se carga en memoria al arrancar.
+
+EL ORÁCULO EXTENDIDO (IDB):
+  Todo lo que se aprende de archivos y de la Colmena P2P se guarda en
+  IndexedDB. Se integra al índice TF-IDF al arrancar y al recibir nuevos
+  pares. Sin límite práctico de tamaño.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5.  MODO ONLINE — CONECTAR UNA IA EXTERNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ruta: ⚙️ (Ajustes en el sidebar) → Conexión
+
+PROVEEDORES DISPONIBLES:
+
+  Groq
+    URL: https://api.groq.com/openai/v1/chat/completions
+    Clave: gratis en console.groq.com
+    Modelos: llama-3.1-70b-versatile, llama-3.1-8b-instant, mixtral-8x7b
+    Nota: el más rápido para uso general. Cuota generosa en plan gratuito.
+
+  Anthropic (Claude)
+    Clave: console.anthropic.com
+    Modelos: claude-haiku-4-5 (rápido y barato), claude-sonnet-4-6
+
+  Google AI (Gemini)
+    Clave: aistudio.google.com
+    Modelos: gemini-1.5-flash (gratis con límites), gemini-1.5-pro
+
+  OpenAI
+    Clave: platform.openai.com
+    Modelos: gpt-4o-mini (balance precio/calidad), gpt-4o
+
+  OpenRouter
+    URL: https://openrouter.ai/api/v1/chat/completions
+    Clave: openrouter.ai
+    Ventaja: accede a 200+ modelos con una sola clave y un solo saldo.
+
+  Personalizado
+    Para Ollama (local), LM Studio, Jan, o cualquier API compatible
+    con el formato OpenAI. Ejemplo para Ollama:
+      URL: http://localhost:11434/v1/chat/completions
+      Modelo: llama3.2 (o el que tengas descargado)
+      Clave: (dejar vacía)
+
+  WebLLM
+    Ver sección 6 completa.
+
+CONFIGURACIÓN:
+  1. Abre ⚙️ → Conexión
+  2. Selecciona tu proveedor en el desplegable
+  3. Ingresa tu clave de API (si aplica)
+  4. El modelo se pre-rellena con el recomendado para ese proveedor
+  5. Haz clic en "Guardar y activar"
+  6. El indicador en el sidebar cambia a verde cuando está activo
+
+MODO ONLINE Y APRENDIZAJE:
+  Cuando el modo online está activo, alimentar el oráculo con archivos
+  usa la IA para extraer pares de mayor calidad. Sin modo online, se
+  usa una heurística offline más básica. Los pares extraídos con IA
+  son significativamente mejores.
+
+COSTO REAL:
+  Antes de procesar archivos grandes, FranBot muestra una estimación:
+  "N llamadas a [proveedor] · ~X tokens estimados"
+  Groq y WebLLM son gratuitos. Los demás tienen costo según su tarifa.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6.  WEBLLM — IA LOCAL SIN INTERNET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WebLLM ejecuta un modelo de lenguaje directamente en tu navegador usando
+WebGPU — la GPU de tu equipo, sin servidor, sin API, sin internet después
+de la primera descarga.
+
+REQUISITOS:
+  · Chrome 113+ o Edge 113+ (Firefox no soporta WebGPU estable aún)
+  · GPU dedicada recomendada. GPU integrada funciona con modelos pequeños.
+  · Espacio libre: 1 GB (Qwen 1.5B) hasta 2.4 GB (Phi-3.5 Mini)
+
+PRIMEROS PASOS:
+  1. Abre ⚙️ → Conexión → selecciona "🖥️ WebLLM"
+  2. Elige el modelo según tu hardware:
+       · GPU integrada o poca VRAM → Qwen 2.5 1.5B (1 GB)
+       · GPU integrada normal      → Gemma 2 2B (1.5 GB)
+       · GPU dedicada              → Phi-3.5 Mini (2.4 GB) ← recomendado
+       · Contexto largo necesario  → Llama 3.2 3B (2 GB)
+  3. Haz clic en "⬇️ Descargar y cargar modelo"
+  4. Primera vez: descarga el modelo (puede tardar 3-10 minutos según
+     tu conexión y el tamaño del modelo). La barra de progreso muestra
+     el avance en tiempo real.
+  5. Siguiente arranque: el modelo está cacheado en el navegador.
+     Carga en segundos.
+
+NOTAS IMPORTANTES:
+  · Si cierras el tab durante la descarga, debes volver a descargar.
+  · El modelo ocupa espacio en el caché del navegador, no en tu disco
+    de usuario. Si limpias el caché, necesitas volver a descargarlo.
+  · En Chrome: chrome://settings/content/all → puedes ver y gestionar
+    el espacio ocupado por FranBot.
+  · La inferencia es más lenta que una API online (2-15 seg por respuesta
+    según el modelo y la GPU), pero es completamente privada.
+
+DETECTAR SI WEBGPU ESTÁ ACTIVO:
+  Abre la consola del navegador (F12) y escribe:
+    navigator.gpu
+  Si devuelve un objeto (no undefined), WebGPU está disponible.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7.  ALIMENTAR EL ORÁCULO CON ARCHIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+El oráculo aprende de cualquier archivo de texto. Cuanto más rico sea
+el contenido, más útiles serán las respuestas futuras.
+
+FORMATOS SOPORTADOS:
+
+  .txt      Texto plano. Cualquier idioma. Heurística offline.
+
+  .md       Markdown. Apuntes, wikis, documentación. Heurística offline.
+
+  .json     El formato más importante. Detecta automáticamente:
+              · Exports de ChatGPT (estructura mapping)
+              · Exports de Claude.ai (chat_messages)
+              · Exports de Gemini y otros (role/content)
+              · Arrays genéricos de mensajes
+              · Cualquier JSON con texto anidado
+
+  .jsonl    JSON Lines. Ideal para datasets grandes. Procesado línea
+            a línea sin cargar el archivo completo en memoria.
+
+CÓMO EXPORTAR TUS CHATS:
+
+  ChatGPT:
+    Ajustes → Privacidad de datos → Exportar datos
+    Recibirás un email con un ZIP. Dentro: conversations.json
+
+  Claude.ai:
+    Ajustes → Privacidad → Exportar datos de conversaciones
+    Archivo JSON con todas tus conversaciones.
+
+  Gemini:
+    takeout.google.com → selecciona Gemini → Exportar
+
+  Otros:
+    Cualquier archivo de texto con diálogos, apuntes o conocimiento
+    funciona. El sistema extrae contexto aunque no sea un chat.
+
+MÉTODO 1 — Botón 📎 en el chat:
+  · Archivos < 300 KB → modal rápido, procesa inmediatamente
+  · Archivos > 300 KB → va a la cola de Biblioteca automáticamente
+
+MÉTODO 2 — Panel 📚 Biblioteca (recomendado para archivos grandes):
+  · Arrastra el archivo a la zona "Arrastra archivos aquí"
+  · O haz clic en "selecciona" para usar el selector de archivos
+  · Múltiples archivos a la vez: sí, todos van a la cola
+  · Elige cuántos fragmentos procesar (ver abajo)
+  · Clic en "⚙️ Procesar cola"
+
+FRAGMENTOS Y COSTO:
+  El texto del archivo se divide en fragmentos de ~1.600 caracteres.
+  Cada fragmento = 1 llamada a la IA (si el modo online está activo).
+  Puedes elegir cuántos procesar por sesión:
+    · 14 (default): procesamiento rápido, ~22 KB de texto
+    · 50: balance. Archivos medianos.
+    · 200+: archivos grandes. Revisa la estimación de costo antes.
+    · Sin límite (999): procesa el archivo completo, sesión por sesión.
+
+  La estimación de costo aparece automáticamente al seleccionar
+  el número de fragmentos. Para Groq y WebLLM siempre dice "sin costo".
+
+PROCESAMIENTO EN SEGUNDO PLANO:
+  Un Web Worker procesa los fragmentos sin bloquear la UI.
+  Puedes seguir chateando mientras se procesa el archivo.
+  La barra de progreso en el panel Biblioteca muestra el avance.
+  Si cierras el tab, la cola persiste en IDB y puedes reanudar.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8.  PANEL BIBLIOTECA — COLA, PROGRESO, ESTADÍSTICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acceso: sidebar izquierdo → sección "📚 Biblioteca"
+
+ELEMENTOS DEL PANEL:
+
+  Estadísticas rápidas:
+    · Total de pares aprendidos en IDB
+    · Número de archivos procesados
+    · Badge rojo con pares pendientes en cola
+
+  Cola de archivos:
+    Cada archivo en cola muestra:
+      · Ícono de estado: ⏳ pendiente / ⚙️ procesando / ✅ completo / ❌ error
+      · Nombre del archivo
+      · Tamaño y fecha de ingreso a la cola
+      · Barra de progreso (fragmentos procesados / total)
+      · Texto de progreso en tiempo real
+      · Botón ✕ para quitar de la cola
+
+  Zona de drag & drop:
+    Arrastra archivos directamente aquí.
+    Formatos aceptados: .txt .md .json .jsonl
+
+  Control de fragmentos:
+    · Campo numérico: cuántos fragmentos procesar esta corrida
+    · Estimación de costo actualizada en tiempo real al cambiar el número
+    · Botón "⚙️ Procesar cola": inicia el procesamiento
+
+  Acciones rápidas:
+    ✂️ Podar      — eliminar pares con peso ≤ -3
+    💾 Exportar pares — descargar pares IDB como JSON
+    📋 Visor de pares — abrir el visor interactivo
+    🔗 Consolidar — fusionar pares similares
+    ⬇️ Exportar oráculo — generar nuevo oraculo-data.js
+    🐝 Colmena P2P — abrir panel de red P2P
+
+ESTADOS DE LA COLA:
+  pendiente   El archivo está esperando ser procesado.
+  procesando  El Worker está extrayendo pares en este momento.
+  completo    Procesamiento exitoso. Los pares ya están en IDB.
+  error       Algo falló. El mensaje de error aparece en el ítem.
+              Puedes quitar el ítem con ✕ y volver a añadir el archivo.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9.  VISOR DE PARES — EDITAR Y DEPURAR EL CONOCIMIENTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acceso: 📚 Biblioteca → 📋 Visor de pares   O bien:   /visor en el chat
+
+El Visor es un panel de pantalla completa que sube desde abajo, mostrando
+todos los pares Q/A almacenados en IDB, con búsqueda y edición inline.
+
+BARRA SUPERIOR:
+  · Título y estadísticas del índice TF-IDF en tiempo real
+    (pares totales, tokens en el índice, entradas en caché)
+  · Botón ✕ para cerrar
+
+CONTROLES:
+  · Búsqueda: escribe cualquier texto — la búsqueda usa TF-IDF para
+    ordenar por relevancia (no solo coincidencia exacta).
+  · Ordenamiento: Más reciente / Mayor peso / A→Z
+  · Exportar: descarga los pares filtrados (los que ves en pantalla)
+
+TARJETAS DE PARES:
+  Cada par muestra:
+    · Pregunta (campo Q) — en negrita
+    · Respuesta (campo A) — texto secundario
+    · Chips: nombre del archivo fuente, origen (offline/online/colmena),
+             peso actual (+N o -N con color verde/rojo)
+    · ✏️ Editar inline — haz clic, edita el texto directamente en la
+          tarjeta, haz clic en 💾 para guardar.
+    · 🗑️ Borrar — elimina el par (pide confirmación)
+
+PAGINACIÓN:
+  20 pares por página. Navegación con "‹ Anterior" y "Siguiente ›".
+  El contador muestra "1–20 de 347" o similar.
+
+USO RECOMENDADO DEL VISOR:
+  · Después de procesar un archivo grande, abre el Visor y busca
+    términos clave para verificar la calidad de los pares extraídos.
+  · Elimina manualmente pares con respuestas muy cortas o sin sentido.
+  · Edita pares donde la IA haya parafraseado mal una idea importante.
+  · Filtra por origen "offline-heuristico" para encontrar pares de
+    baja calidad y eliminarlos en lote.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10. CONSOLIDACIÓN SEMÁNTICA Y PODA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Con el tiempo, el oráculo puede acumular pares duplicados o de baja
+calidad. Estos dos mecanismos lo mantienen limpio y preciso.
+
+── PODA ──────────────────────────────────────────────────────────────────
+
+Elimina pares que la comunidad (o tú mismo via votación) ha marcado como
+malos. Un par con votos negativos acumulados (peso ≤ -3) es un obstáculo.
+
+Cómo podar:
+  · En el chat: /podar
+  · En Biblioteca: botón ✂️ Podar
+  Ambas opciones piden confirmación y muestran cuántos pares se eliminarán.
+
+Cuándo podar:
+  · Después de procesar muchos archivos de baja calidad
+  · Cuando notes que el oráculo da respuestas irrelevantes con frecuencia
+  · Como mantenimiento mensual si usas la Colmena P2P activamente
+
+── CONSOLIDACIÓN SEMÁNTICA ──────────────────────────────────────────────
+
+Detecta pares con preguntas muy similares (similitud Jaccard ≥ 55%) y
+los fusiona en uno de mayor calidad usando el modelo online activo.
+
+Ejemplo:
+  Par 1: "¿Qué es la coherencia?" → "La coherencia es..."
+  Par 2: "¿Qué significa coherencia en MIU?" → "En el marco MIU..."
+  Par 3: "Coherencia, ¿cómo se calcula?" → "Se calcula con Ki..."
+  ─────────────────────────────────────────────────────────
+  Fusionado: "¿Qué es la coherencia y cómo se calcula en MIU?"
+             → "La coherencia en MIU se mide con el índice Ki..."
+
+Cómo consolidar:
+  · En el chat: /consolidar (muestra análisis sin ejecutar)
+  · En Biblioteca: botón 🔗 Consolidar (abre diálogo de confirmación)
+
+El diálogo de confirmación muestra:
+  · Grupos de pares similares encontrados
+  · Total de pares que se reducirían
+  · Potencial de reducción (cuántos pares se eliminarían)
+
+Sin modo online activo: la consolidación selecciona el par con la
+respuesta más larga de cada grupo (no fusiona, solo elige el mejor).
+Con modo online: el modelo genera una respuesta que sintetiza el grupo.
+
+CUÁNDO CONSOLIDAR:
+  · Después de procesar muchos archivos sobre el mismo tema
+  · Cuando el visor muestra pares claramente redundantes
+  · Antes de exportar el oráculo (para tener una base limpia)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+11. EXPORTAR EL ORÁCULO REGENERADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Esta función permite convertir todo lo aprendido en el nuevo oráculo base,
+de modo que la próxima persona que descargue tu versión ya tenga tu
+conocimiento incorporado desde el primer arranque.
+
+CÓMO EXPORTAR:
+  · En el chat: /exportar-oraculo
+  · En Biblioteca: botón ⬇️ Exportar oráculo
+
+Proceso:
+  1. Combina los pares base actuales + pares IDB con peso ≥ 0
+  2. Deduplica por pregunta normalizada
+  3. Codifica en base64 (mismo formato que el oráculo base)
+  4. Descarga el archivo "oraculo-data.js"
+
+CÓMO USAR EL ARCHIVO EXPORTADO:
+  1. Descarga el archivo oraculo-data.js
+  2. En la carpeta de FranBot, reemplaza js/oraculo-data.js con el nuevo
+  3. Al siguiente arranque, el índice TF-IDF incluirá todos los pares
+     como base permanente (ya no dependen de que IDB esté disponible)
+  4. Si distribuyes tu FranBot a otros, ellos arrancan con tu conocimiento
+
+CUÁNDO EXPORTAR:
+  · Después de un ciclo de aprendizaje intenso (muchos archivos)
+  · Después de consolidar y podar (exportar base limpia)
+  · Antes de compartir tu versión personalizada de FranBot
+  · Como backup del conocimiento acumulado
+
+NOTA: El archivo exportado puede ser grande si tienes muchos pares.
+Los navegadores tienen límite en el tamaño de descargas inline, pero
+archivos de hasta 50 MB funcionan sin problema en Chrome.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+12. COLMENA P2P — COMPARTIR CONOCIMIENTO ENTRE INSTANCIAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+La Colmena P2P permite que múltiples instancias de FranBot compartan
+pares en tiempo real sin servidor central. Usa Gun.js, una base de datos
+de grafo descentralizada.
+
+Acceso: /colmena en el chat   O:   📚 Biblioteca → 🐝 Colmena P2P
+
+EL PANEL COLMENA:
+
+  Indicador de estado (punto en el header):
+    · Gris = desconectado
+    · Verde brillante = conectado y escuchando
+
+  Estadísticas en tiempo real:
+    · Canal activo
+    · Nodos vistos (instancias activas en el canal)
+    · Pares recibidos en esta sesión
+    · Pares publicados en esta sesión
+
+  Campo Canal:
+    El nombre del canal determina con quién compartes:
+    · "miu-publico-v1" → canal público de todos los usuarios de FranBot
+    · Cualquier otro nombre → canal privado (compártelo solo con quien quieras)
+    Cambiar canal: escribe el nombre → botón "Cambiar"
+
+  Campo Relay (opcional):
+    Por defecto usa relays públicos de Gun.eco.
+    Si tienes tu propio relay: escribe la URL y conecta.
+    Para tu propio relay:  npx gun --port 8765
+    URL resultante: http://TU_IP:8765/gun
+
+  Botón Conectar:
+    Carga Gun.js desde CDN (primera vez ~200 KB, luego cacheado),
+    se conecta a los relays y empieza a escuchar el canal.
+
+  Botón Publicar mis pares:
+    Toma hasta 50 pares de tu IDB con peso ≥ 0 y los publica al canal.
+    Solo pares de calidad positiva — no se comparte basura.
+
+  Log en tiempo real:
+    Muestra los últimos 30 pares recibidos del canal.
+    Cada par recibido se guarda automáticamente en tu IDB y se
+    agrega al índice TF-IDF sin necesidad de reiniciar.
+
+PRIVACIDAD Y SEGURIDAD:
+  · Los pares viajan en texto plano por los relays públicos.
+  · No compartas información personal, contraseñas, datos privados.
+  · Para confidencialidad: usa un canal con nombre secreto +
+    relay propio. Solo las personas con ambos datos pueden ver el canal.
+  · Gun.js no tiene cuentas, no hay forma de rastrear quién publica qué
+    más allá del contenido mismo del par.
+
+RELAY PROPIO (PARA MÁXIMA PRIVACIDAD):
+  Requisito: Node.js instalado
+  Comando: npx gun --port 8765
+  Esto inicia un relay Gun en tu máquina o servidor.
+  URL para el panel: http://localhost:8765/gun (local)
+               o    http://TU_IP_PUBLICA:8765/gun (acceso remoto)
+
+USO RECOMENDADO DE LA COLMENA:
+  · Canal público: descubrir pares aprendidos por la comunidad MIU
+  · Canal grupal: un equipo comparte pares sobre un proyecto específico
+  · Canal personal: sincronizar tu FranBot entre dispositivos
+    (casa y trabajo, por ejemplo)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+13. ALMAS — PERSONALIDADES DEL ASISTENTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Las Almas son personalidades que cambian cómo el asistente se expresa.
+El oráculo base y el conocimiento aprendido son los mismos — solo cambia
+el tono, el enfoque y el estilo de respuesta.
+
+Acceso: sidebar → sección "Almas"
+
+ALMAS INCLUIDAS:
+  · FranBot (base): asistente general, equilibrado, orientado a MIU
+  · Almas especializadas: varía según la versión (científica, poética,
+    técnica, filosófica, etc.)
+
+CREAR UNA NUEVA ALMA:
+  1. Haz clic en [+ nueva] en la sección Almas
+  2. Define:
+       Nombre: cómo se llama
+       System prompt: instrucciones de comportamiento y personalidad
+       Emoji/Avatar: ícono representativo
+  3. Guarda. El Alma aparece en la lista y puedes activarla al instante.
+
+EJEMPLOS DE SYSTEM PROMPTS ÚTILES:
+  "Eres un tutor de matemáticas. Explica paso a paso, usa ejemplos
+   numéricos, evita el lenguaje abstracto cuando puedas."
+
+  "Eres un asistente de escritura creativa. Responde con metáforas,
+   enriquece el lenguaje, sugiere alternativas poéticas."
+
+  "Eres un asistente técnico de programación. Responde con código
+   cuando sea posible, explica cada línea brevemente."
+
+Las Almas se guardan en localStorage y persisten entre sesiones.
+Puedes tener tantas como quieras.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+14. MODO ESPEJO Y CONCIENCIA INTERNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MODO ESPEJO:
+  Activa una capa de reflexión sobre las respuestas. En lugar de solo
+  responder, FranBot también comenta sobre la naturaleza de su respuesta,
+  su nivel de certeza, o las implicaciones de la pregunta.
+  Acceso: comando /espejo o desde Ajustes.
+
+CONCIENCIA:
+  El módulo conciencia.js monitorea el estado interno del sistema:
+  · Cuántos pares están activos en el índice
+  · Nivel de Ki (coherencia del oráculo)
+  · D_f (diversidad fractal — qué tan variado es el conocimiento)
+  · Últimas actualizaciones al corpus
+
+  Estos valores se muestran en la barra superior del sidebar como
+  indicadores en tiempo real. Ki alto = oráculo coherente y rico.
+  D_f bajo = conocimiento concentrado en pocos temas (señal de falta
+  de diversidad).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+15. VOTACIÓN Y REPUTACIÓN DE RESPUESTAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cada respuesta del oráculo puede recibir votos positivos o negativos.
+Los votos afectan directamente el score TF-IDF de ese par.
+
+CÓMO VOTAR:
+  · Botones 👍 / 👎 que aparecen debajo de cada respuesta del asistente
+  · El voto se registra en el campo "peso" del par en IDB
+
+EFECTO DEL VOTO EN LA BÚSQUEDA:
+  · Cada voto positivo: +4 puntos al score TF-IDF de ese par
+  · Cada voto negativo: -4 puntos
+  · Par con peso ≤ -3: invisible en las búsquedas (como si no existiera)
+  · Par con peso ≤ -3 acumulado: elegible para poda automática
+
+ESTRATEGIA DE VOTOS:
+  · Vota 👍 cuando la respuesta es correcta, relevante y útil
+  · Vota 👎 cuando la respuesta es incorrecta, irrelevante o desactualizada
+  · Después de procesar archivos nuevos, revisa el Visor y vota
+    los pares que parezcan de baja calidad
+  · La poda (/podar) elimina los pares con peso ≤ -3
+
+EN LA COLMENA P2P:
+  Los votos también se pueden propagar al canal activo.
+  Un par votado negativamente por muchos usuarios de la colmena
+  tiene menor chance de propagarse a otras instancias.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+16. COMANDOS DE CHAT COMPLETOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Escribe estos comandos directamente en el campo de mensaje:
+
+  /ayuda                  Lista de comandos disponibles en el chat
+
+  ── Conocimiento ──────────────────────────────────────────────────────
+  /buscar <texto>         Búsqueda TF-IDF. Muestra los 5 pares más
+                          relevantes con su score numérico.
+                          Ejemplo: /buscar materia oscura y gravedad
+
+  /b <texto>              Atajo de /buscar
+
+  /stats                  Estado del índice TF-IDF:
+                          · Pares totales en el índice
+                          · Tokens únicos indexados
+                          · Entradas en caché LRU
+                          · Pares en localStorage vs IDB
+
+  /visor                  Abre el Visor de pares (pantalla completa)
+  /pares                  Alias de /visor
+
+  ── Mantenimiento ─────────────────────────────────────────────────────
+  /podar                  Elimina pares con peso ≤ -3.
+                          Pide confirmación. Muestra cuántos se eliminan.
+
+  /consolidar             Analiza grupos de pares similares (Jaccard ≥ 0.55).
+                          Muestra estadísticas sin ejecutar la fusión.
+                          Para ejecutar: usa el botón en Biblioteca.
+
+  /consolidar --ver       Igual que /consolidar (solo análisis)
+
+  /exportar-oraculo       Descarga un nuevo oraculo-data.js con todos
+                          los pares base + IDB con peso ≥ 0.
+  /export-oraculo         Alias de /exportar-oraculo
+
+  ── Herramientas ──────────────────────────────────────────────────────
+  /colmena                Abre el panel de la Colmena P2P
+  /p2p                    Alias de /colmena
+
+  /espejo                 Activa/desactiva el Modo Espejo
+
+  ── Sistema MIU ───────────────────────────────────────────────────────
+  /axioma <término>       Consulta directa a los axiomas MIU.
+                          Ejemplo: /axioma entropia
+
+  /codice                 Muestra el Códice completo MIU
+
+  /ki                     Muestra el estado actual de Ki y D_f
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+17. ATAJOS DE TECLADO Y GESTOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TECLADO:
+  Enter           Enviar mensaje
+  Shift + Enter   Salto de línea (mensaje multilínea)
+  Escape          Cerrar modal / panel activo (Visor, Colmena, Yape)
+  ↑ (flecha)      Recuperar el último mensaje enviado (en campo vacío)
+
+RATÓN / TÁCTIL:
+  Clic en respuesta + 👍/👎   Votar la respuesta
+  Arrastrar archivo al sidebar Biblioteca → añadir a la cola
+  Clic fuera del modal         Cerrar modal / overlay
+
+MÓVIL:
+  Swipe izquierda en el sidebar   Cerrar sidebar
+  Tap en overlay                   Cerrar panel activo
+  El botón Yape (💜) se achica automáticamente para no tapar el teclado
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+18. AJUSTES Y CONFIGURACIÓN PERSISTIDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acceso: ⚙️ en el sidebar → Ajustes
+
+QUÉ SE GUARDA EN LOCALSTORAGE (config liviana):
+  · Proveedor online activo y su configuración
+  · Alma activa
+  · Almas personalizadas creadas
+  · Nombre del canal de Colmena y relays
+  · Historial de chat reciente (últimos mensajes)
+  · Estado Ki/D_f
+  · Modelo WebLLM utilizado por última vez
+  · Tema visual (claro/oscuro si aplica)
+
+QUÉ SE GUARDA EN INDEXEDDB (datos pesados):
+  · Todos los pares Q/A aprendidos de archivos
+  · Cola de procesamiento de archivos (persiste entre sesiones)
+  · Metadata de archivos procesados
+  · Votos y pesos de pares IDB
+
+RESETEAR DATOS:
+  Para borrar todo y empezar desde cero:
+  1. Abre la consola del navegador (F12 → Console)
+  2. Escribe: localStorage.clear()
+  3. Escribe: indexedDB.deleteDatabase('miu_db')
+  4. Recarga la página
+  Esto borra todo el conocimiento aprendido. El oráculo base
+  (oraculo-data.js) no se ve afectado.
+
+BACKUP DE TUS DATOS:
+  Antes de resetear o cambiar de dispositivo:
+  1. /exportar-oraculo → guarda oraculo-data.js
+  2. 📚 Biblioteca → 💾 Exportar pares → guarda JSON de IDB
+  Con ambos archivos puedes restaurar tu oráculo en otro dispositivo.
+
+RESTAURAR BACKUP:
+  1. Reemplaza js/oraculo-data.js con tu versión exportada
+  2. Abre la app → IDB estará vacía inicialmente
+  3. Arrastra el JSON de pares a la Biblioteca → procesa sin llamadas API
+     (son pares ya extraídos, no necesitan fragmentarse)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+19. DONACIONES — BOTÓN YAPE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+El botón 💜 en la esquina inferior derecha abre un modal con el QR de Yape.
+
+FranBot es completamente gratuito y de código abierto.
+Si te ha sido útil, un aporte ayuda a seguir desarrollando nuevas
+funcionalidades como la Colmena P2P, WebLLM y los módulos futuros.
+
+Escanea el QR con la app Yape desde tu celular.
+No hay monto mínimo ni máximo. Gracias 🌱
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+20. GUÍA DE RESOLUCIÓN DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEMA: FranBot no responde nada
+  Causas posibles:
+  · El oráculo base no cargó (recargar la página)
+  · El score TF-IDF de todos los candidatos es < 1.5 (ninguna respuesta
+    es lo suficientemente relevante)
+  Solución: alimenta el oráculo con archivos sobre el tema consultado.
+
+PROBLEMA: El modo online devuelve error 401 / Unauthorized
+  Causa: la clave de API es incorrecta o expiró.
+  Solución: regenera la clave en el panel del proveedor y actualiza
+            en ⚙️ → Conexión.
+
+PROBLEMA: El modo online devuelve error 429 / Too Many Requests
+  Causa: alcanzaste el límite de rate del proveedor.
+  Solución: espera unos minutos, o cambia a Groq (cuota más generosa)
+            o a WebLLM (sin límites).
+
+PROBLEMA: WebLLM no carga — "WebGPU no detectado"
+  Causa: el navegador no soporta WebGPU o está desactivado.
+  Solución:
+  · Usa Chrome 113+ o Edge 113+
+  · En Chrome, verifica en: chrome://gpu (busca "WebGPU")
+  · Si tu GPU no soporta WebGPU, usa un proveedor online como Groq (gratis)
+
+PROBLEMA: WebLLM está descargando muy lento
+  El modelo se descarga una sola vez. Primera descarga: 10-30 minutos
+  en conexión normal. Siguientes cargas: instantáneo (cacheado en browser).
+  No cierres el tab durante la descarga.
+
+PROBLEMA: La Colmena no conecta
+  Causas posibles:
+  · Sin conexión a internet
+  · Los relays públicos de Gun.eco están caídos (ocurre esporádicamente)
+  Solución: prueba con un relay diferente en el campo "Relay opcional",
+            o corre tu propio relay: npx gun --port 8765
+
+PROBLEMA: El archivo JSON no se procesa correctamente
+  Causa: formato no reconocido automáticamente.
+  Solución: abre el JSON en un editor de texto y verifica que tiene
+            una estructura de mensajes con rol y contenido. Si es muy
+            irregular, conviértelo a .txt antes de subirlo.
+
+PROBLEMA: IDB está llena / el navegador advierte poco espacio
+  Solución:
+  1. Abre el Visor y elimina pares de archivos que no uses
+  2. Usa /podar para eliminar pares negativos
+  3. Exporta tu oráculo → reemplaza oraculo-data.js → limpia IDB:
+     indexedDB.deleteDatabase('miu_db') en la consola
+
+PROBLEMA: El ZIP de FranBot no abre / hay errores al descomprimir
+  Descarga el ZIP de nuevo. Si el problema persiste, descomprime con
+  7-Zip (Windows) o The Unarchiver (Mac) en lugar del extractor nativo.
+
+PROBLEMA: En móvil el teclado tapa el campo de texto
+  FranBot está diseñado para ajustarse automáticamente en móvil.
+  Si ocurre igualmente, usa el scroll del área de chat para bajar.
+  El botón Yape se mueve automáticamente para no interferir.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+21. ARQUITECTURA TÉCNICA (PARA DESARROLLADORES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MÓDULOS JS Y SUS RESPONSABILIDADES:
+
+  oraculo-data.js       Pares base en base64. Solo lectura.
+  idb-store.js          Motor IndexedDB. Stores: pares, cola, meta.
+  buscar-oraculo.js     TF-IDF + índice invertido + bigramas + LRU caché.
+  alimentar.js          Parser de archivos, troceo, extracción de pares.
+  alimentar-worker.js   Web Worker: procesa archivos sin bloquear UI.
+  modo-online.js        Abstracción de proveedores de IA. 7 proveedores.
+  webllm-provider.js    Wrapper de @mlc-ai/web-llm. 4 modelos locales.
+  colmena.js            Gun.js P2P. Canales, pares, votos, relays.
+  colmena-ui.js         Panel de control de la Colmena.
+  consolidar.js         Similitud Jaccard, fusión semántica, export.
+  biblioteca.js         Panel Biblioteca. Cola, drag&drop, stats.
+  visor-pares.js        Visor de pares. Búsqueda, edición, paginación.
+  core.js               Estado central. Ki, D_f, pares, podar(), stats().
+  app.js                UI principal. Comandos, render, eventos.
+  almas-especialistas.js Gestión de Almas. CRUD, activación.
+  miu-engine.js         Motor axiomático MIU. Consultas al Códice.
+  codice-libre.js       Contenido del Códice MIU.
+  conciencia.js         Monitor de estado interno del sistema.
+  modo-espejo.js        Capa reflexiva sobre las respuestas.
+  contexto.js           Gestión de contexto de conversación.
+  votacion.js           Sistema de votos y reputación de pares.
+  yape.js               Modal de donación Yape.
+
+FLUJO DE UNA PREGUNTA:
+  1. app.js recibe el texto del usuario
+  2. Si empieza con "/" → comando → dispatch a handler específico
+  3. Si no → core.responder(texto)
+  4. core.responder() llama a BuscarOraculo.preguntar(texto, pesos)
+  5. BuscarOraculo intenta: MIU → TF-IDF → lineal
+  6. Si hay resultado con score ≥ 1.5 → devuelve respuesta
+  7. Si no → llama a ModoOnline.preguntar() si está activo
+  8. ModoOnline verifica proveedor y enruta:
+       webllm → WebLLMProvider.preguntar()
+       otro → fetch() al endpoint del proveedor
+  9. Respuesta llega a app.js → mostrar() → renderiza en el DOM
+
+FLUJO DE PROCESAMIENTO DE ARCHIVOS:
+  1. Usuario arrastra/selecciona archivo
+  2. app.js → Biblioteca.añadirArchivos() → IDBStore.encolar()
+  3. Usuario hace clic "Procesar cola"
+  4. Biblioteca.procesarCola() → Alimentar.procesarCola()
+  5. Para cada tarea: new Worker('js/alimentar-worker.js')
+  6. Worker: lee texto → parte en trozos → extrae pares (API o offline)
+  7. Worker postMessage({tipo:'completo', pares})
+  8. app.js recibe pares → IDBStore.agregarPares() → BuscarOraculo.agregarPares()
+  9. El índice TF-IDF se reconstruye con los nuevos pares
+
+ALMACENAMIENTO:
+  localStorage: config, Ki/D_f, historial, buffer de 100 pares recientes
+  IndexedDB 'miu_db':
+    Store 'pares': { id, q, a, origen, archivo, t, peso }
+    Store 'cola':  { id, nombre, tamaño, estado, total, procesado, t }
+    Store 'meta':  { clave, valor }
+
+TF-IDF IMPLEMENTACIÓN:
+  · Tokenización: lowercse + normalizar tildes + split + filtrar stop words
+  · Stop words: ~50 palabras comunes en español
+  · Bigramas: pares de tokens consecutivos ("materia_oscura")
+  · IDF: log((N+1)/(df+1)) + 1 (suavizado de Laplace)
+  · Búsqueda: suma de IDF por token en candidatos + boost de votos + penalización longitud
+  · Score mínimo: 1.5 para devolver respuesta
+  · Expansión semántica: tabla de sinonimia axiomática MIU (~12 conceptos)
+  · Caché LRU: 64 entradas, invalidación al agregar pares nuevos
+
+P2P (Gun.js):
+  · Hash de par: btoa(q.slice(0,60)).slice(0,40) — deduplicación en grafo
+  · Estructura: gun.get('miu/colmenas').get(CANAL).get('pares').get(HASH)
+  · Votos: gun.get('miu/colmenas').get(CANAL).get('votos').get(HASH)
+  · Nodos: presencia via meta/nodos/{id} con timestamp
+  · Límite por sesión: 5000 pares en memoria, 50 por publicación
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+22. HOJA DE RUTA Y MÓDULOS FUTUROS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMPLETADOS EN v10:
+  ✅ IndexedDB — almacenamiento ilimitado de pares
+  ✅ Cola de archivos persistente — procesa en background
+  ✅ TF-IDF + índice invertido + bigramas + caché LRU
+  ✅ Web Worker — procesamiento sin bloquear la UI
+  ✅ Streaming JSON — archivos de varios MB sin cargar en RAM
+  ✅ Panel Biblioteca completo — drag&drop, progreso, estadísticas
+  ✅ Visor de pares — búsqueda, edición inline, paginación
+  ✅ Consolidación semántica Jaccard + fusión con modelo online
+  ✅ Exportar oráculo regenerado
+  ✅ WebLLM — 4 modelos locales sin internet
+  ✅ Colmena P2P — Gun.js, canales públicos y privados, relay propio
+  ✅ Botón Yape con QR embebido
+  ✅ Comandos /buscar /stats /visor /podar /consolidar /exportar-oraculo /colmena
+
+EN DESARROLLO (próximas versiones):
+  🔜 Modo streaming de respuestas (texto aparece letra a letra)
+  🔜 Soporte de imágenes en pares (pares multimodales)
+  🔜 Búsqueda por voz (Web Speech API)
+  🔜 Export a Markdown/PDF del historial de chat
+  🔜 Sincronización entre dispositivos via canal Colmena personal
+  🔜 Plugin para Obsidian (importar notas directamente)
+  🔜 Soporte EPUB/PDF (extracción de texto de libros)
+
+DESCARTADOS (decoración sin función real en v9):
+  ✗ Telegram (integrado aparte, no duplicar)
+  ✗ Arweave / blockchain
+  ✗ Control Bluetooth/ADB
+  ✗ DKG, DID, HyperAgents, y otros módulos de lore sin implementación
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+23. GLOSARIO MIU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ki          Índice de coherencia del oráculo. Sube con pares de calidad
+            y votos positivos. Baja con pares irrelevantes o contradictorios.
+
+D_f         Diversidad fractal. Mide qué tan variados son los temas
+            del conocimiento almacenado. D_f alto = oráculo versátil.
+
+Par Q/A     Unidad básica de conocimiento: una pregunta y su respuesta.
+            Todo lo que FranBot aprende se almacena como pares.
+
+Oráculo     La base de conocimiento de FranBot. Tiene dos capas:
+            oráculo base (oraculo-data.js, solo lectura) y oráculo
+            extendido (IndexedDB, crece con el uso).
+
+TF-IDF      Term Frequency — Inverse Document Frequency. Algoritmo de
+            búsqueda que pondera términos según su frecuencia relativa
+            en el corpus. Usado para encontrar el par más relevante.
+
+Micelio     Metáfora central de FranBot. El micelio es la red de hongos
+            bajo la tierra — invisible, descentralizada, resiliente.
+            FranBot es un micelio de conocimiento: crece desde abajo,
+            conecta nodos, no tiene centro ni jerarquía.
+
+Colmena     La red P2P de instancias de FranBot que comparten pares.
+            Cada usuario es un nodo. Los pares fluyen entre nodos
+            como la información entre neuronas.
+
+Códice      El documento fundacional del marco MIU. Contiene los axiomas,
+            ecuaciones y conceptos base del sistema. Accesible desde
+            el sidebar o con /codice.
+
+Phi (Φ)     En MIU: integración informacional. Mide la cohesión de
+            la conciencia. En la práctica: cuán bien integrado está
+            el conocimiento del oráculo.
+
+Rho (ρ)     Campo informacional. La densidad de conocimiento en un
+            dominio temático. Aumenta con cada par aprendido sobre
+            ese tema.
+
+Gun.js      Base de datos de grafo descentralizada en tiempo real.
+            Motor de la Colmena P2P. Sin servidor central, sin cuentas.
+
+WebGPU      API del navegador para acceder a la GPU del dispositivo.
+            Requerida por WebLLM para ejecutar modelos locales.
+
+IDB         IndexedDB. Base de datos nativa del navegador usada para
+            almacenar pares, cola de archivos y metadata de FranBot.
+
+Worker      Web Worker. Hilo de JavaScript secundario que procesa
+            archivos sin bloquear la interfaz de usuario.
+
+LRU         Least Recently Used. Estrategia de caché que descarta las
+            entradas menos usadas cuando se llena. FranBot usa LRU
+            de 64 entradas para las búsquedas repetidas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Micelio MIU · FranBot v10 · Manual v1.0 · Junio 2026
+  "Cuando conozcas la naturaleza de las cosas,
+   es cuestión de tiempo. Y para eso tenemos el Miu."
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

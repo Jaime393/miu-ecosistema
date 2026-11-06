@@ -1,0 +1,132 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🧬  MICELIO MIU — FranBot v10
+       El asistente personal que aprende, recuerda y comparte contigo.
+       Sin suscripción. Sin servidor. Sin límites.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+¿Cansado de asistentes que olvidan todo cuando cierras el chat?
+¿De pagar por IA que vive en servidores de otros y no puedes controlar?
+
+FranBot v10 es diferente. Vive en tu dispositivo, aprende de tus archivos,
+conecta con otros en tiempo real — y nunca olvida lo que le enseñas.
+
+────────────────────────────────────────────────────────────────────────────
+  📦  DESCARGA GRATUITA
+────────────────────────────────────────────────────────────────────────────
+
+Descarga el ZIP → descomprime → abre index.html en tu navegador.
+Funciona local, sin instalar nada, sin cuenta, sin internet obligatorio.
+
+Compatible con: Chrome 113+, Edge 113+, Firefox, Safari.
+Para IA local sin internet: Chrome/Edge con GPU (ver sección WebLLM).
+
+────────────────────────────────────────────────────────────────────────────
+  ✨  QUÉ PUEDE HACER
+────────────────────────────────────────────────────────────────────────────
+
+🧠  APRENDE DE TUS ARCHIVOS
+   Arrastra cualquier archivo de texto, Markdown o JSON de chat (exporta
+   desde ChatGPT, Claude, Gemini, etc.) y FranBot extrae el conocimiento
+   automáticamente. Elige cuántos fragmentos procesar. La IA trabaja en
+   segundo plano sin congelar tu pantalla.
+
+🔍  BÚSQUEDA SEMÁNTICA REAL
+   Motor TF-IDF con índice invertido y bigramas. Encuentra lo que sabes
+   aunque no uses las palabras exactas. Más de 50.000 pares almacenados
+   sin límite real, sin que la búsqueda se vuelva lenta.
+
+💾  ALMACENAMIENTO ILIMITADO
+   Versiones anteriores tenían un tope de ~5 MB en el navegador. v10 usa
+   IndexedDB — miles de pares aprendidos, cola de archivos persistente,
+   sin pérdida al cerrar el tab.
+
+🖥️  IA LOCAL SIN INTERNET (WebLLM)
+   Descarga un modelo de lenguaje directamente en tu navegador via WebGPU.
+   Después de la primera descarga, todo funciona sin conexión, sin clave
+   de API, sin costo. Modelos disponibles:
+     · Phi-3.5 Mini (Microsoft) — 2.4 GB, muy capaz
+     · Gemma 2 2B (Google)     — 1.5 GB, más rápido
+     · Qwen 2.5 1.5B (Alibaba) — 1 GB, el más ligero
+     · Llama 3.2 3B (Meta)     — 2 GB, contexto largo
+
+🐝  COLMENA P2P — COMPARTE CONOCIMIENTO EN TIEMPO REAL
+   Conecta tu FranBot con el de otros usuarios sin pasar por ningún
+   servidor central. Los pares que aprendes se comparten; los que llegan
+   se guardan en tu base local e indexan al instante. Canales públicos
+   o privados (nombre secreto). Relay opcional propio con un comando.
+
+✂️  CONSOLIDACIÓN SEMÁNTICA
+   Detecta pares duplicados con similitud Jaccard, los fusiona en uno
+   de mayor calidad usando el modelo online activo. Menos basura,
+   mejor conocimiento.
+
+⬇️  EXPORTA TU ORÁCULO
+   Todo lo que aprendiste → un archivo oraculo-data.js que puedes subir
+   a GitHub. La próxima persona que descargue tu versión ya tendrá tu
+   conocimiento como base.
+
+💜  APOYO
+   Si te ha sido útil, puedes apoyar el proyecto escaneando el QR de Yape
+   que aparece en la esquina inferior derecha de la app.
+
+────────────────────────────────────────────────────────────────────────────
+  🔌  CONECTA TU PROPIA IA (MODO ONLINE)
+────────────────────────────────────────────────────────────────────────────
+
+FranBot funciona offline con su oráculo base. Para más capacidad,
+conecta cualquiera de estos proveedores en ⚙️ → Conexión:
+
+  · Groq           — gratuito, muy rápido (Llama 3, Mixtral)
+  · Anthropic      — Claude Sonnet / Haiku
+  · Google AI      — Gemini Flash / Pro
+  · OpenAI         — GPT-4o / mini
+  · OpenRouter     — 200+ modelos con una sola clave
+  · Personalizado  — cualquier API compatible con OpenAI (Ollama, LM Studio, etc.)
+  · WebLLM         — sin API, sin internet, modelo en tu navegador
+
+────────────────────────────────────────────────────────────────────────────
+  🛠️  COMANDOS DISPONIBLES EN EL CHAT
+────────────────────────────────────────────────────────────────────────────
+
+Escribe estos comandos directamente en el chat:
+
+  /buscar <consulta>    — búsqueda TF-IDF, muestra los 5 pares más relevantes
+  /stats                — estado del índice: pares, tokens, caché
+  /visor                — abre el visor interactivo de pares aprendidos
+  /podar                — elimina pares con muchos votos negativos
+  /consolidar           — analiza y fusiona pares duplicados
+  /exportar-oraculo     — descarga tu oráculo regenerado como archivo
+  /colmena              — abre el panel de la Colmena P2P
+  /ayuda                — lista completa de comandos
+
+────────────────────────────────────────────────────────────────────────────
+  📐  DATOS TÉCNICOS
+────────────────────────────────────────────────────────────────────────────
+
+  22 módulos JavaScript · ~5.400 líneas de código
+  CSS: 594 líneas · Sin frameworks · Sin dependencias en tiempo de ejecución
+  Peso del ZIP: ~580 KB (incluye QR Yape embebido)
+  Almacenamiento: localStorage (config) + IndexedDB (pares, cola)
+  Motor de búsqueda: TF-IDF + índice invertido + bigramas + caché LRU 64
+  P2P: Gun.js via relays públicos (gun.eco)
+  IA local: WebLLM (@mlc-ai/web-llm) via WebGPU
+  Procesamiento: Web Worker (hilo separado, UI nunca se congela)
+
+────────────────────────────────────────────────────────────────────────────
+  🌱  FILOSOFÍA
+────────────────────────────────────────────────────────────────────────────
+
+"El campo informacional evoluciona minimizando energía libre.
+ Cada archivo digerido aumenta la densidad de conocimiento.
+ Cada par consolidado reduce el ruido.
+ El micelio crece sin centro — como debe ser."
+
+FranBot no es un producto. Es una herramienta que te pertenece.
+No hay suscripción porque no hay servidor que mantener.
+No hay límite porque el límite es tu dispositivo.
+No hay empresa detrás recolectando tus datos porque todo queda en tu navegador.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Micelio MIU · FranBot v10 · Descarga gratuita
+  "Aislar → Analizar → Digerir → Absorber → Disolver → Resolver"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

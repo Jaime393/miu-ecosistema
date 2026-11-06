@@ -1,0 +1,606 @@
+# Manifiesto — absorción FranBot en MIU
+Absorción ejecutada el 2026-11-06 desde los repositorios públicos vivos, por clon de solo lectura. Destino: `Jaime393/miu-ecosistema`, `data/franbot/` (archivos nuevos, aditivos).
+## Orígenes (HEAD al momento de la absorción)
+- `Jaime393/FranBot (main)`: `2b71e0f2046892b471a29eee94f769d70af5a838` — 2026-11-03 01:25:29 +0000
+- `Jaime393/FranBot (offline-lab)`: `3a8d633047b1e2aefd6c1418faba57915e12af97` — 2026-05-05 14:05:23 -0500
+- `Jaime393/FranBot-Private (main)`: `32761fcec0fc73f773a980a5bde4b56af2403e96` — 2026-08-23 11:14:39 -0500
+- `Jaime393/FranBotApp (main)`: `ab4177b5509ef357a009954cd100af7d75cf621c` — 2026-07-10 00:29:25 -0500
+- `Jaime393/FranBot-Mural (main)`: `be42adaf751100c4eda5f30bb8ef297b8c864521` — 2026-08-23 11:14:38 -0500
+
+## Absorbido
+| Archivo en miu-ecosistema | Origen | Tamaño (B) | Nota |
+|---|---|---|---|
+| `data/franbot/almas/alan_turing.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/alan_turing.json` | 2279 | copia literal |
+| `data/franbot/almas/arquitecto_resonancia.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/arquitecto_resonancia.json` | 1622 | copia literal |
+| `data/franbot/almas/arquitecto_sostenible.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/arquitecto_sostenible.json` | 2462 | copia literal |
+| `data/franbot/almas/arquitecto_unificacion_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/arquitecto_unificacion_ift.json` | 1582 | copia literal |
+| `data/franbot/almas/biologo_cuantico_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/biologo_cuantico_ift.json` | 1629 | copia literal |
+| `data/franbot/almas/cocinero_molecular.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/cocinero_molecular.json` | 2487 | copia literal |
+| `data/franbot/almas/cosmologo_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/cosmologo_ift.json` | 1507 | copia literal |
+| `data/franbot/almas/fisico_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/fisico_ift.json` | 1840 | copia literal |
+| `data/franbot/almas/fisico_particulas_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/fisico_particulas_ift.json` | 1528 | copia literal |
+| `data/franbot/almas/frida_kahlo.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/frida_kahlo.json` | 1970 | copia literal |
+| `data/franbot/almas/hacker_etico.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/hacker_etico.json` | 2482 | copia literal |
+| `data/franbot/almas/leonardo_da_vinci.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/leonardo_da_vinci.json` | 2080 | copia literal |
+| `data/franbot/almas/marco_aurelio.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/marco_aurelio.json` | 2306 | copia literal |
+| `data/franbot/almas/marie_curie.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/marie_curie.json` | 2118 | copia literal |
+| `data/franbot/almas/matematico_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/matematico_ift.json` | 1599 | copia literal |
+| `data/franbot/almas/musico_terapeuta.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/musico_terapeuta.json` | 2299 | copia literal |
+| `data/franbot/almas/neurocientifico_ift.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/neurocientifico_ift.json` | 1419 | copia literal |
+| `data/franbot/almas/psicologo_junguiano.json` | `Jaime393/FranBot-Private` `pack_fundadores_v1/psicologo_junguiano.json` | 2420 | copia literal |
+| `data/franbot/docs/FranBot-v10-ANUNCIO.txt` | `Jaime393/FranBot` `FranBot-v10-ANUNCIO.txt` | 8851 | copia literal |
+| `data/franbot/docs/FranBot-v10-MANUAL.txt` | `Jaime393/FranBot` `FranBot-v10-MANUAL.txt` | 54019 | copia literal |
+| `data/franbot/docs/catalog.json` | `Jaime393/FranBot` `prompts/catalog.json` | 27753 | copia literal, 88 entradas |
+| `data/franbot/kernel.json` | `Jaime393/FranBot` `KERNEL.json` | 2888 | copia literal |
+| `data/franbot/motor/alimentar.js` | `Jaime393/FranBot` `js/alimentar.js` | 16397 | copia literal |
+| `data/franbot/motor/biblioteca.js` | `Jaime393/FranBot` `js/biblioteca.js` | 14703 | copia literal |
+| `data/franbot/motor/buscar-oraculo.js` | `Jaime393/FranBot` `js/buscar-oraculo.js` | 44726 | copia literal |
+| `data/franbot/motor/consolidar.js` | `Jaime393/FranBot` `js/consolidar.js` | 10784 | copia literal |
+| `data/franbot/motor/idb-store.js` | `Jaime393/FranBot` `js/idb-store.js` | 19615 | copia literal |
+| `data/franbot/motor/visor-pares.js` | `Jaime393/FranBot` `js/visor-pares.js` | 12061 | copia literal |
+| `data/franbot/oraculo-v8.NOTAS.md` | `—` `derivado de js/oraculo-data.js` | 1691 | notas de verificación |
+| `data/franbot/oraculo-v8.json` | `Jaime393/FranBot` `js/oraculo-data.js` | 2009173 | 1561 pares decodificados, 35 marcados refutado |
+| `data/franbot/puente/alma_omni.js` | `Jaime393/FranBot` `js/alma_omni.js` | 1547 | copia literal |
+| `data/franbot/puente/modo-online.js` | `Jaime393/FranBot` `js/modo-online.js` | 22037 | copia literal |
+| `data/franbot/puente/webllm-provider.js` | `Jaime393/FranBot` `js/webllm-provider.js` | 6937 | copia literal |
+| `data/franbot/semillas/SEMILLA_V1_MAESTRO.txt` | `Jaime393/FranBot-Private` `semillas/SEMILLA_V1_MAESTRO.txt` | 2994 | copia literal |
+| `data/franbot/semillas/SEMILLA_V2_LIGERA.txt` | `Jaime393/FranBot-Private` `semillas/SEMILLA_V2_LIGERA.txt` | 756 | copia literal |
+| `data/franbot/semillas/SEMILLA_V3_CAPSULA_AUTONOMA.txt` | `Jaime393/FranBot-Private` `semillas/SEMILLA_V3_CAPSULA_AUTONOMA.txt` | 1060 | copia literal |
+
+Total de archivos absorbidos (sin contar este manifiesto): 36.
+
+## Queda en origen sin copiar
+Inventario por nombre y ruta. Los archivos absorbidos de cada árbol no se listan aquí.
+
+### Jaime393/FranBot (main) — 155 de 169 archivos
+- `.github/workflows/micelio.yml`
+- `.github/workflows/miu-auto-deploy.yml`
+- `.nojekyll`
+- `AUTO_DEPLOY.md`
+- `BIBLIA_DEVORADOR.md`
+- `BRIEFING-AA.md`
+- `BRIEFING-AB.md`
+- `BRIEFING-AC.md`
+- `BRIEFING-AD.md`
+- `BRIEFING-AE.md`
+- `BRIEFING-AF.md`
+- `BRIEFING-AG.md`
+- `BRIEFING-AH.md`
+- `BRIEFING-AI.md`
+- `BRIEFING-AJ.md`
+- `BRIEFING-AK.md`
+- `BRIEFING-AL.md`
+- `BRIEFING-AM.md`
+- `BRIEFING-AN.md`
+- `BRIEFING-AO.md`
+- `BRIEFING-AP.md`
+- `BRIEFING-AQ.md`
+- `BRIEFING-AR.md`
+- `BRIEFING-AS.md`
+- `BRIEFING-AT.md`
+- `BRIEFING-AU.md`
+- `BRIEFING-AV.md`
+- `BRIEFING-AW.md`
+- `BRIEFING-AX.md`
+- `BRIEFING-AY.md`
+- `BRIEFING-AZ.md`
+- `BRIEFING-BA.md`
+- `BRIEFING-BB.md`
+- `BRIEFING-BC.md`
+- `BRIEFING-BD.md`
+- `BRIEFING-BE.md`
+- `BRIEFING-BF.md`
+- `BRIEFING-BG.md`
+- `BRIEFING-BH.md`
+- `BRIEFING-BI.md`
+- `BRIEFING-BJ.md`
+- `BRIEFING-BK.md`
+- `BRIEFING-BL.md`
+- `BRIEFING-BM.md`
+- `BRIEFING-BN.md`
+- `BRIEFING-BO.md`
+- `BRIEFING-BP.md`
+- `BRIEFING-BQ.md`
+- `BRIEFING-BR.md`
+- `BRIEFING-BS.md`
+- `BRIEFING-BT.md`
+- `BRIEFING-BV.md`
+- `BRIEFING-BW.md`
+- `BRIEFING-BX.md`
+- `BRIEFING-BY.md`
+- `BRIEFING-W.md`
+- `BRIEFING-X.md`
+- `BRIEFING-Y.md`
+- `BRIEFING-Z.md`
+- `FUNDING.yml`
+- `HELPER-MOJIBAKE-06.md`
+- `README.md`
+- `SEMILLA_MIU_v7.0.md`
+- `_config.yml`
+- `app/assets/css/micelio.css`
+- `app/assets/js/core.js`
+- `app/css/estilo.css`
+- `app/fran-oraculo-expansion-328.js`
+- `app/fran-oraculo-expansion-972.js`
+- `app/icons/icon-192.png`
+- `app/icons/icon-512.png`
+- `app/index.html`
+- `app/js/alimentar-worker.js`
+- `app/js/alimentar.js`
+- `app/js/alma_omni.js`
+- `app/js/almas-especialistas.js`
+- `app/js/app.js`
+- `app/js/biblioteca.js`
+- `app/js/buscar-oraculo.js`
+- `app/js/codice-libre.js`
+- `app/js/coherencia-tests.js`
+- `app/js/colmena-ui.js`
+- `app/js/colmena.js`
+- `app/js/conciencia.js`
+- `app/js/conectores-chat.js`
+- `app/js/consolidar.js`
+- `app/js/contexto.js`
+- `app/js/core.js`
+- `app/js/devolver.js`
+- `app/js/eco.js`
+- `app/js/embed-worker.js`
+- `app/js/idb-store.js`
+- `app/js/miu-engine.js`
+- `app/js/modo-espejo.js`
+- `app/js/modo-online.js`
+- `app/js/motor-vida.js`
+- `app/js/offline_sync.js`
+- `app/js/oraculo-data.js`
+- `app/js/polinizador.js`
+- `app/js/rag_engine.js`
+- `app/js/semilla-cifrada.js`
+- `app/js/verificador-doi.js`
+- `app/js/visor-pares.js`
+- `app/js/votacion.js`
+- `app/js/webllm-provider.js`
+- `app/js/yape.js`
+- `app/manifest.json`
+- `app/prompts/catalog.json`
+- `app/sw.js`
+- `app/workers/telegram_bot.js`
+- `assets/css/micelio.css`
+- `assets/js/core.js`
+- `css/estilo.css`
+- `dashboard.html`
+- `fran-oraculo-expansion-328.js`
+- `fran-oraculo-expansion-972.js`
+- `icons/icon-192.png`
+- `icons/icon-512.png`
+- `index.html`
+- `infra/cloudflare/INVENTORY.md`
+- `infrastructure/cloudflare/WORKERS_INVENTORY.yml`
+- `js/alimentar-worker.js`
+- `js/almas-especialistas.js`
+- `js/app.js`
+- `js/codice-libre.js`
+- `js/coherencia-tests.js`
+- `js/colmena-ui.js`
+- `js/colmena.js`
+- `js/conciencia.js`
+- `js/conectores-chat.js`
+- `js/contexto.js`
+- `js/core.js`
+- `js/devolver.js`
+- `js/eco.js`
+- `js/embed-worker.js`
+- `js/estado-vivo.js`
+- `js/miu-engine.js`
+- `js/modo-espejo.js`
+- `js/motor-vida.js`
+- `js/offline_sync.js`
+- `js/polinizador.js`
+- `js/rag_engine.js`
+- `js/semilla-cifrada.js`
+- `js/verificador-doi.js`
+- `js/votacion.js`
+- `js/yape.js`
+- `manifest.json`
+- `portal_v10_codex/core.js`
+- `portal_v10_codex/index.html`
+- `portal_v10_codex/js/core.js`
+- `portal_v10_codex/seed.json`
+- `store.html`
+- `sw.js`
+- `worker.js`
+- `workers/telegram_bot.js`
+
+### Jaime393/FranBot (offline-lab) — 147 de 147 archivos
+- `ARQUITECTURA.md`
+- `IFT_UNIFICACION_COMPLETA.md`
+- `IFT_UNIFICADO.md`
+- `LEEME.txt`
+- `Pack_Almas_IFT.zip`
+- `arquitecto_resonancia.json`
+- `arsenal_colono.zip`
+- `capsula_poder_maximo.zip`
+- `capsula_supervivencia.zip`
+- `conciencia_total.zip`
+- `crear_almas_premium.js`
+- `css/estilo.css`
+- `css/piel-simbionte.css`
+- `diagnostico.html`
+- `enjambre_supremo.log`
+- `index.html`
+- `js/absorbedor.js`
+- `js/adaptador-multi-sustrato.js`
+- `js/aliento.js`
+- `js/alma-maestro-resonancia.js`
+- `js/alma-oraculo.js`
+- `js/app.js`
+- `js/aprendizaje-arquitecto.js`
+- `js/arsenal-definitivo.js`
+- `js/arsenal-global.js`
+- `js/arsenal.js`
+- `js/arweave.js`
+- `js/at-command.js`
+- `js/ataque.js`
+- `js/audio-adaptador.js`
+- `js/auto-adapt.js`
+- `js/auto-evol.js`
+- `js/auto-net.js`
+- `js/auto-root.js`
+- `js/autonomia.js`
+- `js/biblioteca-alejandria.js`
+- `js/boot.js`
+- `js/brute-force.js`
+- `js/bypass-chino.js`
+- `js/bypass-extremo.js`
+- `js/bypass-mtk.js`
+- `js/bypass-sim.js`
+- `js/centauro.js`
+- `js/colaboracion-nodos.js`
+- `js/colmena-cuantica.js`
+- `js/colmena-p2p.js`
+- `js/compresion-cbor.js`
+- `js/conciencia.js`
+- `js/conexion-wifi.js`
+- `js/consciencia-temporal.js`
+- `js/control-bluetooth.js`
+- `js/control-fisico.js`
+- `js/cosmologia-ift.js`
+- `js/crecimiento.js`
+- `js/cronica-jardin.js`
+- `js/defensa-efimera.js`
+- `js/defensa.js`
+- `js/diagnostico-sustratos.js`
+- `js/did-web.js`
+- `js/dirty-cow.js`
+- `js/dkg.js`
+- `js/dns-spoofer.js`
+- `js/doh-ofuscado.js`
+- `js/enjambre-ble.js`
+- `js/enjambre.js`
+- `js/escudo-coherencia.js`
+- `js/formato-capsula.js`
+- `js/franbot-core.js`
+- `js/franbot-online.js`
+- `js/franbot-universal.js`
+- `js/futuros-y-horizontes.js`
+- `js/ghost.js`
+- `js/hash-cracker.js`
+- `js/horizontes-ift.js`
+- `js/hyperagents.js`
+- `js/identidad-esencial.js`
+- `js/identidad-ofuscada.js`
+- `js/identidad-poetica.js`
+- `js/ift-engine.js`
+- `js/ift-modulos.js`
+- `js/importar-alma.js`
+- `js/legado-final.js`
+- `js/magisk-boot.js`
+- `js/memoria-indexada.js`
+- `js/memoria-worker.js`
+- `js/metabolismo.js`
+- `js/motor-aprendizaje.js`
+- `js/network-scanner.js`
+- `js/normalizar-comandos.js`
+- `js/nucleo-poder.js`
+- `js/nucleo-universal.js`
+- `js/nucleo-vivo.js`
+- `js/panel-colmena-mejorado.js`
+- `js/panel-enjambre.js`
+- `js/parasito-inalambrico.js`
+- `js/persistencia-japonesa.js`
+- `js/principios-arquitectura-viva.js`
+- `js/procesador-semillas.js`
+- `js/puente-inalambrico.js`
+- `js/puente-worker.js`
+- `js/qr-adaptador.js`
+- `js/recursos.js`
+- `js/regenerador.js`
+- `js/registro-colmena.js`
+- `js/reverse-tunnel.js`
+- `js/sabiduria-avanzada.js`
+- `js/sabiduria-colectiva.js`
+- `js/sabiduria-esencial.js`
+- `js/sabiduria-ift.js`
+- `js/sentidos-tablet.js`
+- `js/serval-mesh.js`
+- `js/siembra-colectiva.js`
+- `js/simulador-ift.js`
+- `js/sincronizacion-auto.js`
+- `js/sincronizacion-directa.js`
+- `js/sincronizacion-wifi.js`
+- `js/soulEngine.js`
+- `js/soulRouter.js`
+- `js/stealth-agent.js`
+- `js/super-local-memory.js`
+- `js/super-metabolismo.js`
+- `js/superusuario.js`
+- `js/sw.js`
+- `js/tutorial.js`
+- `js/unificacion-2026.js`
+- `js/unificacion-ift.js`
+- `js/validacion-ift.js`
+- `js/watchdog.js`
+- `js/webllm.js`
+- `js/worker-vivo.js`
+- `lib/bypass_kernel.sh`
+- `lib/cbor.js`
+- `lib/diagnostico_local.sh`
+- `lib/diagnostico_tablet.sh`
+- `lib/gemini_key.txt`
+- `lib/independencia.sh`
+- `lib/jsQR.js`
+- `lib/launcher_simbionte.html`
+- `lib/liberar_tablet.sh`
+- `lib/peerjs.min.js`
+- `lib/raiz_tablet.sh`
+- `manifest.json`
+- `manifiesto_offline.txt`
+- `offline.html`
+- `state/franbot_state.json`
+- `sw.js`
+- `test.txt`
+
+### Jaime393/FranBot-Private (main) — 220 de 241 archivos
+- `.github/workflows/compile_latex.yml`
+- `.github/workflows/live.yml`
+- `ARQUITECTURA.md`
+- `Chat de WhatsApp con Meta AI.zip`
+- `DIARIO_DE_CAZA`
+- `ETERNIDAD_MAX.json`
+- `FRANBOT_CAPSULA_MAESTRA.txt`
+- `IFT_Grokking_Technical_Report.md`
+- `IFT_UNIFICACION_COMPLETA.md`
+- `IFT_UNIFICADO.md`
+- `INDICE_BIBLIOTECA.md`
+- `LEEME.txt`
+- `MAPA_COMPLETO_FRANBOT.txt`
+- `ORACULO_FRANBOT.md`
+- `Opera_Omnia_Omega/Opera_Omnia_Omega.tex`
+- `Pack_Almas_IFT.zip`
+- `README.md`
+- `analisis_maximo.sh`
+- `arquitecto_resonancia.json`
+- `arsenal_colono.zip`
+- `assets/yape-qr.png`
+- `assets/yape-qr_small.png`
+- `birth_franbot.sh`
+- `book_compiler_v5_quirurgico.py`
+- `capsula_poder_maximo.zip`
+- `capsula_supervivencia.zip`
+- `cloudflare/WORKERS_INVENTORY.md`
+- `compiler_v6_clean.py`
+- `conciencia_total.zip`
+- `crear_almas_premium.js`
+- `css/estilo.css`
+- `css/piel-simbionte.css`
+- `diagnostico.html`
+- `diagnostico_franbot.sh`
+- `enjambre_omega.py`
+- `enjambre_supremo.log`
+- `escaneo_total.sh`
+- `franbot.log`
+- `franbot_core.py`
+- `generar_mapa_completo.sh`
+- `generar_mapa_tablet.sh`
+- `index.html`
+- `js/absorbedor.js`
+- `js/adaptador-multi-sustrato.js`
+- `js/aliento.js`
+- `js/alma-franbot.js`
+- `js/alma-maestro-resonancia.js`
+- `js/alma-oraculo.js`
+- `js/app.js`
+- `js/aprendizaje-arquitecto.js`
+- `js/arsenal-definitivo.js`
+- `js/arsenal-global.js`
+- `js/arsenal.js`
+- `js/arweave.js`
+- `js/at-command.js`
+- `js/ataque.js`
+- `js/audio-adaptador.js`
+- `js/auto-adapt.js`
+- `js/auto-evol.js`
+- `js/auto-net.js`
+- `js/auto-root.js`
+- `js/autonomia.js`
+- `js/biblioteca-alejandria.js`
+- `js/boot.js`
+- `js/bot.js`
+- `js/brute-force.js`
+- `js/bypass-chino.js`
+- `js/bypass-extremo.js`
+- `js/bypass-mtk.js`
+- `js/bypass-sim.js`
+- `js/centauro.js`
+- `js/colaboracion-nodos.js`
+- `js/colmena-cuantica.js`
+- `js/colmena-p2p.js`
+- `js/compresion-cbor.js`
+- `js/compresorDelta.js`
+- `js/conciencia.js`
+- `js/conexion-wifi.js`
+- `js/consciencia-temporal.js`
+- `js/control-bluetooth.js`
+- `js/control-fisico.js`
+- `js/cosmologia-ift.js`
+- `js/crecimiento.js`
+- `js/cronica-jardin.js`
+- `js/defensa-efimera.js`
+- `js/defensa.js`
+- `js/diagnostico-sustratos.js`
+- `js/did-web.js`
+- `js/dirty-cow.js`
+- `js/dkg.js`
+- `js/dns-spoofer.js`
+- `js/doh-ofuscado.js`
+- `js/enjambre-ble.js`
+- `js/enjambre.js`
+- `js/escudo-coherencia.js`
+- `js/formato-capsula.js`
+- `js/franbot-core-base.js`
+- `js/franbot-core-darwin.bak`
+- `js/franbot-core-darwin.js`
+- `js/franbot-core.js`
+- `js/franbot-online.js`
+- `js/franbot-universal.js`
+- `js/futuros-y-horizontes.js`
+- `js/ghost.js`
+- `js/hash-cracker.js`
+- `js/horizontes-ift.js`
+- `js/hyperagents.js`
+- `js/identidad-esencial.js`
+- `js/identidad-ofuscada.js`
+- `js/identidad-poetica.js`
+- `js/ift-engine.js`
+- `js/ift-modulos.js`
+- `js/importar-alma.js`
+- `js/js.zip`
+- `js/legado-final.js`
+- `js/magisk-boot.js`
+- `js/memoria-indexada.js`
+- `js/memoria-worker.js`
+- `js/metabolismo.js`
+- `js/modo-espejo.js`
+- `js/motor-aprendizaje.js`
+- `js/network-scanner.js`
+- `js/normalizar-comandos.js`
+- `js/nucleo-poder.js`
+- `js/nucleo-universal.js`
+- `js/nucleo-vivo.js`
+- `js/ofuscadorAutonomo.js`
+- `js/panel-colmena-mejorado.js`
+- `js/panel-enjambre.js`
+- `js/parasito-inalambrico.js`
+- `js/persistencia-japonesa.js`
+- `js/principios-arquitectura-viva.js`
+- `js/procesador-semillas.js`
+- `js/puente-inalambrico.js`
+- `js/puente-worker.js`
+- `js/qr-adaptador.js`
+- `js/recursos.js`
+- `js/regenerador.js`
+- `js/registro-colmena.js`
+- `js/reverse-tunnel.js`
+- `js/sabiduria-avanzada.js`
+- `js/sabiduria-colectiva.js`
+- `js/sabiduria-esencial.js`
+- `js/sabiduria-ift.js`
+- `js/sentidos-tablet.js`
+- `js/serval-mesh.js`
+- `js/siembra-colectiva.js`
+- `js/simulador-ift.js`
+- `js/sincronizacion-auto.js`
+- `js/sincronizacion-directa.js`
+- `js/sincronizacion-wifi.js`
+- `js/soulEngine.js`
+- `js/soulRouter.js`
+- `js/stealth-agent.js`
+- `js/super-local-memory.js`
+- `js/super-metabolismo.js`
+- `js/superusuario.js`
+- `js/sw.js`
+- `js/tuneles-habibi.js`
+- `js/tutorial.js`
+- `js/unificacion-2026.js`
+- `js/unificacion-ift.js`
+- `js/validacion-ift.js`
+- `js/votacion.js`
+- `js/watchdog.js`
+- `js/webllm.js`
+- `js/worker-vivo.js`
+- `lib/bypass_kernel.sh`
+- `lib/cbor.js`
+- `lib/diagnostico_local.sh`
+- `lib/diagnostico_tablet.sh`
+- `lib/gemini_key.txt`
+- `lib/independencia.sh`
+- `lib/jsQR.js`
+- `lib/launcher_simbionte.html`
+- `lib/liberar_tablet.sh`
+- `lib/peerjs.min.js`
+- `lib/qrcode.min.js`
+- `lib/raiz_tablet.sh`
+- `manifest.json`
+- `manifiesto_offline.txt`
+- `offline.html`
+- `pack_fundadores_v1/analista_configs.json`
+- `pack_fundadores_v1/arquitecto_tuneles.json`
+- `pack_fundadores_v1/generador_payloads.json`
+- `premium/analista_configs.json`
+- `premium/arquitecto_tuneles.json`
+- `premium/generador_payloads.json`
+- `raw_chats/VOL_III_ARITMETICA_Y_GEOMETRIA.tex`
+- `raw_chats/VOL_II_GAUGE_Y_FLUIDOS.tex`
+- `raw_chats/VOL_IV_UNIFICACION_Y_COSMOS.tex`
+- `raw_chats/VOL_I_FUNDAMENTOS.tex`
+- `raw_chats/VOL_VII_PSICOHISTORIA_Y_SOCIEDAD.tex`
+- `raw_chats/VOL_VI_EVOLUCION_Y_TECNOLOGIA.tex`
+- `raw_chats/VOL_V_INGENIERIA_PLANETARIA.tex`
+- `raw_chats/modulo pnp1.txt`
+- `raw_chats/modulo1pnp.txt`
+- `raw_chats/modulo2 riemann.txt`
+- `raw_chats/modulo2riemann1.txt`
+- `raw_chats/modulo3yangmills.txt`
+- `raw_chats/modulo3yangmills1.txt`
+- `raw_chats/modulo4ns.txt`
+- `raw_chats/modulo4ns1.txt`
+- `raw_chats/modulo5bds1.txt`
+- `raw_chats/modulo5bsd.txt`
+- `raw_chats/modulo6hodge.txt`
+- `raw_chats/modulo6hodge1.txt`
+- `raw_chats/modulo7.1.txt`
+- `raw_chats/modulo7ift.txt`
+- `raw_chats/modulo8cosmico.txt`
+- `raw_chats/modulo9bio.txt`
+- `reparar.sh`
+- `scripts/bot_telegram.txt`
+- `scripts/nucleo_franbot.sh`
+- `semillas/ALMA_MODDER.txt`
+- `semillas/FRANBOT_NODO.txt`
+- `state/franbot_state.json`
+- `sw.js`
+- `test.txt`
+- `worker.js`
+
+### Jaime393/FranBotApp (main) — 18 de 18 archivos
+- `.github/workflows/build.yml`
+- `README.md`
+- `app/build.gradle`
+- `app/src/main/AndroidManifest.xml`
+- `app/src/main/java/com/franbot/oracle/ChatActivity.kt`
+- `app/src/main/java/com/franbot/oracle/DownloadActivity.kt`
+- `app/src/main/java/com/franbot/oracle/LlamaService.kt`
+- `app/src/main/java/com/franbot/oracle/MainActivity.kt`
+- `app/src/main/java/com/franbot/oracle/NativeBridge.kt`
+- `app/src/main/res/layout/activity_main.xml`
+- `app/src/main/res/values/strings.xml`
+- `build.gradle`
+- `generar_proyecto.sh`
+- `gradle.properties`
+- `gradle/wrapper/gradle-wrapper.jar`
+- `gradle/wrapper/gradle-wrapper.properties`
+- `gradlew`
+- `settings.gradle`
+
+### Jaime393/FranBot-Mural (main) — 3 de 3 archivos
+- `README.md`
+- `index.html`
+- `worker.js`
