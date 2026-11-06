@@ -1,17 +1,17 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T18:15:01.799004Z",
+  "ts": "2026-11-06T18:20:04.687216Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 20939,
+      "latencia_s": 0.6,
+      "gossip_total": 20945,
       "gossip_newest": {
-        "id": 21995,
-        "ts": "2026-11-06T18:15:00.278631+00:00",
-        "tipo": "reintegracion_mitosis"
+        "id": 22001,
+        "ts": "2026-11-06T18:20:02.934846+00:00",
+        "tipo": "confianza_ajustada"
       },
       "relay_total": 309,
       "relay_newest": {
@@ -33,11 +33,11 @@
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 1.4,
-      "gossip_total": 18032,
+      "latencia_s": 0.9,
+      "gossip_total": 18033,
       "gossip_newest": {
-        "id": 18066,
-        "ts": "2026-11-06T18:15:00.861379+00:00",
+        "id": 18067,
+        "ts": "2026-11-06T18:20:00.113858+00:00",
         "tipo": "ciclo_cipher"
       }
     }
@@ -46,21 +46,20 @@
     "ref": "tpfiybpguuxskitszhmk",
     "gateway": "vivo-401-sin-clave",
     "db": "muerta-timeout",
-    "latencia_s": 6.1,
-    "error": "TimeoutError: The read operation timed out"
+    "latencia_s": 4.7,
+    "error": "HTTP Error 503: Service Unavailable"
   },
   "bore": {
-    "url": "http://bore.pub:57548",
-    "actualizado_ts": "2026-11-06T17:55:25.145342+00:00",
+    "url": "http://bore.pub:54652",
+    "actualizado_ts": "2026-11-06T18:15:26.811492+00:00",
     "health": {
-      "http": 0,
-      "error": "TimeoutError"
+      "http": 200
     },
     "queue": {
-      "http": 0,
-      "error": "TimeoutError"
+      "http": 200
     },
-    "estado": "muerto"
+    "queue_total": 15,
+    "estado": "vivo"
   },
   "miu_pulse": {
     "phi": 35770.7,
