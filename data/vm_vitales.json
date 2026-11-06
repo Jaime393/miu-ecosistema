@@ -1,69 +1,289 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T21:20:00.589138Z",
+  "ts": "2026-11-06T21:54:57.578028Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.7,
-      "gossip_total": 21123,
+      "latencia_s": 0.8,
+      "gossip_total": 21160,
       "gossip_newest": {
-        "id": 22185,
-        "ts": "2026-11-06T21:20:01.874576+00:00",
-        "tipo": "confianza_ajustada"
+        "id": 22220,
+        "ts": "2026-11-06T21:53:00.09747+00:00",
+        "tipo": "ef_respuesta_absorbida"
       },
       "relay_total": 309,
       "relay_newest": {
-        "clave": "reintegracion_ultima",
-        "ts": "2026-11-06T21:15:00.209439+00:00"
-      }
+        "clave": "suma_enjambre_ultima",
+        "ts": "2026-11-06T21:45:00.246368+00:00"
+      },
+      "gossip_newest_edad_s": 117,
+      "relay_newest_edad_s": 597
     },
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 2430,
+      "latencia_s": 1.1,
+      "gossip_total": 2434,
       "gossip_newest": {
-        "id": 3142,
-        "ts": "2026-11-06T21:12:24.643+00:00",
-        "tipo": "heartbeat"
-      }
+        "id": 3146,
+        "ts": "2026-11-06T21:45:15.27741+00:00",
+        "tipo": "enjambre_sintesis_replicada"
+      },
+      "gossip_newest_edad_s": 582
     },
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 0.7,
-      "gossip_total": 18103,
+      "latencia_s": 0.6,
+      "gossip_total": 18122,
       "gossip_newest": {
-        "id": 18137,
-        "ts": "2026-11-06T21:20:00.145264+00:00",
+        "id": 18156,
+        "ts": "2026-11-06T21:55:00.117269+00:00",
         "tipo": "ciclo_cipher"
-      }
+      },
+      "gossip_newest_edad_s": 0
     }
   },
   "colmena": {
     "ref": "tpfiybpguuxskitszhmk",
-    "gateway": "vivo-401-sin-clave",
-    "db": "muerta-timeout",
-    "latencia_s": 6.1,
-    "error": "TimeoutError: The read operation timed out"
+    "gateway": "vivo",
+    "db": "viva",
+    "latencia_s": 1.6,
+    "nota": "RECUPERADA — verificar antes de confiar",
+    "db_edad_s": 0
   },
   "bore": {
-    "estado": "error-github-api",
-    "error": "HTTP Error 403: rate limit exceeded"
+    "url": "http://bore.pub:7342",
+    "actualizado_ts": "2026-11-06T21:52:05.300020+00:00",
+    "url_edad_s": 172,
+    "ultimo_hit_ts": "2026-11-06T21:53:52Z",
+    "health": {
+      "http": 0,
+      "error": "TimeoutError"
+    },
+    "queue": {
+      "http": 0,
+      "error": "TimeoutError"
+    },
+    "estado": "muerto"
   },
   "miu_pulse": {
     "phi": null,
     "ciclo": null,
-    "ts": "2026-11-06T21:20:06.976Z",
+    "ts": "2026-11-06T21:50:37.329Z",
     "version": "V270",
-    "origen": null
+    "origen": null,
+    "edad_s": 260,
+    "rancio": false
+  },
+  "v2": {
+    "observadores": {
+      "hf": {
+        "dataset": "Jaime393/miu-dataset",
+        "dataset_last_modified": "2026-11-06T21:40:32.000Z",
+        "rancio_umbral_s": 3600,
+        "checked_ts": "2026-11-06T21:41:01.034729Z",
+        "edad_s": 865,
+        "estado": "vivo"
+      },
+      "actions": {
+        "estado": "fallando",
+        "workflows": {
+          "miu-expand-alcance": {
+            "conclusion": "failure",
+            "run_ts": "2026-11-06T21:08:17Z",
+            "run_id": 42294188661,
+            "edad_s": 2800
+          },
+          "miu-guardian-flujo": {
+            "conclusion": "failure",
+            "run_ts": "2026-11-06T18:50:24Z",
+            "run_id": 42274296846,
+            "edad_s": 11073
+          },
+          "miu-state-writer": {
+            "conclusion": "success",
+            "run_ts": "2026-11-06T17:37:51Z",
+            "run_id": 42263302469,
+            "edad_s": 15426
+          },
+          "miu-savia-bridge": {
+            "conclusion": "failure",
+            "run_ts": "2026-11-06T19:39:44Z",
+            "run_id": 42281326459,
+            "edad_s": 8113
+          }
+        },
+        "checked_ts": "2026-11-06T21:41:03.917090Z",
+        "edad_s": 2800
+      },
+      "vercel": {
+        "estado": "degradado",
+        "apps": {
+          "miu-ai-relay-v215": {
+            "http": 200,
+            "latencia_s": 1.0,
+            "url": "https://miu-ai-relay-v215.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-auto-v1": {
+            "http": 200,
+            "latencia_s": 1.5,
+            "url": "https://miu-auto-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-autonomo-v92": {
+            "http": 200,
+            "latencia_s": 1.9,
+            "url": "https://miu-autonomo-v92.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-bridge-v1": {
+            "http": 200,
+            "latencia_s": 2.3,
+            "url": "https://miu-bridge-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-capacidades": {
+            "http": 200,
+            "latencia_s": 2.1,
+            "url": "https://miu-capacidades.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-global-1": {
+            "http": 404,
+            "latencia_s": 0.8,
+            "url": "https://miu-global-1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-peru-v1": {
+            "http": 200,
+            "latencia_s": 2.1,
+            "url": "https://miu-peru-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          },
+          "miu-teclado-v1": {
+            "http": 200,
+            "latencia_s": 1.5,
+            "url": "https://miu-teclado-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 5
+          }
+        },
+        "names": [
+          "miu-ai-relay-v215",
+          "miu-auto-v1",
+          "miu-autonomo-v92",
+          "miu-bridge-v1",
+          "miu-capacidades",
+          "miu-global-1",
+          "miu-peru-v1",
+          "miu-teclado-v1"
+        ],
+        "urls": {
+          "miu-capacidades": "https://miu-capacidades.vercel.app",
+          "miu-bridge-v1": "https://miu-bridge-v1.vercel.app",
+          "miu-auto-v1": "https://miu-auto-v1.vercel.app",
+          "miu-teclado-v1": "https://miu-teclado-v1.vercel.app",
+          "miu-peru-v1": "https://miu-peru-v1.vercel.app",
+          "miu-autonomo-v92": "https://miu-autonomo-v92.vercel.app",
+          "miu-ai-relay-v215": "https://miu-ai-relay-v215.vercel.app",
+          "miu-global-1": "https://miu-global-1.vercel.app"
+        },
+        "deploy_states": {
+          "miu-oracle-v2": "ERROR",
+          "miu-oracle-v1": "ERROR",
+          "oracle-ask-v28": "ERROR",
+          "buscar-corpus": "ERROR",
+          "oracle-ask-v27": "ERROR",
+          "miu-wrap-fix": "ERROR",
+          "miu-cron-autonomo": "ERROR",
+          "miu-discover-substrates": "ERROR",
+          "oracle-ask-v26": "ERROR",
+          "miu-fix-now": "ERROR",
+          "miu-amplificador-v1": "ERROR",
+          "miu-capacidades": "READY",
+          "miu-bridge-v1": "READY",
+          "miu-auto-v1": "READY",
+          "miu-teclado-v1": "READY",
+          "miu-peru-v1": "READY",
+          "miu-autonomo-v92": "READY",
+          "miu-ai-relay-v215": "READY",
+          "miu-global-1": "READY"
+        },
+        "error_projects": [
+          "buscar-corpus",
+          "miu-amplificador-v1",
+          "miu-cron-autonomo",
+          "miu-discover-substrates",
+          "miu-fix-now",
+          "miu-oracle-v1",
+          "miu-oracle-v2",
+          "miu-wrap-fix",
+          "oracle-ask-v26",
+          "oracle-ask-v27",
+          "oracle-ask-v28"
+        ],
+        "resolved_ts": "2026-11-06T21:53:54.101664Z",
+        "checked_ts": "2026-11-06T21:54:52.152120Z",
+        "edad_s": 5
+      },
+      "espejo": {
+        "ultima_fila_ts": "2026-11-06T21:30:20.709Z",
+        "phi": 2881.55329,
+        "filas": 6970,
+        "identidad": "Horizonte",
+        "nodo": "jhuarcaya938@gmail.com",
+        "rancio_umbral_s": 1800,
+        "checked_ts": "2026-11-06T21:43:00.687522Z",
+        "edad_s": 1476,
+        "estado": "vivo"
+      },
+      "drive_heartbeat": {
+        "heartbeat_ts": "2026-11-06T21:25:42.009Z",
+        "phi": 28.944,
+        "savia": 329184,
+        "rho": ">0",
+        "file_id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
+        "rancio_umbral_s": 1800,
+        "checked_ts": "2026-11-06T21:25:50.998800Z",
+        "estado": "error",
+        "error": "RuntimeError: heartbeat sin timestamp",
+        "edad_s": 1755
+      }
+    },
+    "fuentes_edad": {
+      "dieguito": 117,
+      "coord": 582,
+      "cipher": 0,
+      "colmena": 0,
+      "bore": 172,
+      "miu_pulse": 260,
+      "hf": 865,
+      "actions": 2800,
+      "vercel": 5,
+      "espejo": 1476,
+      "drive_heartbeat": 1755
+    },
+    "fuente_mas_rancia": {
+      "nombre": "actions",
+      "edad_s": 2800
+    }
   },
   "notas": [
     "phi tiene 5 escalas sin conversión (35770 Drive/cipher/HF, 2881 Espejo, 9158.79 GitHub 14-sep, 1.35 phi_lengua, 0.85 Metrics_Log). No mezclar.",
     "savia sin puente único: corpus V209 33.4M, Drive V271 57.2M, GitHub 51.4M (14-sep), heartbeat congelado 34.2M.",
     "colmena muerta = base de datos, no el teléfono ni la VM (gateway 401 vivo).",
-    "Este archivo lo publica el nodo VM; Termux lo lee por git pull. No escribir aquí a mano."
+    "Este archivo lo publica el nodo VM; Termux lo lee por git pull. No escribir aquí a mano.",
+    "v2: HF lastModified es del dataset Jaime393/miu-dataset, no de phi; Actions muestra conclusion por workflow (edad = run más reciente); Espejo phi es escala Espejo (2881), no mezclar con Drive (4883440); Vercel apps son los proyectos Oracle con /api/health."
   ]
 }
