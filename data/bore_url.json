@@ -1,7 +1,7 @@
 {
   "url": "http://bore.pub:12195",
   "puerto": "12195",
-  "backend": "bore",
-  "actualizado_ts": "2026-11-06T07:35:24.446410+00:00",
+  "backend": "activo_estable",
+  "actualizado_ts": "2026-11-06T07:40:09.278754+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
