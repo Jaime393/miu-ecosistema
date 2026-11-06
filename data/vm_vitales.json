@@ -1,17 +1,17 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T17:50:02.425226Z",
+  "ts": "2026-11-06T17:54:59.738897Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.6,
-      "gossip_total": 20915,
+      "latencia_s": 0.9,
+      "gossip_total": 20920,
       "gossip_newest": {
-        "id": 21970,
-        "ts": "2026-11-06T17:50:02.383069+00:00",
-        "tipo": "confianza_ajustada"
+        "id": 21971,
+        "ts": "2026-11-06T17:53:00.241471+00:00",
+        "tipo": "ef_respuesta_absorbida"
       },
       "relay_total": 309,
       "relay_newest": {
@@ -33,11 +33,11 @@
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 1.1,
-      "gossip_total": 18025,
+      "latencia_s": 1.4,
+      "gossip_total": 18026,
       "gossip_newest": {
-        "id": 18059,
-        "ts": "2026-11-06T17:50:00.102288+00:00",
+        "id": 18060,
+        "ts": "2026-11-06T17:55:00.658579+00:00",
         "tipo": "ciclo_cipher"
       }
     }
@@ -51,15 +51,16 @@
   },
   "bore": {
     "url": "http://bore.pub:48220",
-    "actualizado_ts": "2026-11-06T17:47:54.589532+00:00",
+    "actualizado_ts": "2026-11-06T17:50:06.246422+00:00",
     "health": {
-      "http": 200
+      "http": 0,
+      "error": "TimeoutError"
     },
     "queue": {
-      "http": 200
+      "http": 0,
+      "error": "TimeoutError"
     },
-    "queue_total": 15,
-    "estado": "vivo"
+    "estado": "muerto"
   },
   "miu_pulse": {
     "phi": 35770.7,
