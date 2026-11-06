@@ -1,1 +1,1 @@
-{"ts": "2026-11-06T05:10:01Z", "servicios": {"oraculo_8771": 200, "borde_8766": 200, "llama_8080": 200, "bore": 200}, "bore_url": "http://bore.pub:33566", "queue": {"total": 12, "pending": 0}, "sistema": {"procesos": 39, "disk": "90%", "load": "top: 50.0 sort"}}
+{"ts": "2026-11-06T05:25:00Z", "servicios": {"oraculo_8771": 200, "borde_8766": 200, "llama_8080": 200, "bore": 0}, "bore_url": "http://bore.pub:43026", "queue": {"total": 12, "pending": 0}, "sistema": {"procesos": 37, "disk": "90%", "load": "top:  100 ps"}}
