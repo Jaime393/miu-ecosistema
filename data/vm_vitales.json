@@ -1,43 +1,43 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T17:40:23.977408Z",
+  "ts": "2026-11-06T17:44:59.634415Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 20908,
+      "latencia_s": 0.9,
+      "gossip_total": 20909,
       "gossip_newest": {
-        "id": 21963,
-        "ts": "2026-11-06T17:40:00.055704+00:00",
-        "tipo": "recoger_respuestas_ejecutado"
+        "id": 21964,
+        "ts": "2026-11-06T17:45:00.133515+00:00",
+        "tipo": "suma_horaria"
       },
       "relay_total": 309,
       "relay_newest": {
-        "clave": "reintegracion_ultima",
-        "ts": "2026-11-06T17:15:00.288967+00:00"
+        "clave": "suma_enjambre_ultima",
+        "ts": "2026-11-06T17:45:00.133515+00:00"
       }
     },
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 0.6,
-      "gossip_total": 2413,
+      "latencia_s": 0.8,
+      "gossip_total": 2414,
       "gossip_newest": {
-        "id": 3125,
-        "ts": "2026-11-06T17:27:52.728+00:00",
-        "tipo": "bcrp"
+        "id": 3126,
+        "ts": "2026-11-06T17:43:13.601+00:00",
+        "tipo": "heartbeat"
       }
     },
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 18021,
+      "latencia_s": 1.5,
+      "gossip_total": 18024,
       "gossip_newest": {
-        "id": 18055,
-        "ts": "2026-11-06T17:40:00.070141+00:00",
+        "id": 18058,
+        "ts": "2026-11-06T17:45:00.783951+00:00",
         "tipo": "ciclo_cipher"
       }
     }
