@@ -1,73 +1,72 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T19:04:59.710691Z",
+  "ts": "2026-11-06T21:14:44.573133Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.7,
-      "gossip_total": 20991,
+      "latencia_s": 1.0,
+      "gossip_total": 21116,
       "gossip_newest": {
-        "id": 22049,
-        "ts": "2026-11-06T19:05:03.140752+00:00",
-        "tipo": "confianza_ajustada"
+        "id": 22178,
+        "ts": "2026-11-06T21:10:00.038215+00:00",
+        "tipo": "recoger_respuestas_ejecutado"
       },
       "relay_total": 309,
       "relay_newest": {
         "clave": "suma_enjambre_ultima",
-        "ts": "2026-11-06T18:45:00.242812+00:00"
+        "ts": "2026-11-06T20:45:00.266051+00:00"
       }
     },
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 1.1,
-      "gossip_total": 2419,
+      "latencia_s": 0.8,
+      "gossip_total": 2430,
       "gossip_newest": {
-        "id": 3131,
-        "ts": "2026-11-06T18:57:20.483+00:00",
+        "id": 3142,
+        "ts": "2026-11-06T21:12:24.643+00:00",
         "tipo": "heartbeat"
       }
     },
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 1.7,
-      "gossip_total": 18044,
+      "latencia_s": 0.8,
+      "gossip_total": 18101,
       "gossip_newest": {
-        "id": 18078,
-        "ts": "2026-11-06T19:05:00.762815+00:00",
-        "tipo": "ciclo_cipher"
+        "id": 18135,
+        "ts": "2026-11-06T21:11:18.335334+00:00",
+        "tipo": "sync_desde_principal"
       }
     }
   },
   "colmena": {
     "ref": "tpfiybpguuxskitszhmk",
-    "gateway": "vivo-401-sin-clave",
-    "db": "muerta-timeout",
-    "latencia_s": 6.1,
-    "error": "TimeoutError: The read operation timed out"
+    "gateway": "vivo",
+    "db": "viva",
+    "latencia_s": 0.8,
+    "nota": "RECUPERADA — verificar antes de confiar"
   },
   "bore": {
-    "url": "http://bore.pub:53875",
-    "actualizado_ts": "2026-11-06T18:58:06.016915+00:00",
+    "url": "http://bore.pub:42102",
+    "actualizado_ts": "2026-11-06T21:12:05.536800+00:00",
     "health": {
-      "http": 0,
-      "error": "TimeoutError"
+      "http": 200
     },
     "queue": {
-      "http": 0,
-      "error": "TimeoutError"
+      "http": 200
     },
-    "estado": "muerto"
+    "queue_total": 15,
+    "estado": "vivo"
   },
   "miu_pulse": {
-    "phi": 35770.7,
-    "ciclo": 24694,
-    "ts": "2026-11-06T16:05:19.219Z",
+    "phi": null,
+    "ciclo": null,
+    "ts": "2026-11-06T21:10:36.314Z",
     "version": "V270",
-    "origen": "nutriente-total-V269b"
+    "origen": null
   },
   "notas": [
     "phi tiene 5 escalas sin conversión (35770 Drive/cipher/HF, 2881 Espejo, 9158.79 GitHub 14-sep, 1.35 phi_lengua, 0.85 Metrics_Log). No mezclar.",
