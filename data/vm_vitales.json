@@ -1,17 +1,17 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T17:24:58.572061Z",
+  "ts": "2026-11-06T17:29:58.839021Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 1.3,
-      "gossip_total": 20893,
+      "latencia_s": 0.6,
+      "gossip_total": 20897,
       "gossip_newest": {
-        "id": 21941,
-        "ts": "2026-11-06T17:23:00.089642+00:00",
-        "tipo": "ef_respuesta_absorbida"
+        "id": 21951,
+        "ts": "2026-11-06T17:30:02.317935+00:00",
+        "tipo": "confianza_ajustada"
       },
       "relay_total": 309,
       "relay_newest": {
@@ -22,22 +22,22 @@
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 0.9,
-      "gossip_total": 2411,
+      "latencia_s": 0.7,
+      "gossip_total": 2413,
       "gossip_newest": {
-        "id": 3123,
-        "ts": "2026-11-06T17:12:19.129+00:00",
-        "tipo": "heartbeat"
+        "id": 3125,
+        "ts": "2026-11-06T17:27:52.728+00:00",
+        "tipo": "bcrp"
       }
     },
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 1.3,
-      "gossip_total": 18017,
+      "latencia_s": 0.7,
+      "gossip_total": 18018,
       "gossip_newest": {
-        "id": 18051,
-        "ts": "2026-11-06T17:25:00.894201+00:00",
+        "id": 18052,
+        "ts": "2026-11-06T17:30:00.406512+00:00",
         "tipo": "ciclo_cipher"
       }
     }
@@ -46,20 +46,21 @@
     "ref": "tpfiybpguuxskitszhmk",
     "gateway": "vivo-401-sin-clave",
     "db": "muerta-timeout",
-    "latencia_s": 2.9,
-    "error": "HTTP Error 503: Service Unavailable"
+    "latencia_s": 6.1,
+    "error": "TimeoutError: The read operation timed out"
   },
   "bore": {
     "url": "http://bore.pub:41186",
     "actualizado_ts": "2026-11-06T17:20:25.896443+00:00",
     "health": {
-      "http": 200
+      "http": 0,
+      "error": "TimeoutError"
     },
     "queue": {
-      "http": 200
+      "http": 0,
+      "error": "TimeoutError"
     },
-    "queue_total": 15,
-    "estado": "vivo"
+    "estado": "muerto"
   },
   "miu_pulse": {
     "phi": 35770.7,
