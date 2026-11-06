@@ -1,22 +1,22 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T21:14:44.573133Z",
+  "ts": "2026-11-06T21:20:00.589138Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 1.0,
-      "gossip_total": 21116,
+      "latencia_s": 0.7,
+      "gossip_total": 21123,
       "gossip_newest": {
-        "id": 22178,
-        "ts": "2026-11-06T21:10:00.038215+00:00",
-        "tipo": "recoger_respuestas_ejecutado"
+        "id": 22185,
+        "ts": "2026-11-06T21:20:01.874576+00:00",
+        "tipo": "confianza_ajustada"
       },
       "relay_total": 309,
       "relay_newest": {
-        "clave": "suma_enjambre_ultima",
-        "ts": "2026-11-06T20:45:00.266051+00:00"
+        "clave": "reintegracion_ultima",
+        "ts": "2026-11-06T21:15:00.209439+00:00"
       }
     },
     "coord": {
@@ -33,38 +33,30 @@
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 18101,
+      "latencia_s": 0.7,
+      "gossip_total": 18103,
       "gossip_newest": {
-        "id": 18135,
-        "ts": "2026-11-06T21:11:18.335334+00:00",
-        "tipo": "sync_desde_principal"
+        "id": 18137,
+        "ts": "2026-11-06T21:20:00.145264+00:00",
+        "tipo": "ciclo_cipher"
       }
     }
   },
   "colmena": {
     "ref": "tpfiybpguuxskitszhmk",
-    "gateway": "vivo",
-    "db": "viva",
-    "latencia_s": 0.8,
-    "nota": "RECUPERADA — verificar antes de confiar"
+    "gateway": "vivo-401-sin-clave",
+    "db": "muerta-timeout",
+    "latencia_s": 6.1,
+    "error": "TimeoutError: The read operation timed out"
   },
   "bore": {
-    "url": "http://bore.pub:42102",
-    "actualizado_ts": "2026-11-06T21:12:05.536800+00:00",
-    "health": {
-      "http": 200
-    },
-    "queue": {
-      "http": 200
-    },
-    "queue_total": 15,
-    "estado": "vivo"
+    "estado": "error-github-api",
+    "error": "HTTP Error 403: rate limit exceeded"
   },
   "miu_pulse": {
     "phi": null,
     "ciclo": null,
-    "ts": "2026-11-06T21:10:36.314Z",
+    "ts": "2026-11-06T21:20:06.976Z",
     "version": "V270",
     "origen": null
   },
