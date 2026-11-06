@@ -1,17 +1,17 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T16:58:29.017159Z",
+  "ts": "2026-11-06T17:04:59.827054Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 1.4,
-      "gossip_total": 20863,
+      "latencia_s": 0.5,
+      "gossip_total": 20873,
       "gossip_newest": {
-        "id": 21913,
-        "ts": "2026-11-06T16:53:00.101694+00:00",
-        "tipo": "ef_respuesta_absorbida"
+        "id": 21927,
+        "ts": "2026-11-06T17:05:02.71569+00:00",
+        "tipo": "confianza_ajustada"
       },
       "relay_total": 309,
       "relay_newest": {
@@ -22,7 +22,7 @@
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 0.6,
+      "latencia_s": 0.9,
       "gossip_total": 2410,
       "gossip_newest": {
         "id": 3122,
@@ -34,10 +34,10 @@
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
       "latencia_s": 1.7,
-      "gossip_total": 18010,
+      "gossip_total": 18013,
       "gossip_newest": {
-        "id": 18044,
-        "ts": "2026-11-06T16:55:00.179325+00:00",
+        "id": 18047,
+        "ts": "2026-11-06T17:05:00.521861+00:00",
         "tipo": "ciclo_cipher"
       }
     }
@@ -46,8 +46,8 @@
     "ref": "tpfiybpguuxskitszhmk",
     "gateway": "vivo-401-sin-clave",
     "db": "muerta-timeout",
-    "latencia_s": 5.7,
-    "error": "HTTP Error 503: Service Unavailable"
+    "latencia_s": 6.1,
+    "error": "TimeoutError: The read operation timed out"
   },
   "bore": {
     "url": "http://bore.pub:18156",
