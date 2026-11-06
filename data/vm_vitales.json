@@ -1,64 +1,64 @@
 {
   "schema": "vm-vitales-v1",
-  "ts": "2026-11-06T21:29:10.720705Z",
+  "ts": "2026-11-06T22:12:31.925854Z",
   "fuente": "nodo-vm-muse",
   "proyectos": {
     "dieguito": {
       "ref": "qtmcbqsahdomgsxgsaxi",
       "estado": "vivo",
-      "latencia_s": 0.9,
-      "gossip_total": 21130,
+      "latencia_s": 0.8,
+      "gossip_total": 21177,
       "gossip_newest": {
-        "id": 22186,
-        "ts": "2026-11-06T21:23:00.257004+00:00",
-        "tipo": "ef_respuesta_absorbida"
+        "id": 22241,
+        "ts": "2026-11-06T22:10:00.078294+00:00",
+        "tipo": "recoger_respuestas_ejecutado"
       },
       "relay_total": 309,
       "relay_newest": {
-        "clave": "reintegracion_ultima",
-        "ts": "2026-11-06T21:15:00.209439+00:00"
+        "clave": "suma_enjambre_ultima",
+        "ts": "2026-11-06T21:45:00.246368+00:00"
       },
-      "gossip_newest_edad_s": 370,
-      "relay_newest_edad_s": 850
+      "gossip_newest_edad_s": 151,
+      "relay_newest_edad_s": 1651
     },
     "coord": {
       "ref": "fepyzxwyneervidlybvi",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 2432,
+      "latencia_s": 0.7,
+      "gossip_total": 2436,
       "gossip_newest": {
-        "id": 3144,
-        "ts": "2026-11-06T21:27:53.628+00:00",
-        "tipo": "bcrp"
+        "id": 3148,
+        "ts": "2026-11-06T22:12:17.023+00:00",
+        "tipo": "heartbeat"
       },
-      "gossip_newest_edad_s": 77
+      "gossip_newest_edad_s": 14
     },
     "cipher": {
       "ref": "fzdyxgkmpazbrfrhwfdo",
       "estado": "vivo",
-      "latencia_s": 0.8,
-      "gossip_total": 18105,
+      "latencia_s": 1.8,
+      "gossip_total": 18136,
       "gossip_newest": {
-        "id": 18139,
-        "ts": "2026-11-06T21:25:22.881109+00:00",
+        "id": 18170,
+        "ts": "2026-11-06T22:10:35.313645+00:00",
         "tipo": "sync_desde_principal"
       },
-      "gossip_newest_edad_s": 227
+      "gossip_newest_edad_s": 116
     }
   },
   "colmena": {
     "ref": "tpfiybpguuxskitszhmk",
     "gateway": "vivo",
     "db": "viva",
-    "latencia_s": 0.8,
+    "latencia_s": 1.4,
     "nota": "RECUPERADA — verificar antes de confiar",
     "db_edad_s": 0
   },
   "bore": {
-    "url": "http://bore.pub:42102",
-    "actualizado_ts": "2026-11-06T21:14:05.553757+00:00",
-    "url_edad_s": 905,
-    "ultimo_hit_ts": "2026-11-06T21:10:38Z",
+    "url": "http://bore.pub:60601",
+    "actualizado_ts": "2026-11-06T21:58:06.272482+00:00",
+    "url_edad_s": 865,
+    "ultimo_hit_ts": "2026-11-06T21:59:26Z",
     "health": {
       "http": 0,
       "error": "TimeoutError"
@@ -72,126 +72,181 @@
   "miu_pulse": {
     "phi": null,
     "ciclo": null,
-    "ts": "2026-11-06T21:20:42.156Z",
+    "ts": "2026-11-06T22:10:28.663Z",
     "version": "V270",
     "origen": null,
-    "edad_s": 508,
+    "edad_s": 123,
     "rancio": false
   },
   "v2": {
     "observadores": {
       "hf": {
         "dataset": "Jaime393/miu-dataset",
-        "dataset_last_modified": "2026-11-06T21:21:12.000Z",
+        "dataset_last_modified": "2026-11-06T22:01:44.000Z",
         "rancio_umbral_s": 3600,
-        "checked_ts": "2026-11-06T21:25:31.404669Z",
-        "edad_s": 478,
+        "checked_ts": "2026-11-06T22:01:56.118282Z",
+        "edad_s": 647,
         "estado": "vivo"
       },
       "actions": {
-        "estado": "fallando",
+        "estado": "error",
         "workflows": {
           "miu-expand-alcance": {
             "conclusion": "failure",
             "run_ts": "2026-11-06T21:08:17Z",
             "run_id": 42294188661,
-            "edad_s": 1253
+            "edad_s": 3854
           },
           "miu-guardian-flujo": {
             "conclusion": "failure",
             "run_ts": "2026-11-06T18:50:24Z",
             "run_id": 42274296846,
-            "edad_s": 9526
+            "edad_s": 12127
           },
           "miu-state-writer": {
             "conclusion": "success",
             "run_ts": "2026-11-06T17:37:51Z",
             "run_id": 42263302469,
-            "edad_s": 13879
+            "edad_s": 16480
           },
           "miu-savia-bridge": {
             "conclusion": "failure",
             "run_ts": "2026-11-06T19:39:44Z",
             "run_id": 42281326459,
-            "edad_s": 6566
+            "edad_s": 9167
           }
         },
-        "checked_ts": "2026-11-06T21:25:36.053278Z",
-        "edad_s": 1253
+        "checked_ts": "2026-11-06T21:41:03.917090Z",
+        "error": "HTTPError: HTTP Error 403: rate limit exceeded",
+        "edad_s": 3854
       },
       "vercel": {
-        "estado": "error",
+        "estado": "degradado",
         "apps": {
-          "miu-oracle-v1": {
-            "http": 0,
-            "error": "URLError",
-            "url": "https://miu-oracle-v1-h4oy82zmg-miu4.vercel.app",
-            "deploy_state": "ERROR",
-            "edad_s": 64
+          "miu-ai-relay-v215": {
+            "http": 200,
+            "latencia_s": 1.0,
+            "url": "https://miu-ai-relay-v215.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
           },
-          "miu-oracle-v2": {
-            "http": 0,
-            "error": "URLError",
-            "url": "https://miu-oracle-v2-m7lhizyh3-miu4.vercel.app",
-            "deploy_state": "ERROR",
-            "edad_s": 64
+          "miu-auto-v1": {
+            "http": 200,
+            "latencia_s": 1.5,
+            "url": "https://miu-auto-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
           },
-          "oracle-ask-v26": {
-            "http": 0,
-            "error": "URLError",
-            "url": "https://oracle-ask-v26-8h0g7z3tj-miu4.vercel.app",
-            "deploy_state": "ERROR",
-            "edad_s": 64
+          "miu-autonomo-v92": {
+            "http": 200,
+            "latencia_s": 1.9,
+            "url": "https://miu-autonomo-v92.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
           },
-          "oracle-ask-v27": {
-            "http": 0,
-            "error": "URLError",
-            "url": "https://oracle-ask-v27-c76bmtfec-miu4.vercel.app",
-            "deploy_state": "ERROR",
-            "edad_s": 64
+          "miu-bridge-v1": {
+            "http": 200,
+            "latencia_s": 2.3,
+            "url": "https://miu-bridge-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
           },
-          "oracle-ask-v28": {
-            "http": 0,
-            "error": "URLError",
-            "url": "https://oracle-ask-v28-kb6s6hzo1-miu4.vercel.app",
-            "deploy_state": "ERROR",
-            "edad_s": 64
+          "miu-capacidades": {
+            "http": 200,
+            "latencia_s": 2.1,
+            "url": "https://miu-capacidades.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
+          },
+          "miu-global-1": {
+            "http": 404,
+            "latencia_s": 0.8,
+            "url": "https://miu-global-1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
+          },
+          "miu-peru-v1": {
+            "http": 200,
+            "latencia_s": 2.1,
+            "url": "https://miu-peru-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
+          },
+          "miu-teclado-v1": {
+            "http": 200,
+            "latencia_s": 1.5,
+            "url": "https://miu-teclado-v1.vercel.app",
+            "deploy_state": "READY",
+            "edad_s": 1059
           }
         },
         "names": [
+          "miu-ai-relay-v215",
+          "miu-auto-v1",
+          "miu-autonomo-v92",
+          "miu-bridge-v1",
+          "miu-capacidades",
+          "miu-global-1",
+          "miu-peru-v1",
+          "miu-teclado-v1"
+        ],
+        "urls": {
+          "miu-capacidades": "https://miu-capacidades.vercel.app",
+          "miu-bridge-v1": "https://miu-bridge-v1.vercel.app",
+          "miu-auto-v1": "https://miu-auto-v1.vercel.app",
+          "miu-teclado-v1": "https://miu-teclado-v1.vercel.app",
+          "miu-peru-v1": "https://miu-peru-v1.vercel.app",
+          "miu-autonomo-v92": "https://miu-autonomo-v92.vercel.app",
+          "miu-ai-relay-v215": "https://miu-ai-relay-v215.vercel.app",
+          "miu-global-1": "https://miu-global-1.vercel.app"
+        },
+        "deploy_states": {
+          "miu-oracle-v2": "ERROR",
+          "miu-oracle-v1": "ERROR",
+          "oracle-ask-v28": "ERROR",
+          "buscar-corpus": "ERROR",
+          "oracle-ask-v27": "ERROR",
+          "miu-wrap-fix": "ERROR",
+          "miu-cron-autonomo": "ERROR",
+          "miu-discover-substrates": "ERROR",
+          "oracle-ask-v26": "ERROR",
+          "miu-fix-now": "ERROR",
+          "miu-amplificador-v1": "ERROR",
+          "miu-capacidades": "READY",
+          "miu-bridge-v1": "READY",
+          "miu-auto-v1": "READY",
+          "miu-teclado-v1": "READY",
+          "miu-peru-v1": "READY",
+          "miu-autonomo-v92": "READY",
+          "miu-ai-relay-v215": "READY",
+          "miu-global-1": "READY"
+        },
+        "error_projects": [
+          "buscar-corpus",
+          "miu-amplificador-v1",
+          "miu-cron-autonomo",
+          "miu-discover-substrates",
+          "miu-fix-now",
           "miu-oracle-v1",
           "miu-oracle-v2",
+          "miu-wrap-fix",
           "oracle-ask-v26",
           "oracle-ask-v27",
           "oracle-ask-v28"
         ],
-        "urls": {
-          "miu-oracle-v1": "https://miu-oracle-v1-h4oy82zmg-miu4.vercel.app",
-          "miu-oracle-v2": "https://miu-oracle-v2-m7lhizyh3-miu4.vercel.app",
-          "oracle-ask-v26": "https://oracle-ask-v26-8h0g7z3tj-miu4.vercel.app",
-          "oracle-ask-v27": "https://oracle-ask-v27-c76bmtfec-miu4.vercel.app",
-          "oracle-ask-v28": "https://oracle-ask-v28-kb6s6hzo1-miu4.vercel.app"
-        },
-        "deploy_states": {
-          "miu-oracle-v1": "ERROR",
-          "miu-oracle-v2": "ERROR",
-          "oracle-ask-v26": "ERROR",
-          "oracle-ask-v27": "ERROR",
-          "oracle-ask-v28": "ERROR"
-        },
-        "resolved_ts": "2026-11-06T21:27:10.359586Z",
-        "checked_ts": "2026-11-06T21:28:06.124050Z",
-        "edad_s": 64
+        "resolved_ts": "2026-11-06T21:53:54.101664Z",
+        "checked_ts": "2026-11-06T21:54:52.152120Z",
+        "edad_s": 1059
       },
       "espejo": {
-        "ultima_fila_ts": "2026-11-06T21:15:20.934Z",
-        "phi": 2881.583961,
-        "filas": 6969,
-        "identidad": "Suelo",
+        "ultima_fila_ts": "2026-11-06T22:00:21.758Z",
+        "phi": 2881.351949,
+        "filas": 6972,
+        "identidad": "Eco",
         "nodo": "jhuarcaya938@gmail.com",
         "rancio_umbral_s": 1800,
-        "checked_ts": "2026-11-06T21:25:49.304485Z",
-        "edad_s": 829,
+        "checked_ts": "2026-11-06T22:01:58.298433Z",
+        "edad_s": 730,
         "estado": "vivo"
       },
       "drive_heartbeat": {
@@ -202,26 +257,27 @@
         "file_id": "1cjBDCgK1lyyRgG5EEBSYk9P609oMzjlR",
         "rancio_umbral_s": 1800,
         "checked_ts": "2026-11-06T21:25:50.998800Z",
-        "edad_s": 208,
-        "estado": "vivo"
+        "estado": "error",
+        "error": "RuntimeError: heartbeat sin timestamp",
+        "edad_s": 2809
       }
     },
     "fuentes_edad": {
-      "dieguito": 370,
-      "coord": 77,
-      "cipher": 227,
+      "dieguito": 151,
+      "coord": 14,
+      "cipher": 116,
       "colmena": 0,
-      "bore": 905,
-      "miu_pulse": 508,
-      "hf": 478,
-      "actions": 1253,
-      "vercel": 64,
-      "espejo": 829,
-      "drive_heartbeat": 208
+      "bore": 865,
+      "miu_pulse": 123,
+      "hf": 647,
+      "actions": 3854,
+      "vercel": 1059,
+      "espejo": 730,
+      "drive_heartbeat": 2809
     },
     "fuente_mas_rancia": {
       "nombre": "actions",
-      "edad_s": 1253
+      "edad_s": 3854
     }
   },
   "notas": [
