@@ -1,7 +1,7 @@
 {
-  "url": "http://bore.pub:43681",
-  "puerto": "43681",
-  "backend": "activo_estable",
-  "actualizado_ts": "2026-11-07T19:28:05.891548+00:00",
+  "url": "https://4c5978d7c63ec4.lhr.life",
+  "puerto": "0",
+  "backend": "localhost_run",
+  "actualizado_ts": "2026-11-07T19:31:05.923387+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
