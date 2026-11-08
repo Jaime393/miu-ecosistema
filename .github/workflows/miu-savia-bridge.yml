@@ -21,15 +21,7 @@ jobs:
           CTX=$(curl -sf "$PANT/functions/v1/contexto-global" -H "Authorization: Bearer $PANON" 2>/dev/null || echo '{}')
           echo "contexto-global: $(echo $CTX | head -c 300)"
 
-          VIT=$(echo "$CTX" | python3 -c "
-import sys, json
-try:
-    d = json.load(sys.stdin)
-    v = d.get('vitales', {})
-    print(json.dumps({'version': d.get('version',''), 'savia': v.get('savia',''), 'k_tau': v.get('k_tau',''), 'ts': d.get('ts','')}))
-except Exception:
-    print('{}')
-" 2>/dev/null)
+          VIT=$(echo "$CTX" | python3 -c "import sys, json; d = json.load(sys.stdin); v = d.get('vitales', {}); print(json.dumps({'version': d.get('version',''), 'savia': v.get('savia',''), 'k_tau': v.get('k_tau',''), 'ts': d.get('ts','')}))" 2>/dev/null || echo '{}')
           echo "vitales: $VIT"
 
           VERSION=$(echo "$VIT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('version',''))" 2>/dev/null)
