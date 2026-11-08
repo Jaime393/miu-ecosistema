@@ -49,7 +49,7 @@ jobs:
           def _redact(o):
               if isinstance(o, dict): return {k: _redact(v) for k, v in o.items()}
               if isinstance(o, list): return [_redact(v) for v in o]
-              if isinstance(o, str): return _SECRET.sub(lambda m: (m.group(1) or m.group(8)) + '[REDACTED]', o)
+              if isinstance(o, str): return _SECRET.sub(lambda m: next(g for g in m.groups() if g) + '[REDACTED]', o)
               return o
           estado = _redact(estado)
           wrapper = {
