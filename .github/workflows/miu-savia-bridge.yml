@@ -1,6 +1,8 @@
 name: miu-savia-bridge
-# Restaura el puente roto: sincroniza phi y savia desde metabolismo hacia relay_config
-# Corre cada 3h junto al State Writer
+# Puente savia: sincroniza vitales desde contexto-global hacia relay_config
+# Reescrito 2026-11-08: el esquema viejo (estado_miu.phi / gossip_log.contenido) ya no existe.
+# Patrón: el estado vivo se lee de /functions/v1/contexto-global (frescura garantizada),
+# la evidencia se escribe en gossip_log.payload (jsonb), el puente en relay_config.
 on:
   schedule:
     - cron: '30 */3 * * *'
@@ -12,43 +14,44 @@ jobs:
       PANT: https://tpfiybpguuxskitszhmk.supabase.co
       PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
     steps:
-      - name: Leer estado_miu vivo desde panteon
+      - name: Leer vitales desde contexto-global y escribir puente
         run: |
-          # estado_miu es la tabla viva — lee phi y savia reales
-          ESTADO=$(curl -sf "$PANT/rest/v1/estado_miu?select=phi,savia,ciclo,rho,ts&limit=1&order=ts.desc" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
-          echo "estado_miu: $ESTADO"
-          
-          PHI=$(echo $ESTADO | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('phi','') if d else '')" 2>/dev/null)
-          SAVIA=$(echo $ESTADO | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('savia','') if d else '')" 2>/dev/null)
-          CICLO=$(echo $ESTADO | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0].get('ciclo','') if d else '')" 2>/dev/null)
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          
-          echo "PHI=$PHI SAVIA=$SAVIA CICLO=$CICLO"
-          
-          if [ -z "$PHI" ] && [ -z "$SAVIA" ]; then
-            echo "estado_miu no accesible desde anon — intentando relay_config vivo"
-            # Leer del metabolismo via relay si existe
-            SAVIA_RC=$(curl -sf "$PANT/rest/v1/relay_config?clave=eq.savia_global&select=valor" \
-              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
-              | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null)
-            echo "relay_config.savia_global: $SAVIA_RC"
-          fi
-          
-          # Escribir bridge timestamp a gossip (evidencia de intento)
+          # 1. estado vivo: contexto-global (edge function, siempre fresco)
+          CTX=$(curl -sf "$PANT/functions/v1/contexto-global" -H "Authorization: Bearer $PANON" 2>/dev/null || echo '{}')
+          echo "contexto-global: $(echo $CTX | head -c 300)"
+
+          VIT=$(echo "$CTX" | python3 -c "
+import sys, json
+try:
+    d = json.load(sys.stdin)
+    v = d.get('vitales', {})
+    print(json.dumps({'version': d.get('version',''), 'savia': v.get('savia',''), 'k_tau': v.get('k_tau',''), 'ts': d.get('ts','')}))
+except Exception:
+    print('{}')
+" 2>/dev/null)
+          echo "vitales: $VIT"
+
+          VERSION=$(echo "$VIT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('version',''))" 2>/dev/null)
+          SAVIA=$(echo "$VIT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('savia',''))" 2>/dev/null)
+          KTAU=$(echo "$VIT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('k_tau',''))" 2>/dev/null)
+
+          # 2. evidencia del intento en gossip_log (esquema: payload jsonb, NO contenido)
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"savia_bridge\",\"origen\":\"github-action\",\"contenido\":\"phi=${PHI:-FOSIL} savia=${SAVIA:-FOSIL} ciclo=${CICLO:-?} ts=$TS\",\"ts\":\"$TS\"}]"
-          
-          # Si tenemos valores reales, actualizar relay_config
-          if [ -n "$PHI" ] && [ "$PHI" != "40296" ]; then
-            echo "PHI vivo encontrado: $PHI — actualizando relay_config"
+            -d "[{\"origen\":\"github-action\",\"destino\":\"micelio\",\"tipo\":\"savia_bridge\",\"payload\":{\"ts\":\"$TS\",\"version\":\"$VERSION\",\"savia\":\"$SAVIA\",\"k_tau\":\"$KTAU\"},\"ts\":\"$TS\"}]"
+          echo "gossip_log escrito"
+
+          # 3. si hay valores vivos, actualizar el puente en relay_config
+          if [ -n "$SAVIA" ] && [ "$SAVIA" != "" ]; then
+            echo "vitales vivos: V=$VERSION savia=$SAVIA k_tau=$KTAU — actualizando relay_config"
             curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
               -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
               -H 'Content-Type: application/json' \
               -H 'Prefer: resolution=merge-duplicates,return=minimal' \
-              -d "[{\"clave\":\"phi_vivo_bridge\",\"valor\":\"$PHI\"},{\"clave\":\"savia_vivo_bridge\",\"valor\":\"$SAVIA\"},{\"clave\":\"ciclo_vivo_bridge\",\"valor\":\"$CICLO\"}]"
+              -d "[{\"clave\":\"savia_vivo_bridge\",\"valor\":\"$SAVIA\"},{\"clave\":\"version_vivo_bridge\",\"valor\":\"$VERSION\"},{\"clave\":\"ktau_vivo_bridge\",\"valor\":\"$KTAU\"},{\"clave\":\"bridge_ts\",\"valor\":\"$TS\"}]"
+            echo "relay_config puente actualizado"
           else
-            echo "phi=$PHI — posible fósil o inaccesible desde anon. Diagnóstico registrado en gossip."
+            echo "contexto-global inaccesible — diagnóstico ya registrado en gossip_log"
           fi
