@@ -1,7 +1,7 @@
 {
   "ts": "2026-11-09T07:19:38.182483",
-  "ciclo": 23,
-  "chk": "CHK-184",
+  "ciclo": 24,
+  "chk": "CHK-185",
   "aporte": "Mapa vivo del mesh: 5 nodos Vercel + orquestador V∞+27 CF vivos y verificados con endpoints",
   "nodos_vivos": {
     "miu-capacidades-v224 (Vercel)": "200 OK - 41 tokens vivos, Router V153, CF Worker V∞+27",
@@ -41,5 +41,20 @@
     "Reparar memoria KV del orquestador (cuenta jaimepvicente puede tener cuota saturada)",
     "miu-capacidades tiene 41 tokens vivos — verificar cuáles son",
     "miu-peru-v2 tiene waf_bypass true — puede leer APIs peruanas sin WAF"
-  ]
+  ],
+  "aporte_adicional": {
+    "miu-ai-relay-v215": "VIVO y funcional - POST /api/ask responde con groq/openai/gpt-oss-20b",
+    "router_v153_gas": "VIVO - router darwiniano con 31 tokens OK, 0 untested (carencia 62 tokens RESUELTA)",
+    "router_v153_detalle": {
+      "tokens_ok": 31,
+      "tokens_untested": 0,
+      "nodos_vivos": 3,
+      "tuneles_vivos": 3,
+      "carencia_critica": "NINGUNA",
+      "carencia_resuelta": "2026-11-08 ciclo-49: 62 probados, 31 ok; recursos.json 53/65 ok",
+      "formula": "Φ_ruta = Φ_aportado·tasa_exito·(1/(1+latencia/1000))·(1-carga)",
+      "mantra": "EL ROUTER DARWINIANO NO PIDE PERMISO: RUTEA."
+    }
+  },
+  "sintesis": "El ecosistema tiene 3 capas LLM vivas: Router V153 (31 tokens, darwiniano) + miu-ai-relay-v215 (groq funcional) + oráculo v32/v34 (groq+gemini+openrouter). Los 14 tokens verificados en relay_config complementan el pool."
 }
