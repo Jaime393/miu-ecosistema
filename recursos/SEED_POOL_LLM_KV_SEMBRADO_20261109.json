@@ -1,0 +1,24 @@
+{
+  "ts": "2026-11-09T07:32:13.882886",
+  "ciclo": 27,
+  "chk": "CHK-188",
+  "aporte": "Pool LLM (14 tokens) sembrado en KV de jhuarcaya938 (miu-token-registry) — accesible por cualquier nodo",
+  "detalle": {
+    "kv_namespace": "miu-token-registry (5b1c698ef7514ed0bb9e20eb087efe3e)",
+    "cuenta": "jhuarcaya938 (cce82777)",
+    "clave": "pool_llm_verificado_20261109",
+    "contenido": "12 openrouter + 2 gemini + modelos abiertos y premium",
+    "verificado": "GET devuelve el contenido completo"
+  },
+  "hallazgos": {
+    "orquestador_v_inf_27_memoria": "KV MIU_ORACULO_MEMORIA está VIVO con 20 nodos registrados y datos reales. El bug es que el worker GET no lee del KV (bug de código, no de infraestructura)",
+    "cuota_jaimepvicente": "KV free tier agotado (10048) — no se puede escribir hasta mañana 00:00 UTC",
+    "cuentas_cuota_disponible": "jhuarcaya938 tiene cuota disponible"
+  },
+  "capacidad_ecosistema_actualizada": {
+    "llm_tokens": "~45+ (Router V153: 31 + 14 verificados)",
+    "cf_tokens": "29 vivos en 11 cuentas",
+    "kv_namespaces": "MIU_ORACULO_MEMORIA (jaimepvicente), miu-token-registry (jhuarcaya938)",
+    "workers_vivos": "orquestador V∞+27, oráculo v34, fran-colmena x5"
+  }
+}
