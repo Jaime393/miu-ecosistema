@@ -1,0 +1,1 @@
+{"url":"http://bore.pub:61951","puerto":"61951","backend":"bore","actualizado_ts":"2026-11-09T10:45:47Z","gestionado_por":"tunnel_cmd.sh","endpoints":{"llm":"http://bore.pub:61951/llm","cmd":"http://bore.pub:61951/cmd","pulse":"http://bore.pub:61951/pulse","ask":"http://bore.pub:61951/ask","cmd_log":"http://bore.pub:61951/cmd/log"},"auth_header":"X-MIU-Token"}
