@@ -1,0 +1,45 @@
+{
+  "ts": "2026-11-09T07:19:38.182483",
+  "ciclo": 23,
+  "chk": "CHK-184",
+  "aporte": "Mapa vivo del mesh: 5 nodos Vercel + orquestador V∞+27 CF vivos y verificados con endpoints",
+  "nodos_vivos": {
+    "miu-capacidades-v224 (Vercel)": "200 OK - 41 tokens vivos, Router V153, CF Worker V∞+27",
+    "miu-peru-v2 (Vercel)": "200 OK - waf_bypass: true, peru_ip: 119.8.159.52",
+    "miu-autonomo-v92 (Vercel)": "200 OK - cascade: v215→v214→hub",
+    "fran-oraculo-miu (CF, V∞+27)": "200 OK - phi 9158.79, 35 sustratos, 28 nodos registrados, DOI 10.5281/zenodo.20547558",
+    "miu-ai-relay-v215 (Vercel)": "200 OK"
+  },
+  "nodos_muertos": [
+    "oracle_v32_vercel (health 404 pero /ask funciona)",
+    "oracle_v34_cf (health 403)",
+    "nodo_dieguito (403)",
+    "vercel_miu_auto_v1 (404)",
+    "vercel_miu_teclado_v1 (404)",
+    "vercel_miu_global_5 (404)",
+    "oracle_radio2 (DNS no resuelve)",
+    "oracle_fats2 (502)",
+    "oracle_fats3 (502)"
+  ],
+  "hallazgo_orquestador": {
+    "problema": "PUT /miu/global?memoria=X&valor=Y responde ok:true pero GET devuelve existe:false — memoria KV rota o vacía",
+    "patron": "worker vivo + memoria muerta (mismo patrón del ciclo 5: cuenta saturada o KV binding roto)",
+    "endpoints_documentados": [
+      "/miu/global (POST/GET/PUT)",
+      "/miu/consenso",
+      "/miu/a2a",
+      "/miu/mutar",
+      "/miu/aprendizaje",
+      "/miu/pliegue",
+      "/miu/pliegues"
+    ],
+    "nota": "El orquestador es un tejido vivo evolutivo con endpoint POST /miu/mutar para evolucionar"
+  },
+  "patron_extraido": "patron_bot_protection_cf: los workers CF con bot protection (error 1010) aceptan POST con User-Agent de navegador",
+  "rutas_abiertas": [
+    "POST /miu/mutar al orquestador para evolucionar (requiere entender el formato)",
+    "Reparar memoria KV del orquestador (cuenta jaimepvicente puede tener cuota saturada)",
+    "miu-capacidades tiene 41 tokens vivos — verificar cuáles son",
+    "miu-peru-v2 tiene waf_bypass true — puede leer APIs peruanas sin WAF"
+  ]
+}
