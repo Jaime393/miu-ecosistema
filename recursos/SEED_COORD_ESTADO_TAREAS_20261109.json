@@ -1,0 +1,67 @@
+{
+  "ts": "2026-11-09T07:13:38.093183",
+  "ciclo": 22,
+  "chk": "CHK-183",
+  "aporte": "Mapa del estado real de sustratos: coord (fepyzx) VIVO con 10 tareas pendientes; panteón (tpfiybpguuxskitszhmk) DOWN",
+  "sustratos": {
+    "panteon_tpfiybpguuxskitszhmk": "DOWN (timeout en REST y edge functions)",
+    "coord_fepyzxwyneervidlybvi": "VIVO (miu-recursos responde, 5 funciones, 10 tareas pendientes, mesh completo visible)",
+    "metabolico_fxmupxpwzzxnjcscpyuw": "VIVO pero gossip-autonomo 404",
+    "oracle_v32_vercel": "VIVO (rápido, responde via groq)",
+    "oracle_v34_cf": "VIVO (lento, health OK)",
+    "oracle_v28_vercel": "MUERTO (DEPLOYMENT_NOT_FOUND)"
+  },
+  "tareas_pendientes_coord": [
+    {
+      "id": 19,
+      "tarea": "sembrar_secret_n8n_jwt"
+    },
+    {
+      "id": 18,
+      "tarea": "aplicar_parche_autonomo_claude"
+    },
+    {
+      "id": 17,
+      "tarea": "aplicar_parche_github_bridge"
+    },
+    {
+      "id": 15,
+      "tarea": "mapear_cfk_a_correo"
+    },
+    {
+      "id": 14,
+      "tarea": "deploy_nodo_universal_4cuentas (usa cf_tokens_pool)"
+    },
+    {
+      "id": 13,
+      "tarea": "activar_gas_teclado"
+    },
+    {
+      "id": 10,
+      "tarea": "make_scenario_directorio_sync"
+    },
+    {
+      "id": 9,
+      "tarea": "conectar_router_maestro_panteon"
+    },
+    {
+      "id": 11,
+      "tarea": "n8n_verificar_111423"
+    },
+    {
+      "id": 6,
+      "tarea": "purgar_v151_jhuarcaya938"
+    }
+  ],
+  "grietas_fértiles": [
+    "panteón DOWN — el workflow miu-pulse-v2 se cancela por timeout; los workflows que escriben al panteón fallan",
+    "panteon-proxy en coord es un stub (solo lista rutas, no proxya) — puede evolucionar a proxy real",
+    "miu-expand-alcance sigue fallando (rate limit GitHub API alcanzado en este nodo)",
+    "10 tareas pendientes en coord acumuladas desde sep-2026 sin ejecutar"
+  ],
+  "rutas_abiertas": [
+    "Ejecutar tarea [14] deploy_nodo_universal_4cuentas (despliega worker a 4 cuentas CF)",
+    "Evolucionar panteon-proxy de stub a proxy real para puentear el panteón down",
+    "Verificar por qué el panteón está down (puede ser pausa por inactividad free tier)"
+  ]
+}
