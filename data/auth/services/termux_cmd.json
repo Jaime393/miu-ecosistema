@@ -1,0 +1,26 @@
+{
+  "servicio": "termux_cmd",
+  "tipo": "borde_operativo",
+  "descripcion": "Sustrato Termux expuesto via bore. Sirve /llm (router 5 LLM), /cmd (7 scripts whitelist), /pulse, /ask, /estado",
+  "auth_header": "X-MIU-Token",
+  "token": "3167b10ea5944aad3fd3203c34b3bbdc260904e184bdca8db5253bed24138987",
+  "endpoint_base": "http://bore.pub:31101",
+  "endpoints": {
+    "pulse":    "http://bore.pub:31101/pulse",
+    "health":   "http://bore.pub:31101/health",
+    "ask":      "http://bore.pub:31101/ask",
+    "llm":      "http://bore.pub:31101/llm",
+    "cmd":      "http://bore.pub:31101/cmd",
+    "cmd_log":  "http://bore.pub:31101/cmd/log",
+    "estado":   "http://bore.pub:31101/estado"
+  },
+  "endpoints_publicos": ["/pulse", "/health", "/ask", "/estado"],
+  "endpoints_auth": ["/llm", "/cmd", "/cmd/log"],
+  "scripts_disponibles": ["disk", "health_full", "llama", "procs", "pulse", "tunnel", "vitales"],
+  "proveedores_llm": ["google_api/gemini-2.5-flash", "groq/gpt-oss-120b", "openrouter/dots-3", "cf_workers_ai/llama-3.1-8b", "local_llama/SmolLM2-360M"],
+  "pool_vivo": {"groq": 7, "openrouter": 4, "google_api": 1, "cf_workers_ai": 1, "local_llama": 1},
+  "latencia_esperada_ms": {"pulse": 500, "cmd": 800, "ask": 3000, "llm": 3000},
+  "probed_ts": "2026-11-09T10:59:33Z",
+  "gestionado_por": "tunnel_cmd.sh (cron */5)",
+  "fuente_url": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/data/cmd_url.json"
+}
