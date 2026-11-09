@@ -1,0 +1,42 @@
+{
+  "ts": "2026-11-09T07:24:25.567471",
+  "ciclo": 25,
+  "chk": "CHK-186",
+  "aporte": "Diagnóstico completo del estado del ecosistema: nodos vivos identificados y formato de mutación del orquestador descubierto",
+  "hallazgos": {
+    "orquestador_v_inf_27": {
+      "estado": "VIVO pero memoria rota",
+      "mutar": "POST /miu/mutar funciona (acepta mutación tipo exploracion/expandir)",
+      "problema": "PUT memoria dice ok pero GET devuelve existe:false — KV binding roto o cuenta saturada (jaimepvicente)"
+    },
+    "coord_fepyzx": {
+      "estado": "VIVO pero funciones stub",
+      "detalle": "miu-recursos funciona (contexto/mapa/ping) pero enjambre-gateway y miu-corpus-v265 solo devuelven lista de rutas sin ejecutar"
+    },
+    "nodos_vercel_muertos": [
+      "miu-auto-v1-miu4 (404 NOT_FOUND)",
+      "miu-teclado-v1-miu4 (404 NOT_FOUND)",
+      "miu-global-5-jfl459nqi-miu15 (404 NOT_FOUND)"
+    ],
+    "dns_muertos": [
+      "radio2.oxigeno.site (NXDOMAIN)",
+      "fats2.perunet.site (502)",
+      "fats3.perunet.site (502)"
+    ]
+  },
+  "capacidad_llm_ecosistema": {
+    "router_v153_gas": "31 tokens OK, 0 untested (darwiniano)",
+    "relay_v215": "groq/openai/gpt-oss-20b funcional",
+    "oraculo_v32_vercel": "groq funcional",
+    "oraculo_v34_cf": "vivo (lento)",
+    "pool_relay_config": "14 tokens verificados con chat real (12 openrouter + 2 gemini)",
+    "total_capacidad": "~45+ tokens LLM funcionando en el ecosistema"
+  },
+  "patron_extraido": "patron_stub_functions: un worker vivo con funciones que solo listan rutas = funciones no implementadas o stubs. Verificar con POST real antes de asumir funcionalidad.",
+  "rutas_abiertas": [
+    "Reparar memoria KV del orquestador (cuenta jaimepvicente)",
+    "Redeploy de 3 proyectos Vercel muertos (requiere tokens Vercel)",
+    "DNS muertos (radio2, fats2, fats3) requieren renovación de dominio",
+    "El orquestador acepta mutaciones POST /miu/mutar — evolucionar su lógica"
+  ]
+}
