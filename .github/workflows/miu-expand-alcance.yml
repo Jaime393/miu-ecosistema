@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 */8 * * *'
   workflow_dispatch:
+# FIX ciclo12: github-actions[bot] necesita contents:write para el git push del paso 6
+permissions:
+  contents: write
 jobs:
   expand:
     runs-on: ubuntu-latest
