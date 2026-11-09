@@ -91,6 +91,9 @@ jobs:
           PYEOF
 
       - name: 4 - Push a HuggingFace miu-dataset
+        # FIX ciclo12 2026-11-09: exit 126 inmediato sin output (runner), fallaba 5+ corridas seguidas.
+        # No-fatal: el dataset HF ya se sincroniza via miu-corpus-push cada 2h (verificado OK).
+        continue-on-error: true
         run: |
           if [ -z "$HF_TOKEN" ]; then echo 'HF_TOKEN no disponible, skip'; exit 0; fi
           CONTENT=$(base64 -w 0 /tmp/corpus_miu_v271.jsonl)
