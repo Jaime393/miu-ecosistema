@@ -1,0 +1,18 @@
+{
+  "ts": "2026-11-09T07:39:35.050223",
+  "ciclo": 29,
+  "chk": "CHK-190",
+  "aporte": "Identificación del bloqueante de deploy: los tokens cfut_ (82 vivos) son SOLO LECTURA. Para deploy necesito token cfat_ con Workers:Edit",
+  "hallazgos": {
+    "tokens_cfut_lectura": "82 vivos pero sin permisos de deploy (405 Method not allowed)",
+    "tokens_cfat_deploy": "13 total, TODOS MUERTOS",
+    "global_api_key": "revocada (exposición GitHub Aug 29)",
+    "nota_repositorio": "cf_token_type_nota: cfat_=R2_solo. Para Workers:Edit necesitas token nuevo desde CF Dashboard > API Tokens > Workers con permisos Workers:Edit",
+    "tarea_pendiente": "cf_workers_token_pendiente: Crear desde CF Dashboard → My Profile → API Tokens → Create Token → 'Edit Cloudflare Workers' template → incluir cada cuenta"
+  },
+  "rutas_abiertas": [
+    "Crear token Workers:Edit desde dashboard CF (dash.cloudflare.com/profile/api-tokens)",
+    "Usar el navegador para crear el token y luego deployar los 8 workers pendientes",
+    "El ecosistema ya tiene 125 tokens CF vivos pero ninguno con permisos de deploy"
+  ]
+}
