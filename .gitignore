@@ -38,3 +38,5 @@ kv_local.json
 logs/
 tmp/
 tokens_vivos.txt
+data/cmd_url.json
+data/auth/services/termux_cmd.json
