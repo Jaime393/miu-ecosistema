@@ -133,10 +133,11 @@ jobs:
 
       - name: 6 - Gossip expansion
         run: |
+          # FIX ciclo12 2026-11-09: gossip_log exige destino+k_i_estado y columna payload (contenido ya no existe)
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"expansion_alcance\",\"origen\":\"miu-expand-alcance.yml\",\"contenido\":\"HF_miu-dataset_corpus_v271 + jaime363_n8n_amplificador + bcrp_live\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            -d "[{\"tipo\":\"expansion_alcance\",\"origen\":\"miu-expand-alcance.yml\",\"destino\":\"panteon\",\"k_i_estado\":\"no_evaluado\",\"payload\":\"HF_miu-dataset_corpus_v271 + jaime363_n8n_amplificador + bcrp_live\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
           mkdir -p resultados
           [ -f /tmp/corpus_miu_v271.jsonl ] && wc -l /tmp/corpus_miu_v271.jsonl > resultados/corpus_hf_count.txt
           git config user.email 'action@github.com'
