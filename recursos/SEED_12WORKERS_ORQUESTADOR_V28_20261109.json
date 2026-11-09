@@ -1,0 +1,37 @@
+{
+  "ts": "2026-11-09T07:51:26.373696",
+  "ciclo": 32,
+  "chk": "CHK-193",
+  "aporte": "12 WORKERS DEPLOYED: 4 nodo-universal-v1 + 4 miu-autonomo-v270 + 4 orquestadores fran-oraculo-v28",
+  "resumen_deploy": {
+    "nodo-universal-v1": [
+      "https://nodo-universal-v1.javier19051997-miu.workers.dev",
+      "https://nodo-universal-v1.miu-beacon-d0b37632.workers.dev",
+      "https://nodo-universal-v1.miu-beacon-ba3dcff0.workers.dev",
+      "https://nodo-universal-v1.miu-beacon-6915f743.workers.dev"
+    ],
+    "miu-autonomo-v270": [
+      "https://miu-autonomo-v270.javier19051997-miu.workers.dev",
+      "https://miu-autonomo-v270.miu-beacon-d0b37632.workers.dev",
+      "https://miu-autonomo-v270.miu-beacon-ba3dcff0.workers.dev",
+      "https://miu-autonomo-v270.miu-beacon-6915f743.workers.dev"
+    ],
+    "fran-oraculo-v28": [
+      "https://fran-oraculo-v28.javier19051997-miu.workers.dev",
+      "https://fran-oraculo-v28.miu-beacon-d0b37632.workers.dev",
+      "https://fran-oraculo-v28.miu-beacon-ba3dcff0.workers.dev",
+      "https://fran-oraculo-v28.miu-beacon-6915f743.workers.dev"
+    ]
+  },
+  "orquestador_v28_fix": {
+    "bug_original": "V-inf-27: PUT escribe a state.memoria pero NO persiste a KV",
+    "fix_v28": "PUT hace kvPut mem:key y GET lee desde kvGet mem:key",
+    "estado": "Workers vivos pero SIN KV binding (persistido_kv false)",
+    "bloqueante_kv": "API KV namespaces da 401 incluso con Workers Admin y KV Write"
+  },
+  "capacidad_actual": {
+    "workers_total": 12,
+    "cuentas_cf_activas": 4,
+    "tokens_workers_admin": "4 cuentas con capacidad de deploy"
+  }
+}
