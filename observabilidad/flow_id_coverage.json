@@ -1,13 +1,12 @@
 {
-  "ts": "2026-11-09T01:05:08.357740Z",
-  "cobertura_flow_id_pct": 49.0,
-  "eco_ratio_pct": 15.5,
-  "total_eventos_muestra": 200,
+  "ts": "2026-11-09T08:22:17.768344Z",
+  "cobertura_flow_id_pct": 0.0,
+  "eco_ratio_pct": 0.0,
+  "total_eventos_muestra": 0,
   "alertas": [
-    "ALERTA: cobertura flow_id 49.0% < 50%",
-    "ALERTA: eco_ratio 15.5% > 5%"
+    "CRITICO: cobertura flow_id 0.0% < 30%"
   ],
-  "estado": "alerta",
+  "estado": "critico",
   "nodos_prioritarios_adopcion": [
     "jardinero-autonomo",
     "autonomo-claude",
