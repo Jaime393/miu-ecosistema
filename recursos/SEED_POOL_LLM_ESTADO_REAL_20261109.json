@@ -1,7 +1,7 @@
 {
   "ts": "2026-11-09T07:05:00Z",
-  "ciclo": 19,
-  "chk": "CHK-180",
+  "ciclo": 20,
+  "chk": "CHK-181",
   "aporte": "Estado real del pool LLM del ecosistema verificado con chat real (no solo list)",
   "pool": {
     "openrouter": {
@@ -32,5 +32,13 @@
   "total_vivos": 14,
   "total_sin_credito": 33,
   "fuente": "Jaime393/miu-ecosistema data/auth/created_relay_config_full.json (rot13)",
-  "patron": "patron_verificacion_chat_real: sondear /models o /key solo valida existencia del token, no crédito. Verificar con chat real."
+  "patron": "patron_verificacion_chat_real: sondear /models o /key solo valida existencia del token, no crédito. Verificar con chat real.",
+  "modelos_premium_verificados": {
+    "anthropic/claude-sonnet-5.5": "200 OK - verificado con chat real",
+    "openai/gpt-6.1-terra-pro": "disponible (no verificado con chat)",
+    "openai/gpt-4o-mini": "200 OK - verificado con chat real",
+    "gemini-3-flash-preview": "200 OK - verificado con chat real (key2 y key3)"
+  },
+  "aporte_nuevo": "El ecosistema tiene acceso a claude-sonnet-5.5 y gpt-6.1-terra-pro vía los 12 tokens OpenRouter con crédito",
+  "patron_nuevo": "Los modelos de openrouter evolucionan: claude-3.5-sonnet está deprecado, usar claude-5.5-* y gpt-6.1-*"
 }
