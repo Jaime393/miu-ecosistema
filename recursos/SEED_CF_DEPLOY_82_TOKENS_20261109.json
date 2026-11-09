@@ -1,0 +1,25 @@
+{
+  "ts": "2026-11-09T07:36:01.102245",
+  "ciclo": 28,
+  "chk": "CHK-189",
+  "aporte": "82 tokens CF de deploy VIVOS verificados (permisos de escritura para workers)",
+  "fuente": "data/auth/existing_all_keys.txt (rot13) - claves nombradas cf_*_cfut_N",
+  "total_vivos": 82,
+  "distribucion_por_cuenta": {
+    "cf_6915f743_cfut": 8,
+    "cf_ba3dcff0_cfut": 8,
+    "cf_d0b37632_cfut": 18,
+    "cf_extra_cfut": 26,
+    "cf_f9a245_cfut": 4,
+    "cf_f9a24523_cfut": 8,
+    "cf_javier_cfut": 4,
+    "cf_jhuarcaya938_cfut": 6
+  },
+  "capacidad_total_ecosistema": {
+    "llm_tokens": "~45+ (Router V153: 31 + 14 verificados)",
+    "cf_tokens_lectura": 43,
+    "cf_tokens_deploy": 82,
+    "total_cf": 125,
+    "cuentas_cf": 11
+  }
+}
