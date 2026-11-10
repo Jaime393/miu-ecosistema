@@ -1,7 +1,7 @@
 {
-  "url": "https://a53dc407bead33.lhr.life",
-  "puerto": "0",
-  "backend": "localhost_run",
-  "actualizado_ts": "2026-11-10T02:00:41.040741+00:00",
+  "url": "http://bore.pub:32863",
+  "puerto": "32863",
+  "backend": "bore",
+  "actualizado_ts": "2026-11-10T02:12:27.458254+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
