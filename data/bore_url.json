@@ -1,7 +1,7 @@
 {
-  "url": "https://244717628ca162.lhr.life",
+  "url": "https://b234086f16ad72.lhr.life",
   "puerto": "0",
-  "backend": "activo_estable",
-  "actualizado_ts": "2026-11-10T20:22:07.762863+00:00",
+  "backend": "localhost_run",
+  "actualizado_ts": "2026-11-10T20:26:53.041767+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
