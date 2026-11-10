@@ -1,7 +1,7 @@
 {
-  "url": "https://aca715bb9d96c2.lhr.life",
-  "puerto": "0",
-  "backend": "localhost_run",
-  "actualizado_ts": "2026-11-10T01:14:59.006479+00:00",
+  "url": "http://bore.pub:64903",
+  "puerto": "64903",
+  "backend": "bore",
+  "actualizado_ts": "2026-11-10T01:16:41.213978+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
