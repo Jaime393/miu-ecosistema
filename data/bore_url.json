@@ -1,7 +1,7 @@
 {
-  "url": "https://31353aba56fef628-38-92-48-149.serveousercontent.com",
+  "url": "https://8e6b64a1ef0de2.lhr.life",
   "puerto": "0",
-  "backend": "serveo",
-  "actualizado_ts": "2026-11-10T00:45:14.412167+00:00",
+  "backend": "localhost_run",
+  "actualizado_ts": "2026-11-10T00:46:52.653340+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
