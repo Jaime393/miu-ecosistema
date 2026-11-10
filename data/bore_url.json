@@ -1,7 +1,7 @@
 {
-  "url": "https://56656afeabda86.lhr.life",
-  "puerto": "0",
-  "backend": "activo_estable",
-  "actualizado_ts": "2026-11-09T23:42:07.114821+00:00",
+  "url": "http://bore.pub:27857",
+  "puerto": "27857",
+  "backend": "bore",
+  "actualizado_ts": "2026-11-10T00:00:33.056908+00:00",
   "gestionado_por": "tunnel_pool.sh"
 }
