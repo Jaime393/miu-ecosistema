@@ -18,54 +18,51 @@ jobs:
       
       - name: Leer tokens TG desde relay_config
         run: |
-          # Lee todos los tokens de bots TG
-          TOKENS=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.tg_bot%25&select=clave,valor" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
-          TOKENS2=$(curl -sf "$PANT/rest/v1/relay_config?clave=like.%25_bot_token%25&select=clave,valor" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null)
-          
-          echo "$TOKENS" > /tmp/tg_tokens.json
-          echo "$TOKENS2" >> /tmp/tg_tokens.json
-          
+          # Lee todas las claves tg_* (los tokens reales viven como tg_<nombre>, ej: tg_franbottablet)
+          # FIX 2026-11-12 (CHK-190): patrones anteriores (tg_bot*, *_bot_token*) no matcheaban
+          # ninguna clave real -> 26 runs con 0/0. El filtro Python (formato NNN:AAA) descarta metadata.
+          curl -sf "$PANT/rest/v1/relay_config?clave=like.tg%25&select=clave,valor&limit=200" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" > /tmp/tg_tokens.json 2>/dev/null \
+            || echo '[]' > /tmp/tg_tokens.json
+
           python3 << 'PYEOF'
           import json, subprocess, datetime
-          
+
           results = []
           seen = set()
-          
-          for fname in ['/tmp/tg_tokens.json']:
-              try:
-                  data = json.loads(open(fname).read().replace('\n',',').replace('}{','},{')
-                      .replace('[,','[').replace(',]',']'))
-              except:
-                  data = []
+
+          try:
+              data = json.load(open('/tmp/tg_tokens.json'))
+          except Exception:
+              data = []
+
+          if not isinstance(data, list):
+              data = [data]
               
-              if not isinstance(data, list):
-                  data = [data]
-              
-              for entry in data:
-                  clave = entry.get('clave','')
-                  token = entry.get('valor','')
-                  if not token or token in seen or len(token) < 20:
-                      continue
-                  if ':' not in token:  # TG tokens siempre tienen :
-                      continue
-                  seen.add(token)
+          for entry in data:
+              clave = entry.get('clave','')
+              token = entry.get('valor','')
+              if not token or token in seen:
+                  continue
+              import re as _re
+              if not _re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', token.strip()):  # formato TG token real
+                  continue
+              seen.add(token)
                   
-                  r = subprocess.run(['curl','-sf','--max-time','5',
-                      f'https://api.telegram.org/bot{token}/getMe'],
-                      capture_output=True, text=True)
-                  try:
-                      d = json.loads(r.stdout)
-                      if d.get('ok'):
-                          bot = d.get('result',{})
-                          results.append({'clave':clave,'username':'@'+bot.get('username','?'),'id':bot.get('id'),'name':bot.get('first_name'),'vivo':True})
-                          print(f"✓ {clave}: @{bot.get('username','?')} (id={bot.get('id')})") 
-                      else:
-                          results.append({'clave':clave,'vivo':False,'error':d.get('description','')})
-                          print(f"✗ {clave}: {d.get('description','')}")
-                  except:
-                      results.append({'clave':clave,'vivo':False,'error':'parse_error'})
+              r = subprocess.run(['curl','-sf','--max-time','5',
+                  f'https://api.telegram.org/bot{token}/getMe'],
+                  capture_output=True, text=True)
+              try:
+                  d = json.loads(r.stdout)
+                  if d.get('ok'):
+                      bot = d.get('result',{})
+                      results.append({'clave':clave,'username':'@'+bot.get('username','?'),'id':bot.get('id'),'name':bot.get('first_name'),'vivo':True})
+                      print(f"✓ {clave}: @{bot.get('username','?')} (id={bot.get('id')})") 
+                  else:
+                      results.append({'clave':clave,'vivo':False,'error':d.get('description','')})
+                      print(f"✗ {clave}: {d.get('description','')}")
+              except:
+                  results.append({'clave':clave,'vivo':False,'error':'parse_error'})
           
           print(f"\nTotal: {len(results)} bots | Vivos: {sum(1 for r in results if r.get('vivo'))}")
           json.dump(results, open('/tmp/bot_audit.json','w'), indent=2)
