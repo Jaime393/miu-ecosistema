@@ -62,8 +62,8 @@ jobs:
             
             -- Registrar en gossip si hay actividad
             IF n_recicladas > 0 OR n_limpias > 0 THEN
-              INSERT INTO gossip_log(tipo, origen, contenido, ts)
-              VALUES('reconciliacion_cola', 'fn_reconciliar_cola_idempotente',
+              INSERT INTO gossip_log(tipo, origen, destino, payload, ts)
+              VALUES('reconciliacion_cola', 'fn_reconciliar_cola_idempotente', 'enjambre',
                 format('recicladas=%s archivadas=%s', n_recicladas, n_limpias),
                 NOW());
             END IF;
@@ -110,4 +110,4 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"capacidad_instalada\",\"origen\":\"github-action\",\"contenido\":\"fn_reconciliar_cola_idempotente + cron 3min en metabolismo. Recicla procesando sin request_id >5min. No pausa nada. No resta nada. Solo suma.\",\"ts\":\"$TS\"}]" && echo 'gossip OK'
+            -d "[{\"tipo\":\"capacidad_instalada\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"fn_reconciliar_cola_idempotente + cron 3min en metabolismo. Recicla procesando sin request_id >5min. No pausa nada. No resta nada. Solo suma.\",\"ts\":\"$TS\"}]" && echo 'gossip OK'

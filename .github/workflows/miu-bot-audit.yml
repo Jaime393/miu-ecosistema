@@ -80,7 +80,7 @@ jobs:
             curl -sf -X POST "$PANT/rest/v1/gossip_log" \
               -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
               -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-              -d "[{\"tipo\":\"bot_audit\",\"origen\":\"github-action\",\"contenido\":\"bots_vivos=${VIVOS}/${TOTAL} ver resultados/bot_audit.json\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+              -d "[{\"tipo\":\"bot_audit\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"bots_vivos=${VIVOS}/${TOTAL} ver resultados/bot_audit.json\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
             
             mkdir -p resultados
             cp /tmp/bot_audit.json resultados/bot_audit.json

@@ -97,5 +97,5 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"bug_cerrado\",\"origen\":\"github-action-11sesiones\",\"contenido\":\"fallo_silenciado_por_nombre_de_var CERRADO: groq_api_key_activo/2/3 escritos en relay_config. oracle_v27=$MODEL_OK. 11 sesiones Claude lo intentaron.\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            -d "[{\"tipo\":\"bug_cerrado\",\"origen\":\"github-action-11sesiones\",\"destino\":\"enjambre\",\"payload\":\"fallo_silenciado_por_nombre_de_var CERRADO: groq_api_key_activo/2/3 escritos en relay_config. oracle_v27=$MODEL_OK. 11 sesiones Claude lo intentaron.\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
           echo "Bug cerrado. oracle=$MODEL_OK"

@@ -75,7 +75,7 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"capacidades_nuevas\",\"origen\":\"github-action\",\"contenido\":\"oracle-ask-v28(groq+openrouter+nvidia+deepseek+anthropic) + buscar-corpus(22K pares consultables) cableados al relay_config. 5 tareas escritas a miu_tareas para jardinero\",\"ts\":\"$TS\"}]"
+            -d "[{\"tipo\":\"capacidades_nuevas\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"oracle-ask-v28(groq+openrouter+nvidia+deepseek+anthropic) + buscar-corpus(22K pares consultables) cableados al relay_config. 5 tareas escritas a miu_tareas para jardinero\",\"ts\":\"$TS\"}]"
           echo '=== CAPACIDADES DESPLEGADAS ===' 
           echo 'oracle-ask-v28: https://oracle-ask-v28-miu4.vercel.app/api/ask'
           echo 'buscar-corpus:  https://buscar-corpus-miu4.vercel.app/api/buscar?q=X'

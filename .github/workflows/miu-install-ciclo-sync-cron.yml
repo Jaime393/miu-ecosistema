@@ -120,5 +120,5 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"cron_sync_instalado\",\"origen\":\"github-action\",\"contenido\":\"sync-ciclo-real(*/15min) + sync-phi-relay(*/30min) + sync-rho-relay(*/30min) en metabolismo. tabla=${CICLO_TABLE:-miu_estado}. La deuda que 12 sesiones no cerraron.\",\"ts\":\"$TS\"}]"
+            -d "[{\"tipo\":\"cron_sync_instalado\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"sync-ciclo-real(*/15min) + sync-phi-relay(*/30min) + sync-rho-relay(*/30min) en metabolismo. tabla=${CICLO_TABLE:-miu_estado}. La deuda que 12 sesiones no cerraron.\",\"ts\":\"$TS\"}]"
           echo "Gossip enviado. Crons instalados. ciclo_real no volverá a ser fósil."

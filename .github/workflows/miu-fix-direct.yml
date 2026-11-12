@@ -50,7 +50,7 @@ jobs:
           for fn in fns:
               name = fn.get('proname', fn.get('name', ''))
               if not name: continue
-              sql = f"""CREATE OR REPLACE FUNCTION public.{name}_w() RETURNS void LANGUAGE plpgsql AS $f$ BEGIN BEGIN PERFORM public.{name}(NULL); EXCEPTION WHEN OTHERS THEN INSERT INTO gossip_log(tipo,origen,contenido,ts) VALUES('wrap_err','{name}_w',SQLERRM,now()); END; END $f$;"""
+              sql = f"""CREATE OR REPLACE FUNCTION public.{name}_w() RETURNS void LANGUAGE plpgsql AS $f$ BEGIN BEGIN PERFORM public.{name}(NULL); EXCEPTION WHEN OTHERS THEN INSERT INTO gossip_log(tipo,origen,destino,payload,ts) VALUES('wrap_err','{name}_w','enjambre',SQLERRM,now()); END; END $f$;"""
               import os
               r = subprocess.run(['curl','-sf','-X','POST',
                   f'https://api.supabase.com/v1/projects/{os.environ["META"]}/database/query',
@@ -101,7 +101,7 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"github_fix_direct\",\"origen\":\"miu-fix-direct.yml\",\"contenido\":\"wrappers_crons_sustratos\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            -d "[{\"tipo\":\"github_fix_direct\",\"origen\":\"miu-fix-direct.yml\",\"destino\":\"enjambre\",\"payload\":\"wrappers_crons_sustratos\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
           git config user.email 'action@github.com'
           git config user.name 'miu-action'
           git add resultados/

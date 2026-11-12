@@ -144,7 +144,7 @@ jobs:
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"github_action_n8n_fix\",\"origen\":\"miu-fix-n8n-y-tareas.yml\",\"contenido\":\"coord_bridge+relay_health fijados via REST API — tareas escritas a miu_tareas\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            -d "[{\"tipo\":\"github_action_n8n_fix\",\"origen\":\"miu-fix-n8n-y-tareas.yml\",\"destino\":\"enjambre\",\"payload\":\"coord_bridge+relay_health fijados via REST API — tareas escritas a miu_tareas\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
           mkdir -p resultados
           [ -f /tmp/coord_bridge_fixed.json ] && cp /tmp/coord_bridge_fixed.json resultados/coord_bridge_patched.json
           git config user.email 'action@github.com'
