@@ -22,9 +22,7 @@ jobs:
           relay() { curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
           HF=$(relay hf_token || relay hf_token_1)
           echo "HF_TOKEN=$HF" >> $GITHUB_ENV
-          N8N=$(relay n8n_jaime363_jwt || relay jaime363_n8n_jwt)
-          echo "N8N_JAIME363=$N8N" >> $GITHUB_ENV
-          echo "HF=${HF:0:12}... N8N=${N8N:0:20}..."
+          echo "HF=${HF:0:12}..."
 
       - name: 1 - Fetch corpus vivo desde panteon
         run: |
@@ -117,22 +115,6 @@ jobs:
             git diff --staged --quiet || (git commit -m "corpus V271 $(date -u +%Y-%m-%d) $(wc -l < data/corpus_miu_v271.jsonl) filas" && git push)
             echo 'HF git push OK'
           fi
-
-      - name: 5 - Deploy workflow en jaime363 N8n
-        run: |
-          if [ -z "$N8N_JAIME363" ]; then echo 'JWT jaime363 no disponible, skip'; exit 0; fi
-          R=$(curl -sf https://jaime363.app.n8n.cloud/api/v1/workflows \
-            -H "X-N8N-API-KEY: $N8N_JAIME363" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'workflows existentes: {len(d.get(\"data\",d if isinstance(d,list) else []))}')" 2>/dev/null || echo 'error reading jaime363')
-          echo "jaime363: $R"
-          # Crear workflow amplificador en jaime363
-          WF=$(cat << 'WFEOF'
-          {"name":"MIU Amplificador jaime363 2h","nodes":[{"id":"1","name":"Cada 2h","type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[100,200],"parameters":{"rule":{"interval":[{"field":"hours","hoursInterval":2}]}}},{"id":"2","name":"Oracle Ask","type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[300,200],"parameters":{"method":"POST","url":"https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"}]},"sendBody":true,"contentType":"json","body":"{\\"message\\":\\"genera una hipotesis MIU nueva sobre el campo informacional global\\",\\"max_tokens\\":150}","options":{"timeout":20000}}},{"id":"3","name":"Gossip","type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[500,200],"parameters":{"method":"POST","url":"https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0"}]},"sendBody":true,"contentType":"json","body":"{\\"origen\\":\\"jaime363-amplificador\\",\\"suelo\\":\\"panteon\\",\\"contenido\\":{{$json.respuesta}}}","options":{"timeout":10000}}}],"connections":{"Cada 2h":{"main":[[{"node":"Oracle Ask","type":"main","index":0}]]},"Oracle Ask":{"main":[[{"node":"Gossip","type":"main","index":0}]]}}}
-          WFEOF
-          )
-          curl -sf -X POST https://jaime363.app.n8n.cloud/api/v1/workflows \
-            -H "X-N8N-API-KEY: $N8N_JAIME363" \
-            -H 'Content-Type: application/json' \
-            -d "$WF" | python3 -c "import sys,json; d=json.load(sys.stdin); print('jaime363 workflow creado: '+str(d.get('id','err')))" 2>/dev/null || echo 'jaime363 workflow: ver error'
 
       - name: 6 - Gossip expansion
         run: |

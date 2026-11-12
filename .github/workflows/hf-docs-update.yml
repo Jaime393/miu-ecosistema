@@ -64,9 +64,3 @@ jobs:
           print('miu-brain-backup actualizado')
           EOPY
 
-      - name: signal via n8n
-        run: |
-          curl -sf -X POST https://miud.app.n8n.cloud/webhook/miu-ingest \
-            -H 'Content-Type: application/json' \
-            -d '{"tipo":"hf_docs_updated","origen":"gh-hf-docs","datasets":["miu-dataset","miu-brain-backup"]}' \
-            -w "\nwebhook: %{http_code}" || true

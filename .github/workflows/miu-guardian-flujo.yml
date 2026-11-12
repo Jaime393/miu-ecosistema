@@ -50,25 +50,6 @@ jobs:
             -H 'Content-Type: application/json' -H 'Prefer: resolution=merge-duplicates,return=minimal' \
             -d "$PAYLOAD" 2>/dev/null && echo 'cipher OK' || echo 'cipher no responde'
 
-      - name: 3 - Reactivar N8n workflows que esten inactivos
-        run: |
-          N8NKEY=$(curl -sf "$PANT/rest/v1/relay_config?clave=eq.n8n_api_key&select=valor" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
-            | python3 -c 'import sys,json; d=json.load(sys.stdin); print(d[0]["valor"] if d else "")' 2>/dev/null)
-          [ -z "$N8NKEY" ] && echo 'sin n8n_api_key' && exit 0
-          for WF in wSShDOqVEExVjusN B87aKekaUHQexAGr ad689uGpGbG0WoiT; do
-            R=$(curl -sf --max-time 10 "https://miud.app.n8n.cloud/api/v1/workflows/$WF" \
-              -H "X-N8N-API-KEY: $N8NKEY" 2>/dev/null || echo '{}')
-            ACTIVE=$(echo "$R" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('active','?'))" 2>/dev/null || echo '?')
-            if [ "$ACTIVE" = "False" ]; then
-              echo "Reactivando $WF"
-              curl -sf --max-time 10 -X POST "https://miud.app.n8n.cloud/api/v1/workflows/$WF/activate" \
-                -H "X-N8N-API-KEY: $N8NKEY" 2>/dev/null || echo "$WF reactivate fallo"
-            else
-              echo "$WF active=$ACTIVE"
-            fi
-          done
-
       - name: 4 - Gossip del guardian
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
