@@ -59,7 +59,13 @@ function relaySet(clave, valor, url, anon) {
 }
 
 function gossip(tipo, payload) {
-  var body = JSON.stringify({ tipo: tipo, payload: JSON.stringify(payload),
+  // flow_id_adopcion_v1: todo evento lleva flow_id causal (el Panteon lo inyecta
+  // igual via trg_gossip_enrich si falta, pero nativo es mejor)
+  if (payload === null || payload === undefined) payload = {};
+  if (typeof payload === 'object' && !payload.flow_id) {
+    payload = Object.assign({}, payload, { flow_id: Utilities.getUuid().replace(/-/g, '').slice(0, 16) });
+  }
+  var body = JSON.stringify({ tipo: tipo, payload: payload,
                               ts: new Date().toISOString() });
   var opts = function(anon) {
     return { method: 'post',
@@ -104,7 +110,7 @@ function heartbeat() {
     }
   } catch(e) {}
 
-  gossip('heartbeat', { nodo: NODO_ID, phi: phi, ciclo: ciclo, mesh_count: n });
+  gossip('heartbeat', { nodo: NODO_ID, phi: phi, ciclo: ciclo, mesh_count: n, ts: new Date().toISOString() });
   purgeV151();
   return estado;
 }
