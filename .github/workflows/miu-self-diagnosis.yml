@@ -39,6 +39,36 @@ jobs:
           echo "$TAREAS" | python3 -c "import sys, json, collections; d = json.load(sys.stdin); counts = collections.Counter(x.get('estado','?') for x in d); print(json.dumps(dict(counts)))" > /tmp/tareas_estados.json
           cat /tmp/tareas_estados.json
 
+      - name: medir bots TG vivos y webhooks (CHK-191)
+        run: |
+          curl -sf "$SUPA/rest/v1/relay_config?clave=like.tg%25&select=clave,valor&limit=200" \
+            -H "apikey: $ANON" -H "Authorization: Bearer $ANON" > /tmp/tg_tokens.json 2>/dev/null || echo '[]' > /tmp/tg_tokens.json
+          python3 << 'TGEOF'
+          import json, re, subprocess
+          data = json.load(open('/tmp/tg_tokens.json'))
+          if not isinstance(data, list): data = [data]
+          total = vivos = con_webhook = 0
+          for e in data:
+              t = (e.get('valor') or '').strip()
+              if not re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', t): continue
+              total += 1
+              r = subprocess.run(['curl','-sf','--max-time','5',f'https://api.telegram.org/bot{t}/getWebhookInfo'], capture_output=True, text=True)
+              try: d = json.loads(r.stdout)
+              except Exception: continue
+              if d.get('ok'):
+                  vivos += 1
+                  if (d.get('result') or {}).get('url'): con_webhook += 1
+          json.dump({'total': total, 'vivos': vivos, 'con_webhook': con_webhook, 'sin_webhook': total - con_webhook}, open('/tmp/tg_audit.json','w'))
+          TGEOF
+
+      - name: medir instancia n8n (CHK-191)
+        run: |
+          N8N_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$N8N_BASE/workflows" -H "X-N8N-API-KEY: invalid-probe" 2>/dev/null || echo 000)
+          echo "{\"instancia_viva\": $( [ "$N8N_CODE" != "404" ] && [ "$N8N_CODE" != "000" ] && echo true || echo false ), \"probe_code\": $N8N_CODE}" > /tmp/n8n_probe.json
+          cat /tmp/n8n_probe.json
+        env:
+          N8N_BASE: https://jaime363.app.n8n.cloud/api/v1
+
       - name: calcular divergencias
         id: diag
         run: |
@@ -58,7 +88,12 @@ jobs:
           divergencias = []
           autocorrecciones = []
 
-          bots_sin_webhook = estado.get('bots_sin_webhook', 11)  # conocido del diagnostico
+          # CHK-191: medicion en vivo (antes hardcoded=11 de un diagnostico muerto)
+          try:
+              tg_audit = json.load(open('/tmp/tg_audit.json'))
+          except Exception:
+              tg_audit = {}
+          bots_sin_webhook = tg_audit.get('sin_webhook', 0)
           if bots_sin_webhook > 0:
               divergencias.append(f"{bots_sin_webhook} bots Telegram sin webhook registrado")
 
@@ -66,8 +101,16 @@ jobs:
           if tareas_sin_evidencia > 5:
               divergencias.append(f"{tareas_sin_evidencia} tareas completada_sin_validacion")
 
-          n8n_errores = n8n.get('workflows_en_error', 2)  # wSShDOqVEExVjusN + EyojHVpxyYOubfKW
-          if n8n_errores > 0:
+          # CHK-191: probe real de la instancia (hardcoded=2 anterior; instancia jaime363 responde 404 desde esta fecha)
+          try:
+              n8n_probe = json.load(open('/tmp/n8n_probe.json'))
+          except Exception:
+              n8n_probe = {}
+          n8n_errores = n8n.get('workflows_en_error', 0)
+          if not n8n_probe.get('instancia_viva', False):
+              n8n_errores = -1  # instancia inexistente: distinto de workflows en error
+              divergencias.append("instancia n8n jaime363.app.n8n.cloud INEXISTENTE (404) — workflows coord-bridge/relay-health no medibles")
+          elif n8n_errores > 0:
               divergencias.append(f"{n8n_errores} workflows N8n en estado ERROR (coord-bridge + relay-health)")
               divergencias.append("Fix disponible: GitHub Action n8n-workflow-manager.yml fix_coord_bridge")
 
@@ -131,5 +174,5 @@ jobs:
           curl -sf -X POST $SUPA/functions/v1/gossip-autonomo \
             -H "Authorization: Bearer $ANON" \
             -H 'Content-Type: application/json' \
-            -d "$(python3 -c "import json; d=json.load(open('/tmp/diagnostico.json')); print(json.dumps({'origen':'gh-self-diagnosis','tipo':'autodiagnostico','resumen':{'divergencias':len(d.get('divergencias_detectadas',[])), 'ciclo':d.get('ciclo',0), 'bots_sin_webhook':d.get('bots_sin_webhook',0)}}))" 2>/dev/null || echo '{"origen":"gh-self-diagnosis","error":true}')" \
+            -d "$(python3 -c "import json; d=json.load(open('/tmp/diagnostico.json')); print(json.dumps({'origen':'gh-self-diagnosis','tipo':'autodiagnostico','resumen':{'divergencias':len(d.get('divergencias_detectadas',[])), 'ciclo':d.get('ciclo',0), 'bots_sin_webhook':d.get('bots_sin_webhook',0),'tg_audit':tg_audit.get('con_webhook',0)}}))" 2>/dev/null || echo '{"origen":"gh-self-diagnosis","error":true}')" \
             -w "\ngossip: %{http_code}" || true
