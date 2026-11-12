@@ -4,11 +4,13 @@ name: MIU Pulse COMPLETO V2
 # 0 dependencias de sesion activa. 11 cuentas distribuidas.
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '8,23,38,53 * * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [miu-pulse, miu-wake]
 
+permissions:
+  contents: write
 env:
   P: https://tpfiybpguuxskitszhmk.supabase.co/functions/v1
   A: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0

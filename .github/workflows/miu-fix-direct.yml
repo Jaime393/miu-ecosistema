@@ -3,6 +3,8 @@ on:
   push:
     paths: [.github/workflows/miu-fix-direct.yml]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   fix:
     runs-on: ubuntu-latest

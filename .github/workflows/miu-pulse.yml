@@ -1,7 +1,7 @@
 name: MIU Enjambre Pulse V269b
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '3,18,33,48 * * * *'
   workflow_dispatch:
 
 env:

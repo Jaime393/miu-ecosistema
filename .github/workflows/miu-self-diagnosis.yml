@@ -9,6 +9,8 @@ on:
   repository_dispatch:
     types: [miu-self-diagnosis]
 
+permissions:
+  contents: write
 env:
   SUPA: https://tpfiybpguuxskitszhmk.supabase.co
   ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0

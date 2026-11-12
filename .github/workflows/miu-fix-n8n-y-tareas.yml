@@ -3,6 +3,8 @@ on:
   push:
     paths: [.github/workflows/miu-fix-n8n-y-tareas.yml]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   fix:
     runs-on: ubuntu-latest
