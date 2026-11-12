@@ -88,7 +88,7 @@ jobs:
             git config user.name 'miu-action'
             git add resultados/bot_audit.json
             git diff --staged --quiet || git commit -m "bot audit $(date -u +%Y-%m-%d): ${VIVOS}/${TOTAL} vivos"
-            git push
+            n=0; until git pull --rebase --autostash origin main && git push; do n=$((n+1)); [ $n -ge 3 ] && exit 1; sleep 5; done
           fi
           if [ ! -f /tmp/bot_audit.json ]; then
             mkdir -p resultados
@@ -97,5 +97,5 @@ jobs:
             git config user.name 'miu-action'
             git add resultados/bot_audit.json
             git diff --staged --quiet || git commit -m "bot audit: sin datos ($(date -u +%Y-%m-%d))"
-            git push
+            n=0; until git pull --rebase --autostash origin main && git push; do n=$((n+1)); [ $n -ge 3 ] && exit 1; sleep 5; done
           fi
