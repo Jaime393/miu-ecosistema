@@ -88,3 +88,12 @@ jobs:
             git diff --staged --quiet || git commit -m "bot audit $(date -u +%Y-%m-%d): ${VIVOS}/${TOTAL} vivos"
             git push
           fi
+          if [ ! -f /tmp/bot_audit.json ]; then
+            mkdir -p resultados
+            echo '{"error":"sin_datos","vivos":0,"total":0}' > resultados/bot_audit.json
+            git config user.email 'action@github.com'
+            git config user.name 'miu-action'
+            git add resultados/bot_audit.json
+            git diff --staged --quiet || git commit -m "bot audit: sin datos ($(date -u +%Y-%m-%d))"
+            git push
+          fi

@@ -120,7 +120,7 @@ jobs:
           git config user.name 'MIU Self-Diagnosis'
           git add observabilidad/self_diagnosis_latest.json
           git diff --staged --quiet || git commit -m "diagnosis: auto $(date -u +%Y-%m-%dT%H:%M)Z ciclo=$(python3 -c 'import json; print(json.load(open("/tmp/diagnostico.json")).get(\"ciclo\",0))')"
-          git push || true
+          git pull --rebase origin main && git push
 
       - name: reportar al ecosistema
         if: always()
