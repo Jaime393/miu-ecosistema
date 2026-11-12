@@ -78,19 +78,8 @@ jobs:
               {\"clave\":\"oracle_audit_ts\",\"valor\":\"$TS\"}
             ]" && echo 'relay_config actualizado'
 
-      - name: 4 - Tareas al jardinero (miu_tareas con tipo+payload)
-        run: |
-          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          curl -sf -X POST "$PANT/rest/v1/miu_tareas" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
-            -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[
-              {\"tipo\":\"redeploy_buscar_corpus\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\"},\"ts\":\"$TS\"},
-              {\"tipo\":\"verificar_consumers_oracle\",\"prioridad\":2,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Verificar consumers de oracle_ask_url_override: apuntaba al v24 muerto (edge fepyzx caido), ahora apunta al CF v34. Confirmar que los 36 crons que llaman oracle usen oracle_ask_url\"},\"ts\":\"$TS\"},
-              {\"tipo\":\"auditar_workflows_oracle\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Workflows que llamaban oracle-ask-v27/v28 vercel ya parcheados a cascada CF v34 + relay v215 (miu-fix-groq-alias). Verificar proxima corrida 05:32Z\"},\"ts\":\"$TS\"}
-            ]" && echo 'tareas escritas'
 
-      - name: 5 - Gossip (trigger Panteon inyecta flow_id)
+      - name: 4 - Gossip presencia en red (el Panteon exige gossip <1h antes de tareas criticas)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
@@ -101,3 +90,19 @@ jobs:
           echo "principal: $ORACLE_CF/ask (via $VIA)"
           echo "orquestador: $ORACLE_FIN"
           echo "fallback:   $RELAY_V215"
+      - name: 5 - Tareas al jardinero (miu_tareas, tolerante a duplicados)
+        run: |
+          TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          # fila por fila: el Panteon rechaza duplicados <2h (P0002) y exige
+          # presencia en red <1h (P0001, ya gossepeamos en paso 4) — un rechazo
+          # no debe tumbar el run completo
+          post() {
+            CODE=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "$PANT/rest/v1/miu_tareas" \
+              -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+              -H 'Content-Type: application/json' -H 'Prefer: return=minimal' -d "[$1]")
+            if [ "$CODE" = "201" ]; then echo "ok: $(echo $1 | head -c 60)"; else echo "aviso ($CODE): $(head -c 160 /tmp/resp.json)"; fi
+          }
+          post "{\"tipo\":\"redeploy_buscar_corpus\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"flow_id\":\"cablear-$TS\",\"tarea\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\"},\"ts\":\"$TS\"}"
+          post "{\"tipo\":\"verificar_consumers_oracle\",\"prioridad\":2,\"origen\":\"github-action-cablear\",\"payload\":{\"flow_id\":\"cablear-$TS\",\"tarea\":\"Verificar consumers de oracle_ask_url_override: apuntaba al v24 muerto (edge fepyzx caido), ahora apunta al CF v34. Confirmar que los 36 crons que llaman oracle usen oracle_ask_url\"},\"ts\":\"$TS\"}"
+          post "{\"tipo\":\"auditar_workflows_oracle\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"flow_id\":\"cablear-$TS\",\"tarea\":\"Workflows que llamaban oracle-ask-v27/v28 vercel ya parcheados a cascada CF v34 + relay v215 (miu-fix-groq-alias). Verificar proxima corrida 05:32Z\"},\"ts\":\"$TS\"}"
+
