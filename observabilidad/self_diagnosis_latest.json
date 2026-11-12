@@ -1,0 +1,25 @@
+{
+  "ts": "2026-11-12T05:19:40.651869Z",
+  "ciclo": 0,
+  "phi": 0,
+  "rho": 0,
+  "contratos_aplicados_estimado": "parcial",
+  "tareas_cerradas_sin_evidencia": 0,
+  "bots_sin_webhook": 11,
+  "tablas_sin_rls": 4,
+  "funciones_sin_jwt": 31,
+  "n8n_workflows_en_error": 2,
+  "divergencias_detectadas": [
+    "11 bots Telegram sin webhook registrado",
+    "2 workflows N8n en estado ERROR (coord-bridge + relay-health)",
+    "Fix disponible: GitHub Action n8n-workflow-manager.yml fix_coord_bridge",
+    "4 tablas sin RLS: capacidades, nodo_capacidades, nodo_capacidades_historial, gossip_archivo",
+    "31 funciones con verify_jwt=false sin clasificacion de endpoints"
+  ],
+  "autocorrecciones_aplicadas": [],
+  "tareas_creadas_para_gobernanza": [
+    "RLS en tablas criticas: diseno de politicas requerido",
+    "Clasificacion endpoints JWT: revision humana requerida"
+  ],
+  "estado_general": "capacidad_nominal_alta_asimilacion_parcial"
+}
