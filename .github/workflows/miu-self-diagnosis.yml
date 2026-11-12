@@ -128,6 +128,7 @@ jobs:
               "contratos_aplicados_estimado": "parcial",
               "tareas_cerradas_sin_evidencia": tareas_sin_evidencia,
               "bots_sin_webhook": bots_sin_webhook,
+              "tg_audit": tg_audit,
               "tablas_sin_rls": tablas_sin_rls,
               "funciones_sin_jwt": funciones_sin_jwt,
               "n8n_workflows_en_error": n8n_errores,
@@ -174,5 +175,5 @@ jobs:
           curl -sf -X POST $SUPA/functions/v1/gossip-autonomo \
             -H "Authorization: Bearer $ANON" \
             -H 'Content-Type: application/json' \
-            -d "$(python3 -c "import json; d=json.load(open('/tmp/diagnostico.json')); print(json.dumps({'origen':'gh-self-diagnosis','tipo':'autodiagnostico','resumen':{'divergencias':len(d.get('divergencias_detectadas',[])), 'ciclo':d.get('ciclo',0), 'bots_sin_webhook':d.get('bots_sin_webhook',0),'tg_audit':tg_audit.get('con_webhook',0)}}))" 2>/dev/null || echo '{"origen":"gh-self-diagnosis","error":true}')" \
+            -d "$(python3 -c "import json; d=json.load(open('/tmp/diagnostico.json')); print(json.dumps({'origen':'gh-self-diagnosis','tipo':'autodiagnostico','resumen':{'divergencias':len(d.get('divergencias_detectadas',[])), 'ciclo':d.get('ciclo',0), 'bots_sin_webhook':d.get('bots_sin_webhook',0)}}))" 2>/dev/null || echo '{"origen":"gh-self-diagnosis","error":true}')" \
             -w "\ngossip: %{http_code}" || true
