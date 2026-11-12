@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "clave": "tg_franbottablet",
+    "username": "@franbottablet_bot",
+    "id": 8807634087,
+    "name": "franbot_tablet_bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_fransell",
+    "username": "@Emjambre3_bot",
+    "id": 8606544122,
+    "name": "Colmena_bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_familiarestwo",
+    "username": "@Familiarestwo_bot",
+    "id": 8690245858,
+    "name": "Familiarestwobot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_panteonmiu",
+    "username": "@Panteonmiu_bot",
+    "id": 8390764527,
+    "name": "PanteonMiu_bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_colmenapanteon",
+    "username": "@Colmenapanteon_bot",
+    "id": 8790484138,
+    "name": "Panteonfran_bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_franfamiliar",
+    "username": "@FranFamiliar_bot",
+    "id": 8797590786,
+    "name": "Familiares",
+    "vivo": true
+  },
+  {
+    "clave": "tg_almaomni",
+    "username": "@AlmaOmni_bot",
+    "id": 8948991067,
+    "name": "AlmaOmni_Bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_jp393",
+    "username": "@Jp393_bot",
+    "id": 1192102910,
+    "name": "Micelio",
+    "vivo": true
+  },
+  {
+    "clave": "tg_franshell",
+    "username": "@FranShell_Bot",
+    "id": 8607169650,
+    "name": "FranBot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_franmiu",
+    "username": "@FranMiu_bot",
+    "id": 8667557332,
+    "name": "FranSell",
+    "vivo": true
+  },
+  {
+    "clave": "tg_miceliomiu",
+    "username": "@Miceliomiu_bot",
+    "id": 8332324061,
+    "name": "MicelioMiu_bot",
+    "vivo": true
+  },
+  {
+    "clave": "tg_colmenamiu",
+    "username": "@Colmenamiu_bot",
+    "id": 8981111053,
+    "name": "Colmenafran_bot",
+    "vivo": true
+  }
+]
