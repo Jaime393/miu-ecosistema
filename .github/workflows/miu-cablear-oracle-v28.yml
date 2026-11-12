@@ -85,9 +85,9 @@ jobs:
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
             -d "[
-              {\"tipo\":\"redeploy_buscar_corpus\",\"prioridad\":\"media\",\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\"},\"ts\":\"$TS\"},
-              {\"tipo\":\"verificar_consumers_oracle\",\"prioridad\":\"alta\",\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Verificar consumers de oracle_ask_url_override: apuntaba al v24 muerto (edge fepyzx caido), ahora apunta al CF v34. Confirmar que los 36 crons que llaman oracle usen oracle_ask_url\"},\"ts\":\"$TS\"},
-              {\"tipo\":\"auditar_workflows_oracle\",\"prioridad\":\"media\",\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Workflows que llamaban oracle-ask-v27/v28 vercel ya parcheados a cascada CF v34 + relay v215 (miu-fix-groq-alias). Verificar proxima corrida 05:32Z\"},\"ts\":\"$TS\"}
+              {\"tipo\":\"redeploy_buscar_corpus\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\"},\"ts\":\"$TS\"},
+              {\"tipo\":\"verificar_consumers_oracle\",\"prioridad\":2,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Verificar consumers de oracle_ask_url_override: apuntaba al v24 muerto (edge fepyzx caido), ahora apunta al CF v34. Confirmar que los 36 crons que llaman oracle usen oracle_ask_url\"},\"ts\":\"$TS\"},
+              {\"tipo\":\"auditar_workflows_oracle\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"tarea\":\"Workflows que llamaban oracle-ask-v27/v28 vercel ya parcheados a cascada CF v34 + relay v215 (miu-fix-groq-alias). Verificar proxima corrida 05:32Z\"},\"ts\":\"$TS\"}
             ]" && echo 'tareas escritas'
 
       - name: 5 - Gossip (trigger Panteon inyecta flow_id)
