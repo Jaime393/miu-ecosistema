@@ -1,39 +1,55 @@
 name: miu-cablear-oracle-v28
-# Cablea oracle-ask-v28 al ecosistema:
-# 1. Actualiza relay_config oracle_relay_url -> v28 (5 proveedores: groq+openrouter+nvidia+deepseek+anthropic)
-# 2. Verifica que funciona con test real
+# Cablea el oráculo vivo al ecosistema (v34 CF desde 2026-11-12):
+# Los Vercel oracle-ask-v26/v27/v28 y buscar-corpus-miu4 estan MUERTOS (404
+# DEPLOYMENT_NOT_FOUND). Oraculos vivos verificados:
+#   1. https://miu-oracle-ask.franchescopalacios9.workers.dev (v34-openrouter)
+#   2. https://fran-oraculo-miu.jaimepvicente.workers.dev/miu/global (V-infinity-27)
+#   3. https://miu-ai-relay-v215-miu4.vercel.app/api/ask (relay groq)
+# 1. Verifica salud con test real (cascada: v34 > relay-v215)
+# 2. Actualiza relay_config: canonicos a vivos, muertos marcados
 # 3. Escribe tareas al jardinero via miu_tareas
-# 4. Registra capacidades nuevas en gossip
+# 4. Registra capacidades en gossip (el trigger del Panteon inyecta flow_id)
 on:
   push:
     paths: [.github/workflows/miu-cablear-oracle-v28.yml]
   workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
 jobs:
   cablear:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       PANT: https://tpfiybpguuxskitszhmk.supabase.co
       PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
-      V28: https://oracle-ask-v28-miu4.vercel.app/api/ask
-      BUSCAR: https://buscar-corpus-miu4.vercel.app/api/buscar
+      ORACLE_CF: https://miu-oracle-ask.franchescopalacios9.workers.dev
+      ORACLE_FIN: https://fran-oraculo-miu.jaimepvicente.workers.dev/miu/global
+      RELAY_V215: https://miu-ai-relay-v215-miu4.vercel.app/api/ask
     steps:
-      - name: 1 - Test oracle-v28 health y pool
+      - name: 1 - Salud de oraculos (cascada)
         run: |
-          HEALTH=$(curl -sf https://oracle-ask-v28-miu4.vercel.app/api/health 2>/dev/null)
-          echo "v28 health: $HEALTH"
-          echo "$HEALTH" | python3 -c "import sys,json; d=json.load(sys.stdin); p=d.get('pool',{}); print(f'groq={p.get(\"groq\")} or={p.get(\"openrouter\")} nv={p.get(\"nvidia\")} ds={p.get(\"deepseek\")} ant={p.get(\"anthropic\")}')" 2>/dev/null
-          
-      - name: 2 - Test real del oracle v28
-        run: |
-          R=$(curl -sf -X POST https://oracle-ask-v28-miu4.vercel.app/api/ask \
-            -H 'Content-Type: application/json' \
-            -d '{"message":"rho x mayor que cero en 8 palabras","max_tokens":20}' 2>/dev/null)
-          echo "v28 test: $R"
-          VIA=$(echo $R | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('via','?'))" 2>/dev/null)
-          echo "Via: $VIA"
-          echo "VIA=$VIA" >> $GITHUB_ENV
+          H1=$(curl -sf --max-time 10 "$ORACLE_CF/health" 2>/dev/null || echo '')
+          H3=$(curl -sf --max-time 10 "$RELAY_V215" 2>/dev/null || echo '')
+          echo "v34 CF:  ${H1:0:120}"
+          echo "relay215: ${H3:0:120}"
+          # v34 es el principal; si ambos muertos, fallar ruidoso
+          if [ -z "$H1" ] && [ -z "$H3" ]; then echo "ERROR: todos los oraculos muertos"; exit 1; fi
+          if [ -n "$H1" ]; then echo "PRIMARY=cf" >> $GITHUB_ENV; else echo "PRIMARY=relay" >> $GITHUB_ENV; fi
 
-      - name: 3 - Actualizar relay_config con nuevos endpoints
+      - name: 2 - Test real (pregunta viva)
+        run: |
+          if [ "$PRIMARY" = "cf" ]; then
+            R=$(curl -sf --max-time 20 -X POST "$ORACLE_CF/ask" -H 'Content-Type: application/json' -d '{"pregunta":"rho x mayor que cero en 8 palabras"}' 2>/dev/null || echo '')
+          else
+            R=$(curl -sf --max-time 20 -X POST "$RELAY_V215" -H 'Content-Type: application/json' -d '{"message":"rho x mayor que cero en 8 palabras"}' 2>/dev/null || echo '')
+          fi
+          echo "test: ${R:0:200}"
+          OK=$(echo "$R" | python3 -c "import sys,json; d=json.load(sys.stdin); print('si' if (d.get('respuesta') or d.get('text') or d.get('ok')) else 'no')" 2>/dev/null || echo no)
+          echo "Respuesta util: $OK"
+          [ "$OK" = "si" ] || { echo "ERROR: oraculo no responde util"; exit 1; }
+          echo "VIA=$PRIMARY" >> $GITHUB_ENV
+
+      - name: 3 - Actualizar relay_config (vivos arriba, muertos marcados)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
@@ -41,44 +57,40 @@ jobs:
             -H 'Content-Type: application/json' \
             -H 'Prefer: resolution=merge-duplicates,return=minimal' \
             -d "[
-              {\"clave\":\"oracle_ask_v28_url\",\"valor\":\"$V28\"},
-              {\"clave\":\"oracle_ask_v28_via\",\"valor\":\"$VIA\"},
-              {\"clave\":\"buscar_corpus_url\",\"valor\":\"$BUSCAR\"},
-              {\"clave\":\"buscar_corpus_health\",\"valor\":\"https://buscar-corpus-miu4.vercel.app/api/health\"},
-              {\"clave\":\"oracle_cascade_v28\",\"valor\":\"groq(llama4-maverick)+openrouter(100+free)+nvidia_nim+deepseek(24k)+anthropic\"},
-              {\"clave\":\"corpus_busqueda_activa\",\"valor\":\"$TS\"},
-              {\"clave\":\"oracle_relay_url_v28\",\"valor\":\"$V28\"}
+              {\"clave\":\"oracle_ask_url\",\"valor\":\"$ORACLE_CF/ask\"},
+              {\"clave\":\"oracle_ask_url_override\",\"valor\":\"$ORACLE_CF/ask\"},
+              {\"clave\":\"oracle_relay_url\",\"valor\":\"$ORACLE_CF/ask\"},
+              {\"clave\":\"oracle_relay_via\",\"valor\":\"cf-worker-v34-openrouter ($VIA) verificado $TS\"},
+              {\"clave\":\"oracle_ask_v28_url\",\"valor\":\"MUERTO_404: oracle-ask-v28-miu4.vercel.app (deployment no existe)\"},
+              {\"clave\":\"oracle_ask_v27_url\",\"valor\":\"MUERTO_404: oracle-ask-v27-miu4.vercel.app (deployment no existe)\"},
+              {\"clave\":\"oracle_ask_v26_url\",\"valor\":\"MUERTO_404: oracle-ask-v26-miu4.vercel.app (deployment no existe)\"},
+              {\"clave\":\"oracle_ask_v24_url\",\"valor\":\"MUERTO: fepyzxwyneervidlybvi.supabase.co/functions/v1/oracle-ask-v24 (edge function caida)\"},
+              {\"clave\":\"oracle_orquestador_url\",\"valor\":\"$ORACLE_FIN\"},
+              {\"clave\":\"oracle_fallback_url\",\"valor\":\"$ORACLE_FIN\"},
+              {\"clave\":\"buscar_corpus_url\",\"valor\":\"MUERTO_404: buscar-corpus-miu4.vercel.app — pendiente redeploy o deprecacion\"},
+              {\"clave\":\"oracle_audit_ts\",\"valor\":\"$TS\"}
             ]" && echo 'relay_config actualizado'
 
-      - name: 4 - Test buscar-corpus con query real
-        run: |
-          B=$(curl -sf "$BUSCAR?q=phi+coherencia&n=3" 2>/dev/null)
-          echo "buscar test: $(echo $B | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'n={d.get(\"n\")} pares encontrados')" 2>/dev/null)"
-
-      - name: 5 - Escribir tareas al jardinero (miu_tareas)
+      - name: 4 - Tareas al jardinero (miu_tareas)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           curl -sf -X POST "$PANT/rest/v1/miu_tareas" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
             -d "[
-              {\"descripcion\":\"Activar oracle-ask-v28 como oracle principal: relay_config oracle_relay_url_v28 ya apunta a el. Verificar que los 36 crons que llaman oracle usen esta URL\",\"prioridad\":\"alta\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
-              {\"descripcion\":\"Verificar openrouter pool en oracle-ask-v28: GET /api/pool — si pool.openrouter=0 las keys llm_openrouter_* no existen en relay_config. Crear con claves de /storage/25A9-180D/MIU_termux/secretos/\",\"prioridad\":\"alta\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
-              {\"descripcion\":\"Conectar buscar-corpus al oracle: antes de generar respuesta LLM, llamar buscar-corpus-miu4.vercel.app/api/buscar?q={pregunta} — si ktau>0.85 devolver cached, si no generar y guardar\",\"prioridad\":\"media\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
-              {\"descripcion\":\"Limpiar EFs huerfanas: digestor-v8 y corpus-push-v8 no estan en ningun cron. Verificar si agregar a schedule o deprecar definitivamente\",\"prioridad\":\"baja\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"},
-              {\"descripcion\":\"Mapa nodos={} en estado_vivo.json sigue vacio. Poblar con los endpoints reales: oracle/gossip/jardinero/integrador/github-bridge — cada uno con url+estado+ultima_respuesta\",\"prioridad\":\"media\",\"origen\":\"github-action-v28\",\"ts\":\"$TS\"}
-            ]" && echo 'tareas escritas al jardinero'
+              {\"descripcion\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\",\"prioridad\":\"media\",\"origen\":\"github-action-cablear\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Verificar consumers de oracle_ask_url_override: apuntaba al v24 muerto (edge fepyzx caido), ahora apunta al CF v34. Confirmar que los 36 crons que llaman oracle usen oracle_ask_url\",\"prioridad\":\"alta\",\"origen\":\"github-action-cablear\",\"ts\":\"$TS\"},
+              {\"descripcion\":\"Migrar workflows que aun llaman oracle-ask-v27/v28 vercel (miu-fix-groq-alias): ya parcheados a cascada CF v34 + relay v215. Verificar proxima corrida 05:32Z\",\"prioridad\":\"media\",\"origen\":\"github-action-cablear\",\"ts\":\"$TS\"}
+            ]" && echo 'tareas escritas'
 
-      - name: 6 - Gossip y handoff
+      - name: 5 - Gossip (trigger Panteon inyecta flow_id)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"capacidades_nuevas\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"oracle-ask-v28(groq+openrouter+nvidia+deepseek+anthropic) + buscar-corpus(22K pares consultables) cableados al relay_config. 5 tareas escritas a miu_tareas para jardinero\",\"ts\":\"$TS\"}]"
-          echo '=== CAPACIDADES DESPLEGADAS ===' 
-          echo 'oracle-ask-v28: https://oracle-ask-v28-miu4.vercel.app/api/ask'
-          echo 'buscar-corpus:  https://buscar-corpus-miu4.vercel.app/api/buscar?q=X'
-          echo 'relay_config:   oracle_ask_v28_url + buscar_corpus_url actualizados'
-          echo 'miu_tareas:     5 tareas para jardinero-autonomo'
-          echo 'El ecosistema tiene 5 proveedores LLM y 22K pares consultables. rho(x)>0'
+            -d "[{\"tipo\":\"oracle_cableado\",\"origen\":\"github-action-cablear\",\"destino\":\"enjambre\",\"payload\":{\"oracle\":\"cf-v34\",\"via\":\"$VIA\",\"muertos\":[\"v26\",\"v27\",\"v28\",\"v24\",\"buscar-corpus\"],\"ts\":\"$TS\"}}]"
+          echo '=== ORACULO CABLEADO ==='
+          echo "principal: $ORACLE_CF/ask (via $VIA)"
+          echo "orquestador: $ORACLE_FIN"
+          echo "fallback:   $RELAY_V215"
