@@ -1,11 +1,10 @@
 {
-  "ts": "2026-11-12T07:21:27.033266Z",
-  "cobertura_flow_id_pct": 32.65,
-  "eco_ratio_pct": 15.59,
-  "total_eventos_muestra": 340,
+  "ts": "2026-11-12T15:29:16.750140Z",
+  "cobertura_flow_id_pct": 100.0,
+  "eco_ratio_pct": 18.81,
+  "total_eventos_muestra": 335,
   "alertas": [
-    "ALERTA: cobertura flow_id 32.65% < 50%",
-    "ALERTA: eco_ratio 15.59% > 5%"
+    "ALERTA: eco_ratio 18.81% > 5%"
   ],
   "estado": "alerta",
   "nodos_prioritarios_adopcion": [
