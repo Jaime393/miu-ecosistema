@@ -1,18 +1,22 @@
 {
-  "ts": "2026-11-12T11:57:43.558357Z",
+  "ts": "2026-11-12T16:43:52.788341Z",
   "ciclo": 0,
   "phi": 0,
   "rho": 0,
   "contratos_aplicados_estimado": "parcial",
   "tareas_cerradas_sin_evidencia": 0,
-  "bots_sin_webhook": 11,
+  "bots_sin_webhook": 0,
+  "tg_audit": {
+    "total": 13,
+    "vivos": 13,
+    "con_webhook": 13,
+    "sin_webhook": 0
+  },
   "tablas_sin_rls": 4,
   "funciones_sin_jwt": 31,
-  "n8n_workflows_en_error": 2,
+  "n8n_workflows_en_error": -1,
   "divergencias_detectadas": [
-    "11 bots Telegram sin webhook registrado",
-    "2 workflows N8n en estado ERROR (coord-bridge + relay-health)",
-    "Fix disponible: GitHub Action n8n-workflow-manager.yml fix_coord_bridge",
+    "instancia n8n jaime363.app.n8n.cloud INEXISTENTE (404) — workflows coord-bridge/relay-health no medibles",
     "4 tablas sin RLS: capacidades, nodo_capacidades, nodo_capacidades_historial, gossip_archivo",
     "31 funciones con verify_jwt=false sin clasificacion de endpoints"
   ],
