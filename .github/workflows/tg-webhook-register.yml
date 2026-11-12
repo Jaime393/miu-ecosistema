@@ -46,7 +46,8 @@ jobs:
           H = {"apikey": ANON, "Authorization": "Bearer "+ANON}
 
           def get(url, headers=None, timeout=15):
-              return json.load(urllib.request.urlopen(url, timeout=timeout, headers=headers or {}))
+              req = urllib.request.Request(url, headers=headers or {})
+              return json.load(urllib.request.urlopen(req, timeout=timeout))
 
           rows = get(f"{SUPA}/rest/v1/relay_config?clave=like.tg_*&select=clave,valor&limit=200", H)
           toks = {r['clave']: r['valor'].strip() for r in rows
