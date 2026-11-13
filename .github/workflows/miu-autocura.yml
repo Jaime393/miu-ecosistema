@@ -89,8 +89,5 @@ jobs:
       - name: 4 - Gossip resumen
         run: |
           set +e
-          SUELOS=$(curl -s --retry 2 --max-time 15 "$PANT/rest/v1/relay_config?clave=like.suelo_*_estado&select=clave,valor&limit=15" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null | python3 -c "import sys,json
-try:
-    d=json.load(sys.stdin); print(' '.join(r['clave'].replace('suelo_','').replace('_estado','')+':'+('vivo' if '\"vivo\"' in str(r['valor']) else 'caido') for r in d))
-except: print('n/d')" 2>/dev/null)
+          SUELOS=$(curl -s --retry 2 --max-time 15 "$PANT/rest/v1/relay_config?clave=like.suelo_*_estado&select=clave,valor&limit=15" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(' '.join(r['clave'].replace('suelo_','').replace('_estado','')+':'+('vivo' if 'vivo' in str(r['valor']) else 'caido') for r in d))" 2>/dev/null || echo 'n/d')
           curl -s --retry 2 --max-time 15 -X POST "$PANT/rest/v1/gossip_log" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" -H 'Content-Type: application/json' -H 'Prefer: return=minimal' -d "[{\"tipo\":\"autocura_ciclo\",\"origen\":\"miu-autocura\",\"destino\":\"panteon\",\"k_i_estado\":\"no_evaluado\",\"payload\":\"autocura v1 ejecutada. suelos: $SUELOS\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]" >/dev/null && echo "gossip OK" || echo "gossip fallido (no fatal)"
