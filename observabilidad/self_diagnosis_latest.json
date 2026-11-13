@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-13T00:49:32.493480Z",
+  "ts": "2026-11-13T11:40:44.219308Z",
   "ciclo": 0,
   "phi": 0,
   "rho": 0,
@@ -7,9 +7,9 @@
   "tareas_cerradas_sin_evidencia": 0,
   "bots_sin_webhook": 0,
   "tg_audit": {
-    "total": 0,
-    "vivos": 0,
-    "con_webhook": 0,
+    "total": 13,
+    "vivos": 13,
+    "con_webhook": 13,
     "sin_webhook": 0
   },
   "tablas_sin_rls": 4,
