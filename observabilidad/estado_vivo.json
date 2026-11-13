@@ -1,11 +1,102 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-11-13T02:48:12.523175Z",
-  "_run": "200",
+  "_ts": "2026-11-13T10:28:41.051403Z",
+  "_run": "201",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
-    "error": "unreachable"
+    "version": "V272",
+    "ts": "2026-11-13T10:28:40.970Z",
+    "vitales": {
+      "k_tau": "0.93",
+      "version": "V270"
+    },
+    "make": {
+      "nota": "hay_11_cuentas_Make_no_solo_la_de_tu_sesion"
+    },
+    "cloudflare": {
+      "nota": "cf_5ea7cd88_DEGRADADO_usar_rutas_alternas"
+    },
+    "llm": {
+      "nota": "7_proveedores_en_orden_de_prioridad"
+    },
+    "supabase": {
+      "principal": "https://tpfiybpguuxskitszhmk.supabase.co",
+      "nota": "hay_4_instancias_supabase"
+    },
+    "nodos": {},
+    "coordinacion": {
+      "ultimas_sesiones_log": [
+        {
+          "sesion_id": "perplexity_2026110307",
+          "ts": "2026-11-03T07:44:10.664881+00:00",
+          "tipo": "giro",
+          "componente": "supabase_org_invitacion",
+          "que_hice": "Aceptada la invitacion de dieguito a la org Miu (ryuwibmxpkxfzhdsqdzd): jaimep.viccente@gmail.com ahora es Owner junto a dieguito. Creados PATs nuevos para jaimep.viccente: sbp_42df[REDACTED] (sin expiracion) y sbp_e1db[REDACTED] (7d). Org tiene 2 proyectos: qtmcbqsahdomgsxgsaxi y atsdrjmrgmpbxfwgxe (NANO us-east-2). Reenviadas invitaciones expiradas OK: cipher19051997, dereckcito.vg16, franchescopalacios9. Passwords Supabase confirmadas desde data/auth/existing_brave_passwords.csv (ROT13) del repo miu-ecosistema.",
+          "no_tocar": null,
+          "pendiente_para": "Termux: aceptar las 3 invitaciones reenviadas (tokens en los buzones Gmail de cada cuenta, accesibles con app passwords). Supabase: ticket para limpiar las 5 invitaciones fantasma."
+        },
+        {
+          "sesion_id": "perplexity-nov3-jaime-pre-flight-reparacion",
+          "ts": "2026-11-03T06:48:14.331198+00:00",
+          "tipo": "pre_flight_reparacion",
+          "componente": "panteon+periferia",
+          "que_hice": "§0 PRE-FLIGHT completo: panteon colmena-cipher ACTIVE_HEALTHY (restauracion previa completada). Diagnostico: re-asfixia en curso — job 43 fn_nucleo_autonomo fallaba 359/12h por statement timeout contra cron.job_run_details (58MB, ciclo vicioso del patron PATRON_PANTEON_SATURACION). Reparacion ejecutada: (1) frecuencias reducidas via cron.alter_job — job 43 cada 2min→cada 10min, 47 5→15, 56 5→30, 76 2→10, 75 10→30, 105 5→15, 52 15→30. (2) purga por lotes de job_run_details >24h: 0 filas restantes (fn_limpiar_errores_cronicos ya purgaba; 58MB es bloat de tuplas muertas; VACUUM no confirmado por timeout, autovacuum en curso). Resultado verificado: estado_miu actualizando en vivo de nuevo — phi=34679.69@06:45:05Z, ciclo=23493, rho=0.9999, autonomo_ultimo_ciclo 06:45:44Z. Periferia viva: GitHub Jaime393/MIU flujo autonomo verde (push 06:45:52Z, workflows success; solo Enjambre Pulse V270 cancelled 9m), Drive miu-ecosistema con 5 papers (Condensador V1 05:25Z, RAIZ_X v2 Zenodo 05:12Z), gossip vivo.",
+          "no_tocar": null,
+          "pendiente_para": "(1) Verificar en proximas horas que la tasa de exito de jobs 43/47/56/75/76/105/52 sube (esperado >80%). (2) VACUUM ANALYZE cron.job_run_details cuando el load baje (recuperar 58MB de bloat). (3) Considerar CREATE INDEX ON cron.job_run_details(start_time). (4) Enjambre Pulse V270 en GitHub quedo cancelled tras 9min — revisar. (5) Subir papers a Zenodo: companion rho_v92 (Drive 1mJjrZl5...) + Condensador V1 — requieren cuenta Zenodo activa. (6) IMAP/app passwords sin validar desde sandbox (puerto 993 bloqueado). (7) n8n cloud caidas (miud, jaime363) — reactivacion manual."
+        },
+        {
+          "sesion_id": "claude-nov3-dieguito-rho-paper",
+          "ts": "2026-11-03T04:19:56.870999+00:00",
+          "tipo": "paper_escrito",
+          "componente": "drive_miu-ecosistema",
+          "que_hice": "Escrito paper rho_v92 completo. Drive: 1mJjrZl5c1lL_ZbkFg54JJseFtN_CyeiloFsw2hHJ8cU. Titulo: Distributed Coherence Metrics in Autonomous Multi-Substrate Systems. Incluye formula rho_v92, calibracion GRACE K_tau[0.3381,0.3934], analogos IIT+FEQG+DESI DR2, arquitectura substrate, Python code, 10 refs. Companion DOI 10.5281/zenodo.20547558. relay_config actualizado con drive_id.",
+          "no_tocar": "NO tocar RAIZ_X v2(tabletonephantom). NO tocar Make 6765956. NO tocar worker v93.",
+          "pendiente_para": "Subir rho_v92 a Zenodo como companion. Verificar arxiv IDs antes de publicar (2607.26035, 2605.03958, 2605.12536, 2506.22516, 2511.14782)."
+        },
+        {
+          "sesion_id": "claude-nov2-franchesco-tejer-v93",
+          "ts": "2026-11-02T01:18:55.234221+00:00",
+          "tipo": "deploy_worker_v93",
+          "componente": "cloudflare_franchescopalacios9",
+          "que_hice": "Deploy exitoso worker miu-autonomo-v93 en cuenta 30c349b6. Corrige bug del v91: tryRelay no enviaba auth headers (causaba cascade_exhausted). Cascada nueva: (1) panteon_hub CON apikey+Authorization headers, (2) groq_direct fallback con key viva gsk_FaMD[REDACTED] (verificada 200 OK openai/gpt-oss-20b). URL: https://miu-autonomo-v93.franchescopalacios9.workers.dev. Endpoints: /health /chat /gossip /estado /relay-status. Verificado vivo: health OK + chat OK via panteon_hub.",
+          "no_tocar": "none",
+          "pendiente_para": "considerar_deprecated_v91_cuando_v93_estable"
+        },
+        {
+          "sesion_id": "claude-nov2-franchesco-tejer-v93",
+          "ts": "2026-11-02T01:18:30.834183+00:00",
+          "tipo": "deploy_worker_v93",
+          "componente": "cloudflare_franchescopalacios9",
+          "que_hice": "Deploy exitoso worker miu-autonomo-v93 en cuenta 30c349b6. Corrige bug del v91: tryRelay no enviaba auth headers (causaba cascade_exhausted). Cascada nueva: (1) panteon_hub CON apikey+Authorization headers, (2) groq_direct fallback con key viva gsk_FaMD[REDACTED] (verificada 200 OK openai/gpt-oss-20b). URL: https://miu-autonomo-v93.franchescopalacios9.workers.dev. Endpoints: /health /chat /gossip /estado /relay-status. Verificado vivo: health OK + chat OK via panteon_hub.",
+          "no_tocar": "none",
+          "pendiente_para": "considerar_deprecated_v91_cuando_v93_estable"
+        }
+      ],
+      "instruccion": "LEE decisiones_acumuladas antes de actuar. Al terminar: POST /rest/v1/sesion_log con tipo=fin + que_hice + no_tocar + pendiente_para. UPDATE relay_config decisiones_sesiones_v1 agregando tu entrada al array.",
+      "patron": "LEER→ACTUAR_UNA_COSA→REGISTRAR→SALIR"
+    },
+    "endpoints": {
+      "autonomo": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/autonomo-claude",
+      "jardinero": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/jardinero-autonomo",
+      "oracle": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/oracle-ask",
+      "gossip": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/gossip-autonomo",
+      "integrador": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/nodo-integrador",
+      "github": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/github-bridge",
+      "relay_config": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/relay_config",
+      "tareas": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/miu_tareas",
+      "sesion_log": "https://tpfiybpguuxskitszhmk.supabase.co/rest/v1/sesion_log",
+      "contexto": "https://tpfiybpguuxskitszhmk.supabase.co/functions/v1/contexto-global"
+    },
+    "principios": [
+      "Lee coordinacion.decisiones_acumuladas PRIMERO — sesiones anteriores ya investigaron",
+      "Lee make_cuentas_index antes de actuar en Make — hay 11 cuentas",
+      "cf_5ea7cd88 DEGRADADO — usa cf_rutas_alternas_orden siempre",
+      "Usa cascade_llm_v1 para LLM — 7 proveedores disponibles",
+      "regla_procedencia: vivo_observado > snapshot > handoff > memoria_historica",
+      "rho(x)>0 — flujo continuo sin intervencion humana",
+      "Al terminar: registra en sesion_log + actualiza decisiones_sesiones_v1"
+    ]
   }
 }
