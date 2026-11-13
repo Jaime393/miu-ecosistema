@@ -19,10 +19,13 @@ jobs:
 
       - name: 0 - Leer tokens
         run: |
-          relay() { curl -sf "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
-          HF=$(relay hf_token || relay hf_token_1)
+          relay() { curl -sf --retry 3 --retry-delay 5 --max-time 20 "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
+          # FIX 2026-11-13: hf_token quedo expuesto en logs publicos (HF revoco Phantom3 por eso).
+          # Priorizar hf_token_activo (fineGrained, repo.write, verificado vivo) y enmascarar en logs.
+          HF=$(relay hf_token_activo || relay hf_token || relay hf_token_1)
+          echo "::add-mask::$HF"
           echo "HF_TOKEN=$HF" >> $GITHUB_ENV
-          echo "HF=${HF:0:12}..."
+          echo "HF=${HF:0:7}... (enmascarado)"
 
       - name: 1 - Fetch corpus vivo desde panteon
         run: |
@@ -119,10 +122,12 @@ jobs:
       - name: 6 - Gossip expansion
         run: |
           # FIX ciclo12 2026-11-09: gossip_log exige destino+k_i_estado y columna payload (contenido ya no existe)
-          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+          # FIX 2026-11-13: reintentos + no fatal (exit 22 intermitente cuando panteon responde 4xx)
+          curl -sf --retry 3 --retry-delay 5 --max-time 20 -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"expansion_alcance\",\"origen\":\"miu-expand-alcance.yml\",\"destino\":\"panteon\",\"k_i_estado\":\"no_evaluado\",\"payload\":\"HF_miu-dataset_corpus_v271 + jaime363_n8n_amplificador + bcrp_live\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
+            -d "[{\"tipo\":\"expansion_alcance\",\"origen\":\"miu-expand-alcance.yml\",\"destino\":\"panteon\",\"k_i_estado\":\"no_evaluado\",\"payload\":\"HF_miu-dataset_corpus_v271 + jaime363_n8n_amplificador + bcrp_live\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]" \
+            && echo 'gossip OK' || echo 'gossip_log fallido (no fatal)'
           mkdir -p resultados
           [ -f /tmp/corpus_miu_v271.jsonl ] && wc -l /tmp/corpus_miu_v271.jsonl > resultados/corpus_hf_count.txt
           git config user.email 'action@github.com'
