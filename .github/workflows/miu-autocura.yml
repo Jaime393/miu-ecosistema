@@ -30,7 +30,8 @@ jobs:
             CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 12 "https://$REF.supabase.co/rest/v1/" -H "apikey: $ANON" 2>/dev/null)
             # 401 = vivo pidiendo auth; 200 = vivo; 000 = muerto
             [ "$CODE" = "000" ] && ESTADO="caido" || ESTADO="vivo"
-            sembrar "suelo_${REF}_estado" "{\"estado\":\"$ESTADO\",\"code\":\"$CODE\",\"ts\":\"$TS\"}"
+            # valor plano (json anidado rompia el POST)
+            sembrar "suelo_${REF}_estado" "$ESTADO|$CODE|$TS"
             ESTADOS="$ESTADOS $REF=$ESTADO"
             echo "suelo $REF: $CODE -> $ESTADO"
           done
@@ -65,7 +66,7 @@ jobs:
           # Solo redispara si el fallo es TRANSITORIO: ultimo run fallido pero alguno de los 3 previos exitoso.
           # Si los ultimos 3 fallaron, no buclea: solo alerta (grieta persistente = humano).
           DESDE=$(date -u -d '3 hours ago' +%Y-%m-%dT%H:%MZ)
-          gh run list -R "$REPO" --status failure --created ">$DESDE" --limit 20 --json workflowName,databaseId,conclusion,createdAt --jq '.[] | .workflowName' 2>/dev/null | sort -u | while read WF; do
+          gh run list -R "$REPO" --status failure --created ">$DESDE" --limit 20 --json workflowName,databaseId,conclusion,createdAt --jq '.[] | .workflowName' 2>/dev/null | sort -u | grep -v '^miu-autocura$' | while read WF; do
             [ -z "$WF" ] && continue
             echo "evaluando: $WF"
             ULT3=$(gh run list -R "$REPO" --workflow "$WF" --limit 3 --json conclusion --jq '[.[].conclusion] | join(",")' 2>/dev/null)
