@@ -60,7 +60,48 @@ jobs:
             done
           fi
 
-      - name: 3 - Redisparo de workflows con fallo transitorio
+      - name: 3 - Neuronas Vercel (salud + auto-redeploy colmena)
+        run: |
+          set +e
+          panta() { curl -s --retry 2 --retry-delay 3 --max-time 15 "$PANT/rest/v1/relay_config?clave=eq.$1&select=valor" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['valor'] if d else '')" 2>/dev/null; }
+          VTOK=$(panta vercel_token_4)
+          [ -z "$VTOK" ] && echo "sin token vercel, skip" && exit 0
+          gossip() { curl -s --retry 2 --max-time 15 -X POST "$PANT/rest/v1/gossip_log" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" -H 'Content-Type: application/json' -H 'Prefer: return=minimal' -d "[{\"tipo\":\"$1\",\"origen\":\"miu-autocura\",\"destino\":\"vercel\",\"k_i_estado\":\"no_evaluado\",\"payload\":\"$2\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]" >/dev/null; }
+          # familia colmena (cuenta del token_4): salud + auto-redeploy a produccion
+          PROY=$(curl -s --retry 2 --max-time 25 "https://api.vercel.com/v9/projects?limit=100" -H "Authorization: Bearer $VTOK" | python3 -c "import sys,json; d=json.load(sys.stdin); [print(p['name']) for p in d.get('projects',[]) if 'colmena' in p['name']]" 2>/dev/null)
+          REPARADAS=0; VIVAS=0
+          for P in $PROY; do
+            DOM="https://${P//./}.vercel.app"
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$DOM" 2>/dev/null)
+            if [ "$CODE" = "502" ] || [ "$CODE" = "000" ]; then
+              echo "colmena $P: $CODE -> evaluando redeploy"
+              DEP=$(curl -s --max-time 15 "https://api.vercel.com/v6/deployments?name=$P&limit=1" -H "Authorization: Bearer $VTOK" 2>/dev/null)
+              LAST=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['deployments'][0]['uid'] if d.get('deployments') else '')" 2>/dev/null)
+              CREADO=$(echo "$DEP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['deployments'][0].get('createdAt',0) if d.get('deployments') else 0)" 2>/dev/null)
+              AHORA=$(date +%s%3N)
+              # anti-bucle: si el ultimo deployment es de hace menos de 2h, ya se intento
+              if [ -n "$LAST" ] && [ "$CREADO" -lt $((AHORA - 7200000)) ]; then
+                RES=$(curl -s --max-time 90 -X POST "https://api.vercel.com/v13/deployments" -H "Authorization: Bearer $VTOK" -H "Content-Type: application/json" -d "{\"deploymentId\":\"$LAST\",\"name\":\"$P\",\"target\":\"production\"}" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('id') or d.get('error',{}).get('code','err'))" 2>/dev/null)
+                echo "  redeploy -> $RES"
+                case "$RES" in dpl_*) REPARADAS=$((REPARADAS+1)); gossip autocura_vercel_redeploy "colmena $P en $CODE -> redeploy produccion $RES" ;; esac
+              else
+                echo "  skip (deployment reciente <2h o sin deployments)"
+              fi
+            else
+              VIVAS=$((VIVAS+1))
+            fi
+          done
+          echo "colmena: $VIVAS vivas, $REPARADAS re-deployadas"
+          # neuronas criticas de otras cuentas: solo alerta si caen (sin token de reparacion)
+          for N in "oracle-ask-v32-miu4.vercel.app" "oracle-ask-v28-miu4.vercel.app" "miu-ai-relay-v215-miu4.vercel.app/api/ask" "miu-cron-autonomo.vercel.app" "miu-autonomo-v92.vercel.app" "buscar-corpus.vercel.app" "miu-oracle-v2.vercel.app"; do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "https://$N" 2>/dev/null)
+            if [ "$CODE" = "502" ] || [ "$CODE" = "000" ]; then
+              echo "CRITICA $N: $CODE"
+              gossip autocura_vercel_alerta "neurona critica $N responde $CODE (sin token de reparacion en panteon)"
+            fi
+          done
+
+      - name: 4 - Redisparo de workflows con fallo transitorio
         run: |
           set +e
           # Solo redispara si el fallo es TRANSITORIO: ultimo run fallido pero alguno de los 3 previos exitoso.
@@ -87,7 +128,7 @@ jobs:
             esac
           done
 
-      - name: 4 - Gossip resumen
+      - name: 5 - Gossip resumen
         run: |
           set +e
           SUELOS=$(curl -s --retry 2 --max-time 15 "$PANT/rest/v1/relay_config?clave=like.suelo_*_estado&select=clave,valor&limit=15" -H "apikey: $PANON" -H "Authorization: Bearer $PANON" 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(' '.join(r['clave'].replace('suelo_','').replace('_estado','')+':'+('vivo' if 'vivo' in str(r['valor']) else 'caido') for r in d))" 2>/dev/null || echo 'n/d')
