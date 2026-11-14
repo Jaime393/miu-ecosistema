@@ -77,7 +77,7 @@ jobs:
             VIVOS=$(python3 -c "import json; d=json.load(open('/tmp/bot_audit.json')); print(sum(1 for r in d if r.get('vivo')))" 2>/dev/null || echo '?')
             TOTAL=$(python3 -c "import json; d=json.load(open('/tmp/bot_audit.json')); print(len(d))" 2>/dev/null || echo '?')
             
-            GOSSIP=[{\"tipo\":\"bot_audit\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"bots_vivos=${VIVOS}/${TOTAL} ver resultados/bot_audit.json\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]
+            GOSSIP="[{\"tipo\":\"bot_audit\",\"origen\":\"github-action\",\"destino\":\"enjambre\",\"payload\":\"bots_vivos=${VIVOS}/${TOTAL} (ver resultados/bot_audit.json)\",\"ts\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}]"
             # CHK-216: Panteon primero, respaldo COORD fepyzx si caido (402)
             if ! curl -sf -X POST "$PANT/rest/v1/gossip_log" \
               -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
