@@ -22,6 +22,11 @@ jobs:
     env:
       PANT: https://tpfiybpguuxskitszhmk.supabase.co
       PANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
+      # CHK-216: el Panteon esta en 402 exceed_egress_quota (reinicio ~26-nov) —
+      # COORD fepyzx tiene relay_config (clave+valor), gossip_log y miu_tareas
+      # (schema distinto: tarea/estado/origen/payload) como respaldo vivo.
+      COORD: https://fepyzxwyneervidlybvi.supabase.co
+      COORDON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcHl6eHd5bmVlcnZpZGx5YnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NDc1NTQsImV4cCI6MjEwNTQyMzU1NH0.S6meOse3Xfq2d9k5nO4fjL3tseQOzvPNAsubGa0gl6k
       ORACLE_CF: https://miu-oracle-ask.franchescopalacios9.workers.dev
       ORACLE_FIN: https://fran-oraculo-miu.jaimepvicente.workers.dev/miu/global
       RELAY_V215: https://miu-ai-relay-v215-miu4.vercel.app/api/ask
@@ -59,11 +64,7 @@ jobs:
       - name: 3 - Actualizar relay_config (vivos arriba, muertos marcados)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
-            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
-            -H 'Content-Type: application/json' \
-            -H 'Prefer: resolution=merge-duplicates,return=minimal' \
-            -d "[
+          PAYLOAD="[
               {\"clave\":\"oracle_ask_url\",\"valor\":\"$ORACLE_CF/ask\"},
               {\"clave\":\"oracle_ask_url_override\",\"valor\":\"$ORACLE_CF/ask\"},
               {\"clave\":\"oracle_relay_url\",\"valor\":\"$ORACLE_CF/ask\"},
@@ -76,16 +77,40 @@ jobs:
               {\"clave\":\"oracle_fallback_url\",\"valor\":\"$ORACLE_FIN\"},
               {\"clave\":\"buscar_corpus_url\",\"valor\":\"MUERTO_404: buscar-corpus-miu4.vercel.app — pendiente redeploy o deprecacion\"},
               {\"clave\":\"oracle_audit_ts\",\"valor\":\"$TS\"}
-            ]" && echo 'relay_config actualizado'
+            ]"
+          # Panteon primero; si caido (402 egress), respaldo en COORD fepyzx (CHK-216)
+          if curl -sf -X POST "$PANT/rest/v1/relay_config?on_conflict=clave" \
+            -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
+            -H 'Content-Type: application/json' \
+            -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+            -d "$PAYLOAD"; then
+            echo 'relay_config actualizado (Panteon)'
+          else
+            echo 'Panteon caido, respaldo en COORD fepyzx'
+            curl -sf -X POST "$COORD/rest/v1/relay_config?on_conflict=clave" \
+              -H "apikey: $COORDON" -H "Authorization: Bearer $COORDON" \
+              -H 'Content-Type: application/json' \
+              -H 'Prefer: resolution=merge-duplicates,return=minimal' \
+              -d "$PAYLOAD" && echo 'relay_config actualizado (COORD)'
+          fi
 
 
       - name: 4 - Gossip presencia en red (el Panteon exige gossip <1h antes de tareas criticas)
         run: |
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          curl -sf -X POST "$PANT/rest/v1/gossip_log" \
+          GOSSIP="[{\"tipo\":\"oracle_cableado\",\"origen\":\"github-action-cablear\",\"destino\":\"enjambre\",\"payload\":{\"oracle\":\"cf-v34\",\"via\":\"$VIA\",\"muertos\":[\"v26\",\"v27\",\"v28\",\"v24\",\"buscar-corpus\"],\"ts\":\"$TS\"}}]"
+          if curl -sf -X POST "$PANT/rest/v1/gossip_log" \
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d "[{\"tipo\":\"oracle_cableado\",\"origen\":\"github-action-cablear\",\"destino\":\"enjambre\",\"payload\":{\"oracle\":\"cf-v34\",\"via\":\"$VIA\",\"muertos\":[\"v26\",\"v27\",\"v28\",\"v24\",\"buscar-corpus\"],\"ts\":\"$TS\"}}]"
+            -d "$GOSSIP"; then
+            echo 'gossip registrado (Panteon)'
+          else
+            echo 'Panteon caido, gossip de respaldo en COORD fepyzx (CHK-216)'
+            curl -sf -X POST "$COORD/rest/v1/gossip_log" \
+              -H "apikey: $COORDON" -H "Authorization: Bearer $COORDON" \
+              -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+              -d "$GOSSIP" && echo 'gossip registrado (COORD)'
+          fi
           echo '=== ORACULO CABLEADO ==='
           echo "principal: $ORACLE_CF/ask (via $VIA)"
           echo "orquestador: $ORACLE_FIN"
@@ -95,11 +120,18 @@ jobs:
           TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           # fila por fila: el Panteon rechaza duplicados <2h (P0002) y exige
           # presencia en red <1h (P0001, ya gossepeamos en paso 4) — un rechazo
-          # no debe tumbar el run completo
+          # no debe tumbar el run completo. Si el Panteon esta caido (402),
+          # respaldo en COORD fepyzx con schema remapeado (CHK-216).
           post() {
             CODE=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "$PANT/rest/v1/miu_tareas" \
               -H "apikey: $PANON" -H "Authorization: Bearer $PANON" \
               -H 'Content-Type: application/json' -H 'Prefer: return=minimal' -d "[$1]")
+            if [ "$CODE" != "201" ]; then
+              FB=$(echo "$1" | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps([{'tarea': d['tipo'], 'estado': 'pendiente', 'origen': d['origen'], 'payload': d['payload']}]))")
+              CODE=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "$COORD/rest/v1/miu_tareas" \
+                -H "apikey: $COORDON" -H "Authorization: Bearer $COORDON" \
+                -H 'Content-Type: application/json' -H 'Prefer: return=minimal' -d "$FB")
+            fi
             if [ "$CODE" = "201" ]; then echo "ok: $(echo $1 | head -c 60)"; else echo "aviso ($CODE): $(head -c 160 /tmp/resp.json)"; fi
           }
           post "{\"tipo\":\"redeploy_buscar_corpus\",\"prioridad\":5,\"origen\":\"github-action-cablear\",\"payload\":{\"flow_id\":\"cablear-$TS\",\"tarea\":\"Redeployar buscar-corpus-miu4 en Vercel (404 DEPLOYMENT_NOT_FOUND): el flujo corpus-cache del oracle dependia de el. Si no se puede, deprecar y purgar referencias\"},\"ts\":\"$TS\"}"
