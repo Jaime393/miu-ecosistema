@@ -25,6 +25,9 @@ env:
   SUPA: https://tpfiybpguuxskitszhmk.supabase.co
   ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZml5YnBndXV4c2tpdHN6aG1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NjgyNTAsImV4cCI6MjEwMzM0NDI1MH0.W4V8xdyfZj6I7bj1VsfM5gjY17ZHPi8jhIJgDRpUYH0
   WEBHOOK_OK: https://fxmupxpwzzxnjcscpyuw.supabase.co/functions/v1/bots-emisor/webhook
+  # CHK-216: COORD fepyzx como respaldo (Panteon en cuota 402)
+  COORD: https://fepyzxwyneervidlybvi.supabase.co
+  COORDON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcHl6eHd5bmVlcnZpZGx5YnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NDc1NTQsImV4cCI6MjEwNTQyMzU1NH0.S6meOse3Xfq2d9k5nO4fjL3tseQOzvPNAsubGa0gl6k
 
 jobs:
   register-webhooks:
@@ -49,9 +52,29 @@ jobs:
               req = urllib.request.Request(url, headers=headers or {})
               return json.load(urllib.request.urlopen(req, timeout=timeout))
 
-          rows = get(f"{SUPA}/rest/v1/relay_config?clave=like.tg_*&select=clave,valor&limit=200", H)
-          toks = {r['clave']: r['valor'].strip() for r in rows
-                  if re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', (r['valor'] or '').strip())}
+          toks = {}
+          try:
+              rows = get(f"{SUPA}/rest/v1/relay_config?clave=like.tg_*&select=clave,valor&limit=200", H)
+              toks = {r['clave']: r['valor'].strip() for r in rows
+                      if re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', (r['valor'] or '').strip())}
+          except Exception as e:
+              print(f"Panteon no disponible ({e}); usando COORD")
+          if not toks and os.environ.get('COORD'):
+              H2 = {"apikey": os.environ['COORDON'], "Authorization": "Bearer "+os.environ['COORDON']}
+              try:
+                  # tg_* individuales en COORD
+                  rows = get(f"{os.environ['COORD']}/rest/v1/relay_config?clave=like.tg_*&select=clave,valor&limit=200", H2)
+                  toks = {r['clave']: r['valor'].strip() for r in rows
+                          if re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', (r['valor'] or '').strip())}
+              except Exception as e:
+                  print(f"COORD tg_* falla: {e}")
+              if not toks:
+                  try:
+                      pool = json.loads(get(f"{os.environ['COORD']}/rest/v1/relay_config?clave=eq.tg_bots_pool&select=valor&limit=1", H2)[0]['valor'])
+                      toks = {f"tg_pool_{i}": t.strip() for i, t in enumerate(pool)
+                              if re.match(r'^\d{6,12}:[A-Za-z0-9_-]{30,}$', str(t).strip())}
+                  except Exception as e:
+                      print(f"COORD tg_bots_pool falla: {e}")
           print(f"tokens: {len(toks)}")
 
           ok, rotos, reparados, muertos = [], [], [], []
@@ -97,10 +120,16 @@ jobs:
                           "reparados": reparados, "muertos": [m[0] for m in muertos],
                           "webhook_canonico": WEBHOOK_OK}
           }]).encode()
-          req = urllib.request.Request(f"{SUPA}/rest/v1/gossip_log", data=body,
-              headers={**H, "Content-Type": "application/json", "Prefer": "return=minimal"}, method='POST')
-          urllib.request.urlopen(req, timeout=15)
-          print("gossip enviado")
+          sent = False
+          for base, hdr in [(SUPA, H), (os.environ['COORD'], {"apikey": os.environ['COORDON'], "Authorization": "Bearer "+os.environ['COORDON']})]:
+              try:
+                  req = urllib.request.Request(f"{base}/rest/v1/gossip_log", data=body,
+                      headers={**hdr, "Content-Type": "application/json", "Prefer": "return=minimal"}, method='POST')
+                  urllib.request.urlopen(req, timeout=15)
+                  print(f"gossip enviado ({'Panteon' if base==SUPA else 'COORD'})"); sent = True; break
+              except Exception as e:
+                  print(f"gossip falla en {base}: {e}")
+          if not sent: print("WARN: gossip no enviado a ningun lado (no fatal)")
           EOPY
         env:
           MODO_WF: ${{ github.event.inputs.modo || github.event.client_payload.modo || 'verify' }}
@@ -110,8 +139,16 @@ jobs:
         run: |
           # el Panteon exige gossip <1h antes de tareas criticas; este workflow
           # ya gossepea arriba, y fix_% exige presencia — origen consistente
-          curl -sf -X POST "$SUPA/rest/v1/gossip_log" \
+          GOSSIP='[{"tipo":"tg_webhook_fallo","origen":"gh-tg-webhook-register","destino":"enjambre","payload":{"tarea":"auditar bots muertos manualmente — getWebhookInfo fallo"}}]'
+          if ! curl -sf -X POST "$SUPA/rest/v1/gossip_log" \
             -H "apikey: $ANON" -H "Authorization: Bearer $ANON" \
             -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
-            -d '[{"tipo":"tg_webhook_fallo","origen":"gh-tg-webhook-register","destino":"enjambre","payload":{"tarea":"auditar bots muertos manualmente — getWebhookInfo fallo"}}]'
-          echo "gossip de fallo enviado (revision manual)"
+            -d "$GOSSIP"; then
+            curl -sf -X POST "$COORD/rest/v1/gossip_log" \
+              -H "apikey: $COORDON" -H "Authorization: Bearer $COORDON" \
+              -H 'Content-Type: application/json' -H 'Prefer: return=minimal' \
+              -d "$GOSSIP" && echo "gossip de fallo enviado (COORD, revision manual)" \
+              || echo "gossip de fallo no enviado (no fatal)"
+          else
+            echo "gossip de fallo enviado (revision manual)"
+          fi
