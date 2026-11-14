@@ -28,6 +28,30 @@ jobs:
             -H "apikey: $PANON" -H "Authorization: Bearer $PANON" > /tmp/tg_tokens.json 2>/dev/null \
             || echo '[]' > /tmp/tg_tokens.json
 
+          # CHK-216: si el Panteon esta vacio (402 egress), leer tokens del COORD fepyzx
+          if ! python3 -c "import json,sys; sys.exit(0 if json.load(open('/tmp/tg_tokens.json')) else 1)" 2>/dev/null; then
+            python3 << 'PYFALLBACK'
+          import json, os, urllib.request
+          C = os.environ['COORD']; A = os.environ['COORDON']
+          H = {"apikey": A, "Authorization": "Bearer "+A}
+          out = []
+          try:
+              req = urllib.request.Request(f"{C}/rest/v1/relay_config?clave=like.tg_*&select=clave,valor&limit=200", headers=H)
+              out = json.load(urllib.request.urlopen(req, timeout=20))
+          except Exception as e:
+              print(f"COORD tg_* falla: {e}")
+          if not out:
+              try:
+                  req = urllib.request.Request(f"{C}/rest/v1/relay_config?clave=eq.tg_bots_pool&select=valor&limit=1", headers=H)
+                  pool = json.loads(json.load(urllib.request.urlopen(req, timeout=20))[0]['valor'])
+                  out = [{"clave": f"tg_pool_{i}", "valor": t} for i, t in enumerate(pool)]
+              except Exception as e:
+                  print(f"COORD tg_bots_pool falla: {e}")
+          json.dump(out, open('/tmp/tg_tokens.json','w'))
+          print(f"tokens desde COORD: {len(out)}")
+          PYFALLBACK
+          fi
+
           python3 << 'PYEOF'
           import json, subprocess, datetime
 
