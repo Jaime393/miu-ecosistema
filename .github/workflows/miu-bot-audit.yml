@@ -40,13 +40,16 @@ jobs:
               out = json.load(urllib.request.urlopen(req, timeout=20))
           except Exception as e:
               print(f"COORD tg_* falla: {e}")
-          if not out:
-              try:
-                  req = urllib.request.Request(f"{C}/rest/v1/relay_config?clave=eq.tg_bots_pool&select=valor&limit=1", headers=H)
-                  pool = json.loads(json.load(urllib.request.urlopen(req, timeout=20))[0]['valor'])
-                  out = [{"clave": f"tg_pool_{i}", "valor": t} for i, t in enumerate(pool)]
-              except Exception as e:
-                  print(f"COORD tg_bots_pool falla: {e}")
+          # pool tg_bots_pool siempre (like.tg_* incluye la clave del pool pero su
+          # valor es un JSON array, no un token — el filtro de formato lo descarta)
+          try:
+              req = urllib.request.Request(f"{C}/rest/v1/relay_config?clave=eq.tg_bots_pool&select=valor&limit=1", headers=H)
+              pool = json.loads(json.load(urllib.request.urlopen(req, timeout=20))[0]['valor'])
+              seen = {str(r.get('valor','')).strip() for r in out}
+              out += [{"clave": f"tg_pool_{i}", "valor": t} for i, t in enumerate(pool)
+                      if str(t).strip() not in seen]
+          except Exception as e:
+              print(f"COORD tg_bots_pool falla: {e}")
           json.dump(out, open('/tmp/tg_tokens.json','w'))
           print(f"tokens desde COORD: {len(out)}")
           PYFALLBACK
