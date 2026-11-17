@@ -1,11 +1,11 @@
 {
-  "_fuente": "gh-pulse-v2-multisource",
-  "_ts": "2026-11-17T03:40:23.198086Z",
-  "_run": "177",
-  "_url": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
-  "_cuentas": 11,
-  "_distribuido": true,
+  "_fuente": "github-actions-state-writer",
+  "_repo": "Jaime393/miu-ecosistema",
+  "_ts": "2026-11-17T10:06:47.347625Z",
+  "_run": "216",
+  "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
+  "_leer_sin_auth": true,
   "estado": {
-    "error": "paused"
+    "error": "unreachable"
   }
 }
