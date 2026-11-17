@@ -1,0 +1,417 @@
+{
+  "schema": "miu.public-cf-harvest/v1",
+  "checked_at": "2026-11-08T02:04:09.048723+00:00",
+  "source": "https://github.com/Jaime393/miu-ecosistema/blob/586f9ac7e7eca1b28c2ddd9810eba69d0fa9afbb/data/auth/created_cf_workers_inventory.json",
+  "source_sha": "586f9ac7e7eca1b28c2ddd9810eba69d0fa9afbb",
+  "historical_inventory_total": 96,
+  "coverage": "known jaimepvicente domain only; other accounts not guessed",
+  "probed": 50,
+  "health_declared": 8,
+  "inference_verified": false,
+  "credentials_used": false,
+  "results": [
+    {
+      "url": "https://corpus-api-miu.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.543299+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared"
+    },
+    {
+      "url": "https://fran-oraculo-miu.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.550217+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.555415+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-14.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.556085+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.662222+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-21.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.730038+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-22.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.744313+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-26.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.801165+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.890703+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-4.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.891370+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared"
+    },
+    {
+      "url": "https://fran-proxy-micelio-v203-5.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.939875+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared"
+    },
+    {
+      "url": "https://franbot-telegram-edge.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:07.967464+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://micelio-espejo.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.062563+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared"
+    },
+    {
+      "url": "https://miu-alpha-cf1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.069351+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-cipher19051997-0.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.070025+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-cipher19051997-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.073323+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-cipher19051997-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.152400+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-cipher19051997-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.183868+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-dereckcitovg16-0.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.184625+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-dereckcitovg16-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.189798+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-dereckcitovg16-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.239974+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-dereckcitovg16-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.265036+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-franchescopalacios9-0.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.271276+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-franchescopalacios9-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.297916+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-franchescopalacios9-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.345702+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-franchescopalacios9-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.373599+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-jaimedanielmartinez75-0.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.376698+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-jaimedanielmartinez75-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.396839+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-jaimedanielmartinez75-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.452281+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-jaimedanielmartinez75-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.454953+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-jaimepvicente.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.459068+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-tabletonephantom-0.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.502594+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-tabletonephantom-1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.539907+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-tabletonephantom-2.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.553460+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-auto-tabletonephantom-3.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.555473+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-autonomo-v92.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.611168+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared",
+      "version": "V92"
+    },
+    {
+      "url": "https://miu-beacon-5ea7cd88-v224.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.629880+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared",
+      "version": "V224"
+    },
+    {
+      "url": "https://miu-beacon-jaimepvicente-v270.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.656000+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-beta-cf1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.681546+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-gamma-cf1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.723481+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-mesh-5ea7cd88-v270.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.738050+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": true,
+      "state": "health_declared",
+      "version": "V270"
+    },
+    {
+      "url": "https://miu-multi-v209.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.745420+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://miu-nodo-cf-alpha-jaimepvicente.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.761781+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-nodo-cf-beta-jaimepvicente.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.832097+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-nodo-cf-gamma-jaimepvicente.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.836140+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-nodo-cf-jaimepvicente.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.849263+00:00",
+      "inference_verified": false,
+      "http": 404,
+      "health_verified": false,
+      "state": "http_error"
+    },
+    {
+      "url": "https://miu-nodo-cf1.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.863759+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://nucleo-absorcion.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.936021+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://nucleo-actualidad.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.941132+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    },
+    {
+      "url": "https://nucleo-simulacion.jaimepvicente.workers.dev/health",
+      "checked_at": "2026-11-08T02:04:08.955488+00:00",
+      "inference_verified": false,
+      "http": 200,
+      "health_verified": false,
+      "state": "json_observed_not_health"
+    }
+  ]
+}

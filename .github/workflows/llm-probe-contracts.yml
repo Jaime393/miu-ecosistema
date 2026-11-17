@@ -1,0 +1,26 @@
+name: MIU harvest and probe contracts
+on:
+  pull_request:
+    paths:
+      - scripts/llm_probe.py
+      - scripts/harvest_cf_public.py
+      - scripts/test_harvest_and_probe.py
+      - .github/workflows/llm-key-prober.yml
+      - .github/workflows/llm-pool-probe.yml
+      - .github/workflows/llm-probe-contracts.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic tests only; no credentials or provider traffic
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -m unittest discover -s scripts -p test_harvest_and_probe.py -v
