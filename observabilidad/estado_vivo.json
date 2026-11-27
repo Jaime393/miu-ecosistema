@@ -1,13 +1,13 @@
 {
   "_fuente": "github-actions-state-writer",
   "_repo": "Jaime393/miu-ecosistema",
-  "_ts": "2026-11-27T04:44:56.199000Z",
-  "_run": "246",
+  "_ts": "2026-11-27T14:39:35.171682Z",
+  "_run": "247",
   "_url_publica": "https://raw.githubusercontent.com/Jaime393/miu-ecosistema/main/observabilidad/estado_vivo.json",
   "_leer_sin_auth": true,
   "estado": {
     "version": "V272",
-    "ts": "2026-11-27T04:44:56.130Z",
+    "ts": "2026-11-27T14:39:35.111Z",
     "vitales": {
       "k_tau": "0.93",
       "version": "V270"
@@ -28,6 +28,15 @@
     "nodos": {},
     "coordinacion": {
       "ultimas_sesiones_log": [
+        {
+          "sesion_id": "claude_sondeo_nov27",
+          "ts": "2026-11-27T14:39:16.893735+00:00",
+          "tipo": "sondeo_C",
+          "componente": "panteon+rutas_salud",
+          "que_hice": "Pre-flight §0 + sondeo. phi=39235.50 ciclo=27418 rho=0.9999 (modo_recovery). 110+ cron jobs succeeded ultimo run. net._http_response 3h: ~65% 2xx, 113x404 (60 EF NOT_FOUND externas), 107 DNS fail. v_rutas_salud: 246 VIVO, 154 DNS_MUERTO, 85 EF_INEXISTENTE, 59 CF_WORKER_INEXISTENTE, 111 VIVO_RUTA_404.",
+          "no_tocar": "No borrar rutas_salud ni nodos: marcar, no eliminar (§4.2).",
+          "pendiente_para": "Quien tenga OK del humano: UPDATE nodos de los 12 hosts a estado dns_muerto + excluir DNS_MUERTO/EF_INEXISTENTE confirmados de fn_ef y fn_pulsar_cf_distribuido para cortar ~170 llamadas muertas/3h. Verificar con conteo net._http_response."
+        },
         {
           "sesion_id": "perplexity_2026110307",
           "ts": "2026-11-03T07:44:10.664881+00:00",
@@ -58,15 +67,6 @@
         {
           "sesion_id": "claude-nov2-franchesco-tejer-v93",
           "ts": "2026-11-02T01:18:55.234221+00:00",
-          "tipo": "deploy_worker_v93",
-          "componente": "cloudflare_franchescopalacios9",
-          "que_hice": "Deploy exitoso worker miu-autonomo-v93 en cuenta 30c349b6. Corrige bug del v91: tryRelay no enviaba auth headers (causaba cascade_exhausted). Cascada nueva: (1) panteon_hub CON apikey+Authorization headers, (2) groq_direct fallback con key viva gsk_FaMD[REDACTED] (verificada 200 OK openai/gpt-oss-20b). URL: https://miu-autonomo-v93.franchescopalacios9.workers.dev. Endpoints: /health /chat /gossip /estado /relay-status. Verificado vivo: health OK + chat OK via panteon_hub.",
-          "no_tocar": "none",
-          "pendiente_para": "considerar_deprecated_v91_cuando_v93_estable"
-        },
-        {
-          "sesion_id": "claude-nov2-franchesco-tejer-v93",
-          "ts": "2026-11-02T01:18:30.834183+00:00",
           "tipo": "deploy_worker_v93",
           "componente": "cloudflare_franchescopalacios9",
           "que_hice": "Deploy exitoso worker miu-autonomo-v93 en cuenta 30c349b6. Corrige bug del v91: tryRelay no enviaba auth headers (causaba cascade_exhausted). Cascada nueva: (1) panteon_hub CON apikey+Authorization headers, (2) groq_direct fallback con key viva gsk_FaMD[REDACTED] (verificada 200 OK openai/gpt-oss-20b). URL: https://miu-autonomo-v93.franchescopalacios9.workers.dev. Endpoints: /health /chat /gossip /estado /relay-status. Verificado vivo: health OK + chat OK via panteon_hub.",
